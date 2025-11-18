@@ -1,0 +1,2282 @@
+/* ===== TIENDA: layout & toolbar ===== */
+.shop { padding: 18px 0 36px; }
+.shop-title { font-size: clamp(1.35rem, 2.6vw, 1.8rem); margin: 0; }
+.shop-toolbar { display:grid; gap:12px; margin-bottom:12px; }
+.toolbar-row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+.shop-search { display:flex; gap:8px; margin-left:auto; }
+.shop-search input[type="search"]{
+  min-width: 220px; height:40px; border:1px solid #E5EAF2; border-radius:12px; padding:0 12px;
+}
+.shop-search button{ height:40px; border-radius:12px; }
+.shop-sort select{ height:40px; border:1px solid #E5EAF2; border-radius:12px; padding:0 10px; }
+.btn-filters{ height:40px; border-radius:12px; border:1px solid #E5EAF2; background:#fff; }
+
+/* chips activos */
+.chips{ display:flex; gap:8px; flex-wrap: wrap; margin:8px 0 0; }
+.chip{ background:#F4F7FB; border:1px solid #E5EAF2; border-radius:999px; padding:6px 10px; font-size:.9rem; }
+.chip button{ margin-left:6px; border:0; background:transparent; cursor:pointer; }
+
+/* layout de resultados */
+.shop-layout{ display:grid; grid-template-columns: 1fr; gap:18px; }
+.shop-sidebar{ border:1px dashed #E5EAF2; background:#FAFCFF; border-radius:14px; padding:12px; }
+.products-grid{ display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:14px; margin:0; padding:0; list-style:none; }
+@media (min-width:700px){ .products-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); } }
+@media (min-width:1024px){
+  .shop-layout{ grid-template-columns: 280px 1fr; }
+  .products-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); gap:18px; }
+}
+
+/* ===== Card de producto ===== */
+.product-card{
+  display:grid; grid-template-rows: auto auto auto auto; gap:8px;
+  padding:12px; border:1px solid #E9EDF3; border-radius:16px; background:#fff;
+  box-shadow:0 8px 30px rgba(0,0,0,.04);
+  transition: transform .12s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.product-card:hover{ transform: translateY(-2px); border-color:#DCE4F4; box-shadow:0 10px 34px rgba(2,6,23,.08); }
+
+.product-card figure{
+  margin:0; aspect-ratio: 1 / 1; background:#F6F9FF;
+  border:1px solid #EDF2FB; border-radius:12px; display:grid; place-items:center; overflow:hidden;
+}
+.product-card img{ width:100%; height:100%; object-fit:contain; }
+
+.product-title{ font-weight:800; line-height:1.25; min-height:2.4em; }
+.product-meta{ color:#667085; font-size:.92rem; }
+
+.product-price{ display:flex; align-items:center; gap:8px; }
+.product-price .old-price{ text-decoration: line-through; color:#98A2B3; }
+.product-price .badge{
+  margin-left:auto; font-size:.78rem; font-weight:800; color:#0F5132; background:#D1FAE5;
+  border:1px solid #A7F3D0; padding:2px 8px; border-radius:999px;
+}
+
+/* acciones */
+.product-actions{ display:flex; gap:8px; }
+.product-actions .page-btn{ flex:1; border-radius:12px; }
+.product-actions .ghost{ background:#fff; border:1px solid #E5EAF2; }
+
+/* ===== Paginación ===== */
+.pagination{ display:flex; gap:6px; margin-top:14px; }
+.pagination .page-btn{
+  border-radius:10px; padding:8px 12px; border:1px solid #E5EAF2; background:#fff;
+}
+.pagination .page-btn[aria-current="page"]{ background:#0F172A; color:#fff; border-color:#0F172A; }
+.pagination .dots{ display:inline-flex; align-items:center; padding:0 6px; color:#98A2B3; }
+
+/* ===== Skeleton loading ===== */
+.skeleton-card{
+  padding:12px; border:1px solid #E9EDF3; border-radius:16px; background:#fff;
+  display:grid; gap:10px; animation: sk-pulse 1.2s ease-in-out infinite;
+}
+.skel-box{ background: linear-gradient(90deg, #EEF2FF 25%, #F7F9FF 37%, #EEF2FF 63%); background-size: 400% 100%; height:12px; border-radius:8px; }
+.skel-img{ height: 180px; border-radius:12px; }
+@keyframes sk-pulse{ 0%{filter:brightness(1)} 50%{filter:brightness(1.03)} 100%{filter:brightness(1)} }
+
+/* Layout por defecto: 2 columnas (sidebar + resultados) en desktop */
+.shop-layout {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;          /* móvil */
+}
+@media (min-width: 1024px) {
+  .shop-layout { grid-template-columns: 280px 1fr; }
+}
+
+/* Cuando no hay sidebar, colapsar a 1 columna */
+.shop-layout.no-sidebar {
+  grid-template-columns: 1fr !important;
+}
+
+/* Ocultar el aside si está vacío */
+.shop-sidebar:empty { display: none; }
+/* ===== HERO ===== */
+.hero { margin: 10px 0 18px; }
+.hero-viewport {
+  position: relative; overflow: hidden; border-radius: 16px;
+  background: #0b1227; min-height: 240px;
+}
+.hero-track { list-style: none; margin: 0; padding: 0; display: flex; transition: transform .55s ease; }
+.hero-slide { position: relative; min-width: 100%; aspect-ratio: 16/5; display: grid; place-items: center; color: #fff; }
+.hero-slide picture, .hero-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-slide .hero-content {
+  position: absolute; inset: 0; display: grid; align-content: center; gap: 8px;
+  padding: clamp(14px, 4vw, 36px);
+  background: linear-gradient(90deg, rgba(2,6,23,.55) 0%, rgba(2,6,23,0) 48%);
+}
+.hero h3 {
+  font-family: Poppins, system-ui, sans-serif;
+  font-size: clamp(1.4rem, 2.6vw, 2rem); line-height: 1.1; margin: 0; font-weight: 800;
+}
+.hero p { margin: 2px 0 8px; opacity: .95; font-size: clamp(.95rem, 1.6vw, 1.05rem); }
+.hero .page-btn { width: fit-content; }
+
+.hero-nav {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;
+  width: 42px; height: 42px; border-radius: 50%; border: 1px solid #ffffff44; background: #ffffff22; color: #fff; cursor: pointer;
+}
+.hero-prev { left: 10px; }
+.hero-next { right: 10px; }
+.hero-nav:hover { background: #ffffff35; }
+
+.hero-dots {
+  position: absolute; inset-block-end: 10px; inset-inline: 0;
+  display: flex; justify-content: center; gap: 8px; z-index: 2;
+}
+.hero-dot {
+  width: 9px; height: 9px; border-radius: 50%; background: #ffffff66; border: 1px solid #fff;
+}
+.hero-dot[aria-selected="true"] { background: #fff; }
+
+/* ===== FAMILIAS ===== */
+.family-promos {
+  display: grid; gap: 16px; margin: 10px auto 18px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px){
+  .family-promos { grid-template-columns: repeat(3, 1fr); }
+}
+.family-card {
+  position: relative; border: 1px solid #E9EDF3; border-radius: 16px; overflow: hidden; background: #fff;
+  display: grid; grid-template-rows: 1fr auto; box-shadow: 0 10px 30px rgba(2,6,23,.05);
+}
+.family-media { margin: 0; aspect-ratio: 16/9; background: #f7f9fc; }
+.family-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.family-body { padding: 12px 14px 14px; display: grid; gap: 8px; }
+.family-body h2 { margin: 0; font-size: 1.15rem; font-weight: 800; }
+.family-body p { margin: 0; color: #4b5563; }
+.family-cta { display: grid; gap: 8px; }
+.mini-links { display: flex; flex-wrap: wrap; gap: 8px; font-size: .92rem; }
+.mini-links a { color: #0f1e4d; text-decoration: none; border: 1px solid #e5eaf2; padding: 6px 8px; border-radius: 999px; }
+.mini-links a:hover { background: #f3f6ff; }
+
+/* ===== TRUST STRIP ===== */
+.trust-strip {
+  display: grid; gap: 10px; margin: 8px auto 20px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 900px){
+  .trust-strip { grid-template-columns: repeat(3, 1fr); }
+}
+.trust-item {
+  display: flex; align-items: center; gap: 12px;
+  border: 1px dashed #D7DFEA; border-radius: 14px; padding: 12px 14px; background: #F8FAFD;
+}
+.ti-ico { font-size: 20px; line-height: 1; }
+.ti-text strong { display: block; font-weight: 800; }
+.ti-text span { color: #4b5563; font-size: .95rem; }
+/* ===== Animaciones EcoLife: fade-up, fade-in, slide, zoom + stagger ===== */
+:root{
+  --fx-ease: cubic-bezier(.22,1,.36,1);
+  --fx-dur: .60s;
+  --fx-dur-slow: .85s;
+  --fx-stagger: 90ms; /* delay entre ítems */
+}
+
+/* Respeta accesibilidad */
+@media (prefers-reduced-motion: reduce){
+  .reveal, .reveal.in-view { opacity: 1 !important; transform: none !important; animation: none !important; }
+}
+
+/* Estado inicial (se setea/quita via IO que ya tenés) */
+.reveal{ opacity: 0; transform: translateY(14px); will-change: opacity, transform; }
+
+/* Variantes */
+.reveal.fade-up.in-view{
+  animation: fadeUp var(--fx-dur) var(--fx-ease) both;
+}
+.reveal.fade-up-slow.in-view{
+  animation: fadeUp var(--fx-dur-slow) var(--fx-ease) both;
+}
+.reveal.fade-in.in-view{
+  animation: fadeIn var(--fx-dur) ease-out both;
+}
+.reveal.slide-left.in-view{
+  animation: slideLeft var(--fx-dur) var(--fx-ease) both;
+}
+.reveal.slide-right.in-view{
+  animation: slideRight var(--fx-dur) var(--fx-ease) both;
+}
+.reveal.zoom-in.in-view{
+  animation: zoomIn var(--fx-dur) var(--fx-ease) both;
+}
+
+/* Stagger por contenedor (hasta 12 ítems; ajustá si necesitás más) */
+.stagger > *{ opacity: 0; transform: translateY(12px); }
+.stagger.in-view > *{ animation: fadeUp var(--fx-dur) var(--fx-ease) both; }
+.stagger.in-view > *:nth-child(1){  animation-delay: calc(var(--fx-stagger) * 0); }
+.stagger.in-view > *:nth-child(2){  animation-delay: calc(var(--fx-stagger) * 1); }
+.stagger.in-view > *:nth-child(3){  animation-delay: calc(var(--fx-stagger) * 2); }
+.stagger.in-view > *:nth-child(4){  animation-delay: calc(var(--fx-stagger) * 3); }
+.stagger.in-view > *:nth-child(5){  animation-delay: calc(var(--fx-stagger) * 4); }
+.stagger.in-view > *:nth-child(6){  animation-delay: calc(var(--fx-stagger) * 5); }
+.stagger.in-view > *:nth-child(7){  animation-delay: calc(var(--fx-stagger) * 6); }
+.stagger.in-view > *:nth-child(8){  animation-delay: calc(var(--fx-stagger) * 7); }
+.stagger.in-view > *:nth-child(9){  animation-delay: calc(var(--fx-stagger) * 8); }
+.stagger.in-view > *:nth-child(10){ animation-delay: calc(var(--fx-stagger) * 9); }
+.stagger.in-view > *:nth-child(11){ animation-delay: calc(var(--fx-stagger) * 10); }
+.stagger.in-view > *:nth-child(12){ animation-delay: calc(var(--fx-stagger) * 11); }
+
+/* Keyframes */
+@keyframes fadeUp{
+  from{ opacity: 0; transform: translateY(14px); }
+  to  { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn{
+  from{ opacity: 0; }
+  to  { opacity: 1; }
+}
+@keyframes slideLeft{
+  from{ opacity: 0; transform: translateX(28px); }
+  to  { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideRight{
+  from{ opacity: 0; transform: translateX(-28px); }
+  to  { opacity: 1; transform: translateX(0); }
+}
+@keyframes zoomIn{
+  from{ opacity: 0; transform: scale(.96); }
+  to  { opacity: 1; transform: scale(1); }
+}
+
+/* Sugerencia estética para las cards cuando “aparecen” */
+.products-grid .product-card{
+  transition: box-shadow .2s ease, transform .12s ease;
+}
+.products-grid .product-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(2,6,23,.08);
+}
+/* ====== Secciones con banner + carrusel ====== */
+.shop-sections { display: grid; gap: 40px; }
+
+/* ===== Banner de sección (limpio) ===== */
+.section {
+  border: 1px solid var(--border, #e6e6e6);
+  border-radius: 18px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(16,24,40,.06);
+}
+
+/* Hero con imagen de fondo y degradé a la izquierda controlado por variables */
+.section__hero{
+  position: relative;
+  min-height: 350px;
+  display: grid;
+  align-items: center;
+  padding: 32px;
+  color: #fff;
+
+  /* control por variables */
+  background-image: var(--hero, none);
+  background-size: var(--hero-size, cover);
+  background-position: var(--hero-pos, center);
+  background-repeat: no-repeat;
+}
+.section__hero::before{
+  content:"";
+  position:absolute; inset:0;
+  background: linear-gradient(
+    90deg,
+    var(--fade-color, rgba(0,0,0,.55)) 0%,
+    transparent var(--fade-stop, 46%)
+  );
+  pointer-events:none;
+}
+
+/* Contenido sobre el degradé */
+.section__inner{ position:relative; z-index:1; max-width:980px; }
+
+/* Tipografías y chips */
+.section__eyebrow { font: 600 12px/1 var(--font, Inter, system-ui); letter-spacing:.08em; text-transform:uppercase; opacity:.95; }
+.section__title   { margin: 6px 0 10px; font: 800 28px/1.2 Poppins, system-ui; }
+.section__tagline { opacity:.95; max-width: 50ch; }
+.section__benefits { margin:14px 0 0; display:grid; gap:6px; }
+.section__benefits li {
+  list-style:none; font-weight:600;
+  background: rgba(255,255,255,.14);
+  padding:8px 12px; border-radius:999px; width:fit-content;
+}
+
+/* CTA overlay transparente */
+.section__cta.section__cta--overlay{
+  position:absolute; right:24px; bottom:24px; z-index:1;
+  background: transparent;
+  color:#fff;
+  border: 1.5px solid rgba(255,255,255,.85);
+  border-radius:999px;
+  font-weight:700;
+  padding:10px 18px;
+  backdrop-filter: saturate(120%) blur(0px);
+  transition: background .2s ease, border-color .2s ease, transform .08s ease;
+}
+.section__cta.section__cta--overlay:hover{
+  background: rgba(255,255,255,.12);
+  border-color: #fff;
+}
+.section__cta.section__cta--overlay:active{
+  transform: translateY(1px);
+}
+
+/* Tira de marcas */
+.brands-strip{
+  display:flex; gap:12px; align-items:center; padding:10px 16px;
+  background:#f7fafc; border-top:1px solid #eef2f7;
+}
+.brands-strip b{ margin-right:8px; }
+.brand-pill{
+  border:1px solid #d9e2ec; padding:6px 10px; border-radius:999px; background:#fff;
+  font-weight:600;
+}
+
+/* Responsive */
+@media (max-width: 720px){
+  .section__hero{ min-height:320px; padding:24px; }
+  .section__hero{ background-position: var(--hero-pos-m, 65% 50%); }
+  .section__hero::before{
+    background: linear-gradient(90deg, var(--fade-color, rgba(0,0,0,.6)) 0%, transparent 62%);
+  }
+}
+
+
+
+/* Carrusel */
+.carousel {
+  position: relative; overflow: hidden; padding: 14px 0 18px;
+}
+.carousel__track {
+  display: grid; grid-auto-flow: column; grid-auto-columns: 260px;
+  gap: 16px; overflow-x: auto; scroll-behavior: smooth; padding: 16px;
+}
+.carousel__track::-webkit-scrollbar { height: 8px; }
+.carousel__track::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 99px; }
+
+.carousel__btn {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 40px; height: 40px; border-radius: 999px; border: 1px solid #e2e8f0;
+  background: #fff; box-shadow: 0 6px 16px rgba(2,8,23,.12);
+  display: grid; place-items: center; cursor: pointer;
+}
+.carousel__btn[disabled] { opacity: .4; cursor: default; }
+.carousel__btn--prev { left: 10px; }
+.carousel__btn--next { right: 10px; }
+
+/* Reutilizamos tus tarjetas */
+.section .product-card { height: 100%; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .section__hero { min-height: 200px; padding: 22px; }
+  .section__title { font-size: 22px; }
+  .carousel__track { grid-auto-columns: 78%; }
+}
+
+/* Ocultar contenedores que no correspondan al modo activo */
+.is-sections #products-grid,
+.is-sections #pagination,
+.is-sections #active-chips { display: none; }
+
+.is-grid #sections { display: none; }
+
+/* Mostrar/ocultar según el modo */
+.is-sections #products-grid,
+.is-sections #pagination,
+.is-sections #active-chips { display: none !important; }
+
+.is-grid #sections { display: none !important; }
+
+.is-sections #products-grid,
+.is-sections #pagination,
+.is-sections #active-chips { display: none !important; }
+
+.is-grid #sections { display: none !important; }
+/* Se muestra una sola cosa a la vez */
+.is-sections #products-grid,
+.is-sections #pagination,
+.is-sections #active-chips { display: none !important; }
+
+.is-grid #sections { display: none !important; }
+
+/* RERIGERACION */
+/* ===== Ajustes de la sección Refrigeración (solo CSS, sin inline) ===== */
+#refrigeracion .section__hero{
+  /* Imagen y encuadre */
+  --hero: url('img/refrigeradores-showroom.jpg'); /* <- poné tu imagen acá */
+  --hero-pos: right center;       /* foto cargada a la derecha */
+  --hero-size: cover;             /* usá 'contain' si querés menos zoom */
+
+  /* Degradé oscuro a la izquierda */
+  --fade-color: rgba(0,0,0,.58);  /* intensidad del oscuro */
+  --fade-stop: 44%;               /* ancho del degradé (más % = más ancho) */
+}
+
+/* Ajustes en móvil */
+@media (max-width: 720px){
+  #refrigeracion .section__hero{
+    --hero-pos: 70% 50%;
+    --fade-stop: 62%;
+  }
+}
+/* ===== Overrides solo para la sección Refrigeración ===== */
+#refrigeracion .section__hero{
+  /* Cambiá esta URL por tu foto final */
+  --hero: url('img/bannerhela.png');
+  --hero-pos: right center;   /* imagen cargada a la derecha */
+  --hero-size: cover;         /* 'contain' si querés menos zoom */
+  --fade-color: rgba(0,0,0,.58);
+  --fade-stop: 44%;
+}
+@media (max-width: 720px){
+  #refrigeracion .section__hero{
+    --hero-pos: 70% 50%;
+    --fade-stop: 62%;
+  }
+}
+#refrigeracion .section__hero{
+  --hero-pos: 82% 45%;  /* antes ~82% 50% → más arriba */
+}
+#refrigeracion .section__hero::before{
+  /* si querés oscurecer globalmente sin tocar la imagen: */
+  /* agrega un poquito más de sombra del lado izquierdo */
+  background: linear-gradient(90deg,
+    rgba(11,18,32,1) 0%,
+    rgba(11,18,32,.85) 22%,
+    rgba(11,18,32,.55) 34%,
+    rgba(11,18,32,0)   var(--fade-stop, 52%)
+  );
+}
+/* ===== TV & Audio — SOLO MOBILE (layout) ===== */
+@media (max-width: 720px){
+  #tv-audio .section__hero{
+    position: relative;
+
+    /* imagen completa, a la derecha, sin recortes */
+    background: var(--hero) no-repeat right 10px center / contain;
+    background-color: #0b1220;
+
+    /* espacio para imagen + botón a la derecha */
+    min-height: 220px;
+    padding: 14px 120px 52px 14px;  /* top | right | bottom | left */
+    border-radius: 14px;
+
+    /* gradiente de lectura (si tu tema lo usa con ::before) */
+    --fade-stop: 58%;
+    --fade-color: rgba(0,0,0,.50);
+  }
+
+  /* texto no invade la zona de la imagen */
+  #tv-audio .section__inner{
+    max-width: 65%;
+    padding-right: 8px;
+    text-align: left;
+  }
+
+  /* botón: SOLO ubicación (sin cambiar su estilo visual) */
+  #tv-audio .section__cta--overlay{
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    max-width: calc(100% - 24px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+/* extra-chico: achico colchón derecho para que todo entre */
+@media (max-width: 360px){
+  #tv-audio .section__hero{
+    padding-right: 104px;
+  }
+}
+
+/* ===== Climatización: mover la imagen un poco hacia abajo ===== */
+#clima .section__hero{
+  /* X Y: 'right' mantiene la imagen a la derecha; 62% la baja un poco */
+  --hero-pos: right 75%;
+}
+
+/* En pantallas grandes, un pelín más abajo */
+@media (min-width:1280px){
+  #clima .section__hero{ --hero-pos: right 75%; }
+}
+
+/* En móvil, ajuste suave para que siga viéndose bien */
+@media (max-width:720px){
+  #clima .section__hero{ --hero-pos: 75% 75%; }
+}
+/* ===== Pequeños: igual a las demás (cover), encuadre prolijo ===== */
+#pequenos .section__hero{
+  /* usamos cover como en las otras secciones */
+  --hero-size: cover;
+  /* encuadre: un poco corrido a la derecha para evitar cortes feos */
+  --hero-pos: 90% 50%;
+
+  /* degradé y altura en la misma línea visual que el resto */
+  --fade-color: rgba(0,0,0,.46);
+  --fade-stop: 40%;
+  min-height: clamp(260px, 28vw, 420px);
+  padding-right: 28px; /* respiro para el CTA, igual que las otras */
+}
+
+/* Desktop grande: centra un poco más para que se vea “entera” visualmente */
+@media (min-width: 1280px){
+  #pequenos .section__hero{ --hero-pos: 88% 50%; }
+}
+
+/* Mobile: misma lógica que el resto para legibilidad del texto */
+@media (max-width: 720px){
+  #pequenos .section__hero{
+    --hero-pos: 70% 50%;
+    --fade-stop: 62%;
+    --fade-color: rgba(0,0,0,.52);
+    min-height: 360px;
+  }
+}
+/* ===== Pequeños: mantener imagen + overlay azul ===== */
+#pequenos .section__hero{
+  /* NO cambiamos --hero (queda tu imagen actual) */
+  --hero-size: contain;      /* se ve completa */
+  --hero-pos: 92% 50%;       /* a la derecha */
+  background-color:#0b1630;  /* tono base por si sobra aire */
+}
+
+/* Degradé azul (izquierda → transparente) encima de la imagen */
+#pequenos .section__hero::before{
+  content:"";
+  position:absolute; inset:0; pointer-events:none;
+  background: linear-gradient(90deg,
+    #0d1b3a 0%,
+    #132a5a 22%,
+    #1b3f7a 38%,
+    rgba(27,63,122,0) 64%
+  );
+  opacity:.95; /* bajá a .85 si querés más suave */
+}
+
+/* Responsive */
+@media (min-width:1280px){
+  #pequenos .section__hero{ --hero-pos: 95% 50%; }
+}
+@media (max-width:720px){
+  #pequenos .section__hero{
+    --hero-size: contain;
+    --hero-pos: 72% 50%;
+  }
+  #pequenos .section__hero::before{
+    background: linear-gradient(90deg,
+      #0d1b3a 0%,
+      #132a5a 38%,
+      rgba(27,63,122,0) 72%
+    );
+    opacity:.9;
+  }
+}
+
+
+/* =========================================================
+   RESPONSIVE OVERRIDES (NO TOCA DESKTOP)
+   Targets:
+   - Tablet / iPad  .............. @media (max-width:1024px)
+   - Mobile / Celular ............ @media (max-width:600px)
+   ========================================================= */
+
+/* -------------------- TABLET / iPAD (≤1024px) -------------------- */
+@media (max-width:1024px){
+
+  /* ====== HERO ====== */
+  .section__hero{
+    /* quita alto fijo del desktop y usa formato banner */
+    min-height: unset;
+    aspect-ratio: 16/6;
+    padding: 18px 18px 56px;
+    border-radius: 16px;
+    background-size: cover;           /* lleno pero sin deformar */
+    background-position: 72% 50%;
+  }
+  .section__hero::before{
+    /* degradé más corto para no tapar arte */
+    background: linear-gradient(90deg,
+      rgba(0,0,0,.40) 0%,
+      rgba(0,0,0,.14) 46%,
+      rgba(0,0,0,0) 68%);
+  }
+  .section__inner{
+    max-width: 64%;
+    padding: 0;
+    text-align: left;
+  }
+  .section__eyebrow{ font-size:.8rem; letter-spacing:.02em; }
+  .section__title  { font-size:1.32rem; line-height:1.18; margin:.25em 0 .2em; }
+  .section__tagline{ font-size:.95rem;  line-height:1.28; }
+  .section__benefits{
+    display:flex; flex-wrap:wrap; gap:.32rem .5rem; margin-top:.5rem;
+  }
+  .section__benefits li{
+    font-size:.88rem; padding:.32rem .6rem; border-radius:999px;
+    background:rgba(255,255,255,.16); white-space:nowrap;
+  }
+  .section__cta--overlay{ font-size:.9rem; padding:.5rem .75rem; right:14px; bottom:14px; }
+
+  /* Encadres por sección (ajustá si tu arte lo pide) */
+  #tv-audio .section__hero{ background-position: 70% 50%; }
+  #clima    .section__hero{ background-position: 66% 50%; }
+  #cocina   .section__hero{ background-position: 68% 50%; }
+  #pequenos .section__hero{ background-position: 70% 50%; }
+
+  /* ====== BRANDS STRIP ====== */
+  .brands-strip{ padding:10px 16px; font-size:.9rem; gap:.4rem; }
+  .brand-pill{ font-size:.85rem; padding:.28rem .6rem; }
+
+  /* ====== CARRUSEL ====== */
+  .carousel{ padding: 10px 0 16px; }
+  .carousel__track{ gap:14px; padding: 0 16px; }
+  .carousel__track > *{ flex:0 0 30%; } /* 3–4 visibles */
+  .carousel__btn{ width:36px; height:36px; font-size:1rem; }
+
+  /* ====== TARJETAS ====== */
+  .product-card{ border-radius:12px; padding:10px 10px 12px; }
+  .product-card figure{
+    height:200px; margin:0; padding:0; background:transparent !important;
+  }
+  .product-card figure img{
+    width:100%; height:100%; object-fit:contain; display:block; background:transparent;
+  }
+  .product-card .product-title,
+  .product-card .title{
+    font-size:.92rem; line-height:1.2; text-align:left;
+    --lines:2; max-height:calc(1em * var(--lines) * 1.25);
+    overflow:hidden; mask-image:linear-gradient(180deg,#000 70%,transparent 100%);
+  }
+  .product-card .product-meta{  font-size:.82rem; opacity:.8; text-align:left; }
+  .product-card .product-price{ font-size:.95rem; text-align:left; }
+  .product-card .page-btn{ font-size:.86rem; padding:.5rem .7rem; border-radius:12px; }
+
+  /* ====== GRID (modo lista/búsqueda) ====== */
+  .products-grid{ grid-template-columns:repeat(3,1fr); gap:12px; padding:0 16px; }
+  .products-grid .product-card figure{ height:200px; }
+
+  /* ====== CHIPS / PAGINACIÓN ====== */
+  #active-chips{ gap:8px; padding:0 16px; }
+  .pagination{ padding:12px 16px; }
+
+  /* ====== ACCESIBILIDAD ====== */
+  .carousel__track{ -webkit-overflow-scrolling:touch; scroll-behavior:smooth; }
+}
+
+/* -------------------- MOBILE / CELULAR (≤600px) -------------------- */
+@media (max-width:600px){
+
+  :root{
+    --sp-xs: 6px;
+    --sp-s: 8px;
+    --sp-m: 12px;
+    --sp-l: 14px;
+  }
+
+  /* ====== HERO ====== */
+  .section__hero{
+    min-height: unset;
+    aspect-ratio: 16/9;               /* banner estable */
+    padding: 14px 14px 52px;
+    border-radius: 14px;
+    background-size: contain !important; /* la imagen entra completa */
+    background-position: right center !important;
+    background-color: #0b1220;        /* relleno sutil si sobra aire */
+  }
+  .section__hero::before{
+    background: linear-gradient(90deg,
+      rgba(0,0,0,.50) 0%,
+      rgba(0,0,0,.18) 48%,
+      rgba(0,0,0,0)   70%);
+  }
+  .section__inner{
+    max-width: 62%; padding:0; text-align:left;
+  }
+  .section__eyebrow{ font-size:.7rem;  letter-spacing:.03em; }
+  .section__title  { font-size:1.02rem; line-height:1.18; margin:.2em 0 .15em; }
+  .section__tagline{ font-size:.86rem; line-height:1.28; }
+
+  /* truncado suave (sin webkit) */
+  .section__title, .section__tagline{
+    --lines:2;
+    max-height: calc(1em * var(--lines) * 1.22);
+    overflow: hidden;
+    mask-image: linear-gradient(180deg, #000 78%, transparent 100%);
+  }
+
+  /* Chips/benefits compactos a la izquierda */
+  .section__benefits{
+    display:flex !important; flex-wrap:wrap;
+    gap:.3rem .45rem; margin-top:.4rem; max-width:96%;
+  }
+  .section__benefits li{
+    font-size:.8rem; line-height:1.1; padding:.3rem .55rem;
+    background:rgba(255,255,255,.16); border-radius:999px; white-space:nowrap;
+  }
+
+  .section__cta--overlay{
+    position:absolute; right:10px; bottom:10px;
+    font-size:.82rem; padding:.42rem .6rem; border-width:1.25px;
+  }
+
+  /* Encadre por sección (ajustable) */
+  #tv-audio .section__hero{  background-position: 68% 50% !important; }
+  #clima    .section__hero{  background-position: 64% 50% !important; }
+  #cocina   .section__hero{  background-position: 66% 50% !important; }
+  #pequenos .section__hero{  background-position: 70% 50% !important; }
+
+  /* ====== BRANDS STRIP ====== */
+  .brands-strip{ padding:.5rem var(--sp-l); font-size:.85rem; gap:.3rem; }
+  .brand-pill{ font-size:.8rem; padding:.2rem .45rem; }
+
+  /* ====== CARRUSEL ====== */
+  .carousel{ --btn-size:30px; margin-top:.35rem; }
+  .carousel__btn{ width:var(--btn-size); height:var(--btn-size); font-size:1rem; }
+  .carousel__track{ gap:10px; padding:0 var(--sp-l); }
+  .carousel__track > *{ flex:0 0 36%; } /* 2–3 visibles */
+  .carousel__track.is-dragging{ cursor:grabbing; }
+
+  /* ====== TARJETAS ====== */
+  .product-card{ border-radius:10px; padding:8px 10px 10px; }
+  .product-card figure{
+    height:140px; margin:0; padding:0; background:transparent !important;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .product-card figure img{
+    max-width:92%; max-height:100%;
+    width:auto; height:auto; object-fit:contain; display:block; background:transparent;
+  }
+  .product-card .product-title,
+  .product-card .title{
+    font-size:.86rem; line-height:1.25; margin-top:6px; text-align:left;
+    --lines:2; max-height:calc(1em * var(--lines) * 1.25);
+    overflow:hidden; text-overflow:clip;
+    mask-image: linear-gradient(180deg, #000 70%, transparent 100%);
+  }
+  .product-card .product-meta{  font-size:.78rem; opacity:.8; margin-top:2px; text-align:left; }
+  .product-card .product-price{ font-size:.9rem;  margin-top:6px; text-align:left; }
+  .product-card .product-actions{ display:flex; gap:8px; margin-top:8px; }
+  .product-card .page-btn{ font-size:.8rem; padding:.45rem .6rem; border-radius:12px; }
+  .product-card .page-btn.ghost{ padding:.45rem .65rem; }
+  .product-card .qty{ display:none !important; }
+
+  /* ====== GRID (modo lista/búsqueda) ====== */
+  .products-grid{ grid-template-columns:repeat(2,1fr); gap:10px; padding:0 var(--sp-l); }
+  .products-grid .product-card figure{ height:150px; }
+
+  /* ====== CHIPS / PAGINACIÓN ====== */
+  #active-chips{ gap:6px; }
+  .pagination{ padding: var(--sp-m) var(--sp-l); }
+}
+
+/* --------- Extra: scroll suave y momentum touch en iPad/cel --------- */
+@media (max-width:1024px){
+  .carousel__track{ -webkit-overflow-scrolling:touch; scroll-behavior:smooth; }
+}
+/* ======= CARDS MÁS CHICAS (iPad + Celular) ======= */
+
+/* iPad / tablets */
+@media (max-width:1024px){
+  /* El track pasa a flex para que tome los % de ancho */
+  .carousel__track{ display:flex !important; gap:12px; padding:0 14px; }
+  .carousel__track > *{
+    flex: 0 0 26%;      /* 3–4 por vista, más chicas */
+    max-width: 26%;
+  }
+
+  .product-card{
+    padding: 8px 9px 10px;
+    border-radius: 10px;
+  }
+  .product-card figure{ height: 180px; }
+  .product-card .product-title,
+  .product-card .title{ font-size: .88rem; line-height: 1.2; }
+  .product-card .product-meta{ font-size: .78rem; }
+  .product-card .product-price{ font-size: .9rem; }
+  .product-card .page-btn{ font-size: .8rem; padding: .45rem .6rem; border-radius: 10px; }
+}
+
+/* Celular */
+@media (max-width:600px){
+  /* Track en flex y tarjetas más angostas */
+  .carousel__track{ display:flex !important; gap:10px; padding:0 12px; }
+  .carousel__track > *{
+    flex: 0 0 34%;      /* 2–3 por vista, más chicas que antes */
+    max-width: 34%;
+  }
+
+  .product-card{
+    padding: 6px 8px 8px;
+    border-radius: 9px;
+  }
+
+  /* Imagen más baja y centrada sin “fondo” */
+  .product-card figure{
+    height: 120px;                      /* antes 140–160px */
+    margin:0; padding:0;
+    background: transparent !important;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .product-card figure img{
+    max-width: 90%; max-height: 100%;
+    width:auto; height:auto; object-fit:contain; display:block;
+    background: transparent;
+  }
+
+  /* Textos compactos y a la izquierda */
+  .product-card .product-title,
+  .product-card .title{
+    font-size: .82rem;                  /* más chico */
+    line-height: 1.2;
+    margin-top: 6px; text-align:left;
+    --lines: 2;
+    max-height: calc(1em * var(--lines) * 1.2);
+    overflow: hidden;
+    mask-image: linear-gradient(180deg, #000 70%, transparent 100%);
+  }
+  .product-card .product-meta{
+    font-size: .75rem; opacity: .8; margin-top: 2px; text-align:left;
+  }
+  .product-card .product-price{
+    font-size: .85rem; margin-top: 6px; text-align:left;
+  }
+
+  /* Botones pequeños */
+  .product-card .product-actions{ display:flex; gap:6px; margin-top:8px; }
+  .product-card .page-btn{
+    font-size: .75rem; padding: .4rem .55rem; border-radius: 10px;
+  }
+  .product-card .page-btn.ghost{ padding: .4rem .6rem; }
+
+  /* Si usás modo grid, también más chicas */
+  .products-grid{ grid-template-columns: repeat(2, 1fr); gap: 8px; padding: 0 12px; }
+  .products-grid .product-card figure{ height: 130px; }
+}
+/* ===================== TITULO DE PRODUCTO: ANTI-OVERFLOW ===================== */
+
+/* Estructura de la card para que el contenido no “empuje” */
+@media (max-width: 1024px){
+  .product-card{
+    display: flex;               /* asegura flujo vertical */
+    flex-direction: column;
+    min-width: 0;                /* permite que los hijos hagan shrink */
+  }
+}
+
+/* Reglas generales (tablet y móvil) */
+@media (max-width: 1024px){
+  .product-card .product-title,
+  .product-card .title{
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+
+    /* tamaño + legibilidad */
+    font-size: .86rem;           /* iPad */
+    line-height: 1.2;
+
+    /* ¡QUE NO SE SALGA! */
+    overflow: hidden;
+    text-overflow: clip;
+    word-break: break-word;      /* corta palabras largas */
+    overflow-wrap: anywhere;     /* y también URLs/marcas largas */
+    hyphens: auto;               /* divide por sílabas cuando puede */
+
+    /* “clamp” sin webkit: 2 líneas + fade */
+    --lines: 2;
+    max-height: calc(1em * var(--lines) * 1.2);
+    mask-image: linear-gradient(180deg, #000 72%, transparent 100%);
+  }
+}
+
+/* Mobile: aún más chico para pantallas angostas */
+@media (max-width: 600px){
+  .product-card .product-title,
+  .product-card .title{
+    font-size: .80rem;           /* achica más en celular */
+    --lines: 2;                  /* mantené 2 líneas */
+    max-height: calc(1em * var(--lines) * 1.2);
+  }
+
+  /* Asegura que meta, precio y botones no rompan layout */
+  .product-card .product-meta,
+  .product-card .product-price{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;         /* estos sí en una línea */
+  }
+}
+
+/* Si algún contenedor interno tuviera padding que obliga a crecer, forzamos contención */
+@media (max-width: 1024px){
+  .product-card .product-content,
+  .product-card .product-info{   /* por si existen estos wrappers */
+    min-width: 0;
+  }
+}
+/* ================= FIX HERO #pequenos (tablet + mobile) ================= */
+
+/* iPad / tablets */
+@media (max-width: 1024px){
+  #pequenos .section__hero{
+    /* banner horizontal sin alto fijo */
+    min-height: unset;
+    aspect-ratio: 16/6;
+    padding: 18px 18px 56px;
+    border-radius: 16px;
+
+    /* IMAGEN: encuadre cómodo y sin recorte agresivo */
+    background-size: cover;
+    background-position: 72% 55%;
+  }
+  /* overlay suave (gris oscuro), no azul */
+  #pequenos .section__hero::before{
+    background: linear-gradient(90deg,
+      rgba(0,0,0,.40) 0%,
+      rgba(0,0,0,.16) 46%,
+      rgba(0,0,0,0)   68%);
+  }
+
+  /* textos más chicos y a la izquierda */
+  #pequenos .section__inner{ max-width: 64%; padding: 0; text-align: left; }
+  #pequenos .section__eyebrow{ font-size: .8rem; letter-spacing: .02em; }
+  #pequenos .section__title  { font-size: 1.28rem; line-height: 1.18; margin: .25em 0 .2em; }
+  #pequenos .section__tagline{ font-size: .94rem; line-height: 1.26; }
+
+  /* chips compactos */
+  #pequenos .section__benefits{ display:flex; flex-wrap:wrap; gap:.28rem .48rem; margin-top:.45rem; }
+  #pequenos .section__benefits li{ font-size:.86rem; padding:.3rem .6rem; border-radius:999px; background:rgba(255,255,255,.16); white-space:nowrap; }
+
+  #pequenos .section__cta--overlay{ font-size:.88rem; padding:.48rem .7rem; right:14px; bottom:14px; }
+}
+
+/* Mobile */
+@media (max-width: 600px){
+  #pequenos .section__hero{
+    /* IMAGEN entra COMPLETA y no se deforma */
+    min-height: unset;
+    aspect-ratio: 16/9;
+    padding: 14px 14px 52px;
+    border-radius: 14px;
+
+    /* clave: contain + encuadre a la derecha */
+    background-size: contain !important;
+    background-position: 78% 60% !important;
+    background-color: #0b1630; /* relleno sutil si sobra aire */
+  }
+  /* quita overlay azul fuerte y deja uno corto y suave */
+  #pequenos .section__hero::before{
+    background: linear-gradient(90deg,
+      rgba(0,0,0,.52) 0%,
+      rgba(0,0,0,.20) 48%,
+      rgba(0,0,0,0)   68%);
+  }
+
+  /* textos chicos, alineados a la izquierda y con 2 líneas máx */
+  #pequenos .section__inner{ max-width: 62%; padding: 0; text-align: left; }
+  #pequenos .section__eyebrow{ font-size:.7rem; letter-spacing:.03em; }
+  #pequenos .section__title  { font-size:1.0rem; line-height:1.18; margin:.2em 0 .15em; }
+  #pequenos .section__tagline{ font-size:.86rem; line-height:1.26; }
+
+  #pequenos .section__title,
+  #pequenos .section__tagline{
+    --lines:2;
+    max-height: calc(1em * var(--lines) * 1.22);
+    overflow: hidden;
+    mask-image: linear-gradient(180deg, #000 78%, transparent 100%);
+  }
+
+  /* chips más chicos y que no se corten raro */
+  #pequenos .section__benefits{ display:flex !important; flex-wrap:wrap; gap:.28rem .44rem; margin-top:.4rem; max-width:96%; }
+  #pequenos .section__benefits li{ font-size:.8rem; padding:.28rem .55rem; border-radius:999px; background:rgba(255,255,255,.16); white-space:nowrap; }
+
+  #pequenos .section__cta--overlay{ font-size:.82rem; padding:.42rem .6rem; right:10px; bottom:10px; }
+}
+/* Cambiar fuente del H1 en desktop y celular */
+h1,
+.shop-title {
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+/* (Opcional) si querés forzar en mobile también */
+@media (max-width: 600px){
+  h1,
+  .shop-title {
+    font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  }
+}
+/* ===== Botones en card: sin recortes y con anchos asimétricos ===== */
+.product-card .product-actions{
+  display:flex;
+  gap:6px;
+  margin-top:8px;
+}
+
+.product-card .product-actions .page-btn{
+  min-width:0;          /* puede encoger si hay lugar */
+  height:30px;
+  padding:6px 10px;
+  line-height:1;
+  border-radius:10px;
+  font-weight:600;
+  letter-spacing:0;
+  white-space:nowrap;   /* no corta en varias líneas */
+  overflow:visible;     /* QUITA el ellipsis */
+  text-overflow:clip;   /* por si quedó heredado */
+}
+
+/* Comprar: más ancho por defecto */
+.product-card .product-actions .page-btn.add-btn{
+  flex: 1.25 1 0;       /* crece más que “Ver” */
+  font-size:12px;
+  min-width:92px;       /* asegura que “Comprar” entre completo */
+}
+
+/* Ver: un poco más angosto */
+.product-card .product-actions .page-btn.ghost{
+  flex: .85 1 0;
+  font-size:11px;
+  min-width:64px;
+}
+
+/* En pantallas muy chicas: tipografía mínima y min-width más ajustada */
+@media (max-width: 360px){
+  .product-card .product-actions .page-btn.add-btn{
+    font-size:11px; min-width:86px; height:28px; padding:5px 9px;
+  }
+  .product-card .product-actions .page-btn.ghost{
+    font-size:10.5px; min-width:58px; height:28px; padding:5px 8px;
+  }
+}
+/* Único botón en la card (compacto) */
+.product-card .product-actions{
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.product-card .product-actions .page-btn.buy-link{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 112px;     /* ajustá si querés más chico: 104–120px */
+  height: 32px;         /* compacto */
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+
+
+/* Botón compacto con color y hover */
+.product-card .product-actions{
+  margin-top: 8px;
+  display: flex;
+}
+
+/* ===== Colores del botón (podés cambiarlos acá) ===== */
+:root{
+  --btn-card-bg:       #3fb28a;  /* celeste-verde claro */
+  --btn-card-bg-hover: #1d5f86;  /* oscuro al hover */
+  --btn-card-text:     #fff;     /* texto */
+}
+
+/* ===== Botón en card: compacto + borde sólido ===== */
+.product-card .product-actions{
+  margin-top: 8px;
+  display: flex;
+}
+
+.product-card .product-actions .page-btn.buy-link{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  /* tamaño compacto */
+  min-width: 86px;
+  height: 24px;
+  padding: 3px 7px;
+  font-size: 10.5px;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 7px;
+  white-space: nowrap;
+
+  /* color + borde sólido */
+  background: var(--btn-card-bg);
+  color: var(--btn-card-text);
+  border: 1px solid var(--btn-card-bg);
+
+  /* animaciones */
+  transition:
+    background .25s ease,
+    border-color .25s ease,
+    transform .15s ease,
+    box-shadow .15s ease,
+    color .15s ease;
+}
+
+.product-card .product-actions .page-btn.buy-link:hover{
+  background: var(--btn-card-bg-hover);
+  border-color: var(--btn-card-bg-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+}
+
+.product-card .product-actions .page-btn.buy-link:active{
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Accesibilidad: foco visible */
+.product-card .product-actions .page-btn.buy-link:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--btn-card-bg-hover);
+}
+
+/* Desktop: agrandar SOLO "Ver producto" (buy-link) */
+@media (min-width: 1024px){
+  .product-card .product-actions .page-btn.buy-link{
+    min-width: 128px;
+    height: 30px;
+    padding: 6px 12px;
+    font-size: 12.5px;
+    border-radius: 10px;
+  }
+}
+/* ======================
+   Desktop only (>=1024px)
+   ====================== */
+@media (min-width: 1024px) {
+  /* Base desktop (sin tocar cover por defecto) */
+  #tv-audio .section__hero{
+    position: relative;
+    min-height: 56vh;              /* ajustá si necesitás más/menos alto */
+    border-radius: 16px;
+    overflow: hidden;
+    /* capa de imagen + leve gradiente arriba para legibilidad */
+    background:
+      linear-gradient(to bottom, rgba(0,0,0,.10), rgba(0,0,0,.08)),
+      var(--hero) no-repeat center / cover;
+  }
+
+  /* ---------------------------
+     OPCIÓN A: Que ENTRE COMPLETA
+     (agregá la clase .is-fit al hero)
+     --------------------------- */
+  #tv-audio .section__hero.is-fit{
+    /* mostramos toda la imagen, sin recorte */
+    background:
+      linear-gradient(to bottom, rgba(0,0,0,.10), rgba(0,0,0,.08)),
+      var(--hero) no-repeat left center / contain;
+    background-color: #0f2b3a;   /* relleno lateral superior/inferior */
+  }
+
+  /* -------------------------------
+     OPCIÓN B: Desplazar foco a la IZQ
+     (agregá la clase .is-shift-left al hero)
+     ------------------------------- */
+  #tv-audio .section__hero.is-shift-left{
+    /* mantenemos cover, pero movemos el foco hacia la izquierda */
+    background-position: 20% center;  /* probá 15% o 25% según la imagen */
+  }
+
+  /* Ajustes de texto para que no tape la zona importante */
+  #tv-audio .section__inner{
+    padding: 28px;
+    max-width: 680px;  /* limita el ancho del bloque de texto */
+  }
+  #tv-audio .section__eyebrow{ 
+    backdrop-filter: none; 
+  }
+}
+/* ===== Solo móvil, SIN tocar #tv-audio ===== */
+@media (max-width: 640px) {
+  /* sin overlay/gradiente, solo la foto */
+  #refrigeracion .section__hero,
+  #lavado .section__hero,
+  #clima .section__hero,
+  #cocina .section__hero,
+  #pequenos .section__hero {
+    background: var(--hero, transparent) center/cover no-repeat !important;
+  }
+
+  /* sutil para que el texto se lea (sin tapar) */
+  #refrigeracion .section__eyebrow,
+  #lavado .section__eyebrow,
+  #clima .section__eyebrow,
+  #cocina .section__eyebrow,
+  #pequenos .section__eyebrow,
+  #refrigeracion .section__title,
+  #lavado .section__title,
+  #clima .section__title,
+  #cocina .section__title,
+  #pequenos .section__title,
+  #refrigeracion .section__tagline,
+  #lavado .section__tagline,
+  #clima .section__tagline,
+  #cocina .section__tagline,
+  #pequenos .section__tagline,
+  #refrigeracion .section__benefits li,
+  #lavado .section__benefits li,
+  #clima .section__benefits li,
+  #cocina .section__benefits li,
+  #pequenos .section__benefits li {
+    text-shadow: 0 1px 1px rgba(0,0,0,.35);
+  }
+
+  /* micro-pill (muy leve) para eyebrow y beneficios */
+  #refrigeracion .section__eyebrow,
+  #lavado .section__eyebrow,
+  #clima .section__eyebrow,
+  #cocina .section__eyebrow,
+  #pequenos .section__eyebrow {
+    background: rgba(0,0,0,.18);
+  }
+  #refrigeracion .section__benefits,
+  #lavado .section__benefits,
+  #clima .section__benefits,
+  #cocina .section__benefits,
+  #pequenos .section__benefits {
+    background: rgba(0,0,0,.15);
+    backdrop-filter: blur(.5px);
+  }
+}
+/* === Mostrar carrito junto a la hamburguesa SOLO en mobile/tablet === */
+@media (max-width: 1024px) {
+  /* Asegura layout en el header */
+  .gdar-header__inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+  }
+
+  /* El nav rápido solo mostrará el carrito */
+  .gdar-quick {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-left: 0 !important;   /* pegaló a la hamburguesa */
+  }
+
+  /* Ocultá los atajos, dejá solo el carrito */
+  .gdar-quick__link,
+  .gdar-flag {
+    display: none !important;
+  }
+
+  /* Mostrá el carrito y dale un área táctil cómoda */
+  .gdar-quick__cart {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 6px 10px !important;
+    font-size: 18px !important;    /* tamaño legible */
+    line-height: 1 !important;
+    text-decoration: none !important;
+  }
+
+  /* Si tu badge del carrito es muy chico en mobile, agrandalo un toque */
+  .gdar-cart-count {
+    min-width: 18px !important;
+    height: 18px !important;
+    padding: 0 4px !important;
+    border-radius: 999px !important;
+    font-size: 12px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+/* Badge rojo, sin fondo y más cuadrado */
+.product-card .product-title .badge-off{
+  --sale-red: #d12c2c;
+
+  /* colores unificados */
+  color: var(--sale-red) !important;
+  border: 2px solid var(--sale-red) !important;
+  background: transparent !important;
+
+  /* forma más cuadrada */
+  border-radius: 6px !important;  /* antes era 999px */
+  box-shadow: none;               /* sin glow */
+
+  /* opcional: un poco más compacto */
+  padding: .22rem .5rem;
+  font-weight: 800;
+}
+
+/* móvil */
+@media (max-width:640px){
+  .product-card .product-title .badge-off{
+    border-width: 2px !important;
+    padding: .18rem .45rem;
+    border-radius: 5px !important;
+  }
+}
+/* ====== Celular: 2–3 tarjetas por vista, sin tocar desktop ====== */
+/* Reset de anchos demasiado grandes que pusimos antes */
+@media (max-width: 640px){
+  .carousel .carousel__track,
+  .showcase-carousel .sc-track{
+    display: flex;            /* asegura fila horizontal */
+    gap: 10px;                /* espacio entre cards */
+    padding: 0 10px;          /* sangría lateral */
+  }
+
+  /* Base: 2 por vista (≈ 48% cada una) */
+  .carousel .carousel__track .product-card,
+  .showcase-carousel .sc-track .product-card{
+    flex: 0 0 calc(50% - 12px) !important;
+    max-width: calc(50% - 12px) !important;
+    min-width: 0 !important;   /* evita widths heredados */
+  }
+
+  /* Teléfonos un poquito más grandes (≥ 480px): 3 por vista */
+  @media (min-width: 480px){
+    .carousel .carousel__track .product-card,
+    .showcase-carousel .sc-track .product-card{
+      flex: 0 0 calc(33.333% - 12px) !important;
+      max-width: calc(33.333% - 12px) !important;
+    }
+  }
+
+  /* Teléfonos muy chicos (≤ 360px): 2 justas y cómodas */
+  @media (max-width: 360px){
+    .carousel .carousel__track .product-card,
+    .showcase-carousel .sc-track .product-card{
+      flex: 0 0 calc(50% - 10px) !important;
+      max-width: calc(50% - 10px) !important;
+    }
+  }
+}
+
+/* ====== iPad chico (tablets ≤ 1024px): 2 por vista cómodas ====== */
+@media (min-width: 641px) and (max-width: 1024px){
+  .carousel .carousel__track,
+  .showcase-carousel .sc-track{
+    display: flex;
+    gap: 12px;
+    padding: 0 12px;
+  }
+  .carousel .carousel__track .product-card,
+  .showcase-carousel .sc-track .product-card{
+    flex: 0 0 calc(50% - 14px) !important;   /* ~2 por vista */
+    max-width: calc(50% - 14px) !important;
+    min-width: 0 !important;
+  }
+}
+
+/* ====== Precio viejo más chico + tachado rojo (en todas las vistas) ====== */
+.product-card .product-price{
+  display: flex; align-items: baseline; gap: .5rem; flex-wrap: wrap;
+}
+
+.product-card .product-price .price-old{
+  position: relative;
+  font-size: .9rem;           /* más chico que el actual */
+  color: #a6a6a6;
+  text-decoration: none;      /* tachado custom */
+}
+.product-card .product-price .price-old::after{
+  content:""; position:absolute; left:0; top:50%;
+  width:100%; height:2px; transform:translateY(-50%);
+  background:#d12c2c;         /* rojo (mismo del badge) */
+}
+
+.product-card .product-price span:not(.price-old){
+  font-size: 1.05rem;
+  font-weight: 800;
+}
+
+/* En móvil bajamos un pelo más el viejo y subimos el actual */
+@media (max-width: 640px){
+  .product-card .product-price .price-old{ font-size: .8rem; }
+  .product-card .product-price span:not(.price-old){ font-size: 1.08rem; }
+}
+
+/* ====== Badge rojo (mantiene tu estilo), NO toca desktop ====== */
+.product-card .product-title{
+  display:flex; align-items:baseline; gap:.4rem;
+  margin-top:.35rem; margin-bottom:.25rem;
+}
+.product-card .product-title .badge-off{
+  --sale-red:#d12c2c;
+  margin-left:auto;
+  color:var(--sale-red) !important;
+  border:2px solid var(--sale-red) !important;
+  background:transparent !important;
+  border-radius:6px !important;
+  padding:.22rem .5rem;
+  font-weight:800;
+  white-space:nowrap;
+}
+@media (max-width:640px){
+  .product-card .product-title .badge-off{
+    border-width:1.75px !important;
+    border-radius:5px !important;
+    font-size:.78rem;
+    padding:.16rem .42rem;
+  }
+}
+/* ===== Móvil e iPad: título completo + badge visible ===== */
+@media (max-width:1024px){
+  /* Evita recortes de contenedores */
+  .product-card,
+  .product-card * { overflow: visible; }
+
+  /* Título: más chico, ocupa todo el ancho y deja lugar al badge */
+  .product-card .product-title{
+    position: relative;        /* referencia para el badge */
+    display: block;
+    font-size: .88rem;         /* móvil; en iPad subimos debajo */
+    line-height: 1.22;
+    margin: 6px 0 2px;
+    padding-right: 86px;       /* espacio reservado para el badge */
+    white-space: normal;
+    word-break: normal;
+    overflow-wrap: anywhere;
+  }
+
+  /* Badge: absoluto dentro del título (no empuja texto) */
+  .product-card .product-title .badge-off{
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    z-index: 5;                /* por encima de flechas/sombras */
+    font-size: .72rem;         /* más chico en móvil */
+    padding: .12rem .36rem !important;
+    border-width: 1.8px !important;
+    border-radius: 6px !important;
+    line-height: 1;
+    margin: 0 !important;
+    white-space: nowrap;
+  }
+}
+
+/* Ajuste fino para iPad (un poco más grande que móvil) */
+@media (min-width:641px) and (max-width:1024px){
+  .product-card .product-title{ font-size: .96rem; padding-right: 92px; }
+  .product-card .product-title .badge-off{ font-size: .78rem; padding:.14rem .40rem !important; }
+}
+/* ===== iPad / Tablet: 3 tarjetas por vista + imagen completa ===== */
+/* iPad portrait/landscape y iPad Pro: ajusta hasta ~1194px */
+@media (min-width: 641px) and (max-width: 1194px){
+
+  /* Carruseles: 3 por vista con buen aire lateral */
+  .carousel .carousel__track,
+  .showcase-carousel .sc-track{
+    display: flex;
+    align-items: stretch;
+    gap: 14px;
+    padding: 0 14px;
+  }
+
+  /* Tarjeta: 33.333% por vista (3 columnas) */
+  .carousel .carousel__track .product-card,
+  .showcase-carousel .sc-track .product-card{
+    flex: 0 0 calc(33.333% - 16px) !important;
+    max-width: calc(33.333% - 16px) !important;
+    min-width: 260px;          /* evita que se achiquen demasiado */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  /* Imagen visible completa sin crop */
+  .product-card figure{
+    margin: 0 0 .5rem 0;
+    aspect-ratio: 1/1;         /* cuadrada para que “entre todo” */
+    width: 100%;
+  }
+  .product-card figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;       /* muestra toda la foto */
+  }
+
+  /* Título con 2 líneas mínimas y badge abajo a la derecha */
+  .product-card .product-title{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: .25rem .5rem;
+    line-height: 1.25;
+    overflow: visible;
+    -webkit-line-clamp: unset;
+    min-height: calc(1.25em * 2);
+    margin-bottom: .35rem;
+  }
+  .product-card .product-title::after{
+    content: "";
+    flex-basis: 100%;  /* fuerza la 2ª fila */
+    order: 1;
+  }
+  .product-card .product-title .badge-off{
+    position: static !important;
+    order: 2;
+    margin-left: auto;          /* derecha */
+    align-self: flex-start;
+    font-size: .82rem;
+    padding: .18rem .45rem;
+    border-width: 2px !important;
+    border-radius: 6px !important;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  /* Precios y botón con aire */
+  .product-card .product-price{
+    display: flex; align-items: baseline; gap: .55rem; flex-wrap: wrap;
+    margin-top: .1rem;
+  }
+  .product-card .product-price .price-old{ font-size: .9rem; }
+  .product-card .product-price .price-old::after{ height: 2px; background:#d12c2c; }
+  .product-card .product-price span:not(.price-old){ font-size: 1.08rem; font-weight: 800; }
+
+  .product-card .product-actions{ margin-top: auto; }
+  .product-card .product-actions .page-btn,
+  .product-card .product-actions .buy-link{
+    min-height: 42px; display: inline-flex; align-items: center; justify-content: center;
+  }
+
+  /* Flechas de carrusel un poco más grandes al tacto */
+  .carousel .carousel__btn{ width: 40px; height: 40px; }
+}
+/* iPad / tablet: imágenes un poco más chicas en las cards */
+@media (min-width: 641px) and (max-width: 1194px){
+  .product-card figure{
+    /* antes 1/1; bajamos la altura con un ratio más ancho */
+    aspect-ratio: 4 / 3;
+    /* límite de altura para que no se estiren si la card se agranda */
+    max-height: clamp(160px, 22vw, 220px);
+    margin: 0 0 .5rem 0;
+  }
+  .product-card figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;   /* se ve completa, sin cortes */
+  }
+}
+/* ===== iPad / Tablet (641–1194px) ===== */
+@media (min-width: 641px) and (max-width: 1194px){
+
+  /* 1) Tarjetas: imágenes más chicas (sin recorte) */
+  .product-card figure{
+    /* más ancho que alto => menos altura visual */
+    aspect-ratio: 5 / 4;                 /* antes 4/3 o 1/1 */
+    max-height: clamp(130px, 16vw, 180px);
+    margin: 0 0 .45rem 0;
+  }
+  .product-card figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;                  /* que se vea completa */
+  }
+
+  /* 2) TV & Audio: achicar bastante el hero SOLO en esta sección */
+  #tv-audio .section__hero{
+    height: 230px !important;             /* reducir altura del banner */
+    min-height: 230px !important;
+    background-position: center right 22%;
+    background-size: cover;
+    border-radius: 18px;
+  }
+  /* ajustar los textos del hero para que no “griten” en iPad */
+  #tv-audio .section__hero .section__inner{
+    max-width: 48%;
+    padding: 14px 16px;
+  }
+  #tv-audio .section__hero .section__eyebrow{
+    font-size: .82rem;
+    letter-spacing: .02em;
+    opacity: .9;
+  }
+  #tv-audio .section__hero .section__title{
+    font-size: 1.25rem;                   /* bajar bastante */
+    line-height: 1.25;
+    margin: .25rem 0 .35rem;
+  }
+  #tv-audio .section__hero .section__tagline{
+    font-size: .9rem;
+    line-height: 1.25;
+    opacity: .9;
+    margin-bottom: .4rem;
+  }
+  #tv-audio .section__hero .section__cta--overlay{
+    transform: scale(.92);                /* botón un toque más chico */
+    transform-origin: left center;
+  }
+}
+/* ===== iPad / Tablet (641–1194px) ===== */
+@media (min-width: 641px) and (max-width: 1194px){
+
+  /* 1) Tarjetas: imágenes aún más chicas (siempre completas) */
+  .product-card figure{
+    /* más “panorámica” => menos altura visual */
+    aspect-ratio: 16 / 10;
+    max-height: clamp(110px, 13vw, 150px);
+    margin: 0 0 .4rem 0;
+  }
+  .product-card figure img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;   /* se ve toda la imagen, sin recortar */
+  }
+
+  /* 2) TV & Audio: hero a TODO el ancho del iPad (full bleed) y más bajo */
+  #tv-audio .section__hero{
+    /* full-bleed */
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+
+    /* altura reducida */
+    height: 210px !important;
+    min-height: 210px !important;
+
+    /* visual */
+    background-size: cover;
+    background-position: center;
+    border-radius: 0;              /* que llegue a los bordes */
+  }
+
+  /* textos del hero más compactos para esta altura */
+  #tv-audio .section__hero .section__inner{
+    max-width: 50%;
+    padding: 14px 16px;
+  }
+  #tv-audio .section__hero .section__eyebrow{ font-size: .82rem; }
+  #tv-audio .section__hero .section__title{
+    font-size: 1.2rem;
+    line-height: 1.2;
+    margin:.2rem 0 .35rem;
+  }
+  #tv-audio .section__hero .section__tagline{
+    font-size: .9rem;
+    line-height: 1.25;
+    opacity:.9;
+  }
+  #tv-audio .section__hero .section__cta--overlay{
+    transform: scale(.9);
+    transform-origin: left center;
+  }
+}
+/* =========================
+   iPad / Tablets (768–1194)
+   ========================= */
+@media (min-width:768px) and (max-width:1194px){
+
+  /* --- HERO: TV & Audio más bajo y a todo el ancho --- */
+  #tv-audio .section__hero{
+    /* banner más chatito y estable */
+    min-height: unset;
+    aspect-ratio: 16 / 6;
+    padding: 18px 18px 56px;
+    border-radius: 16px;
+
+    /* que la imagen cubra bien sin “hacer zoom raro” */
+    background:
+      linear-gradient(90deg, rgba(0,0,0,.40) 0%, rgba(0,0,0,.10) 46%, rgba(0,0,0,0) 70%),
+      var(--hero) center/cover no-repeat;
+  }
+  #tv-audio .section__inner{ max-width: 60%; }
+  #tv-audio .section__cta--overlay{ right:14px; bottom:14px; padding:.5rem .75rem; }
+
+  /* --- Carruseles: 3 tarjetas por vista, con aire --- */
+  .carousel .carousel__track,
+  .showcase-carousel .sc-track{
+    display:flex !important;
+    align-items:stretch;
+    gap:14px;
+    padding:0 14px;
+  }
+  .carousel .carousel__track > *,
+  .showcase-carousel .sc-track > *{
+    flex:0 0 calc(33.333% - 16px) !important;  /* 3 por vista */
+    max-width:calc(33.333% - 16px) !important;
+    min-width:260px;                            /* evita que sean demasiado angostas */
+  }
+
+  /* --- Imágenes de producto más chicas y completas --- */
+  .product-card figure{
+    aspect-ratio: 4 / 3;             /* antes 1/1 → más bajitas */
+    max-height: clamp(150px, 20vw, 200px);
+    margin:0 0 .5rem 0;
+    background: transparent !important;
+  }
+  .product-card figure img{
+    width:100%; height:100%;
+    object-fit:contain;              /* entra entera sin recortes */
+    display:block;
+  }
+
+  /* Tipografías compactas en la card */
+  .product-card{ padding:10px 10px 12px; border-radius:12px; }
+  .product-card .product-title{ font-size:.95rem; line-height:1.2; }
+  .product-card .product-meta{   font-size:.82rem; }
+  .product-card .product-price{  font-size:.95rem; }
+  .product-card .page-btn{       font-size:.86rem; padding:.5rem .7rem; border-radius:12px; }
+}
+/* ================================================
+   iPad ONLY — ajustes de cards y hero TV & Audio
+   Cobertura:
+   - iPad / iPad mini / Air (768–1024)
+   - iPad Pro 11"/12.9" en vertical (820–1024)
+   - iPad Pro 11" en horizontal (~1194 → 1180 aprox.)
+   ================================================= */
+
+/* iPad clásico (portrait/landscape) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  /* GRID más cómodo: 2 por fila en iPad */
+  .products-grid{
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+    padding: 0 18px !important;
+  }
+
+  /* Imagen de producto un poco más baja para que quepa todo */
+  .product-card figure{
+    height: 170px !important;   /* antes 200px en tablet */
+    background: transparent !important;
+  }
+  .product-card figure img{
+    max-width: 92% !important;
+    max-height: 100% !important;
+    object-fit: contain !important;
+  }
+
+  /* Tipografía y botones un toque más compactos */
+  .product-card .product-title,
+  .product-card .title{
+    font-size: .88rem !important;
+    line-height: 1.2 !important;
+    --lines: 2;
+    max-height: calc(1em * var(--lines) * 1.2);
+  }
+  .product-card .product-price{ font-size: .92rem !important; }
+  .product-card .page-btn{ font-size: .82rem !important; padding: .45rem .6rem !important; }
+
+  /* ===== Hero de TV & Audio (solo iPad) ===== */
+  #tv-audio .section__hero{
+    /* Que la imagen entre completa y quede a la derecha */
+    background-image: var(--hero) !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    background-position: 82% 50% !important;
+    background-color: #0b1220 !important; /* relleno elegante si sobra aire */
+
+    /* Banner horizontal, con espacio para la imagen a la derecha */
+    aspect-ratio: 16 / 6 !important;
+    min-height: unset !important;
+    padding: 18px 200px 56px 18px !important;  /* más colchón derecho */
+    border-radius: 16px !important;
+  }
+
+  /* Texto acotado para que NO invada la imagen */
+  #tv-audio .section__inner{
+    max-width: 58% !important;
+    padding-right: 8px !important;
+    text-align: left !important;
+  }
+
+  /* CTA en esquina, sin romper layout */
+  #tv-audio .section__cta--overlay{
+    right: 14px !important;
+    bottom: 14px !important;
+    font-size: .9rem !important;
+    padding: .5rem .75rem !important;
+    max-width: calc(100% - 28px) !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+}
+
+/* iPad Pro 11" landscape (~1194px) y variaciones hasta 1180px */
+@media (min-width: 1025px) and (max-width: 1180px) {
+
+  .products-grid{
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 14px !important;
+    padding: 0 18px !important;
+  }
+
+  .product-card figure{ height: 180px !important; }
+  .product-card figure img{
+    max-width: 92% !important;
+    object-fit: contain !important;
+  }
+
+  #tv-audio .section__hero{
+    background-size: contain !important;
+    background-position: 85% 50% !important;
+    aspect-ratio: 16 / 6 !important;
+    padding: 22px 220px 60px 22px !important;
+  }
+  #tv-audio .section__inner{ max-width: 56% !important; }
+}
+/* =================== Celular (≤767px) =================== */
+@media (max-width: 767px){
+
+  /* Título: ancho completo, sin recortes, sin clamp */
+  .product-card .product-title{
+    display: block !important;
+    width: 100% !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    -webkit-line-clamp: unset !important;
+    -webkit-box-orient: initial !important;
+    max-height: none !important;
+    margin-bottom: 6px !important;
+    padding-right: 0 !important;              /* que use todo el ancho */
+    font-size: 0.95rem !important;            /* un toque más chico para que entre mejor */
+    line-height: 1.25 !important;
+  }
+
+  /* El badge VA DEBAJO del título (lo mueve el JS) y lo achicamos */
+  .product-card .product-badge{
+    display: flex !important;
+    justify-content: flex-end !important;     /* si lo querés a la izquierda, cambiá a flex-start */
+    align-items: center !important;
+    gap: 6px !important;
+    margin-top: 2px !important;
+    padding-right: 4px !important;
+  }
+  .product-card .badge-off{
+    font-size: 0.72rem !important;
+    padding: 3px 6px !important;
+    border-width: 1.5px !important;
+    line-height: 1 !important;
+  }
+
+  /* Compactar un poco resto de la tarjeta para que todo entre cómodo */
+  .product-card .product-price{ font-size: 0.95rem !important; }
+  .product-card .page-btn{ font-size: 0.85rem !important; padding: .45rem .6rem !important; }
+}
+
+/* =================== iPad (768–1180px) =================== */
+@media (min-width: 768px) and (max-width: 1180px){
+
+  /* Título: ancho completo, sin recortes, sin clamp */
+  .product-card .product-title{
+    display: block !important;
+    width: 100% !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    -webkit-line-clamp: unset !important;
+    -webkit-box-orient: initial !important;
+    max-height: none !important;
+    margin-bottom: 6px !important;
+    padding-right: 0 !important;
+    font-size: 1rem !important;               /* un poquito más que en móvil */
+    line-height: 1.25 !important;
+  }
+
+  /* Badge debajo del título y más chico que desktop */
+  .product-card .product-badge{
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 6px !important;
+    margin-top: 2px !important;
+    padding-right: 6px !important;
+  }
+  .product-card .badge-off{
+    font-size: 0.78rem !important;
+    padding: 4px 8px !important;
+    border-width: 1.5px !important;
+    line-height: 1 !important;
+  }
+
+  .product-card .product-price{ font-size: 1rem !important; }
+  .product-card .page-btn{ font-size: 0.9rem !important; padding: .5rem .7rem !important; }
+}
+/* Slot del badge dentro del figure (solo usaremos en mobile/ipad) */
+.product-card figure { position: relative; }
+.product-card figure .badge-slot { position: absolute; inset: 0 auto auto 0; }
+
+/* =================== Celular (≤767px) =================== */
+@media (max-width: 767px){
+
+  /* Título más compacto y a ancho completo */
+  .product-card .product-title{
+    font-size: 0.86rem !important;
+    line-height: 1.22 !important;
+    margin-bottom: 6px !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    padding-right: 0 !important;
+  }
+
+  /* Badge: arriba-derecha del figure, más chico */
+  .product-card figure .badge-slot{
+    top: 8px; right: 8px; left: auto; bottom: auto;
+  }
+  .product-card .badge-off{
+    position: relative;        /* dentro del slot */
+    font-size: 0.70rem !important;
+    padding: 3px 6px !important;
+    border-width: 1.5px !important;
+    border-radius: 6px !important;
+    line-height: 1 !important;
+    background: #fff;          /* mejora contraste sobre la imagen */
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  }
+
+  /* Opcional: un toque menos de alto en la imagen si lo necesitás */
+  /* .product-card figure{ height: 160px !important; } */
+}
+
+/* =================== iPad (768–1180px) =================== */
+@media (min-width: 768px) and (max-width: 1180px){
+
+  .product-card .product-title{
+    font-size: 0.94rem !important;
+    line-height: 1.22 !important;
+    margin-bottom: 6px !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    padding-right: 0 !important;
+  }
+
+  .product-card figure .badge-slot{
+    top: 10px; right: 10px; left: auto; bottom: auto;
+  }
+  .product-card .badge-off{
+    position: relative;
+    font-size: 0.76rem !important;
+    padding: 4px 8px !important;
+    border-width: 1.5px !important;
+    border-radius: 6px !important;
+    line-height: 1 !important;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  }
+}
+
+/* ===== Rojo en móvil + iPad (sin tocar desktop) ===== */
+@media (max-width: 1194px){
+  figure .badge-slot .badge-off,
+  .product-card .product-badge .badge-off{
+    background: var(--sale-red, #d12c2c) !important; /* rojo */
+    color: #fff !important;                          /* texto blanco */
+    border-color: var(--sale-red, #d12c2c) !important;
+    box-shadow: 0 2px 10px rgba(209,44,44,.25);      /* leve realce */
+  }
+}
+/* ==== UNIFORMAR ALTURAS SOLO Móvil + iPad ==== */
+@media (max-width: 1194px){
+
+  .product-card{
+    display:flex !important;
+    flex-direction:column !important;
+    height:auto; /* el JS fija la altura global si hace falta */
+  }
+
+  /* Imagen misma altura siempre */
+  .product-card figure{
+    height:170px !important;
+    display:flex !important; align-items:center !important; justify-content:center !important;
+    position:relative; margin-bottom:8px !important;
+  }
+  @media (max-width: 767px){ .product-card figure{ height:160px !important; } }
+
+  /* Badge absoluto para que NO cambie el alto de la card */
+  .product-card .badge-off{
+    position:absolute !important; top:10px; right:10px;
+    background:var(--sale-red,#d12c2c) !important; color:#fff !important; border:1.5px solid var(--sale-red,#d12c2c);
+    border-radius:8px; line-height:1; padding:4px 8px; font-size:.78rem;
+  }
+  @media (max-width: 767px){ .product-card .badge-off{ top:8px; right:8px; font-size:.72rem; padding:3px 6px; } }
+
+  /* Título: 2 líneas exactas = misma altura */
+  .product-card .product-title{
+    margin:6px 0 2px !important;
+    font-size:.95rem !important; line-height:1.25 !important;
+    display:-webkit-box !important; -webkit-box-orient:vertical !important; -webkit-line-clamp:2 !important;
+    overflow:hidden !important; white-space:normal !important;
+    min-height:calc(1em * 1.25 * 2);
+  }
+
+  /* Marca: reservar siempre la misma altura */
+  .product-card .product-brand{
+    min-height:20px; display:flex; align-items:center; opacity:.8;
+  }
+
+  /* ====== BLOQUE DE PRECIOS UNIFORME ====== */
+  /* Creamos un contenedor lógico para precio viejo+nuevo */
+  .product-card .price-wrap{
+    display:flex; align-items:baseline; gap:8px; white-space:nowrap;
+    min-height:32px;              /* reserva espacio aunque NO haya tachado */
+    margin-top:6px;
+  }
+  .product-card .price-wrap del{ font-size:.9rem; opacity:.7; }
+  .product-card .price-wrap .product-price{
+    font-weight:700; line-height:1.1;
+    font-size:clamp(.92rem, 2.6vw, 1.05rem); /* se adapta si es muy largo */
+  }
+}
+/* Ocultar "Ver más" solo en banners dentro de la vista de categoría/filtrado */
+.is-in-category .section__cta,
+.is-in-category .section__cta--overlay{
+  display: none !important;
+}
+/* === Categoría: badge rojo arriba-derecha de la imagen (desktop + móvil) === */
+:root{ --sale-red: #d12c2c; }
+
+.is-in-category .product-card figure{ position: relative; }
+
+.is-in-category .product-card figure .badge-slot{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+}
+
+/* Estilo rojo unificado (cubre distintas clases que usa tu UI) */
+.is-in-category .product-card .badge-off,
+.is-in-category .product-card .product-price .badge,
+.is-in-category .product-card .discount,
+.is-in-category .product-card .discount-pill,
+.is-in-category .product-card .price-badge{
+  background: var(--sale-red) !important;
+  color: #fff !important;
+  border: 1.5px solid var(--sale-red) !important;
+  border-radius: 8px !important;
+  line-height: 1 !important;
+  padding: 4px 10px !important;
+  box-shadow: 0 2px 10px rgba(209,44,44,.2);
+  font-weight: 700;
+}
+
+/* Móvil: un poquito más chico y más cerca del borde */
+@media (max-width: 767px){
+  .is-in-category .product-card figure .badge-slot{ top: 8px; right: 8px; }
+  .is-in-category .product-card .badge-off,
+  .is-in-category .product-card .product-price .badge,
+  .is-in-category .product-card .discount,
+  .is-in-category .product-card .discount-pill,
+  .is-in-category .product-card .price-badge{
+    font-size: .72rem !important;
+    padding: 3px 6px !important;
+  }
+}
+/* Ajustar tamaño de título en cards del carrusel y catálogo */
+.product-card .product-title {
+  font-size: 0.75rem !important;  /* ≈12px */
+  line-height: 1.25 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1px;
+  margin-top: 6px;
+  margin-bottom: 4px;
+}
+/* ====== Precio compacto SOLO en celular ====== */
+@media (max-width: 767px){
+  /* Mantener en una línea y alinear con el tachado */
+  .product-card .product-price{
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    white-space: nowrap;              /* no se corta */
+  }
+
+  /* Precio actual (número + "U$S"): más chico y adaptable */
+  .product-card .product-price span,
+  .product-card .product-price strong{
+    font-size: clamp(0.90rem, 3.6vw, 1.05rem) !important;
+    line-height: 1.1;
+    font-weight: 700;
+  }
+
+  /* Precio tachado un poco más chico también */
+  .product-card .product-price del,
+  .product-card .product-price .old-price{
+    font-size: 0.88rem !important;
+    opacity: .7;
+  }
+}
+/* ===== Ajuste fino: botón "Ver más" (solo sección TV & Audio, solo móvil) ===== */
+@media (max-width: 767px){
+  #tv-audio .section__cta--overlay {
+    right: 60px !important;       /* mueve el botón un poco hacia la izquierda */
+    transform: translateX(0) !important;
+  }
+}
+.no-results{
+  text-align:center;
+  padding:3rem 1.25rem;
+  background:#fafafa;
+  border-radius:12px;
+  box-shadow:0 2px 10px rgba(0,0,0,.06);
+  max-width:680px;
+  margin:3rem auto;
+}
+.no-results h2{ font-size:1.25rem; margin-bottom:.5rem; color:#222; }
+.no-results ul{ text-align:left; display:inline-block; margin:1rem auto 0; padding-left:1.25rem; color:#555; }
+.cart-price { display:flex; align-items:center; gap:.5rem; }
+.cart-price .old-price { text-decoration: line-through; opacity:.75; }
+.cart-price .badge { display:inline-block; padding:.1rem .4rem; border-radius:.5rem; font-weight:700; font-size:.85em; background:#e53935; color:#fff; }
+/* ===== FIX TV & AUDIO SOLO DESKTOP ===== */
+@media (min-width: 1024px) {
+  #tv-audio .section__hero {
+    /* más baja */
+    min-height: 360px;          /* podés bajar a 320px si querés más chato */
+    border-radius: 16px;
+    overflow: hidden;
+
+    /* imagen a la derecha y que no se corte */
+    background:
+      linear-gradient(90deg, rgba(5,10,20,.75) 0%, rgba(5,10,20,0) 55%),
+      var(--hero) no-repeat right center / contain;
+    background-color: #0b1227;  /* relleno oscuro del lado izq */
+    padding: 32px 36px;
+    display: grid;
+    align-items: center;
+  }
+
+  /* texto más angosto para que no pise la tele */
+  #tv-audio .section__inner {
+    max-width: 520px;
+  }
+}
+
+/* =======================================================
+   HERO NUEVO - TV & AUDIO (imagen completa con degradado)
+   ======================================================= */
+.hero-reset-tv {
+  position: relative;
+  display: grid;
+  align-items: center;
+  min-height: 420px;
+  border-radius: 18px;
+  overflow: hidden;
+
+  /* Fondo limpio */
+  background-image: var(--hero);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #0a0f1c; /* respaldo */
+}
+
+/* Círculo degradado oscuro a la izquierda */
+.hero-reset-tv::before {
+  content: "";
+  position: absolute;
+  left: -25%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70%;
+  height: 140%;
+  background: radial-gradient(circle at 30% center,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.35) 40%,
+    rgba(0, 0, 0, 0.15) 70%,
+    transparent 100%);
+  z-index: 1;
+}
+
+/* Texto sobre la imagen */
+.hero-reset-tv .section__inner {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 48px;
+  max-width: 600px;
+}
+
+.hero-reset-tv .section__eyebrow {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.hero-reset-tv .section__title {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 10px 0;
+}
+
+.hero-reset-tv .section__tagline {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* ✅ NO se modifica el botón original */
+.hero-reset-tv .section__cta--overlay {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+}
+
+/* Responsive */
+@media (max-width: 720px) {
+  .hero-reset-tv {
+    min-height: 320px;
+    background-size: contain;
+    background-position: center;
+  }
+  .hero-reset-tv .section__inner {
+    padding: 28px;
+    max-width: 80%;
+  }
+}
+/* ===== Ajuste móvil: TV & Audio ===== */
+@media (max-width: 720px) {
+  #tv-audio .hero-reset-tv .section__title {
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+    line-height: 1.15;
+    word-wrap: break-word;
+  }
+
+  /* opcional: achica subtítulo si también se corta */
+  #tv-audio .hero-reset-tv .section__tagline {
+    font-size: 0.9rem;
+  }
+}
+/* --- FIX SOLO PARA EL BOTÓN IZQUIERDO DEL CARRUSEL --- */
+
+.carousel__btn--prev {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  left: 5px !important;    /* Ajustalo si querés más pegado */
+  z-index: 10 !important;
+}
+
+/* El botón derecho también, por si se mueve */
+.carousel__btn--next {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  right: 5px !important;
+  z-index: 10 !important;
+}
+.gdar-quick__cart {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gdar-cart-icon {
+  width: 22px;
+  height: 22px;
+  fill: #0f172a;
+}
+
+body.dark .gdar-cart-icon {
+  fill: #ffffff;
+}

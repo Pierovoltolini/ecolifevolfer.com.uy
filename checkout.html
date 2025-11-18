@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checkout Seguro | EcoLife by Volfer – Envíos en Uruguay</title>
+<meta name="description" content="Finalizá tu compra en EcoLife by Volfer. Checkout seguro, pagos con Handy, envíos rápidos a Maldonado, Punta del Este y todo Uruguay.">
+<meta name="keywords" content="
+checkout seguro Uruguay,
+comprar electrodomésticos Uruguay,
+pago seguro Handy,
+envíos Maldonado,
+envíos Punta del Este,
+electrodomésticos EcoLife,
+compras online Uruguay
+">
+
+  <link rel="icon" href="img/logoecolife.png" type="image/png" />
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos globales -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- Estilos específicos del checkout -->
+  <link rel="stylesheet" href="checkout.css" />
+</head>
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    // Inicializa EmailJS con tu clave pública
+    emailjs.init("ktIyEXjcCfhYjKZzI");
+  })();
+</script>
+
+
+<body>
+ <div class="top-banner">
+  <div class="top-banner__track">
+    <span>Envío gratis a partir de U$S 150 a todo el país </span>
+    <span>Envío gratis a partir de U$S 150 a todo el país </span>
+    <span>Envío gratis a partir de U$S 150 a todo el país </span>
+    <span>Envío gratis a partir de U$S 150 a todo el país </span>
+  </div>
+</div>
+
+
+
+  <!-- Header -->
+  <header class="gdar-header" role="banner">
+    <div class="gdar-header__inner wrap">
+      <a class="gdar-brand" href="index.html" aria-label="EcoLife inicio">
+        <img class="gdar-brand__img" src="img/logoeco.png" alt="EcoLife by Volfer" width="130" height="36">
+      </a>
+      <button class="gdar-burger" id="gdar-burger" aria-label="Abrir menú" aria-controls="gdar-drawer" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="gdar-quick" aria-label="Accesos rápidos">
+        <a href="tienda.html" class="gdar-quick__link">Tienda</a>
+        
+        <a class="gdar-menu__link" href="contact.html">Contacto</a>
+
+        <a href="checkout.html" class="gdar-quick__cart" aria-label="Carrito">
+  <svg class="gdar-cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM6.00436 7.00265V13.0027H17.5163L19.3163 7.00265H6.00436ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"></path>
+  </svg>
+
+  <span class="gdar-cart-count" aria-hidden="true">0</span>
+</a>
+
+      </nav>
+    </div>
+
+    <div class="gdar-overlay" id="gdar-overlay" hidden></div>
+    <aside class="gdar-drawer" id="gdar-drawer" aria-hidden="true" tabindex="-1">
+      <div class="gdar-drawer__header">
+        <span class="gdar-drawer__title">Menú</span>
+        <button class="gdar-drawer__close" id="gdar-close" aria-label="Cerrar menú">✕</button>
+      </div>
+      <nav class="gdar-menu" aria-label="Menú principal">
+        <a class="gdar-menu__link" href="index.html">Inicio</a>
+        <a class="gdar-menu__link" href="tienda.html">Tienda</a>
+       
+       
+        <a class="gdar-menu__link" href="checkout.html" aria-current="page">Checkout</a>
+      </nav>
+    </aside>
+  </header>
+
+  <main class="wrap checkout-page" aria-label="Proceso de compra">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="index.html">Inicio</a> / <a href="tienda.html">Tienda</a> / <span>Checkout</span>
+    </nav>
+
+    <div class="checkout-shell">
+      <!-- IZQUIERDA -->
+      <section class="checkout-left">
+        <div class="checkout-steps" role="tablist" aria-label="Pasos del checkout">
+          <button class="step is-active" data-step="1" role="tab" aria-selected="true">
+            <span class="step-number">1</span>
+            <span class="step-label">Datos de facturación</span>
+          </button>
+          <button class="step" data-step="2" role="tab" aria-selected="false">
+            <span class="step-number">2</span>
+            <span class="step-label">Datos de envío</span>
+          </button>
+          <button class="step" data-step="3" role="tab" aria-selected="false">
+            <span class="step-number">3</span>
+            <span class="step-label">Forma de pago</span>
+          </button>
+        </div>
+
+        <!-- STEP 1 -->
+        <form class="checkout-panel is-visible" id="step-1" data-step="1">
+          <h1 class="checkout-title">Datos de facturación</h1>
+          <p class="checkout-sub">Completá tus datos para la factura y contacto.</p>
+
+          <div class="field-group">
+            <label for="fact-nombre">Nombre y apellido *</label>
+            <input id="fact-nombre" name="fact-nombre" type="text" required>
+          </div>
+
+          <div class="field-group two">
+            <div>
+              <label for="fact-email">Email *</label>
+              <input id="fact-email" name="fact-email" type="email" required>
+            </div>
+            <div>
+              <label for="fact-tel">Teléfono *</label>
+              <input id="fact-tel" name="fact-tel" type="tel" required>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="fact-doc">Documento / RUT</label>
+            <input id="fact-doc" name="fact-doc" type="text">
+          </div>
+
+          <div class="panel-actions">
+            <button type="button" class="btn-primary" data-next="2">Continuar a envío</button>
+          </div>
+        </form>
+
+        <!-- STEP 2 -->
+        <form class="checkout-panel" id="step-2" data-step="2">
+          <h2 class="checkout-title">Datos de envío</h2>
+          <p class="checkout-sub">Elegí el modo de entrega.</p>
+
+          <div class="shipping-tabs">
+            <button type="button" class="ship-tab is-active" data-mode="domicilio">Envío a domicilio</button>
+            <button type="button" class="ship-tab" data-mode="retiro">Retiro en sucursal</button>
+          </div>
+
+          <div class="field-group" data-ship="domicilio">
+            <label for="envio-direccion">Dirección *</label>
+            <input id="envio-direccion" name="envio-direccion" type="text" required>
+          </div>
+
+          <div class="field-group three" data-ship="domicilio">
+            <div>
+              <label for="envio-ciudad">Ciudad *</label>
+              <input id="envio-ciudad" name="envio-ciudad" type="text" required>
+            </div>
+            <div>
+              <label for="envio-depto">Departamento *</label>
+              <input id="envio-depto" name="envio-depto" type="text" required>
+            </div>
+            <div>
+              <label for="envio-cp">Código postal</label>
+              <input id="envio-cp" name="envio-cp" type="text">
+            </div>
+          </div>
+
+          <div class="field-group" data-ship="retiro" hidden>
+            <label for="retiro-sucursal">Sucursal</label>
+            <select id="retiro-sucursal" name="retiro-sucursal">
+              <option value="maldonado">Maldonado - Casa central</option>
+              <option value="punta">Punta del Este</option>
+            </select>
+          </div>
+
+          <div class="panel-actions">
+            <button type="button" class="btn-secondary" data-prev="1">Volver</button>
+            <button type="button" class="btn-primary" data-next="3">Ir a pago</button>
+          </div>
+        </form>
+
+        <!-- STEP 3 -->
+        <form class="checkout-panel" id="step-3" data-step="3">
+          <h2 class="checkout-title">Forma de pago</h2>
+          <p class="checkout-sub">El pago se procesará de forma segura (Handy).</p>
+
+          <div class="field-group">
+            <p class="info-box">Al confirmar te redirigimos a la pasarela.</p>
+          </div>
+
+          <div class="panel-actions">
+            <button type="button" class="btn-secondary" data-prev="2">Volver</button>
+            <button type="submit" class="btn-primary" id="btn-confirm">Confirmar pedido</button>
+          </div>
+        </form>
+        <div class="handy-inside-left">
+        <img src="img/pagohandy.png" alt="Handy Pago Seguro">
+      </div>
+      </section>
+
+      <!-- DERECHA: CARRITO -->
+<aside class="checkout-right" aria-label="Detalle del pedido">
+  <div class="right-head">
+    <h2>DETALLE DEL PEDIDO</h2>
+  </div>
+
+  <header class="cart-actions-top">
+    <a class="page-btn ghost" href="tienda.html">Seguir comprando</a>
+    <button id="btn-clear" class="page-btn ghost" type="button">Vaciar</button>
+  </header>
+
+  <ul id="cart-list" class="cart-list"></ul>
+
+  <div class="cart-summary">
+    <div class="cart-row">
+      <span>Subtotal</span>
+      <strong id="cart-sub" class="cart-sub">U$S 0</strong>
+    </div>
+    
+  </div>
+</aside>
+
+
+
+    </div>
+    
+  </main>
+
+
+
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year">2025</span> EcoLife by Volfer · Envíos a todo Uruguay · 
+
+    </div>
+  </footer>
+
+  <!-- scripts -->
+  <script defer src="js/cart.js"></script>
+  <script defer src="js/nav.js"></script>
+  <script defer src="js/checkout.js"></script>
+  <div class="floating-buttons">
+  <a href="https://wa.me/59894990760?text=Hola%20EcoLife%2C%20me%20contacto%20desde%20la%20web%2C%20estar%C3%ADa%20interesado%20en..." 
+     class="float-btn wsp" 
+     target="_blank" 
+     aria-label="Whatsapp"
+     data-tooltip="¿En qué podemos ayudarte?">
+    <img src="img/whatsapp1.png" alt="WhatsApp">
+  </a>
+  
+  <a href="https://instagram.com/ecolife_byvolfer" 
+     class="float-btn ig" 
+     target="_blank" 
+     aria-label="Instagram EcoLife"
+     data-tooltip="Instagram: @ecolife_byvolfer">
+    <img src="img/instagram1.png" alt="Instagram">
+  </a>
+</div>
+</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CheckoutPage",
+  "name": "Checkout Seguro – EcoLife by Volfer",
+  "url": "https://www.ecolife.com.uy/checkout.html",
+  "publisher": {
+    "@type": "Organization",
+    "name": "EcoLife by Volfer",
+    "logo": "https://www.ecolife.com.uy/img/logoecolife.png"
+  }
+}
+</script>
+
+</body>
+</html>

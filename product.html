@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title id="seo-title">EcoLife by Volfer – Producto</title>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const titleEl = document.getElementById("p-title");
+  const seoTitle = document.getElementById("seo-title");
+
+  const updateSEO = () => {
+    if (!titleEl || !seoTitle) return;
+    const productName = titleEl.textContent.trim();
+    if (productName) {
+      seoTitle.textContent = productName + " en Uruguay | EcoLife by Volfer";
+    }
+  };
+
+  // Esperamos a que product.js cargue los datos
+  setTimeout(updateSEO, 150);
+});
+</script>
+<meta id="meta-desc" name="description" content="">
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const titleEl = document.getElementById("p-title");
+  const brandEl = document.getElementById("p-brand");
+  const metaDesc = document.getElementById("meta-desc");
+
+  setTimeout(() => {
+    const name = titleEl?.textContent.trim() || "";
+    const brand = brandEl?.textContent.trim() || "";
+    metaDesc.content =
+      `${name} ${brand} disponible en Uruguay. Envíos a Maldonado y Punta del Este. Garantía oficial en EcoLife by Volfer.`;
+  }, 200);
+});
+</script>
+
+  <meta name="description" content="Detalle de producto EcoLife." />
+  <link rel="icon" href="img/logoecolife.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="product.css">
+
+</head>
+<body>
+ <div class="top-banner">
+  <div class="top-banner__track">
+    <span>Envío gratis a partir de U$S 150 a todo el país </span>
+    <span>Envío gratis a partir de U$S 150 a todo el país </span>
+    <span>Envío gratis a partir de U$S 150 a todo el país </span>
+    <span>Envío gratis a partir de U$S 150 a todo el país </span>
+  </div>
+</div>
+
+
+
+  <!-- HEADER reutilizable -->
+  <header class="gdar-header" role="banner">
+    <div class="gdar-header__inner wrap">
+      <a class="gdar-brand" href="index.html" aria-label="EcoLife inicio">
+        <img class="gdar-brand__img" src="img/logoeco.png" alt="EcoLife by Volfer" width="130" height="36">
+      </a>
+      <button class="gdar-burger" id="gdar-burger" aria-label="Abrir menú" aria-controls="gdar-drawer" aria-expanded="false">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+      <nav class="gdar-quick" aria-label="Accesos rápidos">
+        <a href="tienda.html" class="gdar-quick__link">Tienda</a>
+        
+       
+       <a href="checkout.html" class="gdar-quick__cart" aria-label="Carrito">
+  <svg class="gdar-cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM6.00436 7.00265V13.0027H17.5163L19.3163 7.00265H6.00436ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"></path>
+  </svg>
+
+  <span class="gdar-cart-count" aria-hidden="true">0</span>
+</a>
+
+        <span class="gdar-flag" aria-label="Uruguay">🇺🇾</span>
+      </nav>
+    </div>
+
+    <div class="gdar-overlay" id="gdar-overlay" hidden></div>
+    <aside class="gdar-drawer" id="gdar-drawer" aria-hidden="true" tabindex="-1">
+      <div class="gdar-drawer__header">
+        <span class="gdar-drawer__title">Menú</span>
+        <button class="gdar-drawer__close" id="gdar-close" aria-label="Cerrar menú">✕</button>
+      </div>
+      <nav class="gdar-menu" aria-label="Menú principal">
+        <a class="gdar-menu__link" href="index.html">Inicio</a>
+        <a class="gdar-menu__link" href="tienda.html">Tienda</a>
+        <div class="gdar-accordion">
+          <button class="gdar-accordion__btn" aria-expanded="false" aria-controls="acc-cats">Categorías</button>
+          <div class="gdar-accordion__panel" id="acc-cats" hidden>
+            <nav id="menu-tree" class="menu-tree" aria-label="Explorar categorías"></nav>
+          </div>
+        </div>
+        
+        <a class="gdar-menu__link"
+   href="https://wa.me/59894990760?text=Hola%20EcoLife%21%20Me%20contacto%20desde%20la%20web.%20Quisiera%20hacer%20una%20consulta."
+   target="_blank">Whatsapp</a>
+
+        <a class="gdar-menu__link" href="checkout.html">Carrito</a>
+      </nav>
+      <form class="gdar-search" role="search" action="tienda.html" method="get">
+        <label class="sr-only" for="q">Buscar</label>
+        <input id="q" name="q" type="search" placeholder="Buscar productos…" />
+        <button type="submit">Buscar</button>
+      </form>
+    </aside>
+  </header>
+
+  <!-- CONTENIDO -->
+  <main class="wrap product" id="product-root" aria-live="polite">
+    <nav class="breadcrumb" aria-label="breadcrumb">
+      <a href="index.html">Inicio</a> / <a href="tienda.html">Tienda</a> / <span id="bc-product">Producto</span>
+    </nav>
+
+    <section class="product-layout" id="product-layout" hidden>
+      <!-- Galería -->
+      <aside class="p-gallery">
+        <figure class="p-main">
+          <img id="p-image" src="img/products/placeholder.png" alt="" />
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    const name = document.getElementById("p-title")?.textContent.trim();
+    const img = document.getElementById("p-image");
+    if (img && name) img.alt = name + " EcoLife Uruguay";
+  }, 200);
+});
+</script>
+
+        </figure>
+        <div class="p-thumbs" id="p-thumbs" role="list"></div>
+      </aside>
+      
+      <!-- Info -->
+      <article class="p-info">
+        <h1 id="p-title" class="p-title"></h1>
+        <div class="p-brand" id="p-brand"></div>
+
+        <div class="p-price">
+          <span id="p-price" class="price"></span>
+          <span id="p-old" class="old-price" hidden></span>
+          <span id="p-badge" class="badge" hidden>Oferta</span>
+        </div>
+
+        <ul class="p-bullets" id="p-bullets"></ul>
+
+       
+  <!-- NUEVO: selector cantidad en la ficha -->
+  <div class="p-qty">
+    <label for="p-qty-input">Cantidad</label>
+    <div class="qty">
+      <button id="p-qty-dec" type="button" aria-label="Restar">−</button>
+      <input id="p-qty-input" type="number" min="1" max="5" value="1" inputmode="numeric">
+      <button id="p-qty-inc" type="button" aria-label="Sumar">+</button>
+      <span id="p-qty-hint" class="qty-hint" aria-live="polite"></span>
+    </div>
+  </div>
+<div class="p-cta">
+  <button id="btn-add" class="btn-primary btn-buy">Comprar</button>
+  <a id="btn-contact" class="btn-secondary btn-consult"
+   href="https://wa.me/59894990760?text=Hola%20EcoLife%21%20Me%20contacto%20desde%20la%20web.%20Estoy%20interesado%20en%20este%20producto%20y%20quisiera%20más%20información."
+   target="_blank">
+   Consultar 
+</a>
+
+</div>
+
+
+        <div class="p-tabs">
+         
+          <button class="tab" data-tab="specs">Especificaciones</button>
+          <button class="tab" data-tab="ship">Envío y garantía</button>
+        </div>
+
+        <div class="p-panels">
+          <div id="tab-desc" class="panel is-active"></div>
+          
+          <div id="tab-specs" class="panel"></div>
+          <div id="tab-ship" class="panel">
+            <ul>
+              <li>Entrega en 48–72 h en zona de cobertura.</li>
+              <li>Instalación con técnicos asociados (opcional).</li>
+              <li>Garantía oficial del fabricante.</li>
+            </ul>
+          </div>
+        </div>
+        <!-- BLOQUE SEO DEL PRODUCTO -->
+<div id="product-seo" style="font-size:13px; color:#666; margin-top:20px;"></div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    const name = document.getElementById("p-title")?.textContent.trim() || "";
+    const brand = document.getElementById("p-brand")?.textContent.trim() || "";
+    const seoBlock = document.getElementById("product-seo");
+
+    seoBlock.innerHTML = `
+      <h2 style="font-size:16px; margin-bottom:8px; color:#444;">
+        Comprar ${name} en Uruguay – EcoLife by Volfer
+      </h2>
+      <p>
+        El modelo <strong>${name}</strong> de <strong>${brand}</strong> está disponible 
+        con envío a <strong>Maldonado</strong>, <strong>Punta del Este</strong> y todo Uruguay.
+        EcoLife by Volfer ofrece garantía oficial, soporte local y entrega rápida.
+      </p>
+      <p>
+        Este producto es ideal para quienes buscan calidad, eficiencia y el mejor precio en Uruguay.
+      </p>
+    `;
+  }, 250);
+});
+</script>
+
+      </article>
+    </section>
+
+    <section id="p-empty" class="p-empty" hidden>
+      <h2>Producto no encontrado</h2>
+      <p>No pudimos encontrar el producto solicitado.</p>
+      <a class="page-btn" href="tienda.html">Volver a la tienda</a>
+    </section>
+      <!-- Relacionados / complementarios -->
+  <section id="related-wrapper" class="related-wrapper" hidden>
+    <h2 class="related-title">También te puede interesar</h2>
+    <div id="related-carousel" class="related-carousel"></div>
+  </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year">2025</span> EcoLife by Volfer · Envíos a todo Uruguay ·
+
+
+
+    </div>
+  </footer>
+<script src="js/offers.js"></script>
+<script defer src="js/cart.js"></script>
+<script defer src="js/nav.js"></script>
+<script defer src="js/product.js"></script>
+
+<div class="floating-buttons">
+  <a href="https://wa.me/59894990760?text=Hola%20EcoLife%2C%20me%20contacto%20desde%20la%20web%2C%20estar%C3%ADa%20interesado%20en..." 
+     class="float-btn wsp" 
+     target="_blank" 
+     aria-label="Whatsapp"
+     data-tooltip="¿En qué podemos ayudarte?">
+    <img src="img/whatsapp1.png" alt="WhatsApp">
+  </a>
+  
+  <a href="https://instagram.com/ecolife_byvolfer" 
+     class="float-btn ig" 
+     target="_blank" 
+     aria-label="Instagram EcoLife"
+     data-tooltip="Instagram: @ecolife_byvolfer">
+    <img src="img/instagram1.png" alt="Instagram">
+  </a>
+</div>
+<!-- SCHEMA PRODUCT PARA GOOGLE -->
+<script type="application/ld+json" id="schema-product"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    const name = document.getElementById("p-title")?.textContent.trim() || "";
+    const image = document.getElementById("p-image")?.src || "";
+    const brand = document.getElementById("p-brand")?.textContent.trim() || "EcoLife";
+    const price = document.getElementById("p-price")?.textContent.replace("U$S", "").trim() || "";
+    const url = window.location.href;
+
+    const schemaData = {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": name,
+      "image": [image],
+      "brand": {
+        "@type": "Brand",
+        "name": brand
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": url,
+        "priceCurrency": "USD",
+        "price": price,
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition"
+      }
+    };
+
+    document.getElementById("schema-product").textContent =
+      JSON.stringify(schemaData, null, 2);
+  }, 200);
+});
+</script>
+
+</body>
+</html>

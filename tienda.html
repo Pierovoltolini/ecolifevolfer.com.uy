@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Electrodomésticos en Uruguay | Heladeras, Aires, Cocinas, TV, Lavarropas y Más – EcoLife</title>
+
+  <meta name="description" content="Compra electrodomésticos en Uruguay: heladeras, aires acondicionados inverter, cocinas, anafes, Smart TV, lavarropas, termotanques y pequeños electrodomésticos. Envíos a Maldonado, Punta del Este y todo el país. EcoLife by Volfer.">
+  <meta name="keywords" content="
+electrodomésticos Uruguay,
+tienda de electrodomésticos Uruguay,
+electrodomésticos Maldonado,
+electrodomésticos Punta del Este,
+
+heladeras Uruguay,
+heladeras no frost Uruguay,
+freezers Uruguay,
+refrigeradores Uruguay,
+
+aires acondicionados Uruguay,
+aires inverter Uruguay,
+climatización Uruguay,
+
+cocinas Uruguay,
+hornos eléctricos Uruguay,
+anafes Uruguay,
+campanas extractoras Uruguay,
+microondas Uruguay,
+lavavajillas Uruguay,
+
+lavarropas Uruguay,
+lavado y secado Uruguay,
+secadoras Uruguay,
+
+Smart TV Uruguay,
+televisores Uruguay,
+QLED Uruguay,
+OLED Uruguay,
+televisores Punta del Este,
+
+audio Uruguay,
+barras de sonido Uruguay,
+
+pequeños electrodomésticos Uruguay,
+airfryer Uruguay,
+cafeteras Uruguay,
+licuadoras Uruguay,
+tostadoras Uruguay,
+batidoras Uruguay,
+mixers Uruguay,
+multiprocesadoras Uruguay,
+exprimidores Uruguay,
+sandwicheras Uruguay,
+jarra eléctrica Uruguay,
+juguera Uruguay,
+
+aspiradoras Uruguay,
+aspiradoras Punta del Este,
+
+termotanques Uruguay,
+calefacción Uruguay,
+ventilación Uruguay
+">
+
+  <link rel="icon" href="img/logoecolife.png" type="image/png" />
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="product.css">
+  <link rel="stylesheet" href="tienda.css">
+</head>
+<body>
+  <div class="top-banner">
+  <div class="top-banner__track">
+    <span>Envío gratis a partir de U$S 150 a todo el país </span>
+    <span>Envío gratis a partir de U$S 150 a todo el país </span>
+    <span>Envío gratis a partir de U$S 150 a todo el país </span>
+    <span>Envío gratis a partir de U$S 150 a todo el país </span>
+  </div>
+</div>
+
+
+
+  <!-- ========== HEADER reutilizable con hamburguesa ========== -->
+  <header class="gdar-header" role="banner">
+    <div class="gdar-header__inner wrap">
+      <a class="gdar-brand" href="index.html" aria-label="EcoLife inicio">
+        <img class="gdar-brand__img" src="img/logoeco.png" alt="EcoLife by Volfer" width="130" height="36">
+      </a>
+
+      <button class="gdar-burger" id="gdar-burger"
+              aria-label="Abrir menú" aria-controls="gdar-drawer" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <nav class="gdar-quick" aria-label="Accesos rápidos">
+        <a href="tienda.html" class="gdar-quick__link" aria-current="page">Tienda</a>
+        
+        <a href="index.html" class="gdar-quick__link">Inicio </a>
+        <a href="checkout.html" class="gdar-quick__cart" aria-label="Carrito">
+  <svg class="gdar-cart-icon" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM6.00436 7.00265V13.0027H17.5163L19.3163 7.00265H6.00436ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"></path>
+  </svg>
+
+  <span class="gdar-cart-count" aria-hidden="true">0</span>
+</a>
+
+        <span class="gdar-flag" aria-label="Uruguay">🇺🇾</span>
+      </nav>
+    </div>
+    
+    <div class="gdar-overlay" id="gdar-overlay" hidden></div>
+
+    <aside class="gdar-drawer" id="gdar-drawer" aria-hidden="true" tabindex="-1">
+      <div class="gdar-drawer__header">
+        <span class="gdar-drawer__title">Menú</span>
+        <button class="gdar-drawer__close" id="gdar-close" aria-label="Cerrar menú">✕</button>
+      </div>
+
+      <nav class="gdar-menu" aria-label="Menú principal">
+        <a class="gdar-menu__link" href="index.html">Inicio</a>
+        <a class="gdar-menu__link" href="tienda.html" aria-current="page">Tienda</a>
+
+        <!-- Acordeón: Categorías -->
+        <div class="gdar-accordion">
+          <button class="gdar-accordion__btn" aria-expanded="false" aria-controls="acc-cats">Categorías</button>
+          <div class="gdar-accordion__panel" id="acc-cats" hidden>
+            <nav id="menu-tree" class="menu-tree" aria-label="Explorar categorías"></nav>
+          </div>
+        </div>
+
+        
+      
+      </nav>
+
+      <form class="gdar-search" role="search" action="tienda.html" method="get">
+        <label class="sr-only" for="q">Buscar</label>
+        <input id="q" name="q" type="search" placeholder="Buscar productos…" />
+        <button type="submit">Buscar</button>
+      </form>
+    </aside>
+  </header>
+
+  <!-- ========== CONTENIDO TIENDA ========== -->
+  <main class="shop wrap" aria-labelledby="shop-title">
+    <!-- Toolbar -->
+    <header class="shop-toolbar" role="region" aria-label="Herramientas de tienda">
+      <nav class="breadcrumb" aria-label="breadcrumb">
+        <a href="index.html">Inicio</a> / <span>Tienda</span>
+      </nav>
+
+      <div class="toolbar-row">
+        <h1 id="shop-title" class="shop-title">
+          Tienda <span id="results-count" aria-live="polite"></span>
+        </h1>
+
+        <form id="shop-search" role="search" action="tienda.html" method="get" class="shop-search">
+          <input type="search" name="q" id="q" placeholder="Buscar productos…" />
+          <button type="submit">Buscar</button>
+        </form>
+
+        <label class="shop-sort">
+          <span class="sr-only">Ordenar</span>
+          <select id="sort">
+            <option value="relevance">Recomendado</option>
+            <option value="price-asc">Precio: menor a mayor</option>
+            <option value="price-desc">Precio: mayor a menor</option>
+            <option value="new">Nuevos</option>
+          </select>
+        </label>
+
+        <button id="btn-filters" class="btn-filters" type="button" aria-controls="shop-sidebar">Filtros</button>
+      </div>
+    </header>
+    
+    <!-- Layout -->
+    <div class="shop-layout">
+      <aside class="shop-sidebar" id="shop-sidebar" aria-label="Filtros"></aside>
+
+      <section class="shop-results">
+
+        <!-- ========== VISTA POR SECCIONES (Home de tienda) ========== -->
+        <div id="sections" class="shop-sections" aria-label="Secciones destacadas">
+
+        <!-- Refrigeración -->
+<section class="section" id="refrigeracion"
+         data-filter="heladera,freezer,refriger,no frost"
+         data-brands="Samsung,Smartlife,Philips">
+
+  <div class="section__hero">
+    <div class="section__inner">
+      <div class="section__eyebrow">Refrigeración</div>
+      <h2 class="section__title">Refrigeración para conservar más y gastar menos</h2>
+      <p class="section__tagline">Heladeras y freezers eficientes para tu día a día.</p>
+     
+    </div>
+
+    <!-- CTA overlay a la derecha -->
+    <a class="section__cta section__cta--overlay"
+       href="tienda.html?cat=electrodomesticos&subcat=refrigeradores">Ver más</a>
+  </div>
+
+  <div class="brands-strip">
+    <b>Marcas confiables:</b>
+    <span class="brand-pill">Samsung</span>
+    <span class="brand-pill">Smartlife</span>
+  </div>
+
+  <!-- Carrusel de productos (se rellena por JS) -->
+  <div class="carousel" role="region" aria-label="Productos destacados de Refrigeración">
+    <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
+    <div class="carousel__track"></div>
+    <button class="carousel__btn carousel__btn--next" aria-label="Siguiente">›</button>
+  </div>
+</section>
+
+
+          <!-- Lavado & Secado -->
+          <section class="section" id="lavado"
+                   data-filter="lavarrop,lavado,secado,lava,secar"
+                   data-brands="Samsung,Smartlife">
+            <div class="section__hero" style="--hero:url('img/bannersecalava.jpg')">
+              <div class="section__inner">
+                <div class="section__eyebrow">Lavado & Secado</div>
+                <h2 class="section__title">Lavado que cuida tu ropa y tu factura</h2>
+                <p class="section__tagline">Lava más en menos tiempo, con menos ruido.</p>
+                
+              </div>
+               <a class="section__cta section__cta--overlay" href="tienda.html?cat=electrodomesticos&subcat=lavado-secado">Ver más</a>
+            </div>
+            <div class="brands-strip">
+              <b>Marcas confiables:</b>
+              <span class="brand-pill">Samsung</span>
+              <span class="brand-pill">Smartlife</span>
+            </div>
+            <div class="carousel" role="region" aria-label="Productos destacados de Lavado">
+              <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
+              <div class="carousel__track"></div>
+              <button class="carousel__btn carousel__btn--next" aria-label="Siguiente">›</button>
+            </div>
+          </section>
+
+          <!-- TV & Audio -->
+       <section class="section" id="tv-audio"
+         data-filter="tv,tele,smart tv,qled,oled,audio,soundbar,barra"
+         data-brands="Samsung,Philips,Smartlife">
+  <div class="section__hero hero-reset-tv" style="--hero:url('img/herotv.png')">
+    <div class="section__inner">
+      <div class="section__eyebrow">TV & Audio</div>
+      <h2 class="section__title">Viví el cine en casa con colores más reales</h2>
+      <p class="section__tagline">Smart TV, barras de sonido y más.</p>
+    </div>
+    <!-- el botón conserva todo como antes -->
+    <a class="section__cta section__cta--overlay" href="tienda.html?cat=televisores">Ver más</a>
+  </div>
+
+  <div class="brands-strip">
+    <b>Marcas confiables:</b>
+    <span class="brand-pill">Samsung</span>
+    <span class="brand-pill">Smartlife</span>
+  </div>
+
+  <div class="carousel" role="region" aria-label="Productos destacados de TV & Audio">
+    <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
+    <div class="carousel__track"></div>
+    <button class="carousel__btn carousel__btn--next" aria-label="Siguiente">›</button>
+  </div>
+</section>
+
+
+
+          <!-- Climatización -->
+          <section class="section" id="clima"
+                   data-filter="aire,climatiz,acondicionad"
+                   data-brands="Samsung,Smartlife">
+            <div class="section__hero" style="--hero:url('img/airehero.png')">
+              <div class="section__inner">
+                <div class="section__eyebrow">Climatización</div>
+                <h2 class="section__title">Confort todo el día gastando menos energía</h2>
+                <p class="section__tagline">Aires con tecnología Inverter de alta eficiencia.</p>
+                
+              </div>
+              <a class="section__cta section__cta--overlay"
+   href="tienda.html?cat=electrodomesticos&filter=aire,acondicionado,split,calefactor,ventilador,termotanque">
+   Ver más
+</a>
+
+            </div>
+            <div class="brands-strip">
+              <b>Marcas confiables:</b>
+              <span class="brand-pill">Samsung</span>
+              <span class="brand-pill">Smartlife</span>
+            </div>
+            <div class="carousel" role="region" aria-label="Productos destacados de Climatización">
+              <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
+              <div class="carousel__track"></div>
+              <button class="carousel__btn carousel__btn--next" aria-label="Siguiente">›</button>
+            </div>
+          </section>
+
+          <!-- Cocina -->
+          <section class="section" id="cocina"
+                   data-filter="cocina,horno,campana,anafe"
+                   data-brands="Samsung,Smartlife,Philips">
+            <div class="section__hero" style="--hero:url('img/cocinahero.png')">
+              <div class="section__inner">
+                <div class="section__eyebrow">Cocina</div>
+                <h2 class="section__title">Convertí cada receta en un momento especial</h2>
+                <p class="section__tagline">Cocinas, hornos, campanas y anafes.</p>
+               
+              </div>
+             <a class="section__cta section__cta--overlay"
+   href="tienda.html?cat=electrodomesticos&filter=cocina,horno,anafe,campana">
+   Ver más
+</a>
+
+            </div>
+           
+            <div class="carousel" role="region" aria-label="Productos destacados de Cocina">
+              <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
+              <div class="carousel__track"></div>
+              <button class="carousel__btn carousel__btn--next" aria-label="Siguiente">›</button>
+            </div>
+          </section>
+          <!-- Cafeteras -->
+<section class="section" id="cafeteras"
+         data-filter="cafetera,cafe,espresso,cafeteras"
+         data-brands="Smartlife,Philips">
+  
+  <div class="section__hero" style="--hero:url('img/heroiniciocelu4.png')">
+    <div class="section__inner">
+      <div class="section__eyebrow">Cafeteras</div>
+      <h2 class="section__title">Tu café perfecto, todos los días</h2>
+      <p class="section__tagline">Cafeteras automáticas, espresso y más.</p>
+    </div>
+
+    <a class="section__cta section__cta--overlay"
+       href="tienda.html?cat=electrodomesticos&filter=cafetera,cafe,espresso,automatica">
+      Ver más
+    </a>
+  </div>
+
+  <div class="brands-strip">
+    <b>Marcas confiables:</b>
+    <span class="brand-pill">Smartlife</span>
+    <span class="brand-pill">Philips</span>
+  </div>
+
+  <div class="carousel" role="region" aria-label="Productos destacados de Cafeteras">
+    <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
+    <div class="carousel__track"></div>
+    <button class="carousel__btn carousel__btn--next" aria-label="Siguiente">›</button>
+  </div>
+
+</section>
+
+          <!-- Pequeños -->
+          <section class="section" id="pequenos"
+                   data-filter="licuad,freidor,mixer,tostador,batidor,juguera,picador,aspirador"
+                   data-brands="Smartlife,Philips">
+            <div class="section__hero" style="--hero:url('img/limhero.png')">
+              <div class="section__inner">
+                <div class="section__eyebrow">Pequeños electros</div>
+                <h2 class="section__title">Potencia y practicidad todos los días</h2>
+                <p class="section__tagline">Licuadoras, freidoras, mixers y más.</p>
+                
+              </div>
+          <a class="section__cta section__cta--overlay"
+   href="tienda.html?cat=electrodomesticos&filter=licuadoras,batidoras,cafeteras,tostadoras,mixers,multiprocesadoras,exprimidores,sandwicheras,jarra,jarra-electrica,juguera,cuidado,personal,afeitadora,secador,plancha,aspirador,aspiradora,aspiradoras,airfryer">
+  Ver más
+</a>
+
+
+            </div>
+            
+            <div class="carousel" role="region" aria-label="Productos destacados de Pequeños">
+              <button class="carousel__btn carousel__btn--prev" aria-label="Anterior">‹</button>
+              <div class="carousel__track"></div>
+              <button class="carousel__btn carousel__btn--next" aria-label="Siguiente">›</button>
+            </div>
+          </section>
+
+        </div><!-- /#sections -->
+
+        <!-- BANNER DE CATEGORÍA (solo cuando hay filtro) -->
+        <div id="filter-hero" hidden></div>
+
+        <!-- GRID (búsquedas/filtros) -->
+        <div id="active-chips" class="chips" aria-live="polite"></div>
+        <ul id="products-grid" class="products-grid" aria-label="Resultados"></ul>
+        <nav id="pagination" class="pagination" aria-label="Paginación"></nav>
+      </section>
+    </div>
+  </main>
+<!-- SEO BLOCK — TIENDA -->
+<section class="seo-block" style="padding:25px 0; font-size:14px; color:#555;">
+  <div class="wrap">
+    <h2 style="font-size:18px; margin-bottom:10px; color:#333;">
+      Comprar Electrodomésticos en Uruguay – EcoLife by Volfer
+    </h2>
+
+    <p>
+      En la tienda oficial de <strong>EcoLife by Volfer</strong> encontrás una amplia 
+      variedad de <strong>electrodomésticos en Uruguay</strong> con envío a 
+      <strong>Maldonado</strong>, <strong>Punta del Este</strong> y todo el país. 
+      Somos distribuidores de marcas líderes como Samsung, Smartlife y Philips.
+    </p>
+
+    <p>
+      Disponemos de <strong>aires acondicionados inverter</strong>, 
+      <strong>heladeras no frost</strong>, 
+      <strong>freezers</strong>, 
+      <strong>cocinas y hornos</strong>, 
+      <strong>anafes</strong>, 
+      <strong>campanas</strong>, 
+      <strong>microondas</strong>, 
+      <strong>lavarropas</strong>, 
+      <strong>secadoras</strong> y 
+      <strong>Smart TV</strong> para todo tipo de hogar.
+    </p>
+
+    <p>
+      También ofrecemos <strong>pequeños electrodomésticos</strong> como airfryers, 
+      cafeteras, licuadoras, batidoras, mixers, sandwicheras, exprimidores, 
+      jarras eléctricas, juguetes de cocina y aspiradoras, además de 
+      <strong>termotanques</strong>, productos de climatización, calefacción y ventilación.
+    </p>
+
+    <p>
+      Si buscás <em>anafes en Punta del Este</em>, 
+      <em>heladeras en Uruguay</em>, 
+      <em>aires acondicionados Maldonado</em>, 
+      <em>cocinas y hornos eléctricos</em> o 
+      <em>Smart TV al mejor precio</em>, 
+      en EcoLife tenés atención local, garantía oficial y entrega rápida.
+    </p>
+  </div>
+</section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year">2025</span> EcoLife by Volfer · Envíos a todo Uruguay · 
+    </div>
+  </footer>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script defer src="js/cart.js"></script>
+    <script defer src="js/offers.js"></script>
+  <script defer src="js/nav.js"></script>
+  <script defer src="js/tienda.js"></script>
+  <script defer src="js/tienda.decor.js"></script>
+  
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const layout  = document.querySelector('.shop-layout');
+      const sidebar = document.getElementById('shop-sidebar');
+      if (layout && sidebar && !sidebar.textContent.trim()) {
+        layout.classList.add('no-sidebar');
+      }
+    });
+  </script>
+  <div class="floating-buttons">
+  <a href="https://wa.me/59894990760?text=Hola%20EcoLife%2C%20me%20contacto%20desde%20la%20web%2C%20estar%C3%ADa%20interesado%20en..." 
+     class="float-btn wsp" 
+     target="_blank" 
+     aria-label="Whatsapp"
+     data-tooltip="¿En qué podemos ayudarte?">
+    <img src="img/whatsapp1.png" alt="WhatsApp">
+  </a>
+  
+  <a href="https://instagram.com/ecolife_byvolfer" 
+     class="float-btn ig" 
+     target="_blank" 
+     aria-label="Instagram EcoLife"
+     data-tooltip="Instagram: @ecolife_byvolfer">
+    <img src="img/instagram1.png" alt="Instagram">
+  </a>
+</div>
+</body>
+</html>
