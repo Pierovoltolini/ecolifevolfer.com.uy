@@ -1,0 +1,920 @@
+[
+  {
+    "type": "sku",
+    "sku": "SL-TV32SMTA14",
+    "priceNew": 159.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-TV40SMT24T",
+    "priceNew": 239.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-TV43FHD25T",
+    "priceNew": 249.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-TVQ50SMT",
+    "priceNew": 459.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-RFH220WH2",
+    "priceNew": 299.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-RNF270SD2",
+    "priceNew": 439.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-RNF270WD2",
+    "priceNew": 459.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-RNF270WDINV2",
+    "priceNew": 479.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-RNF270SDINV2",
+    "priceNew": 499.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-RNF370WDINV",
+    "priceNew": 549.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-RNF370SDINV",
+    "priceNew": 579.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-SBS690S2P",
+    "priceNew": 899.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-SBS480S4P",
+    "priceNew": 899.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-SBS690SDI",
+    "priceNew": 1499.0
+  },
+  {
+    "type": "sku",
+    "sku": "WW10TA046BE",
+    "priceNew": 759.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-WMTL60M",
+    "priceNew": 279.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-WMFL610M",
+    "priceNew": 329.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-WMFL12INV2",
+    "priceNew": 579.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-WMFL12INDS",
+    "priceNew": 629.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-DRY03",
+    "priceNew": 299.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-HPD10T",
+    "priceNew": 779.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-WDFL806",
+    "priceNew": 679.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-TOR1210",
+    "priceNew": 1399.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-DW6012W",
+    "priceNew": 449.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-DW6012S",
+    "priceNew": 549.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-KS5055C",
+    "priceNew": 379.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-KS5757C",
+    "priceNew": 429.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-A6060VT",
+    "priceNew": 229.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-EO6060S7",
+    "priceNew": 359.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-O6060QX",
+    "priceNew": 449.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-MWO20MMW",
+    "priceNew": 89.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-MWO20MMB",
+    "priceNew": 89.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-MWO20MDW",
+    "priceNew": 99.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-MWO20MDB",
+    "priceNew": 99.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-MWO23MDGB",
+    "priceNew": 139.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-MWO23MDGW",
+    "priceNew": 139.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-MWO29MDGB",
+    "priceNew": 149.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-EO19B",
+    "priceNew": 49.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-EO30B",
+    "priceNew": 79.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-EO38B",
+    "priceNew": 89.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-EO38BP",
+    "priceNew": 119.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-EO48BP",
+    "priceNew": 129.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-VS8285",
+    "priceNew": 99.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-HM1080",
+    "priceNew": 19.0
+  },
+   {
+    "type": "sku",
+    "sku": "SART38DG6730S9EY",
+    "priceNew": 959.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-HM5050BW",
+    "priceNew": 29.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-CM9002EA",
+    "priceNew": 399.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-JC3400",
+    "priceNew": 20.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-BL1008B",
+    "priceNew": 29.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-BL1410",
+    "priceNew": 39.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-BL1402",
+    "priceNew": 85.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-HB6048FF",
+    "priceNew": 79.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-TD8211",
+    "priceNew": 29.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-TOD1520",
+    "priceNew": 69.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAUN32T4310",
+    "priceNew": 219.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAUN40F6000F",
+    "priceNew": 299.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAUN43U8000",
+    "priceNew": 399.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAUN50U8000",
+    "priceNew": 489.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAUN55U8000",
+    "priceNew": 599.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAUN65U8000",
+    "priceNew": 799.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAUN75U8000",
+    "priceNew": 1299.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAUN85U8000",
+    "priceNew": 1899.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAQN50Q7FAA",
+    "priceNew": 789.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAQN55Q7F5A",
+    "priceNew": 819.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAQN65Q7F5A",
+    "priceNew": 1199.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAQN75Q7F5A",
+    "priceNew": 1599.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAQN85Q8FAA",
+    "priceNew": 2399.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAQN55LS03DA",
+    "priceNew": 1499.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAQN43QN90FA",
+    "priceNew": 1199.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAQN55QN85DB",
+    "priceNew": 1499.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAQN65QN70FA",
+    "priceNew": 1799.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAQN75QN70FA",
+    "priceNew": 1999.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAQN85QN70FA",
+    "priceNew": 3499.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAQN85QN800D",
+    "priceNew": 6499.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAQN55S90FA",
+    "priceNew": 2199.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAQN65S90FA",
+    "priceNew": 2999.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAQN77S90DA",
+    "priceNew": 4999.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAMXT40",
+    "priceNew": 219.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAMXT50",
+    "priceNew": 319.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAMXT70",
+    "priceNew": 499.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAHW-C400",
+    "priceNew": 159.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAHWC450",
+    "priceNew": 349.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAHWQ600C",
+    "priceNew": 499.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAHWQ700C",
+    "priceNew": 599.0
+  },
+  {
+    "type": "sku",
+    "sku": "SART31DG5220S9",
+    "priceNew": 759.0
+  },
+  {
+    "type": "sku",
+    "sku": "SART38DG6730S9",
+    "priceNew": 959.0
+  },
+  {
+    "type": "sku",
+    "sku": "SART42DG6770B1EY",
+    "priceNew": 999.0
+  },
+  {
+    "type": "sku",
+    "sku": "SART53DG6750B1",
+    "priceNew": 1199.0
+  },
+  {
+    "type": "sku",
+    "sku": "SARB33A307012",
+    "priceNew": 1349.0
+  },
+  {
+    "type": "sku",
+    "sku": "SARS27T5200S9",
+    "priceNew": 2099.0
+  },
+  {
+    "type": "sku",
+    "sku": "SARF32CG5410",
+    "priceNew": 2699.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAWA80CG4240BW",
+    "priceNew": 399.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAWA13CG5441BW",
+    "priceNew": 599.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAWA19CG6441BW",
+    "priceNew": 759.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAWW10TA046BE",
+    "priceNew": 759.0
+  },
+  {
+    "type": "sku",
+    "sku": "WD10T534DBW",
+    "priceNew": 899.0
+  },
+  {
+    "type": "sku",
+    "sku": "WD10T554DBN",
+    "priceNew": 1059.0
+  },
+  {
+    "type": "sku",
+    "sku": "SADW60M6040FW",
+    "priceNew": 949.0
+  },
+  {
+    "type": "sku",
+    "sku": "SADW60M6050FS",
+    "priceNew": 999.0
+  },
+  {
+    "type": "sku",
+    "sku": "SANX52A5411CS",
+    "priceNew": 999.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAMS20A3010AL",
+    "priceNew": 169.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAMS23K3513AK",
+    "priceNew": 199.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAMG23K3515AS",
+    "priceNew": 239.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAVC18M3110",
+    "priceNew": 179.0
+  },
+  {
+    "type": "sku",
+    "sku": "SAVS20C8522TB",
+    "priceNew": 499.0
+  },
+  {
+    "type": "sku",
+    "sku": "BRE227/00",
+    "priceNew": 45.0
+  },
+  {
+    "type": "sku",
+    "sku": "BRE255/00",
+    "priceNew": 69.0
+  },
+  {
+    "type": "sku",
+    "sku": "BRE285/00",
+    "priceNew": 85.0
+  },
+  {
+    "type": "sku",
+    "sku": "BRP505/00",
+    "priceNew": 99.0
+  },
+  {
+    "type": "sku",
+    "sku": "BRE700/00",
+    "priceNew": 89.0
+  },
+  {
+    "type": "sku",
+    "sku": "BRE712/00",
+    "priceNew": 109.0
+  },
+  {
+    "type": "sku",
+    "sku": "BRE720/00",
+    "priceNew": 139.0
+  },
+  {
+    "type": "sku",
+    "sku": "BRE730/00",
+    "priceNew": 159.0
+  },
+  {
+    "type": "sku",
+    "sku": "SL-CE7466DG",
+    "priceNew": 59.0
+  },
+  {
+    "type": "sku",
+    "sku": "NA120/00",
+    "priceNew": 99.0
+  },
+  {
+    "type": "sku",
+    "sku": "NA220/00",
+    "priceNew": 129.0
+  },
+  {
+    "type": "sku",
+    "sku": "NA231/00",
+    "priceNew": 139.0
+  },
+  {
+    "type": "sku",
+    "sku": "HR3705/10",
+    "priceNew": 39.0
+  },
+  {
+    "type": "sku",
+    "sku": "HR7100/90",
+    "priceNew": 65.0
+  },
+  {
+    "type": "sku",
+    "sku": "HR3745/00",
+    "priceNew": 69.0
+  },
+  {
+    "type": "sku",
+    "sku": "HR7922/90",
+    "priceNew": 199.0
+  },
+  {
+    "type": "sku",
+    "sku": "HD7461/00",
+    "priceNew": 55.0
+  },
+  {
+    "type": "sku",
+    "sku": "EP2231/42",
+    "priceNew": 899.0
+  },
+  {
+    "type": "sku",
+    "sku": "HR1855/70",
+    "priceNew": 159.0
+  },
+  {
+    "type": "sku",
+    "sku": "HR2125/80",
+    "priceNew": 40.0
+  },
+  {
+    "type": "sku",
+    "sku": "HR2129/00",
+    "priceNew": 49.0
+  },
+  {
+    "type": "sku",
+    "sku": "HR2240/00",
+    "priceNew": 79.0
+  },
+  {
+    "type": "sku",
+    "sku": "HR2604/80",
+    "priceNew": 99.0
+  },
+  {
+    "type": "sku",
+    "sku": "HR2242/92",
+    "priceNew": 99.0
+  },
+  {
+    "type": "sku",
+    "sku": "HR2242/90",
+    "priceNew": 139.0
+  },
+  {
+    "type": "sku",
+    "sku": "HR2530/50",
+    "priceNew": 40.0
+  },
+  {
+    "type": "sku",
+    "sku": "HR2531/50",
+    "priceNew": 59.0
+  },
+  {
+    "type": "sku",
+    "sku": "HR2626/80",
+    "priceNew": 99.0
+  },
+  {
+    "type": "sku",
+    "sku": "HR1393/00",
+    "priceNew": 59.0
+  },
+  {
+    "type": "sku",
+    "sku": "HD2330/90",
+    "priceNew": 39.0
+  },
+  {
+    "type": "sku",
+    "sku": "HR2203/80",
+    "priceNew": 115.0
+  },
+  {
+    "type": "sku",
+    "sku": "HD2590/00",
+    "priceNew": 39.0
+  },
+  {
+    "type": "sku",
+    "sku": "HD2637/90",
+    "priceNew": 49.0
+  },
+  {
+    "type": "sku",
+    "sku": "FC9350/51",
+    "priceNew": 185.0
+  },
+  {
+    "type": "sku",
+    "sku": "STH3020/10",
+    "priceNew": 75.0
+  },
+  {
+    "type": "sku",
+    "sku": "STE1020/40",
+    "priceNew": 105.0
+  },
+  {
+    "type": "sku",
+    "sku": "GCA1000/60",
+    "priceNew": 30.0
+  },
+  {
+    "type": "sku",
+    "sku": "NDGPICCOLOXS",
+    "priceNew": 109.0
+  },
+  {
+    "type": "sku",
+    "sku": "NDGMINIMEWIMP",
+    "priceNew": 149.0
+  },
+  {
+    "type": "sku",
+    "sku": "NDGGENIOSIMP",
+    "priceNew": 159.0
+  },
+  {
+    "type": "sku",
+    "sku": "G43552U10XL",
+    "priceNew": 359.0
+  },
+  {
+    "type": "sku",
+    "sku": "G48902U10OS",
+    "priceNew": 499.0
+  },
+  {
+    "type": "sku",
+    "sku": "G48202U1021",
+    "priceNew": 499.0
+  },
+  {
+    "type": "sku",
+    "sku": "G48402U1021",
+    "priceNew": 599.0
+  },
+  {
+    "type": "sku",
+    "sku": "G26402U10MD",
+    "priceNew": 1099.0
+  },
+  {
+    "type": "sku",
+    "sku": "G26402U10SM",
+    "priceNew": 1099.0
+  },
+  {
+    "type": "sku",
+    "sku": "G26303M10LG",
+    "priceNew": 1099.0
+  },
+  {
+    "type": "sku",
+    "sku": "G26303M10MD",
+    "priceNew": 1099.0
+  },
+  {
+    "type": "sku",
+    "sku": "G27101M20SM",
+    "priceNew": 999.0
+  },
+  {
+    "type": "sku",
+    "sku": "G28101M10MD",
+    "priceNew": 549.0
+  },
+  {
+    "type": "sku",
+    "sku": "G28101M20MD",
+    "priceNew": 549.0
+  },
+  {
+    "type": "sku",
+    "sku": "G28101M30SM",
+    "priceNew": 549.0
+  },
+  {
+    "type": "sku",
+    "sku": "G28101M30MD",
+    "priceNew": 549.0
+  },
+  {
+    "type": "sku",
+    "sku": "G54503U30OS",
+    "priceNew": 399.0
+  },
+  {
+    "type": "sku",
+    "sku": "G54303U10OS",
+    "priceNew": 459.0
+  },
+  {
+    "type": "sku",
+    "sku": "G54303U20OS",
+    "priceNew": 459.0
+  },
+  {
+    "type": "sku",
+    "sku": "G54303U30OS",
+    "priceNew": 459.0
+  },
+  {
+    "type": "sku",
+    "sku": "G54603U10OS",
+    "priceNew": 399.0
+  },
+  {
+    "type": "sku",
+    "sku": "G54603U20OS",
+    "priceNew": 399.0
+  },
+  {
+    "type": "sku",
+    "sku": "G54603U30OS",
+    "priceNew": 399.0
+  },
+  {
+    "type": "sku",
+    "sku": "G54403U30OS",
+    "priceNew": 459.0
+  },
+  {
+    "type": "sku",
+    "sku": "G55300M40OS",
+    "priceNew": 189.0
+  },
+  {
+    "type": "sku",
+    "sku": "G55100M50OS",
+    "priceNew": 229.0
+  },
+  {
+    "type": "sku",
+    "sku": "G52501F40OS",
+    "priceNew": 189.0
+  },
+  {
+    "type": "sku",
+    "sku": "G52501F30OS",
+    "priceNew": 189.0
+  },
+  {
+    "type": "sku",
+    "sku": "G11602M10SM",
+    "priceNew": 799.0
+  },
+  {
+    "type": "sku",
+    "sku": "G11602M10MD",
+    "priceNew": 799.0
+  },
+  {
+    "type": "sku",
+    "sku": "G11602M10LG",
+    "priceNew": 799.0
+  },
+  {
+    "type": "sku",
+    "sku": "G11602M20SM",
+    "priceNew": 799.0
+  },
+  {
+    "type": "sku",
+    "sku": "G11602M20MD",
+    "priceNew": 799.0
+  },
+  {
+    "type": "sku",
+    "sku": "G11401M1055",
+    "priceNew": 1299.0
+  },
+  {
+    "type": "sku",
+    "sku": "G11502M10SM",
+    "priceNew": 1399.0
+  },
+  {
+    "type": "sku",
+    "sku": "G11502M10MD",
+    "priceNew": 1399.0
+  },
+  {
+    "type": "sku",
+    "sku": "G11502M10LG",
+    "priceNew": 1399.0
+  },
+  {
+    "type": "sku",
+    "sku": "G11102M10SM",
+    "priceNew": 2499.0
+  },
+  {
+    "type": "sku",
+    "sku": "G11102M10MD",
+    "priceNew": 2499.0
+  },
+  {
+    "type": "sku",
+    "sku": "G11102M10LG",
+    "priceNew": 2499.0
+  }
+]
+
+
+
+
+
+
+
+
