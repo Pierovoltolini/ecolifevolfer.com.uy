@@ -62,8 +62,8 @@
   if (!products) return;
 
   const extrasMap = await fetchJSONwithFallback([
-    '/data/descriptions.json','data/descriptions.json','../data/descriptions.json',
-    '/data/description.json','data/description.json','../data/description.json'
+    '/data/descriptions.json','/data/descriptions.json','../data/descriptions.json',
+    '/data/description.json','/data/description.json','../data/description.json'
   ]) || {};
   
   const list = Array.isArray(products) ? products : (products.products || []);
@@ -91,7 +91,7 @@
   async function applyOffersToItem(baseItem){
     let final = { ...baseItem, onSale:false, priceOld:null };
     try {
-      const r = await fetch('data/offers.json', { cache:'no-store' });
+      const r = await fetch('/data/offers.json', { cache:'no-store' });
       if (!r.ok) return final;
       const rules = await r.json();
 
@@ -777,7 +777,7 @@ async function renderRelatedProducts(current) {
     const thumb =
       (Array.isArray(base.images) && base.images[0]) ||
       base.thumbnail ||
-      "img/products/placeholder.png";
+      "/img/products/placeholder.png";
 
     card.innerHTML = `
     ${
