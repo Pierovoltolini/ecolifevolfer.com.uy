@@ -106,7 +106,7 @@ renderItemPriceHTML(item) {
    */
   async repriceWithOffers() {
     try {
-      const r = await fetch('/data/offers.json', { cache: 'no-store' });
+      const r = await fetch('data/offers.json', { cache: 'no-store' });
       if (!r.ok) return;
       const rules = await r.json();
 

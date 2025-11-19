@@ -234,8 +234,8 @@ function searchProducts(products, q){
     }
     
     try {
-      var rProdP = fetch('/data/products.json', { cache: 'no-store' });
-      var rOffP  = fetch('/data/offers.json',   { cache: 'no-store' });
+      var rProdP = fetch('data/products.json', { cache: 'no-store' });
+      var rOffP  = fetch('data/offers.json',   { cache: 'no-store' });
 
       var rProd = await rProdP;
       var rOff  = await rOffP;
@@ -251,7 +251,7 @@ function searchProducts(products, q){
 
       // normalizar
       var products = base.map(function (p) {
-        var image = p.thumbnail || (Array.isArray(p.images) && p.images.length ? p.images[0] : null) || p.image || '/img/products/placeholder.png';
+        var image = p.thumbnail || (Array.isArray(p.images) && p.images.length ? p.images[0] : null) || p.image || 'img/products/placeholder.png';
         return {
           id:              p.id,
           title:           p.title || '',
@@ -580,7 +580,7 @@ function searchProducts(products, q){
               +     badge
               + '</div>'
               + '<div class="product-actions">'
-              + '  <a class="page-btn buy-link" href="/product.html?id=' + encodeURIComponent(p.id) + '" aria-label="Comprar ' + (p.title || '') + '">Ver producto </a>'
+              + '  <a class="page-btn buy-link" href="product.html?id=' + encodeURIComponent(p.id) + '" aria-label="Comprar ' + (p.title || '') + '">Ver producto </a>'
               + '</div>';
 
             frag.appendChild(li);

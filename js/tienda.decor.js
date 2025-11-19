@@ -12,20 +12,20 @@
     {
       title: "Viví el cine en casa",
       subtitle: "Colores más reales y sonido envolvente",
-      cta: { label: "Ver Smart TV", url: "/tienda.html?cat=televisores" },
-      img: { desktop: "/img/hero/hero-tv-desktop.jpg", mobile: "/img/hero/hero-tv-mobile.jpg", alt: "Smart TV mostrando colores vivos" }
+      cta: { label: "Ver Smart TV", url: "tienda.html?cat=televisores" },
+      img: { desktop: "img/hero/hero-tv-desktop.jpg", mobile: "img/hero/hero-tv-mobile.jpg", alt: "Smart TV mostrando colores vivos" }
     },
     {
       title: "Frescura que dura",
       subtitle: "No Frost y eficiencia para tu día a día",
-      cta: { label: "Ver heladeras", url: "/tienda.html?cat=electrodomesticos&subcat=refrigeradores" },
-      img: { desktop: "/img/hero/hero-heladeras-desktop.jpg", mobile: "/img/hero/hero-heladeras-mobile.jpg", alt: "Heladera No Frost de gran capacidad" }
+      cta: { label: "Ver heladeras", url: "tienda.html?cat=electrodomesticos&subcat=refrigeradores" },
+      img: { desktop: "img/hero/hero-heladeras-desktop.jpg", mobile: "img/hero/hero-heladeras-mobile.jpg", alt: "Heladera No Frost de gran capacidad" }
     },
     {
       title: "Cociná más en menos tiempo",
       subtitle: "Hornos, cocinas y anafes que cuidan tu energía",
-      cta: { label: "Ver Cocina", url: "/tienda.html?cat=electrodomesticos&subcat=hornos" },
-      img: { desktop: "/img/hero/hero-cocina-desktop.jpg", mobile: "/img/hero/hero-cocina-mobile.jpg", alt: "Horno y anafe en cocina moderna" }
+      cta: { label: "Ver Cocina", url: "tienda.html?cat=electrodomesticos&subcat=hornos" },
+      img: { desktop: "img/hero/hero-cocina-desktop.jpg", mobile: "img/hero/hero-cocina-mobile.jpg", alt: "Horno y anafe en cocina moderna" }
     }
   ];
 
@@ -96,12 +96,12 @@
   let CATALOG = null;
   async function loadProducts(){
     if (CATALOG) return CATALOG;
-    const r = await fetch('/data/products.json', { cache:'no-store' });
+    const r = await fetch('data/products.json', { cache:'no-store' });
     if (!r.ok) return [];
     const json = await r.json();
     const base = Array.isArray(json) ? json : (json.products || []);
     CATALOG = base.map(p=>{
-      const image = p.thumbnail || (Array.isArray(p.images)&&p.images[0]) || p.image || '/img/products/placeholder.png';
+      const image = p.thumbnail || (Array.isArray(p.images)&&p.images[0]) || p.image || 'img/products/placeholder.png';
       return {
         id: p.id,
         title: p.title || '',
@@ -127,7 +127,7 @@
   async function loadOffers(){
     if (OFFER_RULES) return OFFER_RULES;
     try{
-      const r = await fetch('/data/offers.json', { cache:'no-store' });
+      const r = await fetch('data/offers.json', { cache:'no-store' });
       OFFER_RULES = r.ok ? await r.json() : [];
     }catch(e){
       OFFER_RULES = [];
@@ -160,7 +160,7 @@
     <img src="${p.image}" alt="${safeTitle}"
          loading="lazy" decoding="async" fetchpriority="low"
          width="320" height="400" sizes="${sizes}"
-         onerror="if(!this._tried){this._tried=1;this.src='/img/products/placeholder.png'}">
+         onerror="if(!this._tried){this._tried=1;this.src='img/products/placeholder.png'}">
     ${badge}
   </figure>
   <div class="product-title">${p.title||''}</div>
@@ -516,7 +516,7 @@
   wrapper.id = 'category-hero';
   wrapper.innerHTML = `
     <div class="section__hero"
-         style="--hero:url('/img/bannerhela.png'); /* misma imagen que usás */
+         style="--hero:url('img/bannerhela.png'); /* misma imagen que usás */
                 --hero-pos:right center; --hero-size:cover;
                 --fade-color:rgba(0,0,0,.58); --fade-stop:44%;">
       <div class="section__inner">
