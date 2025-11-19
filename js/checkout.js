@@ -1,9 +1,29 @@
 // js/checkout.js
+// Validación simple de RUT uruguayo
+function validarRUTUy(rut) {
+  rut = rut.replace(/\D/g, ""); // solo números
+
+  if (rut.length !== 12) return false;
+
+  const coef = [4,3,2,9,8,7,6,5,4,3,2];
+  let sum = 0;
+
+  for (let i = 0; i < 11; i++) {
+    sum += coef[i] * parseInt(rut[i], 10);
+  }
+
+  const dv = (11 - (sum % 11)) % 11;
+
+  return dv === parseInt(rut[11], 10);
+}
+
 (function () {
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => root.querySelectorAll(sel);
 
-  // --- PASOS ---
+  /* ============================================================
+      PASOS DEL CHECKOUT
+  ============================================================ */
   const stepBtns = $$(".checkout-steps .step");
   const panels = $$(".checkout-panel");
 
@@ -13,6 +33,7 @@
       btn.classList.toggle("is-active", active);
       btn.setAttribute("aria-selected", active);
     });
+
     panels.forEach(p => {
       p.classList.toggle("is-visible", Number(p.dataset.step) === n);
     });
@@ -22,29 +43,90 @@
     if (email && small) small.textContent = email;
   }
 
-  stepBtns.forEach(btn => btn.addEventListener("click", () => showStep(Number(btn.dataset.step))));
+  stepBtns.forEach(btn =>
+    btn.addEventListener("click", () => showStep(Number(btn.dataset.step)))
+  );
+
+  /* ============================================================
+      VALIDACIONES — BOTONES SIGUIENTE / ATRÁS
+  ============================================================ */
   document.addEventListener("click", (e) => {
     const next = e.target.getAttribute("data-next");
     const prev = e.target.getAttribute("data-prev");
+
+    /* -------------------------
+       VALIDACIÓN PASO 1
+    -------------------------- */
+    if (next === "2") {
+      const nombre = $("#fact-nombre")?.value.trim();
+      const email  = $("#fact-email")?.value.trim();
+      const tel    = $("#fact-tel")?.value.trim();
+      const doc    = $("#fact-doc")?.value.trim();
+      const rut    = $("#fact-rut")?.value.trim();
+
+      if (!nombre) return alert("Ingresá tu nombre completo.");
+      if (!email)  return alert("Ingresá tu email.");
+      if (!tel)    return alert("Ingresá tu teléfono.");
+      if (!doc)    return alert("Ingresá tu Documento.");
+
+      // Validar RUT solo si lo completaron
+      if (rut && !validarRUTUy(rut)) {
+        return alert("El RUT ingresado no es válido.");
+      }
+    }
+
+    /* -------------------------
+       VALIDACIÓN PASO 2
+    -------------------------- */
+    if (next === "3") {
+      const mode = document.querySelector(".ship-tab.is-active")?.dataset.mode;
+
+      // --- Envío a domicilio ---
+      if (mode === "domicilio") {
+        if (!$("#envio-direccion")?.value.trim())
+          return alert("Ingresá la dirección.");
+        if (!$("#envio-ciudad")?.value.trim())
+          return alert("Ingresá la ciudad.");
+        if (!$("#envio-depto")?.value.trim())
+          return alert("Ingresá el departamento.");
+      }
+
+      // --- Retiro en sucursal ---
+      if (mode === "retiro") {
+        if (!$("#retiro-nombre")?.value.trim())
+          return alert("Ingresá el nombre de quien retira.");
+        if (!$("#retiro-tel")?.value.trim())
+          return alert("Ingresá el teléfono de quien retira.");
+      }
+    }
+
     if (next) showStep(Number(next));
     if (prev) showStep(Number(prev));
   });
 
-  // --- TABS ENVÍO ---
+  /* ============================================================
+      TABS DE ENVÍO (DOMICILIO / RETIRO)
+  ============================================================ */
   const shipTabs = $$(".ship-tab");
+
   shipTabs.forEach(tab => {
     tab.addEventListener("click", () => {
       shipTabs.forEach(t => t.classList.remove("is-active"));
       tab.classList.add("is-active");
+
       const mode = tab.dataset.mode;
+
       document.querySelectorAll("[data-ship]").forEach(el => {
         el.hidden = el.dataset.ship !== mode;
       });
+
       recomputeTotals();
     });
   });
+  /* ============================================================
+      CARRITO
+  ============================================================ */
 
-  // --- CARRITO ---
   const listEl = $("#cart-list");
   const subEl = $("#cart-sub");
   const clearBtn = $("#btn-clear");
@@ -192,8 +274,9 @@
 
   window.addEventListener("cart:updated", renderCartRight);
   window.addEventListener("cart:repriced", renderCartRight);
-
-  // --- ENVÍO Y TOTALES ---
+  /* ============================================================
+      ENVÍO + TOTALES
+  ============================================================ */
   const USD_FREE_SHIP_THRESHOLD = 150;
   const UYU_SHIP_FLAT = 250;
   const USD_RATE = 40;
@@ -260,12 +343,13 @@
     ensurePaymentStrip(summaryBox);
   }
 
-  /* EMAILJS - ECOLIFE */
-
+  /* ============================================================
+      EMAILJS
+  ============================================================ */
   const EMAILJS_SERVICE = "service_o901yzo";
-  const TEMPLATE_ID_STORE = "template_2jobyzx";      // mail interno
-  const TEMPLATE_ID_PENDING = "template_3t4k1j1";    // pago en proceso
-  const TEMPLATE_ID_ABANDONED = "template_v9m0mtb";  // carrito abandonado
+  const TEMPLATE_ID_STORE = "template_2jobyzx";
+  const TEMPLATE_ID_PENDING = "template_3t4k1j1";
+  const TEMPLATE_ID_ABANDONED = "template_v9m0mtb";
   const EMAILJS_USER = "ktIyEXjcCfhYjKZzI";
 
   if (typeof emailjs !== "undefined") emailjs.init(EMAILJS_USER);
@@ -308,13 +392,17 @@
         name: $("#fact-nombre")?.value || "",
         email: $("#fact-email")?.value || "",
         phone: $("#fact-tel")?.value || "",
-        rut: $("#fact-doc")?.value || ""
+        document: $("#fact-doc")?.value || "",
+        rut: $("#fact-rut")?.value || ""
       },
       shipping: {
+        mode: document.querySelector(".ship-tab.is-active")?.dataset.mode,
         address: $("#envio-direccion")?.value || "",
         city: $("#envio-ciudad")?.value || "",
         state: $("#envio-depto")?.value || "",
-        zip: $("#envio-cp")?.value || ""
+        zip: $("#envio-cp")?.value || "",
+        retiroNombre: $("#retiro-nombre")?.value || "",
+        retiroTel: $("#retiro-tel")?.value || ""
       },
       items,
       amounts: { subtotalUSD, shippingUYU, totalUSD }
@@ -328,11 +416,15 @@
       name: payload.customer.name,
       email: payload.customer.email,
       phone: payload.customer.phone,
+      document: payload.customer.document,
       rut: payload.customer.rut,
       address: payload.shipping.address,
       city: payload.shipping.city,
       state: payload.shipping.state,
       zip: payload.shipping.zip,
+      retiroNombre: payload.shipping.retiroNombre,
+      retiroTel: payload.shipping.retiroTel,
+
       subtotalUSD: fmt.format(payload.amounts.subtotalUSD),
       shippingUYU: payload.amounts.shippingUYU === 0 ? "Gratis" : `UYU ${payload.amounts.shippingUYU}`,
       totalUSD: fmt.format(payload.amounts.totalUSD),
@@ -340,11 +432,9 @@
     };
 
     try {
-      // --- 1️⃣ Envío interno (a EcoLife)
       await emailjs.send(EMAILJS_SERVICE, TEMPLATE_ID_STORE, vars);
-      console.log("📩 Pedido enviado a EcoLife (interno)");
+      console.log("📩 Pedido enviado a EcoLife");
 
-      // --- 2️⃣ Envío al cliente (pago en proceso)
       const clientVars = {
         name: payload.customer.name,
         email: payload.customer.email,
@@ -355,9 +445,8 @@
       };
 
       await emailjs.send(EMAILJS_SERVICE, TEMPLATE_ID_PENDING, clientVars);
-      console.log("✅ Confirmación enviada al cliente");
+      console.log("📧 Confirmación enviada al cliente");
 
-      // ⭐ 3️⃣ Programar recordatorio (carrito abandonado)
       setTimeout(() => {
         emailjs.send(EMAILJS_SERVICE, TEMPLATE_ID_ABANDONED, {
           name: payload.customer.name,
@@ -365,17 +454,14 @@
           totalUSD: fmt.format(payload.amounts.totalUSD),
           shippingUYU: payload.amounts.shippingUYU === 0 ? "Gratis" : `UYU ${payload.amounts.shippingUYU}`,
           itemsrows: rows
-        })
-        .then(() => console.log("⏳ Recordatorio enviado (carrito abandonado)"))
-        .catch(err => console.error("Error recordatorio:", err));
-      }, 60 * 60 * 1000); // 1 hora
+        });
+      }, 60 * 60 * 1000);
 
-
-      alert("✅ Pedido enviado correctamente. Te llegará un correo con el detalle.");
+      alert("✅ Pedido enviado correctamente.");
       window.EcoCart?.Cart.clear();
 
     } catch (err) {
-      console.error("❌ Error al enviar el correo:", err);
+      console.error("❌ Error al enviar:", err);
       alert("⚠️ No se pudo enviar el correo del pedido.");
     }
   }
@@ -385,4 +471,5 @@
     const payload = collectCheckoutData();
     await sendEmailToStore(payload);
   });
+
 })();

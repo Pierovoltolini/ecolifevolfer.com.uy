@@ -1034,3 +1034,31 @@ button,
   height: auto;      /* no deformar */
   border-radius: 8px;
 }
+/* ============================
+   BORDES NEGROS SOLO EN INPUTS
+   ============================ */
+.checkout-panel input,
+.checkout-panel select,
+.checkout-panel textarea {
+  border: 1px solid #000 !important;   /* borde negro */
+  border-radius: 0 !important;         /* recto */
+  background: #fff !important;         /* fondo blanco limpio */
+  padding: 10px !important;
+  box-shadow: none !important;
+}
+
+/* Hover / Focus también recto */
+.checkout-panel input:focus,
+.checkout-panel select:focus,
+.checkout-panel textarea:focus {
+  border: 1px solid #000 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+.help-note {
+  display: block;
+  font-size: 11px;
+  color: #444;
+  margin-top: 4px;
+  opacity: 0.8;
+}

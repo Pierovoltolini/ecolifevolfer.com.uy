@@ -60,8 +60,7 @@ compras online Uruguay
       <nav class="gdar-quick" aria-label="Accesos rápidos">
         <a href="tienda.html" class="gdar-quick__link">Tienda</a>
         
-        <a class="gdar-menu__link" href="contact.html">Contacto</a>
-
+        
         <a href="checkout.html" class="gdar-quick__cart" aria-label="Carrito">
   <svg class="gdar-cart-icon" viewBox="0 0 24 24" aria-hidden="true">
     <path d="M4.00436 6.41686L0.761719 3.17422L2.17593 1.76001L5.41857 5.00265H20.6603C21.2126 5.00265 21.6603 5.45037 21.6603 6.00265C21.6603 6.09997 21.6461 6.19678 21.6182 6.29L19.2182 14.29C19.0913 14.713 18.7019 15.0027 18.2603 15.0027H6.00436V17.0027H17.0044V19.0027H5.00436C4.45207 19.0027 4.00436 18.5549 4.00436 18.0027V6.41686ZM6.00436 7.00265V13.0027H17.5163L19.3163 7.00265H6.00436ZM5.50436 23.0027C4.67593 23.0027 4.00436 22.3311 4.00436 21.5027C4.00436 20.6742 4.67593 20.0027 5.50436 20.0027C6.33279 20.0027 7.00436 20.6742 7.00436 21.5027C7.00436 22.3311 6.33279 23.0027 5.50436 23.0027ZM17.5044 23.0027C16.6759 23.0027 16.0044 22.3311 16.0044 21.5027C16.0044 20.6742 16.6759 20.0027 17.5044 20.0027C18.3328 20.0027 19.0044 20.6742 19.0044 21.5027C19.0044 22.3311 18.3328 23.0027 17.5044 23.0027Z"></path>
@@ -133,10 +132,22 @@ compras online Uruguay
             </div>
           </div>
 
-          <div class="field-group">
-            <label for="fact-doc">Documento / RUT</label>
-            <input id="fact-doc" name="fact-doc" type="text">
-          </div>
+        <!-- DOCUMENTO PERSONAL (OBLIGATORIO) -->
+<div class="field-group">
+  <label for="fact-doc">Documento *</label>
+  <input id="fact-doc" name="fact-doc" type="text" required>
+  <small class="error-msg"></small>
+</div>
+
+<!-- RUT (OPCIONAL) -->
+<div class="field-group">
+  <label for="fact-rut">RUT (si necesita)</label>
+  <input id="fact-rut" name="fact-rut" type="text" placeholder="">
+  <small class="error-msg"></small>
+  <small class="help-note">Ingresar sin puntos ni guiones</small>
+</div>
+
+
 
           <div class="panel-actions">
             <button type="button" class="btn-primary" data-next="2">Continuar a envío</button>
@@ -173,13 +184,32 @@ compras online Uruguay
             </div>
           </div>
 
-          <div class="field-group" data-ship="retiro" hidden>
-            <label for="retiro-sucursal">Sucursal</label>
-            <select id="retiro-sucursal" name="retiro-sucursal">
-              <option value="maldonado">Maldonado - Casa central</option>
-              <option value="punta">Punta del Este</option>
-            </select>
-          </div>
+        <!-- RETIRO EN SUCURSAL -->
+<!-- RETIRO EN SUCURSAL (con datos del retirante) -->
+<div class="field-group retiro-box" data-ship="retiro" hidden>
+
+  <p class="retiro-info">
+    Retiro en sucursal. Completá los datos de la persona a retirar:
+  </p>
+
+  <label for="retiro-nombre">Nombre de quien retira *</label>
+  <input id="retiro-nombre" name="retiro-nombre" type="text" required>
+  <small class="error-msg"></small>
+
+  <label for="retiro-tel">Teléfono de quien retira *</label>
+  <input id="retiro-tel" name="retiro-tel" type="tel" required>
+  <small class="error-msg"></small>
+
+  <p class="retiro-info" style="margin-top:15px;">
+    La entrega se coordinará en:<br>
+    <strong>
+      Ruta 101 – Capitán Juan Antonio Artigas Km 28.600,<br>
+      91001 Barros Blancos, Canelones O Punta del este .
+    </strong>
+  </p>
+
+</div>
+
 
           <div class="panel-actions">
             <button type="button" class="btn-secondary" data-prev="1">Volver</button>
@@ -239,7 +269,7 @@ compras online Uruguay
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>© <span id="year">2025</span> EcoLife by Volfer · Envíos a todo Uruguay · 
+      <p>© <span id="year">2025</span> EcoLife by Volfer · Envíos a todo Uruguay </p>
 
     </div>
   </footer>
