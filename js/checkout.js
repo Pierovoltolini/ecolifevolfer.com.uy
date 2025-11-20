@@ -1,16 +1,27 @@
 // js/checkout.js
 
-// === Handy Integration ===
+// === Handy Integration (via Worker) ===
 function buildOrderObject() {
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const items = cart.map(item => ({
-    name: item.title,
-    qty: item.quantity,
-    price: Number(item.price),
+  // Usamos el mismo carrito que se muestra en el checkout (EcoCart).
+  // Si por alguna razón no existe, caemos al carrito de localStorage.
+  const ecoItems = (window.EcoCart && window.EcoCart.Cart && window.EcoCart.Cart.getItems)
+    ? window.EcoCart.Cart.getItems()
+    : null;
+
+  const rawItems = Array.isArray(ecoItems) && ecoItems.length
+    ? ecoItems
+    : JSON.parse(localStorage.getItem("cart") || "[]");
+
+  const items = rawItems.map(item => ({
+    name: item.title || item.name,
+    qty: Number(item.qty ?? item.quantity ?? 1),
+    price: Number(item.price) || 0,
     taxed: 0,
     image: item.image || item.thumbnail
   }));
+
   const subtotal = items.reduce((acc, i) => acc + i.price * i.qty, 0);
+
   return {
     orderNumber: Date.now(),
     taxedAmount: 0,
@@ -20,39 +31,21 @@ function buildOrderObject() {
 }
 
 async function createHandyPayment(order) {
-  const endpoint = "https://api.payments.arriba.uy/api/v2/payments";
-  const body = {
-    CallbackUrl: "https://ecolifebyvolfer.com.uy/api/handy-webhook",
-    ResponseType: "Json",
-    Cart: {
-      InvoiceNumber: order.orderNumber,
-      Currency: 840,
-      TaxedAmount: order.taxedAmount,
-      TotalAmount: order.total,
-      LinkImageUrl: order.items[0]?.image || "https://ecolifebyvolfer.com.uy/img/logoecolife.png",
-      TransactionExternalId: crypto.randomUUID(),
-      Products: order.items.map(i => ({
-        Name: i.name,
-        Quantity: i.qty,
-        Amount: i.price,
-        TaxedAmount: i.taxed
-      }))
-    },
-    Client: {
-      CommerceName: "EcoLife by Volfer",
-      SiteUrl: "https://ecolifebyvolfer.com.uy/pago-confirmado.html"
-    }
-  };
-  const res = await fetch(endpoint, {
+  // Llamamos a nuestro Worker en Cloudflare, no directo a la API de Handy.
+  const res = await fetch("/api/handy-create-payment", {
     method: "POST",
-    headers: {
-      "merchant-secret-key": "c80c2dca-ee4f-4cec-ace0-850747a5dcfa",
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(body)
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(order)
   });
+
+  if (!res.ok) {
+    console.error("Error en /api/handy-create-payment", res.status);
+    throw new Error("Error en servidor de pagos");
+  }
+
   const data = await res.json();
-  return data.PaymentUrl;
+  // El Worker devuelve { url: "https://pago.arriba.uy?sessionId=..." }
+  return data.url;
 }
 // === End Handy Integration ===
 
