@@ -1,4 +1,61 @@
 // js/checkout.js
+
+// === Handy Integration (Testing) ===
+function buildOrderObject() {
+  const cart = window.EcoCart?.Cart?.getItems() || [];
+  const items = cart.map(item => ({
+    name: item.title,
+    qty: item.qty,
+    price: Number(item.price),
+    taxed: 0,
+    image: item.thumbnail || item.image
+  }));
+  const subtotal = items.reduce((acc, i) => acc + i.price * i.qty, 0);
+  return {
+    orderNumber: Date.now(),
+    taxedAmount: 0,
+    total: subtotal,
+    items
+  };
+}
+
+async function createHandyPayment(order) {
+  const endpoint = "https://api.payments.arriba.uy/api/v2/payments";
+  const body = {
+    CallbackUrl: "https://ecolifebyvolfer.com.uy/api/handy-webhook",
+    ResponseType: "Json",
+    Cart: {
+      InvoiceNumber: order.orderNumber,
+      Currency: 858,
+      TaxedAmount: order.taxedAmount,
+      TotalAmount: order.total,
+      LinkImageUrl: order.items[0]?.image || "https://ecolifebyvolfer.com.uy/img/logoecolife.png",
+      TransactionExternalId: crypto.randomUUID(),
+      Products: order.items.map(i => ({
+        Name: i.name,
+        Quantity: i.qty,
+        Amount: i.price,
+        TaxedAmount: i.taxed
+      }))
+    },
+    Client: {
+      CommerceName: "EcoLife by Volfer",
+      SiteUrl: "https://ecolifebyvolfer.com.uy/pago-confirmado.html"
+    }
+  };
+  const res = await fetch(endpoint, {
+    method: "POST",
+    headers: {
+      "merchant-secret-key": "c80c2dca-ee4f-4cec-ace0-850747a5dcfa",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(body)
+  });
+  const data = await res.json();
+  return data.url;
+}
+// === End Handy Integration ===
+
 // Validación simple de RUT uruguayo
 function validarRUTUy(rut) {
   rut = rut.replace(/\D/g, ""); // solo números
@@ -468,8 +525,10 @@ function validarRUTUy(rut) {
 
   $("#btn-confirm")?.addEventListener("click", async (e) => {
     e.preventDefault();
-    const payload = collectCheckoutData();
-    await sendEmailToStore(payload);
-  });
+    const order = buildOrderObject();
+    const paymentUrl = await createHandyPayment(order);
+    if (paymentUrl) window.location.href = paymentUrl;
+    else alert("Error generando el pago.");
+});
 
 })();
