@@ -1,14 +1,14 @@
 // js/checkout.js
 
-// === Handy Integration (Testing) ===
+// === Handy Integration ===
 function buildOrderObject() {
-  const cart = window.EcoCart?.Cart?.getItems() || [];
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
   const items = cart.map(item => ({
     name: item.title,
-    qty: item.qty,
+    qty: item.quantity,
     price: Number(item.price),
     taxed: 0,
-    image: item.thumbnail || item.image
+    image: item.image || item.thumbnail
   }));
   const subtotal = items.reduce((acc, i) => acc + i.price * i.qty, 0);
   return {
@@ -26,7 +26,7 @@ async function createHandyPayment(order) {
     ResponseType: "Json",
     Cart: {
       InvoiceNumber: order.orderNumber,
-      Currency: 858,
+      Currency: 840,
       TaxedAmount: order.taxedAmount,
       TotalAmount: order.total,
       LinkImageUrl: order.items[0]?.image || "https://ecolifebyvolfer.com.uy/img/logoecolife.png",
@@ -52,7 +52,7 @@ async function createHandyPayment(order) {
     body: JSON.stringify(body)
   });
   const data = await res.json();
-  return data.url;
+  return data.PaymentUrl;
 }
 // === End Handy Integration ===
 
@@ -529,6 +529,6 @@ function validarRUTUy(rut) {
     const paymentUrl = await createHandyPayment(order);
     if (paymentUrl) window.location.href = paymentUrl;
     else alert("Error generando el pago.");
-});
+  });
 
 })();
