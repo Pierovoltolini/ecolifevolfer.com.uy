@@ -1,3 +1,5 @@
+// functions/api/handy-create-payment.js
+
 export async function onRequestPost({ request, env }) {
   try {
     const HANDY_SECRET = env.HANDY_SECRET;
@@ -9,38 +11,40 @@ export async function onRequestPost({ request, env }) {
       );
     }
 
+    // Orden enviada desde tu checkout (buildOrderObject)
     const order = await request.json();
+    const items = Array.isArray(order.items) ? order.items : [];
 
+    // Armamos el cuerpo según la API de Handy
     const body = {
-      CallbackUrl: "https://ecolifebyvolfer.com.uy/api/handy-webhook",
+      CallbackUrl: "https://ecolifebyvolfer.com.uy/checkout.html", // o página de gracias
       ResponseType: "Json",
       Cart: {
         InvoiceNumber: String(order.orderNumber || Date.now()),
         Currency: 858, // UYU
-        TaxedAmount: order.taxedAmount || 0,
-        TotalAmount: order.total || 0,
+        TaxedAmount: Number(order.taxedAmount || 0),
+        TotalAmount: Number(order.total || 0),
         LinkImageUrl:
-          (order.items && order.items[0] && order.items[0].image) ||
+          (items[0] && items[0].image) ||
           "https://ecolifebyvolfer.com.uy/img/logoecolife.png",
         TransactionExternalId:
           (typeof crypto !== "undefined" && crypto.randomUUID
             ? crypto.randomUUID()
             : String(Date.now())),
-        Products: (order.items || []).map((i) => ({
+        Products: items.map((i) => ({
           Name: i.name,
-          Quantity: i.qty,
-          Amount: i.price,
-          TaxedAmount: i.taxed || 0
+          Quantity: Number(i.qty || 1),
+          Amount: Number(i.price || 0),
+          TaxedAmount: Number(i.taxed || 0)
         }))
       },
       Client: {
         CommerceName: "EcoLife by Volfer",
-        // Esta es SOLO la URL de "volver al comercio" que muestra Handy.
-        // Si NO tenés pago-confirmado.html, cambiá esto a la que quieras:
         SiteUrl: "https://ecolifebyvolfer.com.uy/tienda.html"
       }
     };
 
+    // Llamamos a la API de Handy (testing/prod según tu clave)
     const handyRes = await fetch(
       "https://api.payments.arriba.uy/api/v2/payments",
       {
@@ -66,6 +70,7 @@ export async function onRequestPost({ request, env }) {
       );
     }
 
+    // Devolvemos solo la URL hacia el front
     return new Response(JSON.stringify({ url: data.url }), {
       status: 200,
       headers: { "Content-Type": "application/json" }
