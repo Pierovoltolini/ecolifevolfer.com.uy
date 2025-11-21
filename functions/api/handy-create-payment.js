@@ -17,7 +17,7 @@ export async function onRequestPost({ request, env }) {
 
     // Armamos el cuerpo según la API de Handy
     const body = {
-      CallbackUrl: "https://ecolifebyvolfer.com.uy/checkout.html", // o página de gracias
+      CallbackUrl: "https://ecolifevolfer.com.uy/checkout.html", // o página de gracias
       ResponseType: "Json",
       Cart: {
         InvoiceNumber: String(order.orderNumber || Date.now()),
@@ -26,7 +26,7 @@ export async function onRequestPost({ request, env }) {
         TotalAmount: Number(order.total || 0),
         LinkImageUrl:
           (items[0] && items[0].image) ||
-          "https://ecolifebyvolfer.com.uy/img/logoecolife.png",
+          "https://ecolifevolfer.com.uy/img/logoecolife.png",
         TransactionExternalId:
           (typeof crypto !== "undefined" && crypto.randomUUID
             ? crypto.randomUUID()
@@ -40,7 +40,7 @@ export async function onRequestPost({ request, env }) {
       },
       Client: {
         CommerceName: "EcoLife by Volfer",
-        SiteUrl: "https://ecolifebyvolfer.com.uy/tienda.html"
+        SiteUrl: "https://ecolifevolfer.com.uy/tienda.html"
       }
     };
 
