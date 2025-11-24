@@ -10,32 +10,26 @@ export async function onRequestPost({ request, env }) {
     }
 
     const order = await request.json();
+    const USD_RATE = 40;
 
-    // 🔵 Tipo de cambio recomendado (USD → UYU)
-    const USD_RATE = 43;
-
-    // Convertir total del carrito (USD) → pesos UYU
-    const totalUYU = Math.round(Number(order.total || 0) * USD_RATE);
+    // Total y montos convertidos a UYU
+    const totalUYU = Math.round((order.total || 0) * USD_RATE);
 
     const items = Array.isArray(order.items) ? order.items : [];
 
     const body = {
-      CallbackUrl: "https://ecolifevolfer.com.uy/checkout.html",
+      CallbackUrl: "https://ecolifevolfer.com.uy/checkout", 
       ResponseType: "Json",
-
       Cart: {
         InvoiceNumber: String(order.orderNumber || Date.now()),
-        Currency: 858, // UYU
+        Currency: 858, 
         TaxedAmount: 0,
         TotalAmount: totalUYU,
-
         LinkImageUrl:
           (items[0] && items[0].image) ||
           "https://ecolifevolfer.com.uy/img/logoecolife.png",
-
         TransactionExternalId:
           crypto?.randomUUID?.() ?? String(Date.now()),
-
         Products: items.map((i) => ({
           Name: i.name,
           Quantity: Number(i.qty || 1),
@@ -43,7 +37,6 @@ export async function onRequestPost({ request, env }) {
           TaxedAmount: 0
         }))
       },
-
       Client: {
         CommerceName: "EcoLife by Volfer",
         SiteUrl: "https://ecolifevolfer.com.uy"
