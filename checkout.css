@@ -1062,3 +1062,21 @@ button,
   margin-top: 4px;
   opacity: 0.8;
 }
+.checkout-payment-note {
+  margin-top: 12px;
+  font-size: 0.78rem;
+  color: #6b7280;
+  line-height: 1.35;
+  background: #f8fafc;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border-left: 3px solid #3fb28a;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .checkout-payment-note {
+    font-size: 0.7rem;
+    padding: 8px 10px;
+  }
+}
