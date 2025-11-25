@@ -510,7 +510,7 @@ function validarRUTUy(rut) {
         });
       }, 60 * 60 * 1000);
 
-      alert("✅ Pedido enviado correctamente.");
+      
       window.EcoCart?.Cart.clear();
 
     } catch (err) {
