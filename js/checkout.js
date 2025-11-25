@@ -25,7 +25,7 @@ function buildOrderObject() {
   return {
     orderNumber: Date.now(),
     taxedAmount: 0,
-    total: subtotal,
+    total: subtotal,  // total en USD (base, sin recargo ni envío)
     items
   };
 }
@@ -173,6 +173,7 @@ function validarRUTUy(rut) {
       recomputeTotals();
     });
   });
+
   /* ============================================================
       CARRITO
   ============================================================ */
@@ -324,6 +325,7 @@ function validarRUTUy(rut) {
 
   window.addEventListener("cart:updated", renderCartRight);
   window.addEventListener("cart:repriced", renderCartRight);
+
   /* ============================================================
       ENVÍO + TOTALES
   ============================================================ */
@@ -516,9 +518,96 @@ function validarRUTUy(rut) {
     }
   }
 
+  /* ============================================================
+      CUOTAS – PLAN CATORCE (RECARGO) + RESUMEN
+  ============================================================ */
+
+  const RECARGOS_CUOTAS = {
+    1: 0,      // 1 cuota
+    2: 5.49,   // 2 cuotas
+    3: 7.99,   // 3 cuotas
+    4: 8.49,
+    5: 8.99,
+    6: 9.49,
+    7: 9.49,
+    8: 9.49,
+    9: 9.49,
+    10: 9.49,
+    11: 9.49,
+    12: 9.99
+  };
+
+  function getTotalUSDConRecargo() {
+    const data = collectCheckoutData();
+    const totalUSDBase = data.amounts.totalUSD || 0;
+
+    const select = document.getElementById("selector-cuotas");
+    const cuotas = Number(select?.value || 1);
+
+    const recargo = RECARGOS_CUOTAS[cuotas] || 0; // %
+    const totalUSDConRecargo = totalUSDBase * (1 + recargo / 100);
+
+    return { cuotas, recargo, totalUSDBase, totalUSDConRecargo };
+  }
+
+  function actualizarResumenCuotas() {
+    const resumen = document.getElementById("cuotas-resumen");
+    const select = document.getElementById("selector-cuotas");
+    if (!resumen || !select) return;
+
+    const { cuotas, recargo, totalUSDConRecargo } = getTotalUSDConRecargo();
+
+    const tc = 40;
+    const totalUYUConRecargo = Math.round(totalUSDConRecargo * tc);
+    const cuotaUYU = Math.round(totalUYUConRecargo / cuotas);
+    const f = (n) => n.toLocaleString("es-UY");
+
+    if (cuotas === 1) {
+      resumen.textContent =
+        `Total final estimado: $ ${f(totalUYUConRecargo)} UYU`;
+    } else {
+      resumen.textContent =
+        `Total final estimado: $ ${f(totalUYUConRecargo)} UYU — ` +
+        `${cuotas} cuotas de $ ${f(cuotaUYU)} UYU`;
+    }
+
+    // Guardamos para usar al confirmar
+    window.checkoutCuotas = {
+      cuotas,
+      recargo,
+      totalUSD: totalUSDConRecargo,
+      totalUYU: totalUYUConRecargo,
+      cuotaUYU
+    };
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(actualizarResumenCuotas, 300);
+  });
+
+  document.getElementById("selector-cuotas")?.addEventListener("change", actualizarResumenCuotas);
+
+  /* ============================================================
+      BOTÓN CONFIRMAR – ENVÍA TOTAL CON RECARGO A HANDY
+  ============================================================ */
+
   $("#btn-confirm")?.addEventListener("click", async (e) => {
     e.preventDefault();
+
     const order = buildOrderObject();
+
+    // Aplicar total con recargo de cuotas (si está calculado)
+    try {
+      if (!window.checkoutCuotas) {
+        actualizarResumenCuotas();
+      }
+      if (window.checkoutCuotas?.totalUSD) {
+        order.total = window.checkoutCuotas.totalUSD; // total en USD con recargo
+      }
+    } catch (err) {
+      console.warn("No se pudo aplicar recargo de cuotas, se envía total base.", err);
+    }
+
     const paymentUrl = await createHandyPayment(order);
     if (paymentUrl) window.location.href = paymentUrl;
     else alert("Error generando el pago.");
