@@ -750,15 +750,56 @@ document.addEventListener('click', (e) => {
   window.location.href = btn.href;
 }, false);
 
-// === MOBILE: TAP TAMBIÉN ABRE ===
-document.addEventListener('touchend', (e) => {
-  const card = e.target.closest('.product-card');
+// === ABRIR PRODUCTO ===
+
+// Detectar si es móvil
+const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+// Guardar último tap
+let lastTappedCard = null;
+let lastTapTime = 0;
+
+// DESKTOP → clic normal
+document.addEventListener("click", (e) => {
+  if (isMobile) return; // Mobile usará touch
+
+  const card = e.target.closest(".product-card");
   if (!card) return;
 
-  const btn = card.querySelector('.buy-link');
+  const btn = card.querySelector(".buy-link");
   if (!btn) return;
 
-  if (e.target.closest('.buy-link')) return;
+  if (e.target.closest(".buy-link")) return;
 
   window.location.href = btn.href;
+});
+
+// MOBILE → doble tap para abrir
+document.addEventListener("touchend", (e) => {
+  if (!isMobile) return; // Desktop no usa touch
+
+  const card = e.target.closest(".product-card");
+  if (!card) return;
+
+  const btn = card.querySelector(".buy-link");
+  if (!btn) return;
+
+  if (e.target.closest(".buy-link")) return;
+
+  const now = Date.now();
+
+  // Si tocó la misma card dentro de 400 ms → abrir
+  if (lastTappedCard === card && (now - lastTapTime) < 400) {
+    window.location.href = btn.href;
+    return;
+  }
+
+  // Primer tap → marcar card
+  lastTappedCard = card;
+  lastTapTime = now;
+
+  // Visual feedback opcional
+  card.classList.add("tap-highlight");
+  setTimeout(() => card.classList.remove("tap-highlight"), 350);
 }, { passive: true });
+
