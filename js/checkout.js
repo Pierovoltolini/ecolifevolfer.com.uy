@@ -31,7 +31,8 @@ function buildOrderObject() {
 }
 
 async function createHandyPayment(order) {
-  // Llamamos a nuestro Worker en Cloudflare, no directo a la API de Handy.
+  
+    // Llamamos a nuestro Worker en Cloudflare, no directo a la API de Handy.
   const res = await fetch("/api/handy-create-payment", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -591,26 +592,41 @@ function validarRUTUy(rut) {
       BOTÓN CONFIRMAR – ENVÍA TOTAL CON RECARGO A HANDY
   ============================================================ */
 
-  $("#btn-confirm")?.addEventListener("click", async (e) => {
-    e.preventDefault();
+$("#btn-confirm")?.addEventListener("click", async (e) => {
+  e.preventDefault();
 
-    const order = buildOrderObject();
+  const order = buildOrderObject();
 
-    // Aplicar total con recargo de cuotas (si está calculado)
-    try {
-      if (!window.checkoutCuotas) {
-        actualizarResumenCuotas();
-      }
-      if (window.checkoutCuotas?.totalUSD) {
-        order.total = window.checkoutCuotas.totalUSD; // total en USD con recargo
-      }
-    } catch (err) {
-      console.warn("No se pudo aplicar recargo de cuotas, se envía total base.", err);
+  // === Aplicar recargo de cuotas si corresponde ===
+  try {
+    if (!window.checkoutCuotas) actualizarResumenCuotas();
+    if (window.checkoutCuotas?.totalUSD) {
+      order.total = window.checkoutCuotas.totalUSD;
     }
+  } catch (err) {
+    console.warn("No se pudo aplicar recargo de cuotas.", err);
+  }
 
-    const paymentUrl = await createHandyPayment(order);
-    if (paymentUrl) window.location.href = paymentUrl;
-    else alert("Error generando el pago.");
-  });
+  // === Enviar email antes de Handy ===
+  try {
+    const payload = collectCheckoutData();
+    await sendEmailToStore(payload);
+
+    // 🔥 ALERTA PROFESIONAL
+    alert("✅ Pedido enviado correctamente. Serás redirigido al portal de Handy para procesar el pago.");
+  } catch (err) {
+    console.error("Error enviando EmailJS:", err);
+  }
+
+  // === Generar el pago en Handy ===
+  const paymentUrl = await createHandyPayment(order);
+
+  if (paymentUrl) {
+    window.location.href = paymentUrl;
+  } else {
+    alert("⚠️ Ocurrió un error al generar el pago. Intenta nuevamente.");
+  }
+});
+
 
 })();
