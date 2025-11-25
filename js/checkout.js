@@ -627,6 +627,32 @@ $("#btn-confirm")?.addEventListener("click", async (e) => {
     alert("⚠️ Ocurrió un error al generar el pago. Intenta nuevamente.");
   }
 });
+// --- Evitar apertura con un solo toque en móvil (doble tap required) ---
+document.addEventListener("DOMContentLoaded", function () {
+  const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  if (!isMobile) return; // Solo corre en móviles
+
+  const cards = document.querySelectorAll(".product-card, .producto, .card-producto");
+
+  cards.forEach(card => {
+    let tapped = false;
+
+    card.addEventListener("touchend", (e) => {
+      if (!tapped) {
+        // Primer toque → activa estado pero NO abre
+        tapped = true;
+        card.classList.add("tap-active");
+
+        setTimeout(() => { tapped = false; card.classList.remove("tap-active") }, 500);
+        e.preventDefault();
+      } else {
+        // Segundo toque → ahora sí abre el enlace
+        const link = card.querySelector("a");
+        if (link) window.location.href = link.href;
+      }
+    });
+  });
+});
 
 
 })();
