@@ -565,10 +565,10 @@ function validarRUTUy(rut) {
 
     if (cuotas === 1) {
       resumen.textContent =
-        `Total final estimado: $ ${f(totalUYUConRecargo)} UYU`;
+        `Total final: $ ${f(totalUYUConRecargo)} UYU`;
     } else {
       resumen.textContent =
-        `Total final estimado: $ ${f(totalUYUConRecargo)} UYU — ` +
+        `Total final: $ ${f(totalUYUConRecargo)} UYU — ` +
         `${cuotas} cuotas de $ ${f(cuotaUYU)} UYU`;
     }
 
