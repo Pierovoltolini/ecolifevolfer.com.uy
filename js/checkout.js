@@ -31,23 +31,28 @@ function buildOrderObject() {
 }
 
 async function createHandyPayment(order) {
-  
-    // Llamamos a nuestro Worker en Cloudflare, no directo a la API de Handy.
-  const res = await fetch("/api/handy-create-payment", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(order)
-  });
+  try {
+    const res = await fetch("/api/handy-create-payment", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(order)
+    });
 
-  if (!res.ok) {
-    console.error("Error en /api/handy-create-payment", res.status);
-    throw new Error("Error en servidor de pagos");
+    const data = await res.json();
+
+    if (data.url) {
+      // ❌ NO mostramos alert aquí → evita duplicados
+      window.location.href = data.url;
+    } else {
+      alert("⚠️ Ocurrió un error al generar el pago.");
+      console.error(data);
+    }
+  } catch (err) {
+    alert("⚠️ Error inesperado. Intenta de nuevo.");
+    console.error(err);
   }
-
-  const data = await res.json();
-  // El Worker devuelve { url: "https://pago.arriba.uy?sessionId=..." }
-  return data.url;
 }
+
 // === End Handy Integration ===
 
 // Validación simple de RUT uruguayo
