@@ -1,9 +1,7 @@
 // js/checkout.js
 
-// === Handy Integration (via Worker) ===
 function buildOrderObject() {
-  // Usamos el mismo carrito que se muestra en el checkout (EcoCart).
-  // Si por alguna razón no existe, caemos al carrito de localStorage.
+  // Intentamos obtener el carrito desde EcoCart
   const ecoItems = (window.EcoCart && window.EcoCart.Cart && window.EcoCart.Cart.getItems)
     ? window.EcoCart.Cart.getItems()
     : null;
@@ -12,12 +10,15 @@ function buildOrderObject() {
     ? ecoItems
     : JSON.parse(localStorage.getItem("cart") || "[]");
 
+  // Aseguramos SIEMPRE que haya imagen
   const items = rawItems.map(item => ({
     name: item.title || item.name,
     qty: Number(item.qty ?? item.quantity ?? 1),
     price: Number(item.price) || 0,
     taxed: 0,
-    image: item.image || item.thumbnail
+
+    // 🔥 ESTE FALLO ES EL QUE CAUSABA NO_ITEMS
+    image: item.thumbnail || item.images?.[0] || "https://via.placeholder.com/600"
   }));
 
   const subtotal = items.reduce((acc, i) => acc + i.price * i.qty, 0);
@@ -25,10 +26,11 @@ function buildOrderObject() {
   return {
     orderNumber: Date.now(),
     taxedAmount: 0,
-    total: subtotal,  // total en USD (base, sin recargo ni envío)
+    total: subtotal,
     items
   };
 }
+
 
 async function createHandyPayment(order) {
   try {
