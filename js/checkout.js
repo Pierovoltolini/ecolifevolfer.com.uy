@@ -41,16 +41,18 @@ async function createHandyPayment(order) {
     const data = await res.json();
 
     if (data.url) {
-      return data.url; // ← NECESARIO
-    } else {
-      alert("⚠️ Ocurrió un error al generar el pago.");
-      console.error(data);
+      return data.url; // OK — devolvemos URL
     }
+
+    console.error("Handy error:", data);
+    return null; // ❗SIN ALERT AQUÍ
+
   } catch (err) {
-    alert("⚠️ Error inesperado. Intenta de nuevo.");
-    console.error(err);
+    console.error("Error inesperado:", err);
+    return null; // ❗SIN ALERT TAMPOCO AQUÍ
   }
 }
+
 
 // === End Handy Integration ===
 
@@ -612,24 +614,25 @@ $("#btn-confirm")?.addEventListener("click", async (e) => {
   }
 
   // === Enviar email antes de Handy ===
-  try {
-    const payload = collectCheckoutData();
-    await sendEmailToStore(payload);
+ 
+try {
+  const payload = collectCheckoutData();
+  await sendEmailToStore(payload);
+} catch (err) {
+  console.error("Error enviando EmailJS:", err);
+}
 
-    // 🔥 ALERTA PROFESIONAL
-    alert("✅ Pedido enviado correctamente. Serás redirigido al portal de Handy para procesar el pago.");
-  } catch (err) {
-    console.error("Error enviando EmailJS:", err);
-  }
+// === Generar el pago en Handy ===
+const paymentUrl = await createHandyPayment(order);
 
-  // === Generar el pago en Handy ===
-  const paymentUrl = await createHandyPayment(order);
+// === SOLO UNA ALERTA PROFESIONAL ===
+if (paymentUrl) {
+  alert("✅ Pedido enviado correctamente. Serás redirigido al portal de Handy para procesar el pago.");
+  window.location.href = paymentUrl;
+} else {
+  alert("⚠️ Ocurrió un error al generar el pago. Intenta nuevamente.");
+}
 
-  if (paymentUrl) {
-    window.location.href = paymentUrl;
-  } else {
-    alert("⚠️ Ocurrió un error al generar el pago. Intenta nuevamente.");
-  }
 });
 
 
