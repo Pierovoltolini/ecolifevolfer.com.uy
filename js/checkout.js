@@ -41,8 +41,7 @@ async function createHandyPayment(order) {
     const data = await res.json();
 
     if (data.url) {
-      // ❌ NO mostramos alert aquí → evita duplicados
-      window.location.href = data.url;
+      return data.url; // ← NECESARIO
     } else {
       alert("⚠️ Ocurrió un error al generar el pago.");
       console.error(data);
