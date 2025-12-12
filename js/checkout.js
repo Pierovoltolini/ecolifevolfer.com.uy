@@ -1,5 +1,4 @@
 // js/checkout.js
-
 function buildOrderObject() {
   // Intentamos obtener el carrito desde EcoCart
   const ecoItems = (window.EcoCart && window.EcoCart.Cart && window.EcoCart.Cart.getItems)
@@ -10,26 +9,35 @@ function buildOrderObject() {
     ? ecoItems
     : JSON.parse(localStorage.getItem("cart") || "[]");
 
-  // Aseguramos SIEMPRE que haya imagen
+  // 🔥 Normalizamos los items (Handy exige imagen, nombre, qty y price)
   const items = rawItems.map(item => ({
     name: item.title || item.name,
     qty: Number(item.qty ?? item.quantity ?? 1),
     price: Number(item.price) || 0,
     taxed: 0,
-
-    // 🔥 ESTE FALLO ES EL QUE CAUSABA NO_ITEMS
     image: item.thumbnail || item.images?.[0] || "https://via.placeholder.com/600"
   }));
 
   const subtotal = items.reduce((acc, i) => acc + i.price * i.qty, 0);
 
+  // 🔥 Datos del cliente (Handy recomienda enviarlos)
+  const customer = {
+    name: document.querySelector("#fact-nombre")?.value || "",
+    email: document.querySelector("#fact-email")?.value || "",
+    phone: document.querySelector("#fact-tel")?.value || "",
+    document: document.querySelector("#fact-doc")?.value || ""
+  };
+
+  // 🔥 Estructura final enviada al Worker
   return {
     orderNumber: Date.now(),
     taxedAmount: 0,
-    total: subtotal,
-    items
+    total: subtotal,   // El worker lo redondea si es necesario
+    items,
+    customer
   };
 }
+
 
 
 async function createHandyPayment(order) {
@@ -609,7 +617,8 @@ $("#btn-confirm")?.addEventListener("click", async (e) => {
   try {
     if (!window.checkoutCuotas) actualizarResumenCuotas();
     if (window.checkoutCuotas?.totalUSD) {
-      order.total = window.checkoutCuotas.totalUSD;
+     order.total = Math.round(window.checkoutCuotas.totalUSD);
+
     }
   } catch (err) {
     console.warn("No se pudo aplicar recargo de cuotas.", err);
