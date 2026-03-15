@@ -1,26 +1,25 @@
 [
-{
-  "id": "SAHWQ600C",
-  "title": "Barra de Sonido Inalámbrica Q600 Samsung",
-  "brand": "Samsung",
-  "category": "audio",
-  "subcategory": "barras-de-sonido",
-  "slug": "barra-de-sonido-inalambrica-q600",
-  "price": 659,
-  "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157407-1200-auto?v=638555449494500000&width=1200&height=auto&aspect=true",
-  "images": [
-    "https://vstoreuy.vtexassets.com/arquivos/ids/157407-1200-auto?v=638555449494500000&width=1200&height=auto&aspect=true",
-    "https://vstoreuy.vtexassets.com/arquivos/ids/157408-1200-auto?v=638761019615530000&width=1200&height=auto&aspect=true",
-    "https://vstoreuy.vtexassets.com/arquivos/ids/157409-1200-auto?v=638761019615530000&width=1200&height=auto&aspect=true",
-    "https://vstoreuy.vtexassets.com/arquivos/ids/157410-1200-auto?v=638761019615530000&width=1200&height=auto&aspect=true",
-    "https://vstoreuy.vtexassets.com/arquivos/ids/157411-1200-auto?v=638761019615530000&width=1200&height=auto&aspect=true",
-    "https://vstoreuy.vtexassets.com/arquivos/ids/157412-1200-auto?v=638761019615530000&width=1200&height=auto&aspect=true",
-    "https://vstoreuy.vtexassets.com/arquivos/ids/157413-1200-auto?v=638761019615530000&width=1200&height=auto&aspect=true",
-    "https://vstoreuy.vtexassets.com/arquivos/ids/157414-1200-auto?v=638761019615530000&width=1200&height=auto&aspect=true",
-    "https://vstoreuy.vtexassets.com/arquivos/ids/157415-1200-auto?v=638761019615700000&width=1200&height=auto&aspect=true"
-  ]
-},
-
+  {
+    "id": "SAHWQ600C",
+    "title": "Barra de Sonido Inalámbrica Q600 Samsung",
+    "brand": "Samsung",
+    "category": "audio",
+    "subcategory": "barras-de-sonido",
+    "slug": "barra-de-sonido-inalambrica-q600",
+    "price": 499,
+    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157407-1200-auto?v=638555449494500000&width=1200&height=auto&aspect=true",
+    "images": [
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157407-1200-auto?v=638555449494500000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157408-1200-auto?v=638761019615530000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157409-1200-auto?v=638761019615530000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157410-1200-auto?v=638761019615530000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157411-1200-auto?v=638761019615530000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157412-1200-auto?v=638761019615530000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157413-1200-auto?v=638761019615530000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157414-1200-auto?v=638761019615530000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157415-1200-auto?v=638761019615700000&width=1200&height=auto&aspect=true"
+    ]
+  },
   {
     "id": "SAHWQ700C",
     "title": "BARRA DE SONIDO Q700 SAMSUNG",
@@ -36,7 +35,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/157419-1200-auto?v=638761017700570000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157420-1200-auto?v=638761017700570000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157421-1200-auto?v=638761017700700000&width=1200&height=auto&aspect=true"
-     
     ],
     "slug": "barra-de-sonido-q700",
     "url": "https://www.vstore.com.uy/barra-de-sonido-q700/p"
@@ -60,12 +58,10 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/159807-1200-auto?v=638761015240630000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/159808-1200-auto?v=638761015240630000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/159809-1200-auto?v=638761015240630000&width=1200&height=auto&aspect=true"
-      
-      
     ],
     "slug": "barra-de-sonido-inalambrica-q800d-samsung",
     "url": "https://www.vstore.com.uy/barra-de-sonido-inalambrica-q800d-samsung/p",
-    "stock":"no"
+    "stock": "no"
   },
   {
     "id": "SAHWS700D",
@@ -79,7 +75,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/160321-1200-auto?v=638739226851330000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160322-1200-auto?v=638908560709030000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160323-1200-auto?v=638908560709200000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "barra-de-sonido-inalambrica-s700-samsung",
     "url": "https://www.vstore.com.uy/barra-de-sonido-inalambrica-s700-samsung/p"
@@ -90,7 +85,7 @@
     "brand": "Samsung",
     "category": "audio",
     "subcategory": "barras-de-sonido",
-    "price": 359,
+    "price": 329,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157402-1200-auto?v=638555449478270000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157402-1200-auto?v=638555449478270000&width=1200&height=auto&aspect=true",
@@ -98,7 +93,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/157404-1200-auto?v=638761042964670000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157405-1200-auto?v=638761042964830000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157406-1200-auto?v=638761042964830000&width=1200&height=auto&aspect=true"
-     
     ],
     "slug": "barra-de-sonido-inalambrica-c450",
     "url": "https://www.vstore.com.uy/barra-de-sonido-inalambrica-c450/p"
@@ -109,37 +103,17 @@
     "brand": "Samsung",
     "category": "audio",
     "subcategory": "barras-de-sonido",
-    "price": 179,
+    "price": 159,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/159447-1200-auto?v=638584701448470000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/159447-1200-auto?v=638584701448470000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/159448-1200-auto?v=638761076493600000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/159449-1200-auto?v=638761076493600000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/159450-1200-auto?v=638761076493770000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "barra-de-sonido-inalambrica-c400",
     "url": "https://www.vstore.com.uy/barra-de-sonido-inalambrica-c400/p"
   },
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-
   {
     "id": "SAHW-LS60D",
     "title": "MUSIC FRAME SAMSUNG - PARLANTE FORMATO CUADRO ",
@@ -154,7 +128,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/159454-1200-675?v=638908559586930000&width=1200&height=675&aspect=true"
     ]
   },
- 
   {
     "id": "SAELTO2517",
     "title": "TORRE DE LAVADO BESPOKE SAMSUNG ",
@@ -167,7 +140,7 @@
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-05-02-10-41-32.jpeg",
       "https://blog.buscatuchoza.com/wp-content/uploads/2021/09/04-Lavadora-y-secadora-Samsung-de-carga-frontal-instaladas-en-torre.jpg"
     ],
-    "stock":"no"
+    "stock": "no"
   },
   {
     "id": "WW10TA046BE",
@@ -195,7 +168,7 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/157698-1200-auto?v=638555450464170000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157700-1200-auto?v=638555450470870000&width=1200&height=auto&aspect=true"
     ],
-    "stock":"no"
+    "stock": "no"
   },
   {
     "id": "SAWA80CG4240BW",
@@ -203,7 +176,7 @@
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "lavado-secado",
-    "price": 499,
+    "price": 399,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160520-1200-auto?v=638793861960970000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160520-1200-auto?v=638793861960970000&width=1200&height=auto&aspect=true",
@@ -218,7 +191,7 @@
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "lavado-secado",
-    "price": 799,
+    "price": 599,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160154-1200-auto?v=638669326936770000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160158-1200-auto?v=638908785985470000&width=1200&height=auto&aspect=true",
@@ -232,7 +205,7 @@
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "lavado-secado",
-    "price": 999,
+    "price": 679,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160144-1200-auto?v=638669315291000000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160144-1200-auto?v=638669315291000000&width=1200&height=auto&aspect=true",
@@ -277,10 +250,10 @@
     "category": "electrodomesticos",
     "subcategory": "lavado-secado",
     "price": 1299,
-    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158938-1200-auto?v=638555454676770000&width=1200&height=auto&aspect=true",
+    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/163056-1200-675?v=639052199720370000&width=1200&height=675&aspect=true",
     "images": [
-      "https://vstoreuy.vtexassets.com/arquivos/ids/158938-1200-auto?v=638555454676770000&width=1200&height=auto&aspect=true",
-      "https://vstoreuy.vtexassets.com/arquivos/ids/158939-1200-auto?v=638908787873930000&width=1200&height=auto&aspect=true"
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163056-1200-675?v=639052199720370000&width=1200&height=675&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163057-1200-675?v=639052199720370000&width=1200&height=675&aspect=true"
     ]
   },
   {
@@ -289,7 +262,7 @@
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "lavado-secado",
-    "price": 1599,
+    "price": 1399,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160540-1200-auto?v=638809222743630000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160540-1200-auto?v=638809222743630000&width=1200&height=auto&aspect=true",
@@ -332,7 +305,7 @@
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "refrigeradores",
-    "price": 3299,
+    "price": 2899,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157580-1200-auto?v=638555450068330000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157581-1200-auto?v=638555450071300000&width=1200&height=auto&aspect=true",
@@ -348,7 +321,7 @@
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "refrigeradores",
-    "price": 2799,
+    "price": 1899,
     "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2023-02-07-16-57-22.jpeg",
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2023-02-07-16-57-22.jpeg",
@@ -365,7 +338,7 @@
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "refrigeradores",
-    "price": 719,
+    "price": 699,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/161408-1200-auto?v=638931993825900000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/161409-1200-auto?v=638931993825900000&width=1200&height=auto&aspect=true",
@@ -379,7 +352,7 @@
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "refrigeradores",
-    "price": 859,
+    "price": 779,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158967-1600-auto?v=638562175784470000&width=1600&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158968-1200-auto?v=638763690408900000&width=1200&height=auto&aspect=true",
@@ -394,7 +367,7 @@
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "refrigeradores",
-    "price": 1199,
+    "price": 1049,
     "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-01-02-14-20-20.jpeg",
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-01-02-14-20-40.jpeg",
@@ -408,7 +381,7 @@
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "refrigeradores",
-    "price": 1399,
+    "price": 1149,
     "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2024-06-06-11-24-55.jpeg",
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2024-06-06-11-25-09.jpeg",
@@ -423,7 +396,7 @@
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "refrigeradores",
-    "price": 1999,
+    "price": 1399,
     "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2023-02-07-17-24-03.jpeg",
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2023-02-07-17-24-03.jpeg",
@@ -432,7 +405,7 @@
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2023-01-05-14-24-13.jpeg",
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2023-03-28-14-34-58.jpeg"
     ],
-    "stock":"no"
+    "stock": "no"
   },
   {
     "id": "SART38DG6730S9EY",
@@ -472,7 +445,7 @@
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "campanas",
-    "price": 559,
+    "price": 449,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157463-1200-auto?v=638555449655370000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157464-1200-auto?v=638908786701100000&width=1200&height=auto&aspect=true",
@@ -486,7 +459,7 @@
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "anafes",
-    "price": 599,
+    "price": 499,
     "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/ctr264kc01_2018105112722.jpg",
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/ctr264kc01_2018105112731.jpg",
@@ -500,7 +473,7 @@
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "anafes",
-    "price": 299,
+    "price": 239,
     "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/ctr432nb02_20201911717.jpg",
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/ctr432nb02_20201911717.jpg",
@@ -514,7 +487,7 @@
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "anafes",
-    "price": 349,
+    "price": 299,
     "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/na64h3010as_202058105651.jpg",
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/na64h3010as_20205810570.jpg",
@@ -527,13 +500,13 @@
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "microondas",
-    "price": 239,
-    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157445-1200-auto?v=638555449603530000&width=1200&height=auto&aspect=true",
+    "price": 169,
+    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/163033-1200-675?v=639052197424200000&width=1200&height=675&aspect=true",
     "images": [
-      "https://vstoreuy.vtexassets.com/arquivos/ids/157446-1200-auto?v=638555449606800000&width=1200&height=auto&aspect=true",
-      "https://vstoreuy.vtexassets.com/arquivos/ids/157448-1200-auto?v=638555449613830000&width=1200&height=auto&aspect=true",
-      "https://images.samsung.com/is/image/samsung/uy-ms23k3513ak-ms23k3513ak-zs-lperspectiveblack-248738810?$684_547_PNG$",
-      "https://images.samsung.com/is/image/samsung/uy-feature-ceramic-inside--234389394?$FB_TYPE_A_MO_JPG$"
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163035-1200-675?v=639052197424370000&width=1200&height=675&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163036-1200-675?v=639052197424370000&width=1200&height=675&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163037-1200-675?v=639052197424370000&width=1200&height=675&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163038-1200-675?v=639052197424370000&width=1200&height=675&aspect=true"
     ]
   },
   {
@@ -542,13 +515,13 @@
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "microondas",
-    "price": 259,
-    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157441-1200-auto?v=638555449592030000&width=1200&height=auto&aspect=true",
+    "price": 189,
+    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/163045-1200-auto?v=639052198893230000&width=1200&height=auto&aspect=true",
     "images": [
-      "https://vstoreuy.vtexassets.com/arquivos/ids/157442-1200-auto?v=638555449595170000&width=1200&height=auto&aspect=true",
-      "https://vstoreuy.vtexassets.com/arquivos/ids/157444-1200-auto?v=638555449600100000&width=1200&height=auto&aspect=true",
-      "https://vstoreuy.vtexassets.com/arquivos/ids/157443-1200-auto?v=638555449597500000&width=1200&height=auto&aspect=true",
-      "https://images.samsung.com/is/image/samsung/p6pim/uy/feature/138244396/uy-feature-ceramic-inside--458467966?$FB_TYPE_A_MO_JPG$"
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163046-1200-auto?v=639052198893400000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163047-1200-auto?v=639052198893400000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163048-1200-auto?v=639052198893400000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163049-1200-auto?v=639052198893400000&width=1200&height=auto&aspect=true"
     ]
   },
   {
@@ -557,7 +530,7 @@
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "microondas",
-    "price": 189,
+    "price": 149,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/159746-1200-auto?v=638604652384130000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/159747-1200-auto?v=638925092615800000&width=1200&height=auto&aspect=true",
@@ -571,7 +544,7 @@
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "microondas",
-    "price": 499,
+    "price": 449,
     "thumbnail": "https://images.samsung.com/is/image/samsung/p6pim/cl/mc32dg7646ckzs/gallery/cl-mw7300b-mc32db7746ke-mc32dg7646ckzs-542454269?$684_547_PNG$",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160498-1200-auto?v=638791059692230000&width=1200&height=auto&aspect=true",
@@ -579,14 +552,13 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/160499-1200-auto?v=638791059692370000&width=1200&height=auto&aspect=true"
     ]
   },
-
   {
     "id": "SAVS20C8522TB",
     "title": "ASPIRADORA SAMSUNG STICK",
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "aspiradoras",
-    "price":999 ,
+    "price": 999,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160179/VS20C8522TB--1-.jpg?v=638669444585670000",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160179/VS20C8522TB--1-.jpg?v=638669444585670000",
@@ -596,19 +568,17 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/160187-1200-auto?v=638669445271030000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160189-1200-auto?v=638669445538770000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160180-1200-auto?v=638669444661770000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "aspiradora-stick-samsung",
     "url": "https://www.vstore.com.uy/aspiradora-stick-samsung/p"
   },
- 
   {
     "id": "SAVC18M3110",
     "title": "ASPIRADORA SAMSUNG SIN BOLSA 2L",
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "aspiradoras",
-    "price":259,
+    "price": 189,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157679/SAVC18M3110-1.jpg?v=638555450405430000",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157679/SAVC18M3110-1.jpg?v=638555450405430000",
@@ -624,7 +594,7 @@
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "aspiradoras",
-    "price":1688,
+    "price": 1349,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160171/VR7MD96514G--1-.jpg?v=638669372705830000",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160171/VR7MD96514G--1-.jpg?v=638669372705830000",
@@ -633,26 +603,23 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/160175-1200-auto?v=638774732847800000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160176-1200-auto?v=638774732847800000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160178-1200-auto?v=638774732847970000&width=1200&height=auto&aspect=true"
-      
     ],
-
     "slug": "aspiradora-robot-samsung",
     "url": "https://www.vstore.com.uy/aspiradora-robot-samsung/p"
   },
-
- {
+  {
     "id": "SADW60M6050FS",
     "title": "LAVAVAJILLAS SAMSUNG 14 SERVICIOS ",
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "lavavajillas",
-    "price": 1400,
-    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157398-1200-auto?v=638555449463530000&width=1200&height=auto&aspect=true",
+    "price": 849,
+    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/163050-1200-675?v=639052199156100000&width=1200&height=675&aspect=true",
     "images": [
-      "https://vstoreuy.vtexassets.com/arquivos/ids/157398-1200-auto?v=638555449463530000&width=1200&height=auto&aspect=true",
-      "https://vstoreuy.vtexassets.com/arquivos/ids/157399-1200-auto?v=638882764960800000&width=1200&height=auto&aspect=true",
-      "https://vstoreuy.vtexassets.com/arquivos/ids/157400-1200-auto?v=638882764960970000&width=1200&height=auto&aspect=true",
-      "https://vstoreuy.vtexassets.com/arquivos/ids/157401-1200-auto?v=638882764960970000&width=1200&height=auto&aspect=true"
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163050-1200-675?v=639052199156100000&width=1200&height=675&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163051-1200-675?v=639052199156400000&width=1200&height=675&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163053-1200-675?v=639052199156500000&width=1200&height=675&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163054-1200-675?v=639052199156530000&width=1200&height=675&aspect=true"
     ]
   },
   {
@@ -661,11 +628,11 @@
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "lavavajillas",
-    "price": 1300,
-    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157396-1200-auto?v=638555449455100000&width=1200&height=auto&aspect=true",
+    "price": 779,
+    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/163042-1200-675?v=639052198277770000&width=1200&height=675&aspect=true",
     "images": [
-      "https://vstoreuy.vtexassets.com/arquivos/ids/157396-1200-auto?v=638555449455100000&width=1200&height=auto&aspect=true",
-      "https://vstoreuy.vtexassets.com/arquivos/ids/157397-1200-auto?v=638882763186130000&width=1200&height=auto&aspect=true"
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163042-1200-675?v=639052198277770000&width=1200&height=675&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163044-1200-675?v=639052198278230000&width=1200&height=675&aspect=true"
     ]
   },
   {
@@ -683,7 +650,7 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/157497-1200-auto?v=638761003162570000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157495-1200-auto?v=638761003162400000&width=1200&height=auto&aspect=true"
     ],
-    "stock":"no"
+    "stock": "no"
   },
   {
     "id": "SANX52A5411CS",
@@ -691,7 +658,7 @@
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "cocinas",
-    "price": 1299,
+    "price": 999,
     "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2023-08-03-10-17-56.jpeg",
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2023-08-03-10-18-04.jpeg",
@@ -700,13 +667,13 @@
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2023-08-03-10-19-10.jpeg"
     ]
   },
-{
+  {
     "id": " SL-KS5757C",
     "title": "COCINA COMBINNADA SMARTLIFE 5757 SILVER",
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "cocinas",
-    "price": 549,
+    "price": 419,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158100-1200-auto?v=638555451826530000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158101-1200-auto?v=638555451830770000&width=1200&height=auto&aspect=true",
@@ -718,13 +685,13 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/158107-1200-auto?v=638555451850370000&width=1200&height=auto&aspect=true"
     ]
   },
-{
+  {
     "id": " SL-KS5055C",
     "title": "COCINA COMBINNADA SMARTLIFE 5055 SILVER",
     "brand": "Samsung",
     "category": "electrodomesticos",
     "subcategory": "cocinas",
-    "price": 479,
+    "price": 359,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158080-1200-auto?v=638555451747700000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158081-1200-auto?v=638555451753030000&width=1200&height=auto&aspect=true",
@@ -738,7 +705,7 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/158088-1200-auto?v=638555451778330000&width=1200&height=auto&aspect=true"
     ]
   },
-{
+  {
     "id": " SL-KS5055G",
     "title": "COCINA A GAS  SMARTLIFE 5757 SILVER",
     "brand": "Samsung",
@@ -756,23 +723,13 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/158098-1200-auto?v=638555451817200000&width=1200&height=auto&aspect=true"
     ]
   },
-
-
-
-
-
-
-
-
-
-
   {
     "id": "SAQN75Q7F5A",
     "title": "SMART TV SAMSUNG QLED 75\" 4K",
     "brand": "Samsung",
     "category": "televisores",
     "subcategory": "samsung",
-    "price": 2499,
+    "price": 1399,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/161368-500-auto?v=638926793964270000&width=500&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/161368-500-auto?v=638926793964270000&width=500&height=auto&aspect=true",
@@ -781,7 +738,7 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/161371-1200-675?v=638926793964430000&width=1200&height=675&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/161375-1200-675?v=638926793964570000&width=1200&height=675&aspect=true"
     ],
-    "stock":"no"
+    "stock": "no"
   },
   {
     "id": " SAQN85QN85FA",
@@ -821,7 +778,7 @@
     "brand": "Samsung",
     "category": "televisores",
     "subcategory": "samsung",
-    "price": 2799,
+    "price": 1699,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160286-1200-auto?v=638727200196230000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160286-1200-auto?v=638727200196230000&width=1200&height=auto&aspect=true",
@@ -837,19 +794,19 @@
     "brand": "Samsung",
     "category": "televisores",
     "subcategory": "samsung",
-    "price": 3499,
+    "price": 2199,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/159865-1200-auto?v=638634729067100000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/159865-1200-auto?v=638634729067100000&width=1200&height=auto&aspect=true"
     ]
   },
-   {
+  {
     "id": "SAUN98DU9000",
     "title": "SMART TV SAMSUNG  98\"  4K",
     "brand": "Samsung",
     "category": "televisores",
     "subcategory": "samsung",
-    "price": 4499,
+    "price": 3599,
     "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-02-09-20-25.jpeg",
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-02-09-32-58.jpeg"
@@ -861,7 +818,7 @@
     "brand": "Samsung",
     "category": "televisores",
     "subcategory": "samsung",
-    "price": 2899,
+    "price": 1799,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/161352-1200-auto?v=638936203382530000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/161352-1200-auto?v=638936203382530000&width=1200&height=auto&aspect=true",
@@ -870,7 +827,7 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/161356-1200-675?v=638936203382700000&width=1200&height=675&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/161359-1200-675?v=638936203382830000&width=1200&height=675&aspect=true"
     ],
-    "stock":"no"
+    "stock": "no"
   },
   {
     "id": "SAUN55U8000",
@@ -878,7 +835,7 @@
     "brand": "Samsung",
     "category": "televisores",
     "subcategory": "samsung",
-    "price": 859,
+    "price": 549,
     "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-11-04-11-12-03.jpeg",
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-11-04-11-12-11.jpeg",
@@ -886,7 +843,7 @@
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-11-04-11-12-32.jpeg",
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-11-04-11-12-39.jpeg"
     ],
-    "stock":"no"
+    "stock": "no"
   },
   {
     "id": "SAUN65U8000",
@@ -894,7 +851,7 @@
     "brand": "Samsung",
     "category": "televisores",
     "subcategory": "samsung",
-    "price": 1199,
+    "price": 799,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/161400-1200-auto?v=638930293026400000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/161400-1200-auto?v=638930293026400000&width=1200&height=auto&aspect=true",
@@ -910,7 +867,7 @@
     "brand": "Samsung",
     "category": "televisores",
     "subcategory": "samsung",
-    "price": 1399,
+    "price": 1099,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/159455-1200-auto?v=638584701479330000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/159455-1200-auto?v=638584701479330000&width=1200&height=auto&aspect=true",
@@ -976,7 +933,7 @@
     "brand": "Samsung",
     "category": "televisores",
     "subcategory": "samsung",
-    "price": 699,
+    "price": 469,
     "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-10-03-10-30-18.jpeg",
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-10-03-10-30-18.jpeg",
@@ -987,13 +944,13 @@
     "slug": "led-smart-tv-50-uhd-4k-samsung",
     "url": "https://www.vstore.com.uy/led-smart-tv-50--uhd-4k-samsung/p"
   },
-    {
+  {
     "id": "SAQN50Q7FAA",
     "title": "SMART TV SAMSUNG  QLED 50\" UHD 4K",
     "brand": "Samsung",
     "category": "televisores",
     "subcategory": "samsung",
-    "price": 899,
+    "price": 599,
     "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-03-12-48-50.jpeg",
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-03-12-49-10.jpeg",
@@ -1010,7 +967,7 @@
     "brand": "Samsung",
     "category": "televisores",
     "subcategory": "samsung",
-    "price": 1599,
+    "price": 1199,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/159769-1200-auto?v=638609676385370000&width=1200&height=auto&aspect=true",
     "images": [
       "https://th.bing.com/th/id/R.168a51d8cdb39cb3b87897c279ed7135?rik=DVrs7Pu5Q1lu1g&riu=http%3a%2f%2fblog.bestbuy.ca%2fwp-content%2fuploads%2f2017%2f08%2fInt_images_Samsung_Frame_03.jpg&ehk=mwrxDAHY3rjzqMrcfjjVzC8MGWOpa75jc1lT%2bImOAo0%3d&risl=&pid=ImgRaw&r=0",
@@ -1065,14 +1022,14 @@
     "brand": "Smartlife",
     "category": "televisores",
     "subcategory": "smartlife",
-    "price": 189,
+    "price": 159,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/161687-1200-auto?v=638948589054670000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/161687-1200-auto?v=638948589054670000&width=1200&height=auto&aspect=true"
     ],
     "slug": "smart-tv-smartlife-32-hd",
     "url": "",
-    "stock":"no"
+    "stock": "no"
   },
   {
     "id": "SL-TVQ50SMT",
@@ -1080,7 +1037,7 @@
     "brand": "Smartlife",
     "category": "televisores",
     "subcategory": "smartlife",
-    "price": 499,
+    "price": 459,
     "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-05-02-10-08-33.jpeg",
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-05-02-10-08-33.jpeg"
@@ -1095,7 +1052,7 @@
     "brand": "Smartlife",
     "category": "televisores",
     "subcategory": "smartlife",
-    "price": 299,
+    "price": 269,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160612-1200-auto?v=638818074306030000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160612-1200-auto?v=638818074306030000&width=1200&height=auto&aspect=true"
@@ -1103,20 +1060,20 @@
     "slug": "smart-tv-smartlife-43-full-hd",
     "url": ""
   },
-    {
+  {
     "id": "SL-TVQ55T25SB",
     "title": "SMART TV QLED 55\" UHD 4K | TIZEN | CON BARRA DE SONIDO",
     "brand": "Smartlife",
     "category": "televisores",
     "subcategory": "smartlife",
-    "price": 529,
+    "price": 549,
     "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-11-04-10-41-03.jpeg",
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-11-04-10-41-03.jpeg"
     ],
     "slug": "smart-tv-smartlife-50-full-hd",
-    "url": "",
-    "stock": "no"
+    "url": ""
+   
   },
   {
     "id": "SL-TVQ65T25SB",
@@ -1124,7 +1081,7 @@
     "brand": "Smartlife",
     "category": "televisores",
     "subcategory": "smartlife",
-    "price": 729,
+    "price": 749,
     "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-11-04-10-49-09.jpeg",
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-11-04-10-49-09.jpeg"
@@ -1147,13 +1104,13 @@
     "slug": "smart-tv-smartlife-43-full-hd",
     "url": ""
   },
-{
+  {
     "id": "SAQN55Q7F5A",
     "title": "SMART TV SAMSUNG QLED 55\" 4K",
     "brand": "Samsung",
     "category": "televisores",
     "subcategory": "samsung",
-    "price": 999,
+    "price": 699,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/161384-1200-auto?v=638926973125100000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/161384-1200-auto?v=638926973125100000&width=1200&height=auto&aspect=true",
@@ -1174,222 +1131,209 @@
     "subcategory": "samsung",
     "price": 3499,
     "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-02-10-15-45.jpeg",
-      
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-02-10-15-45.jpeg",
-      
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-02-10-15-57.jpeg",
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-02-10-16-02.jpeg",
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-02-10-16-14.jpeg"
-      
-
     ],
     "slug": "smart-tv-smartlife-43-full-hd",
     "url": ""
   },
-{
-  "id": "SAUN43U8000",
-  "title": "SMART TV SAMSUNG LED 43\" UHD 4K",
-  "brand": "Samsung",
-  "category": "televisores",
-  "subcategory": "samsung",
-  "price": 599,
-  "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-02-09-08-53.jpeg",
-  "images": [
-    "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-02-09-09-22.jpeg",
-    "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-02-09-09-06.jpeg",
-    "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-02-09-09-06.jpeg"
- 
-  ],
-  "slug": "led-smart-tv-43--uhd-4k-samsung",
-  "url": "https://www.vstore.com.uy/led-smart-tv-43--uhd-4k-samsung/p"
-},
-
- {
-  "id": "SL-RNF370SDINV",
-  "title": "REFRIGERADOR SMARTLIFE F/ SECO INVERTER 342L",
-  "brand": "Smartlife",
-  "category": "electrodomesticos",
-  "subcategory": "refrigeradores",
-  "price": 849,
-  "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158191-1200-auto?v=638555452158930000&width=1200&height=auto&aspect=true",
-  "images": [
-    "https://vstoreuy.vtexassets.com/arquivos/ids/158191-1200-auto?v=638555452158930000&width=1200&height=auto&aspect=true",
-    "https://vstoreuy.vtexassets.com/arquivos/ids/158192-1200-auto?v=638555452161500000&width=1200&height=auto&aspect=true",
+  {
+    "id": "SAUN43U8000",
+    "title": "SMART TV SAMSUNG LED 43\" UHD 4K",
+    "brand": "Samsung",
+    "category": "televisores",
+    "subcategory": "samsung",
+    "price": 359,
+    "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-02-09-08-53.jpeg",
+    "images": [
+      "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-02-09-09-22.jpeg",
+      "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-02-09-09-06.jpeg",
+      "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-02-09-09-06.jpeg"
+    ],
+    "slug": "led-smart-tv-43--uhd-4k-samsung",
+    "url": "https://www.vstore.com.uy/led-smart-tv-43--uhd-4k-samsung/p"
+  },
+  {
+    "id": "SL-RNF370SDINV",
+    "title": "REFRIGERADOR SMARTLIFE F/ SECO INVERTER 342L",
+    "brand": "Smartlife",
+    "category": "electrodomesticos",
+    "subcategory": "refrigeradores",
+    "price": 599,
+    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158191-1200-auto?v=638555452158930000&width=1200&height=auto&aspect=true",
+    "images": [
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158191-1200-auto?v=638555452158930000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158192-1200-auto?v=638555452161500000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158193-1200-auto?v=638555452165770000&width=1200&height=auto&aspect=true",
-        "https://vstoreuy.vtexassets.com/arquivos/ids/158194-1200-auto?v=638555452169470000&width=1200&height=auto&aspect=true",
-          "https://vstoreuy.vtexassets.com/arquivos/ids/158195-1200-auto?v=638555452173530000&width=1200&height=auto&aspect=true",
-          "https://vstoreuy.vtexassets.com/arquivos/ids/158197-1200-auto?v=638555452185200000&width=1200&height=auto&aspect=true",
-          "https://vstoreuy.vtexassets.com/arquivos/ids/158198-1200-auto?v=638555452189030000&width=1200&height=auto&aspect=true",
-           "https://vstoreuy.vtexassets.com/arquivos/ids/158199-1200-auto?v=638555452194370000&width=1200&height=auto&aspect=true",
-          "https://vstoreuy.vtexassets.com/arquivos/ids/160283-1200-auto?v=638725664173500000&width=1200&height=auto&aspect=true"
-  ],
-  "slug": "refrigerador-smartlife-f-seco-inverter-342l",
-  "url": "https://www.vstore.com.uy/refrigerador-f-seco-inverter-342l-smartlife/p"
-},
- {
-   "id": "SL-RNF370WDINV",
-   "title": "REFRIGERADOR SMARTLIFE F/SECO INVERTER 342L",
-   "brand": "Smartlife",
-   "category": "electrodomesticos",
-   "subcategory": "refrigeradores",
-   "price": 799,
-   "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158200-1200-auto?v=638555452196230000&width=1200&height=auto&aspect=true",
-   "images": [
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158200-1200-auto?v=638555452196230000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158201-1200-auto?v=638871421524000000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158202-1200-auto?v=638871421524500000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158203-1200-auto?v=638871421524630000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158204-1200-auto?v=638871421524800000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158205-1200-auto?v=638871421524970000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158208-1200-auto?v=638871421525100000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158209-1200-auto?v=638871421525270000&width=1200&height=auto&aspect=true"
-   ],
-   "slug": "refrigerador-smartlife-f-seco-inverter-342l",
-   "url": "https://www.vstore.com.uy/refrigerador-f--seco-inverter-342l-smartlife/p"
- },
-
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158194-1200-auto?v=638555452169470000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158195-1200-auto?v=638555452173530000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158197-1200-auto?v=638555452185200000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158198-1200-auto?v=638555452189030000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158199-1200-auto?v=638555452194370000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160283-1200-auto?v=638725664173500000&width=1200&height=auto&aspect=true"
+    ],
+    "slug": "refrigerador-smartlife-f-seco-inverter-342l",
+    "url": "https://www.vstore.com.uy/refrigerador-f-seco-inverter-342l-smartlife/p"
+  },
+  {
+    "id": "SL-RNF370WDINV",
+    "title": "REFRIGERADOR SMARTLIFE F/SECO INVERTER 342L",
+    "brand": "Smartlife",
+    "category": "electrodomesticos",
+    "subcategory": "refrigeradores",
+    "price": 549,
+    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158200-1200-auto?v=638555452196230000&width=1200&height=auto&aspect=true",
+    "images": [
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158200-1200-auto?v=638555452196230000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158201-1200-auto?v=638871421524000000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158202-1200-auto?v=638871421524500000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158203-1200-auto?v=638871421524630000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158204-1200-auto?v=638871421524800000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158205-1200-auto?v=638871421524970000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158208-1200-auto?v=638871421525100000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158209-1200-auto?v=638871421525270000&width=1200&height=auto&aspect=true"
+    ],
+    "slug": "refrigerador-smartlife-f-seco-inverter-342l",
+    "url": "https://www.vstore.com.uy/refrigerador-f--seco-inverter-342l-smartlife/p"
+  },
   {
     "id": "SL-SBS690S2P",
     "title": "REFRIGERADOR SMARTLIFE SBS 2 PUERTAS",
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "refrigeradores",
-    "price": 1299,
+    "price": 899,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/159022-1200-auto?v=638562970523870000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/159022-1200-auto?v=638562970523870000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/159024-1200-auto?v=638562971047900000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/159025-1200-auto?v=638562971163430000&width=1200&height=auto&aspect=true",
-    
-     "https://vstoreuy.vtexassets.com/arquivos/ids/160294-1200-auto?v=638729856407800000&width=1200&height=auto&aspect=true"
+      "https://vstoreuy.vtexassets.com/arquivos/ids/159025-1200-auto?v=638562971163430000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160294-1200-auto?v=638729856407800000&width=1200&height=auto&aspect=true"
     ],
     "slug": "refrigerador-smartlife-sbs-2-puertas",
     "url": "https://www.vstore.com.uy/refrigerador-sbs-smartlife/p",
-    "stock":"no"
+    "stock": "no"
   },
-
   {
     "id": "SL-RNF270SDINV2",
     "title": "REFRIGERADOR SMARTLIFE F/SECO INVERTER 249L",
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "refrigeradores",
-    "price": 749,
+    "price": 519,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160844-1200-auto?v=638862836965700000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160844-1200-auto?v=638862836965700000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "refrigerador-smartlife-f-seco-inverter-249l",
     "url": "https://www.vstore.com.uy/refrigerador-f-seco-inverter-249l-smartlife/p"
   },
-    {
+  {
     "id": "SL-RNF270SD2",
     "title": "REFRIGERADOR SMARTLIFE F/SECO C/DISP. 249L",
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "refrigeradores",
-    "price": 699,
+    "price": 459,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/159041-1200-auto?v=638563010212170000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/159041-1200-auto?v=638563010212170000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/159042-1200-auto?v=638563010371200000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/159043-1200-auto?v=638563010474700000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/159044-1200-auto?v=638563010571000000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/159047-1200-auto?v=638563010978170000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/159046-1200-auto?v=638563010836070000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/160290-1200-auto?v=638729844842570000&width=1200&height=auto&aspect=true"
-
+      "https://vstoreuy.vtexassets.com/arquivos/ids/159043-1200-auto?v=638563010474700000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/159044-1200-auto?v=638563010571000000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/159047-1200-auto?v=638563010978170000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/159046-1200-auto?v=638563010836070000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160290-1200-auto?v=638729844842570000&width=1200&height=auto&aspect=true"
     ],
     "slug": "refrigerador-smartlife-f-seco-c-disp-249l",
     "url": "https://www.vstore.com.uy/refrigerador-f-seco-c-disp--249l-smartlife/p"
   },
   {
-  "id": "SL-RNF270WDINV2",
-  "title": "REFRIGERADOR SMARTLIFE F/SECO INVERTER 249L",
-  "brand": "Smartlife",
-  "category": "electrodomesticos",
-  "subcategory": "refrigeradores",
-  "price": 699,
-  "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/159026-1200-auto?v=638563001918370000&width=1200&height=auto&aspect=true",
-  "images": [
-    "https://vstoreuy.vtexassets.com/arquivos/ids/159026-1200-auto?v=638563001918370000&width=1200&height=auto&aspect=true",
-    "https://vstoreuy.vtexassets.com/arquivos/ids/159027-1200-auto?v=638889689526970000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/159028-1200-auto?v=638889689527270000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/159029-1200-auto?v=638889689527400000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/159032-1200-auto?v=638889689527570000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/159033-1200-auto?v=638889689527570000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/160292-1200-auto?v=638889689527570000&width=1200&height=auto&aspect=true"
-  ],
-  "slug": "refrigerador-smartlife-f-seco-inverter-249l",
-  "url": "https://www.vstore.com.uy/refrigerador-f---seco-inverter-249l-smartlife/p"
-},
-{
-  "id": "SL-SBS690SDI",
-  "title": "REFRIGERADOR SMARTLIFE SBS 2 PUERTAS C/DISP. 501L",
-  "brand": "Smartlife",
-  "category": "electrodomesticos",
-  "subcategory": "refrigeradores",
-  "price": 1799,
-  "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158210-1200-auto?v=638555452233900000&width=1200&height=auto&aspect=true",
-  "images": [
-    "https://vstoreuy.vtexassets.com/arquivos/ids/158210-1200-auto?v=638555452233900000&width=1200&height=auto&aspect=true",
-    "https://vstoreuy.vtexassets.com/arquivos/ids/158211-1200-auto?v=638908782494330000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158212-1200-auto?v=638908782494470000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158213-1200-auto?v=638908782494470000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158214-1200-auto?v=638908782494470000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158216-1200-auto?v=638908782494630000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158217-1200-auto?v=638908782494630000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158218-1200-auto?v=638908782494630000&width=1200&height=auto&aspect=true"
-  ],
-  "slug": "refrigerador-smartlife-sbs-2-puertas-c-disp-501l",
-  "url": "https://www.vstore.com.uy/refrigerador-sbs-c-disp-smartlife/p"
-},
+    "id": "SL-RNF270WDINV2",
+    "title": "REFRIGERADOR SMARTLIFE F/SECO INVERTER 249L",
+    "brand": "Smartlife",
+    "category": "electrodomesticos",
+    "subcategory": "refrigeradores",
+    "price": 499,
+    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/159026-1200-auto?v=638563001918370000&width=1200&height=auto&aspect=true",
+    "images": [
+      "https://vstoreuy.vtexassets.com/arquivos/ids/159026-1200-auto?v=638563001918370000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/159027-1200-auto?v=638889689526970000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/159028-1200-auto?v=638889689527270000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/159029-1200-auto?v=638889689527400000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/159032-1200-auto?v=638889689527570000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/159033-1200-auto?v=638889689527570000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160292-1200-auto?v=638889689527570000&width=1200&height=auto&aspect=true"
+    ],
+    "slug": "refrigerador-smartlife-f-seco-inverter-249l",
+    "url": "https://www.vstore.com.uy/refrigerador-f---seco-inverter-249l-smartlife/p"
+  },
+  {
+    "id": "SL-SBS690SDI",
+    "title": "REFRIGERADOR SMARTLIFE SBS 2 PUERTAS C/DISP. 501L",
+    "brand": "Smartlife",
+    "category": "electrodomesticos",
+    "subcategory": "refrigeradores",
+    "price": 1349,
+    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158210-1200-auto?v=638555452233900000&width=1200&height=auto&aspect=true",
+    "images": [
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158210-1200-auto?v=638555452233900000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158211-1200-auto?v=638908782494330000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158212-1200-auto?v=638908782494470000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158213-1200-auto?v=638908782494470000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158214-1200-auto?v=638908782494470000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158216-1200-auto?v=638908782494630000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158217-1200-auto?v=638908782494630000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158218-1200-auto?v=638908782494630000&width=1200&height=auto&aspect=true"
+    ],
+    "slug": "refrigerador-smartlife-sbs-2-puertas-c-disp-501l",
+    "url": "https://www.vstore.com.uy/refrigerador-sbs-c-disp-smartlife/p"
+  },
   {
     "id": "SL-RFH220WH2",
     "title": "REFRIGERADOR SMARTLIFE F/HÚMEDO 205L",
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "refrigeradores",
-    "price": 399,
-    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158152-1200-auto?v=638555452011470000&width=1200&height=auto&aspect=true",
+    "price": 299,
+    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/163190-1200-auto?v=639065173148830000&width=1200&height=auto&aspect=true",
     "images": [
-      "https://vstoreuy.vtexassets.com/arquivos/ids/158152-1200-auto?v=638555452011470000&width=1200&height=auto&aspect=true",
-      "https://vstoreuy.vtexassets.com/arquivos/ids/158153-1200-auto?v=638760058033130000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158154-1200-auto?v=638760058033300000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158155-1200-auto?v=638760058033300000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158156-1200-auto?v=638760058033300000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158158-1200-auto?v=638760058033300000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158159-1200-auto?v=638760058033300000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158160-1200-auto?v=638760058033430000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158161-1200-auto?v=638760058033430000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158162-1200-auto?v=638760058033430000&width=1200&height=auto&aspect=true"
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163190-1200-auto?v=639065173148830000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163191-1200-auto?v=639065173149130000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163269-1200-auto?v=639075614933730000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163270-1200-auto?v=639075614933730000&width=1200&height=auto&aspect=true",
+      
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163273-1200-auto?v=639075614933870000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163272-1200-auto?v=639075614933870000&width=1200&height=auto&aspect=true",
+      
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163274-1200-auto?v=639075614933870000&width=1200&height=auto&aspect=true"
     ],
     "slug": "refrigerador-smartlife-f-humedo-205l",
     "url": "https://www.vstore.com.uy/refrigerador-f-humedo-205l-smartlife/p"
   },
-   {
-   "id": "SL-RNF210S",
-   "title": "REFRIGERADOR SMARTLIFE 216L FRÍO SECO",
-   "brand": "Smartlife",
-   "category": "electrodomesticos",
-   "subcategory": "refrigeradores",
-   "price": 379,
-   "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-08-04-15-03-23.jpeg",
-   "images": [
-     "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-08-04-15-03-43.jpeg",
-     "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-10-15-16-13-24.jpeg",
-     "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-10-15-16-13-31.jpeg",
-     "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-10-15-16-13-44.jpeg",
-     "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-10-15-16-13-50.jpeg",
-     "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-10-15-16-14-12.jpeg",
-     "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-08-05-12-47-40.jpeg"
-   ],
-   "slug": "refrigerador-smartlife-216l-frio-seco",
-   "url": "https://www.vstore.com.uy/refrigerador-smartlife-216l-frio-seco/p"
- },
-   
+  {
+    "id": "SL-RNF210S",
+    "title": "REFRIGERADOR SMARTLIFE 216L FRÍO SECO",
+    "brand": "Smartlife",
+    "category": "electrodomesticos",
+    "subcategory": "refrigeradores",
+    "price": 399,
+    "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-08-04-15-03-23.jpeg",
+    "images": [
+      "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-08-04-15-03-43.jpeg",
+      "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-10-15-16-13-24.jpeg",
+      "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-10-15-16-13-31.jpeg",
+      "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-10-15-16-13-44.jpeg",
+      "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-10-15-16-13-50.jpeg",
+      "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-10-15-16-14-12.jpeg",
+      "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-08-05-12-47-40.jpeg"
+    ],
+    "slug": "refrigerador-smartlife-216l-frio-seco",
+    "url": "https://www.vstore.com.uy/refrigerador-smartlife-216l-frio-seco/p"
+  },
   {
     "id": "SL-WMFL12INV2",
     "title": "LAVARROPAS SMARTLIFE INVERTER 12KG",
@@ -1400,7 +1344,6 @@
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160613-1200-auto?v=638818091955930000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160613-1200-auto?v=638818091955930000&width=1200&height=auto&aspect=true"
-     
     ],
     "slug": "lavarropas-smartlife-inverter-12kg",
     "url": "https://www.vstore.com.uy/lavarropas-inverter-12kg-smartlife-1/p"
@@ -1415,7 +1358,6 @@
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/159021-1200-auto?v=638830160505200000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/159021-1200-auto?v=638830160505200000&width=1200&height=auto&aspect=true"
-     
     ],
     "slug": "lavarropas-smartlife-inverter-12kg",
     "url": "https://www.vstore.com.uy/lavarropas-inverter-12kg-smartlife/p"
@@ -1431,10 +1373,8 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160512-1200-auto?v=638908791695600000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160513-1200-auto?v=638908791695930000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/160514-1200-auto?v=638908791695930000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/160515-1200-auto?v=638908791695930000&width=1200&height=auto&aspect=true"
-     
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160514-1200-auto?v=638908791695930000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160515-1200-auto?v=638908791695930000&width=1200&height=auto&aspect=true"
     ],
     "slug": "lavarropa-smartlife-12-kg-inverter",
     "url": "https://www.vstore.com.uy/lavarropa-carga-frontal-12-kg-inverter-smartlife/p"
@@ -1450,14 +1390,14 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158324-1200-auto?v=638555452659600000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158325-1200-auto?v=638908783101030000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158326-1200-auto?v=638908783101200000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158327-1200-auto?v=638908783101200000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158328-1200-auto?v=638908783101200000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158329-1200-auto?v=638908783101370000&width=1200&height=auto&aspect=true"
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158326-1200-auto?v=638908783101200000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158327-1200-auto?v=638908783101200000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158328-1200-auto?v=638908783101200000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158329-1200-auto?v=638908783101370000&width=1200&height=auto&aspect=true"
     ],
     "slug": "lavarropas-smartlife-6kg-carga-superior",
     "url": "https://www.vstore.com.uy/lavarropas-carga-superior-6kg-smartlife/p",
-    "stock":"no"
+    "stock": "no"
   },
   {
     "id": "SL-WMFL610M",
@@ -1470,10 +1410,10 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158316-1200-auto?v=638555452631230000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158317-1200-auto?v=638555452634670000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158318-1200-auto?v=638555452638370000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158319-1200-auto?v=638555452642270000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158320-1200-auto?v=638555452645700000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158322-1200-auto?v=638555452652000000&width=1200&height=auto&aspect=true"
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158318-1200-auto?v=638555452638370000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158319-1200-auto?v=638555452642270000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158320-1200-auto?v=638555452645700000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158322-1200-auto?v=638555452652000000&width=1200&height=auto&aspect=true"
     ],
     "slug": "lavarropas-smartlife-6kg",
     "url": "https://www.vstore.com.uy/lavarropas-carga-frontal-6kg-smartlife/p"
@@ -1484,15 +1424,13 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "lavado-secado",
-    "price": 749,
+    "price": 619,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160258-1200-auto?v=638699497235270000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160258-1200-auto?v=638699497235270000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160267-1200-auto?v=638723798571500000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/160268-1200-auto?v=638723798747670000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/160269-1200-auto?v=638723798884630000&width=1200&height=auto&aspect=true"
-     
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160268-1200-auto?v=638723798747670000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160269-1200-auto?v=638723798884630000&width=1200&height=auto&aspect=true"
     ],
     "slug": "lavasecarropas-smartlife-inverter-8kg",
     "url": "https://www.vstore.com.uy/lavasecarropas-inverter-8-kg-smartlife-/p"
@@ -1503,13 +1441,12 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "lavado-secado",
-    "price": 329,
+    "price": 299,
     "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-10-17-11-11-26.jpeg",
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-10-17-11-11-26.jpeg",
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-10-17-11-11-43.jpeg",
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-10-17-11-12-06.jpeg"
-     
     ],
     "slug": "secarropas-smartlife-3kg",
     "url": "https://www.vstore.com.uy/secarropas-3kg-smartlife/p"
@@ -1520,11 +1457,10 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "lavado-secado",
-    "price": 379,
+    "price": 359,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157959-1200-auto?v=638555451343500000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157959-1200-auto?v=638555451343500000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "secarropas-smartlife-7kg",
     "url": "https://www.vstore.com.uy/secarropas-7kg-smartlife/p"
@@ -1535,11 +1471,10 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "lavado-secado",
-    "price": 599,
+    "price": 549,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158064-1200-auto?v=638555451695430000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158064-1200-auto?v=638555451695430000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "secarropas-smartlife-8kg",
     "url": "https://www.vstore.com.uy/secarropas-8kg-smartlife/p"
@@ -1554,7 +1489,6 @@
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160625-1200-auto?v=638822236146030000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160625-1200-auto?v=638822236146030000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "torre-de-lavado-y-secado-smartlife",
     "url": "https://www.vstore.com.uy/torre-de-lavado-inox-smartlife/p"
@@ -1565,11 +1499,10 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "lavado-secado",
-    "price": 999,
+    "price": 769,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160516-1200-auto?v=638830235743600000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160516-1200-auto?v=638830235743600000&width=1200&height=auto&aspect=true"
-     
     ],
     "slug": "secarropa-smartlife-heat-pump-10-kg-sl-hpd10t",
     "url": "https://www.vstore.com.uy/secarropa-heat-pump-10-kg-sl-hpd10t-smartlife/p"
@@ -1580,19 +1513,18 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "lavavajillas",
-    "price": 649,
+    "price": 549,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157960-1200-auto?v=638555451346570000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157960-1200-auto?v=638555451346570000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157961-1200-auto?v=638555451348900000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157962-1200-auto?v=638555451351900000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157963-1600-auto?v=638555451354700000&width=1600&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157964-1200-auto?v=638555451358600000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157965-1200-auto?v=638555451361270000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157967-1200-auto?v=638555451368100000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157968-1600-auto?v=638555451372270000&width=1600&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157969-1200-auto?v=638555451376170000&width=1200&height=auto&aspect=true"
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157962-1200-auto?v=638555451351900000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157963-1600-auto?v=638555451354700000&width=1600&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157964-1200-auto?v=638555451358600000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157965-1200-auto?v=638555451361270000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157967-1200-auto?v=638555451368100000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157968-1600-auto?v=638555451372270000&width=1600&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157969-1200-auto?v=638555451376170000&width=1200&height=auto&aspect=true"
     ],
     "slug": "lavavajillas-smartlife-12-14-servicios",
     "url": "https://www.vstore.com.uy/lavavajillas-silver-smartlife/p"
@@ -1608,10 +1540,8 @@
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2022-06-02-17-03-08.jpeg",
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2022-06-02-17-03-27.jpeg",
-     "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2022-06-02-17-03-35.jpeg",
-     "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2022-06-02-17-03-02.jpeg"
-  
-     
+      "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2022-06-02-17-03-35.jpeg",
+      "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2022-06-02-17-03-02.jpeg"
     ],
     "slug": "lavavajillas-smartlife-12-14-servicios",
     "url": "https://www.vstore.com.uy/lavavajillas-silver-smartlife/p"
@@ -1622,22 +1552,18 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "lavavajillas",
-    "price": 399,
-    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/161205-1200-auto?v=638906225938770000&width=1200&height=auto&aspect=true",
+    "price": 329,
+    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/163197-1200-675?v=639065896131930000&width=1200&height=675&aspect=true",
     "images": [
-      "https://vstoreuy.vtexassets.com/arquivos/ids/161205-1200-auto?v=638906225938770000&width=1200&height=auto&aspect=true",
-      "https://vstoreuy.vtexassets.com/arquivos/ids/161206-1200-auto?v=638906225939700000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/161207-1200-auto?v=638906225939970000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/161208-1200-auto?v=638906225940130000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/161209-1200-auto?v=638906225940130000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/161210-1200-auto?v=638906225940300000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/161211-1200-auto?v=638906225940430000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/161212-1200-auto?v=638906225940600000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/161215-1200-auto?v=638906225940970000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/161216-1200-auto?v=638906225941100000&width=1200&height=auto&aspect=true"
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163197-1200-675?v=639065896131930000&width=1200&height=675&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163198-1200-675?v=639065896132700000&width=1200&height=675&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163199-1200-675?v=639065896132870000&width=1200&height=675&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163201-1200-675?v=639065896133170000&width=1200&height=675&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163202-1200-675?v=639065896133170000&width=1200&height=675&aspect=true"
+
     ],
     "slug": "lavavajillas-smartlife-8-servicios",
-    "url": "https://www.vstore.com.uy/lavavajillas-smartlife-8-servicios/p"
+    "url": "https://vstoreuy.vtexassets.com/arquivos/ids/163199-1200-675?v=639065896132870000&width=1200&height=675&aspect=true"
   },
   {
     "id": "SL-BL1703",
@@ -1646,15 +1572,15 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "licuadoras",
-    "price": 79,
+    "price": 69,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157880-1200-auto?v=638555451081100000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157880-1200-auto?v=638555451081100000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157881-1200-auto?v=638555451083600000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157882-1200-auto?v=638555451087200000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157883-1200-auto?v=638555451091030000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157884-1200-auto?v=638555451094470000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157887-1200-auto?v=638555451105930000&width=1200&height=auto&aspect=true"
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157882-1200-auto?v=638555451087200000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157883-1200-auto?v=638555451091030000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157884-1200-auto?v=638555451094470000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157887-1200-auto?v=638555451105930000&width=1200&height=auto&aspect=true"
     ],
     "slug": "licuadora-smartlife-800w",
     "url": "https://www.vstore.com.uy/licuadora-800w-smartlife/p"
@@ -1666,15 +1592,15 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "licuadoras",
-    "price": 99,
+    "price": 95,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157869-1200-auto?v=638555451046270000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157869-1200-auto?v=638555451046270000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157870-1200-auto?v=638555451049200000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157871-1200-auto?v=638555451051830000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157872-1200-auto?v=638555451055100000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157873-1200-auto?v=638555451059130000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157874-1200-auto?v=638555451062270000&width=1200&height=auto&aspect=true"
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157871-1200-auto?v=638555451051830000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157872-1200-auto?v=638555451055100000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157873-1200-auto?v=638555451059130000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157874-1200-auto?v=638555451062270000&width=1200&height=auto&aspect=true"
     ],
     "slug": "licuadora-smartlife-1400w",
     "url": "https://www.vstore.com.uy/licuadora-1400w-smartlife/p"
@@ -1686,15 +1612,13 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "licuadoras",
-    "price": 59,
+    "price": 49,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157875-1200-auto?v=638555451066330000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157875-1200-auto?v=638555451066330000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157877-1200-auto?v=638555451072400000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157876-1200-auto?v=638555451069300000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157879-1200-auto?v=638555451079230000&width=1200&height=auto&aspect=true"
-     
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157876-1200-auto?v=638555451069300000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157879-1200-auto?v=638555451079230000&width=1200&height=auto&aspect=true"
     ],
     "slug": "licuadora-smartlife-600w",
     "url": "https://www.vstore.com.uy/licuadora-600w-smartlife/p"
@@ -1719,7 +1643,7 @@
     ],
     "slug": "licuadora-smartlife-400w",
     "url": "https://www.vstore.com.uy/licuadora-400w-smartlife/p",
-    "stock":"no"
+    "stock": "no"
   },
   {
     "id": "SL-HM5050BW",
@@ -1728,18 +1652,16 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "batidoras",
-    "price": 39,
+    "price": 35,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158057-1200-auto?v=638555451675470000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158057-1200-auto?v=638555451675470000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158058-1200-auto?v=638555451678530000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158059-1200-auto?v=638555451680730000&width=1200&height=auto&aspect=true"
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158059-1200-auto?v=638555451680730000&width=1200&height=auto&aspect=true"
     ],
     "slug": "batidora-smartlife-c-bowl-blanca",
     "url": "https://www.vstore.com.uy/batidora-c--bowl-blanca-smartlife/p"
   },
-
   {
     "id": " SL-HM1080",
     "title": "BATIDORA SMARTLIFE MANUAL",
@@ -1747,23 +1669,21 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "batidoras",
-    "price": 29,
+    "price": 25,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158054-1200-auto?v=638555451665830000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158054-1200-auto?v=638555451665830000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158055-1200-auto?v=638790211071970000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158056-1200-auto?v=638790211072130000&width=1200&height=auto&aspect=true"
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158056-1200-auto?v=638790211072130000&width=1200&height=auto&aspect=true"
     ],
     "slug": "batidora-smartlife-manual",
     "url": "https://www.vstore.com.uy/batidora-manual-smartlife/p"
   },
-
-{
+  {
     "id": "SL-HM5052BS",
     "title": "BATIDORA SMARTLIFE C/ BOWL INOX",
     "brand": "Smartlife",
-   "category": "electrodomesticos",
+    "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "batidoras",
     "price": 59,
@@ -1771,45 +1691,37 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158060-1200-auto?v=638555451683530000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158061-1200-auto?v=638555451685900000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158063-1200-auto?v=638555451692930000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158062-1200-auto?v=638555451689800000&width=1200&height=auto&aspect=true"
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158063-1200-auto?v=638555451692930000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158062-1200-auto?v=638555451689800000&width=1200&height=auto&aspect=true"
     ],
     "slug": "batidora-smartlife-c-bowl-inox",
     "url": "https://www.vstore.com.uy/batidora-c--bowl-inox-smartlife/p"
-    
   },
-{
+  {
     "id": "SL-BP5015",
     "title": "BATIDORA PLANETARIA SMARTLIFE ",
     "brand": "Smartlife",
-   "category": "electrodomesticos",
+    "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "batidoras",
     "price": 129,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160901-1200-auto?v=638876880145000000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160901-1200-auto?v=638876880145000000&width=1200&height=auto&aspect=true"
-     
     ],
     "slug": "batidora-planetaria-smartlife",
     "url": "https://www.vstore.com.uy/batidora-planetaria-smartlife-1-2/p"
-    
   },
-
-
-
   {
     "id": "SL-MWO20MMW",
     "title": "MICROONDAS SMARTLIFE MANUAL BLANCO 20L",
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "microondas",
-    "price": 99,
+    "price": 89,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/159004-1200-auto?v=638562949227570000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/159004-1200-auto?v=638562949227570000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "microondas-smartlife-manual-blanco-20l",
     "url": "https://www.vstore.com.uy/microondas-manual-blanco-20l-smartlife/p"
@@ -1820,11 +1732,10 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "microondas",
-    "price": 99,
+    "price": 89,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/159006-1200-auto?v=638562949842930000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/159006-1200-auto?v=638562949842930000&width=1200&height=auto&aspect=true"
-     
     ],
     "slug": "microondas-smartlife-manual-negro-20l",
     "url": "https://www.vstore.com.uy/microondas-manual-negro-20l-smartlife/p"
@@ -1835,11 +1746,10 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "microondas",
-    "price": 109,
+    "price": 99,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/159005-1200-auto?v=638562949481330000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/159005-1200-auto?v=638562949481330000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "microondas-smartlife-digital-negro-20l",
     "url": "https://www.vstore.com.uy/microondas-digital-negro-20l-smartlife/p"
@@ -1850,32 +1760,28 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "microondas",
-    "price": 109,
+    "price": 99,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/161668-1200-auto?v=638944960545770000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/161668-1200-auto?v=638944960545770000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/161669-1200-auto?v=638944960546070000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/161670-1200-auto?v=638944960546070000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/161671-1200-auto?v=638944960546070000&width=1200&height=auto&aspect=true"
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/161670-1200-auto?v=638944960546070000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/161671-1200-auto?v=638944960546070000&width=1200&height=auto&aspect=true"
     ],
     "slug": "microondas-smartlife-digital-blanco-20l",
     "url": "https://www.vstore.com.uy/microondas-digital-blanco-20l-smartlife/p"
   },
-{
+  {
     "id": "SL-MWO23MDGB",
     "title": "MICROONDAS SMARTLIFE DIGITAL C/GRILL 23L ",
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "microondas",
-    "price":149 ,
+    "price": 135,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/159007-1200-auto?v=638562950032970000&width=1200&height=auto&aspect=true",
     "images": [
-    
-     "https://vstoreuy.vtexassets.com/arquivos/ids/159007-1200-auto?v=638562950032970000&width=1200&height=auto&aspect=true"
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/159007-1200-auto?v=638562950032970000&width=1200&height=auto&aspect=true"
     ]
-    
   },
   {
     "id": "SL-MWO29MDGB",
@@ -1883,18 +1789,15 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "microondas",
-    "price":159 ,
+    "price": 145,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/161672-1200-auto?v=638945123030130000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/161672-1200-auto?v=638945123030130000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/161673-1200-auto?v=638945123030770000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/161674-1200-auto?v=638945123030770000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/161675-1200-auto?v=638945123030930000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/161676-1200-auto?v=638945123030930000&width=1200&height=auto&aspect=true"
-     
-
+      "https://vstoreuy.vtexassets.com/arquivos/ids/161674-1200-auto?v=638945123030770000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/161675-1200-auto?v=638945123030930000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/161676-1200-auto?v=638945123030930000&width=1200&height=auto&aspect=true"
     ]
-    
   },
   {
     "id": "SL-MWO23MDGW",
@@ -1902,14 +1805,11 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "microondas",
-    "price":149 ,
+    "price": 135,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160922-1200-auto?v=638889692115330000&width=1200&height=auto&aspect=true",
     "images": [
-     
-     "https://vstoreuy.vtexassets.com/arquivos/ids/160922-1200-auto?v=638889692115330000&width=1200&height=auto&aspect=true"
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160922-1200-auto?v=638889692115330000&width=1200&height=auto&aspect=true"
     ]
-    
   },
   {
     "id": "SL-MWO20MDB",
@@ -1917,16 +1817,14 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "microondas",
-    "price": 109,
+    "price": 99,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158341-1200-auto?v=638555452721300000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158342-1200-auto?v=638787846754600000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158343-1200-auto?v=638787846754600000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158344-1200-auto?v=638787846754770000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158345-1200-auto?v=638787846754770000&width=1200&height=auto&aspect=true"
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158344-1200-auto?v=638787846754770000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158345-1200-auto?v=638787846754770000&width=1200&height=auto&aspect=true"
     ]
-    
   },
   {
     "id": "SL-ACFC2524INV",
@@ -1938,12 +1836,10 @@
     "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-12-17-15-28.jpeg",
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-12-17-15-28.jpeg",
-     
-     "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-12-17-16-05.jpeg",
-     "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-12-17-16-16.jpeg",
-     "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-02-08-42-07.jpeg"
+      "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-12-17-16-05.jpeg",
+      "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-12-17-16-16.jpeg",
+      "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-09-02-08-42-07.jpeg"
     ]
-    
   },
   {
     "id": "SL-ACFC18INVM2",
@@ -1951,14 +1847,12 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "aires-acondicionados",
-    "price": 699,
+    "price": 729,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160460-1200-auto?v=638781652776870000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160460-1200-auto?v=638781652776870000&width=1200&height=auto&aspect=true",
-     
-     "https://vstoreuy.vtexassets.com/arquivos/ids/160461-1200-auto?v=638781652777030000&width=1200&height=auto&aspect=true"
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160461-1200-auto?v=638781652777030000&width=1200&height=auto&aspect=true"
     ]
-    
   },
   {
     "id": "SL-ACFC12INVM2",
@@ -1971,11 +1865,8 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160457-1200-auto?v=638781638049830000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160458-1200-auto?v=638781638050100000&width=1200&height=auto&aspect=true",
-     
-     
-     "https://vstoreuy.vtexassets.com/arquivos/ids/160459-1200-auto?v=638781638050270000&width=1200&height=auto&aspect=true"
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160459-1200-auto?v=638781638050270000&width=1200&height=auto&aspect=true"
     ]
-    
   },
   {
     "id": "SL-ACFC12M32",
@@ -1988,10 +1879,8 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157831-1200-auto?v=638555450923070000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157832-1200-auto?v=638555450925870000&width=1200&height=auto&aspect=true",
-     
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157833-1200-auto?v=638555450929300000&width=1200&height=auto&aspect=true"
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157833-1200-auto?v=638555450929300000&width=1200&height=auto&aspect=true"
     ]
-    
   },
   {
     "id": "SL-ACFC18M32",
@@ -1999,15 +1888,13 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "aires-acondicionados",
-    "price": 599,
+    "price": 649,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157836-1200-auto?v=638555450941770000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157836-1200-auto?v=638555450941770000&width=1200&height=auto&aspect=true",
-   
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157837-1200-auto?v=638555450943930000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157838-1200-auto?v=638555450946370000&width=1200&height=auto&aspect=true"
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157837-1200-auto?v=638555450943930000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157838-1200-auto?v=638555450946370000&width=1200&height=auto&aspect=true"
     ]
-    
   },
   {
     "id": "SL-EO19B",
@@ -2015,11 +1902,10 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "hornos",
-    "price": 69,
+    "price": 49,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160900-1200-auto?v=638908782142500000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160900-1200-auto?v=638908782142500000&width=1200&height=auto&aspect=true"
-    
     ],
     "slug": "horno-electrico-smartlife-19l",
     "url": "https://www.vstore.com.uy/horno-electrico-smartlife/p"
@@ -2030,11 +1916,10 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "hornos",
-    "price": 499,
+    "price": 329,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158024-1200-auto?v=638555451553570000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158024-1200-auto?v=638555451553570000&width=1200&height=auto&aspect=true"
-    
     ],
     "slug": "horno-de-empotrar-smartlife-silver",
     "url": "https://www.vstore.com.uy/horno-de-empotrar-silver-smartlife/p"
@@ -2045,14 +1930,13 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "hornos",
-    "price": 549,
+    "price": 429,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160652-1200-auto?v=638832804686930000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160652-1200-auto?v=638832804686930000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160653-1200-auto?v=638832804687070000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/160654-1600-auto?v=638832804687070000&width=1600&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/160655-1200-auto?v=638832804687070000&width=1200&height=auto&aspect=true"
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160654-1600-auto?v=638832804687070000&width=1600&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160655-1200-auto?v=638832804687070000&width=1200&height=auto&aspect=true"
     ],
     "slug": "horno-de-empotrar-smartlife-negro-digital",
     "url": "https://www.vstore.com.uy/horno-de-empotrar-negro-digital-smartlife/p"
@@ -2063,15 +1947,14 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "hornos",
-    "price": 89,
+    "price": 75,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160191-1200-auto?v=638670129918200000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160191-1200-auto?v=638670129918200000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "horno-electrico-smartlife-30l",
     "url": "https://www.vstore.com.uy/horno-electrico--30l-smartlife/p",
-    "stock":"no"
+    "stock": "no"
   },
   {
     "id": "SL-EO38B",
@@ -2079,12 +1962,11 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "hornos",
-    "price": 99,
+    "price": 85,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160376-1200-auto?v=638755099778900000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160376-1200-auto?v=638755099778900000&width=1200&height=auto&aspect=true",
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-10-15-15-45-48.jpeg"
-     
     ],
     "slug": "horno-electrico-smartlife-38l",
     "url": "https://www.vstore.com.uy/horno-electrico--38l-smartlife-/p"
@@ -2095,11 +1977,10 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "hornos",
-    "price": 129,
+    "price": 99,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160190-1200-auto?v=638670126145770000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160190-1200-auto?v=638670126145770000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "horno-electrico-smartlife-c-anafes-38l",
     "url": "https://www.vstore.com.uy/horno-electrico--c--anafes-38l-smartlife/p"
@@ -2115,9 +1996,8 @@
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-06-02-12-20-43.jpeg",
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-10-17-11-09-13.jpeg",
-     "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-10-17-11-10-09.jpeg",
-     "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-10-17-11-10-01.jpeg"
-     
+      "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-10-17-11-10-09.jpeg",
+      "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-10-17-11-10-01.jpeg"
     ],
     "slug": "horno-electrico-smartlife-c-anafes-48l",
     "url": "https://www.vstore.com.uy/horno-electrico-c--anafes-48l-smartlife/p"
@@ -2133,10 +2013,9 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160399-1200-auto?v=638773047145730000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160400-1200-auto?v=638773047145730000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/160401-1200-auto?v=638773047145900000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/160402-1200-auto?v=638773047145900000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/160403-1200-auto?v=638773047145900000&width=1200&height=auto&aspect=true"
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160401-1200-auto?v=638773047145900000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160402-1200-auto?v=638773047145900000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160403-1200-auto?v=638773047145900000&width=1200&height=auto&aspect=true"
     ],
     "slug": "horno-de-empotrar-smartlife-elect-digital-conveccion",
     "url": "https://www.vstore.com.uy/horno-de-empotrar-elect-digital-conveccion-smartliife/p"
@@ -2147,12 +2026,11 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "campanas",
-    "price": 249,
+    "price": 239,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160606-1200-auto?v=638818068083400000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160606-1200-auto?v=638818068083400000&width=1200&height=auto&aspect=true",
       "https://f.fcdn.app/imgs/3be706/www.dimm.com.uy/dimmuy/486c/original/catalogo/901473_901473_5/1500-1500/campana-extractor-smartlife-sl-ch60bc-campana-smartlife-sl-ch60bc.jpg"
-     
     ],
     "slug": "campana-extractora-smartlife-tipo-t-acero-inox",
     "url": "https://www.vstore.com.uy/campana-extractora-tipo-t-acero-inox-smartlife/p"
@@ -2164,14 +2042,30 @@
     "category": "electrodomesticos",
     "subcategory": "termotanque",
     "price": 309,
-    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160952-1200-auto?v=638900113194370000&width=1200&height=auto&aspect=true",
+    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/163418-1600-auto?v=639084165572970000&width=1600&height=auto&aspect=true",
     "images": [
-      "https://vstoreuy.vtexassets.com/arquivos/ids/160952-1200-auto?v=638900113194370000&width=1200&height=auto&aspect=true",
-      "https://vstoreuy.vtexassets.com/arquivos/ids/160953-1200-auto?v=638900113194530000&width=1200&height=auto&aspect=true"
-    
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163419-1200-auto?v=639084165573770000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163420-1200-auto?v=639084165573900000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163421-1200-675?v=639084165574070000&width=1200&height=675&aspect=true"
     ],
     "slug": "termotanque-smartlife-100l-eficiencia-energetica-a",
-    "url": "https://www.vstore.com.uy/termotanque-smartlife-100l/p"
+    "url": "https://vstoreuy.vtexassets.com/arquivos/ids/163418-1200-675?v=639084165572970000&width=1200&height=675&aspect=true"
+  },
+   {
+    "id": " SL-WH50DA",
+    "title": "TERMOTANQUE SMARTLIFE 50L EFICIENCIA ENERGÉTICA A",
+    "brand": "Smartlife",
+    "category": "electrodomesticos",
+    "subcategory": "termotanque",
+    "price": 229,
+    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/163440-1200-675?v=639084168046430000&width=1200&height=675&aspect=true",
+    "images": [
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163444-1200-675?v=639084168047370000&width=1200&height=675&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163442-1200-675?v=639084168047070000&width=1200&height=675&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163441-1200-675?v=639084168046730000&width=1200&height=675&aspect=true"
+    ],
+    "slug": "termotanque-smartlife-100l-eficiencia-energetica-a",
+    "url": "https://vstoreuy.vtexassets.com/arquivos/ids/163444-1200-675?v=639084168047370000&width=1200&height=675&aspect=true"
   },
   {
     "id": " SL-GWH10DNG",
@@ -2185,7 +2079,7 @@
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2021-09-15-15-57-00.jpeg",
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/slgwh10dng_202052616271.jpg",
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/slgwh10dng_202052616279.jpg",
-    "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/slgwh10dng_2020526162723.jpg"
+      "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/slgwh10dng_2020526162723.jpg"
     ],
     "slug": "termotanque-smartlife-100l-eficiencia-energetica-a",
     "url": "https://www.vstore.com.uy/termotanque-smartlife-100l/p"
@@ -2197,11 +2091,12 @@
     "category": "electrodomesticos",
     "subcategory": "termotanque",
     "price": 279,
-    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160950-1200-auto?v=638900107050300000&width=1200&height=auto&aspect=true",
+    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/163436-1200-675?v=639084167884770000&width=1200&height=675&aspect=true",
     "images": [
-      "https://vstoreuy.vtexassets.com/arquivos/ids/160950-1200-auto?v=638900107050300000&width=1200&height=auto&aspect=true",
-      "https://vstoreuy.vtexassets.com/arquivos/ids/160951-1200-auto?v=638900107050470000&width=1200&height=auto&aspect=true"
-    
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163436-1200-675?v=639084167884770000&width=1200&height=675&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163437-1200-675?v=639084167885100000&width=1200&height=675&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163438-1200-675?v=639084167885100000&width=1200&height=675&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163439-1200-675?v=639084167885230000&width=1200&height=675&aspect=true"
     ],
     "slug": "termotanque-smartlife-80l-eficiencia-energetica-a",
     "url": "https://www.vstore.com.uy/termotanque-smartlife-80l/p"
@@ -2216,8 +2111,7 @@
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160946-1200-auto?v=638900055227270000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160946-1200-auto?v=638900055227270000&width=1200&height=auto&aspect=true",
-     
-     "https://vstoreuy.vtexassets.com/arquivos/ids/160949-1200-auto?v=638900064164930000&width=1200&height=auto&aspect=true"
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160949-1200-auto?v=638900064164930000&width=1200&height=auto&aspect=true"
     ],
     "slug": "termotanque-smartlife-35l-eficiencia-energetica-clase-a",
     "url": "https://www.vstore.com.uy/termotanque-smartlife-35l/p"
@@ -2229,15 +2123,15 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "tostadoras",
-    "price": 39,
+    "price": 35,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158258-1200-auto?v=638555452400270000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158258-1200-auto?v=638555452400270000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158259-1200-auto?v=638555452402930000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158260-1200-auto?v=638555452407900000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158261-1200-auto?v=638555452411670000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158262-1200-auto?v=638555452416670000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158265-1200-auto?v=638555452429400000&width=1200&height=auto&aspect=true"
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158260-1200-auto?v=638555452407900000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158261-1200-auto?v=638555452411670000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158262-1200-auto?v=638555452416670000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158265-1200-auto?v=638555452429400000&width=1200&height=auto&aspect=true"
     ],
     "slug": "tostadora-smartlife-negra-2-panes",
     "url": "https://www.vstore.com.uy/tostadora-negra-2-panes-smartlife/p"
@@ -2249,15 +2143,14 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "tostadoras",
-    "price": 89,
+    "price": 75,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/159009-1200-auto?v=638562951728830000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/159009-1200-auto?v=638562951728830000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/159010-1200-auto?v=638908778432600000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/159011-1200-auto?v=638908778432770000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/159012-1200-auto?v=638908778432770000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/159013-1200-auto?v=638908778432770000&width=1200&height=auto&aspect=true"
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/159011-1200-auto?v=638908778432770000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/159012-1200-auto?v=638908778432770000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/159013-1200-auto?v=638908778432770000&width=1200&height=auto&aspect=true"
     ],
     "slug": "tostadora-digital-smartlife-4-panes",
     "url": "https://www.vstore.com.uy/tostadora-4-panes-smartlife/p"
@@ -2274,10 +2167,10 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158266-1200-auto?v=638555452432630000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158267-1200-auto?v=638787853134400000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158268-1200-auto?v=638787853134400000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158269-1200-auto?v=638787853134400000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158270-1200-auto?v=638787853134400000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158272-1200-auto?v=638787853134400000&width=1200&height=auto&aspect=true"
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158268-1200-auto?v=638787853134400000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158269-1200-auto?v=638787853134400000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158270-1200-auto?v=638787853134400000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158272-1200-auto?v=638787853134400000&width=1200&height=auto&aspect=true"
     ],
     "slug": "tostadora-smartlife-4-panes",
     "url": "https://www.vstore.com.uy/tostadora-4-panes-smartlife-/p"
@@ -2289,15 +2182,15 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "tostadoras",
-    "price": 49,
+    "price": 45,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/159753-1200-auto?v=638604662575500000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/159753-1200-auto?v=638604662575500000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/159754-1200-auto?v=638604662697200000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/159755-1200-auto?v=638604662834530000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/159756-1200-auto?v=638604662929670000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/159757-1600-auto?v=638604663013600000&width=1600&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/159758-1200-auto?v=638604663106630000&width=1200&height=auto&aspect=true"
+      "https://vstoreuy.vtexassets.com/arquivos/ids/159755-1200-auto?v=638604662834530000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/159756-1200-auto?v=638604662929670000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/159757-1600-auto?v=638604663013600000&width=1600&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/159758-1200-auto?v=638604663106630000&width=1200&height=auto&aspect=true"
     ],
     "slug": "tostadora-smartlife-digital",
     "url": "https://www.vstore.com.uy/tostadora-digital-smartlife/p"
@@ -2309,50 +2202,18 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "tostadoras",
-    "price": 29,
+    "price": 25,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158246-1200-auto?v=638555452354170000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158246-1200-auto?v=638555452354170000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158247-1200-auto?v=638555452358830000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158249-1200-auto?v=638555452366200000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158250-1200-auto?v=638555452369000000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158251-1200-auto?v=638555452373800000&width=1200&height=auto&aspect=true"
-
-
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158249-1200-auto?v=638555452366200000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158250-1200-auto?v=638555452369000000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158251-1200-auto?v=638555452373800000&width=1200&height=auto&aspect=true"
     ],
     "slug": "tostadora-smartlife-blanca-2-panes",
     "url": "https://www.vstore.com.uy/tostadora-blanca-2-panes-smartlife/p"
   },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   {
     "id": "SL-CE7466DG",
     "title": "JARRA ELÉCTRICA SMARTLIFE 1.7L",
@@ -2365,14 +2226,14 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157923-1200-auto?v=638555451220330000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157924-1200-auto?v=638908782755730000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157925-1200-auto?v=638908782756200000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157926-1200-auto?v=638908782756370000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157927-1200-auto?v=638908782756370000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157928-1200-auto?v=638908782756370000&width=1200&height=auto&aspect=true"
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157925-1200-auto?v=638908782756200000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157926-1200-auto?v=638908782756370000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157927-1200-auto?v=638908782756370000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157928-1200-auto?v=638908782756370000&width=1200&height=auto&aspect=true"
     ],
     "slug": "jarra-electrica-smartlife-1-7l",
     "url": "https://www.vstore.com.uy/jarra-electrica-digital-smartlife/p",
-    "stock":"no"
+    "stock": "no"
   },
   {
     "id": "SL-EKDD1720",
@@ -2386,10 +2247,10 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160914-1200-auto?v=638889688566400000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160916-1600-auto?v=638889688566600000&width=1600&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/160919-1200-auto?v=638889688566830000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/160920-1200-auto?v=638889688566970000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/160915-1200-auto?v=638889688566570000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/160921-1200-auto?v=638889688566970000&width=1200&height=auto&aspect=true"
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160919-1200-auto?v=638889688566830000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160920-1200-auto?v=638889688566970000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160915-1200-auto?v=638889688566570000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160921-1200-auto?v=638889688566970000&width=1200&height=auto&aspect=true"
     ],
     "slug": "jarra-electrica-smartlife-1-7l-digital",
     "url": "https://www.vstore.com.uy/jarra-electrica-digital-smartlife-/p"
@@ -2406,10 +2267,9 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/161546-1200-auto?v=638937167106970000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/161547-1200-auto?v=638937167107430000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/161548-1200-auto?v=638937167107600000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/161549-1200-auto?v=638937167107600000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/161550-1200-auto?v=638937167107730000&width=1200&height=auto&aspect=true"
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/161548-1200-auto?v=638937167107600000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/161549-1200-auto?v=638937167107600000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/161550-1200-auto?v=638937167107730000&width=1200&height=auto&aspect=true"
     ],
     "slug": "jarra-electrica-smartlife-1-7l",
     "url": "https://www.vstore.com.uy/jarra-electrica-smartlife-1-7l/p"
@@ -2420,16 +2280,14 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "anafes",
-    "price": 299,
+    "price": 219,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157817-1200-auto?v=638555450881300000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157817-1200-auto?v=638555450881300000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157818-1200-auto?v=638555450883930000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157819-1600-auto?v=638555450885970000&width=1600&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157821-1200-auto?v=638555450891370000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157820-1200-auto?v=638555450888470000&width=1200&height=auto&aspect=true"
-
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157819-1600-auto?v=638555450885970000&width=1600&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157821-1200-auto?v=638555450891370000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157820-1200-auto?v=638555450888470000&width=1200&height=auto&aspect=true"
     ],
     "slug": "anafe-electrico-smartlife",
     "url": "https://www.vstore.com.uy/anafe-electrico-smartlife/p"
@@ -2440,15 +2298,14 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "anafes",
-    "price": 249,
+    "price": 219,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157807-1200-auto?v=638555450852330000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157807-1200-auto?v=638555450852330000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157808-1200-auto?v=638555450855770000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157809-1200-auto?v=638555450858100000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157810-1200-auto?v=638555450861030000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157811-1200-auto?v=638555450866500000&width=1200&height=auto&aspect=true"
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157809-1200-auto?v=638555450858100000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157810-1200-auto?v=638555450861030000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157811-1200-auto?v=638555450866500000&width=1200&height=auto&aspect=true"
     ],
     "slug": "anafe-a-gas-smartlife-4-hornallas-negro",
     "url": "https://www.vstore.com.uy/anafe-a-gas-4-hornallas-negro-smartlife/p"
@@ -2459,13 +2316,12 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "anafes",
-    "price": 279,
+    "price": 249,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157822-1200-auto?v=638555450896800000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157822-1200-auto?v=638555450896800000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157823-1200-auto?v=638555450899730000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157825-1200-auto?v=638555450905170000&width=1200&height=auto&aspect=true"
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157825-1200-auto?v=638555450905170000&width=1200&height=auto&aspect=true"
     ],
     "slug": "anafe-a-gas-smartlife-5-hornallas",
     "url": "https://www.vstore.com.uy/anafe-a-gas-5-hornallas-smartlife/p"
@@ -2476,15 +2332,14 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "anafes",
-    "price": 129,
+    "price": 119,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157802-1200-auto?v=638555450837800000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157802-1200-auto?v=638555450837800000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157803-1200-auto?v=638555450841600000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157804-1200-auto?v=638555450843730000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157805-1200-auto?v=638555450846230000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157806-1200-auto?v=638555450848270000&width=1200&height=auto&aspect=true"
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157804-1200-auto?v=638555450843730000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157805-1200-auto?v=638555450846230000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157806-1200-auto?v=638555450848270000&width=1200&height=auto&aspect=true"
     ],
     "slug": "anafe-a-gas-smartlife-2-hornallas",
     "url": "https://www.vstore.com.uy/anafe-a-gas-2-hornallas-smartlife/p"
@@ -2495,15 +2350,14 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "anafes",
-    "price": 199,
+    "price": 180,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157812-1200-auto?v=638555450868800000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157812-1200-auto?v=638555450868800000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157813-1200-auto?v=638555450871300000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157814-1200-auto?v=638555450874130000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157815-1200-auto?v=638555450876300000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/157816-1200-auto?v=638555450878500000&width=1200&height=auto&aspect=true"
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157814-1200-auto?v=638555450874130000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157815-1200-auto?v=638555450876300000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157816-1200-auto?v=638555450878500000&width=1200&height=auto&aspect=true"
     ],
     "slug": "anafe-a-gas-smartlife-4-hornallas-inox",
     "url": "https://www.vstore.com.uy/anafe-a-gas-4-hornallas-inox-smartlife/p"
@@ -2520,9 +2374,8 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158041-1200-auto?v=638555451615500000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158044-1200-auto?v=638555451623800000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158043-1200-auto?v=638555451621130000&width=1200&height=auto&aspect=true",
-     "https://vstoreuy.vtexassets.com/arquivos/ids/158042-1200-auto?v=638555451618170000&width=1200&height=auto&aspect=true"
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158043-1200-auto?v=638555451621130000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158042-1200-auto?v=638555451618170000&width=1200&height=auto&aspect=true"
     ],
     "slug": "mixer-smartlife",
     "url": "https://www.vstore.com.uy/mixer-smartlife/p"
@@ -2534,14 +2387,13 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "mixers",
-    "price": 99,
+    "price": 75,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158045-1200-auto?v=638555451629430000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158045-1200-auto?v=638555451629430000&width=1200&height=auto&aspect=true",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/158046-1200-auto?v=638555451633100000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158046-1200-auto?v=638555451633100000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158047-1200-auto?v=638555451636670000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158048-1200-auto?v=638555451639800000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "mixer-smartlife-c-accesorios",
     "url": "https://www.vstore.com.uy/mixer-c--accesorios-smartlife/p"
@@ -2557,15 +2409,13 @@
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158065-1200-auto?v=638555451698500000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158065-1200-auto?v=638555451698500000&width=1200&height=auto&aspect=true",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/158066-1200-auto?v=638555451702130000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158066-1200-auto?v=638555451702130000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158067-1200-auto?v=638555451705900000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158068-1200-auto?v=638555451709300000&width=1200&height=auto&aspect=true"
-     
     ],
     "slug": "exprimidor-smartlife",
     "url": "https://www.vstore.com.uy/exprimidor-smartlife/p"
   },
-  
   {
     "id": "SL-JC5512",
     "title": "EXPRIMIDOR SMARTLIFE",
@@ -2577,7 +2427,6 @@
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160377-1200-auto?v=638755110157200000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160377-1200-auto?v=638755110157200000&width=1200&height=auto&aspect=true"
-     
     ],
     "slug": "exprimidor-smartlife",
     "url": "https://www.vstore.com.uy/exprimidor-smartlife-1l/p"
@@ -2593,14 +2442,13 @@
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157888-1200-auto?v=638555451108730000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157888-1200-auto?v=638555451108730000&width=1200&height=auto&aspect=true",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/157889-1200-auto?v=638555451110630000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157889-1200-auto?v=638555451110630000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157890-1200-auto?v=638555451113570000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157891-1200-auto?v=638555451116370000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157892-1200-auto?v=638555451119500000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157894-1200-auto?v=638555451125530000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157895-1200-auto?v=638555451130070000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157896-1200-auto?v=638555451133670000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "fabrica-de-pan-smartlife",
     "url": "https://www.vstore.com.uy/fabrica-de-pan-smartlife/p"
@@ -2612,15 +2460,14 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "sandwicheras",
-    "price": 65,
+    "price": 35,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158232-1200-auto?v=638555452307330000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158232-1200-auto?v=638555452307330000&width=1200&height=auto&aspect=true",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/158233-1200-auto?v=638555452310300000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158233-1200-auto?v=638555452310300000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158234-1200-auto?v=638555452315300000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158235-1200-auto?v=638555452318070000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158236-1200-auto?v=638555452320730000&width=1200&height=auto&aspect=true"
-    
     ],
     "slug": "sandwichera-smartlife",
     "url": "https://www.vstore.com.uy/sandwichera-smartlife/p"
@@ -2636,7 +2483,7 @@
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158225-1200-auto?v=638555452285000000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158225-1200-auto?v=638555452285000000&width=1200&height=auto&aspect=true",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/158226-1200-auto?v=638555452289070000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158226-1200-auto?v=638555452289070000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158227-1200-auto?v=638555452295430000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158228-1200-auto?v=638555452297470000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158229-1200-auto?v=638555452299500000&width=1200&height=auto&aspect=true",
@@ -2652,11 +2499,11 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
-    "price": 39,
+    "price": 35,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158136-1200-auto?v=638555451959200000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158136-1200-auto?v=638555451959200000&width=1200&height=auto&aspect=true",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/158137-1200-auto?v=638555451961970000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158137-1200-auto?v=638555451961970000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158138-1200-auto?v=638555451963830000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158139-1200-auto?v=638555451967230000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158140-1200-auto?v=638555451969730000&width=1200&height=auto&aspect=true",
@@ -2676,7 +2523,7 @@
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158144-1200-auto?v=638555451984670000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158144-1200-auto?v=638555451984670000&width=1200&height=auto&aspect=true",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/158145-1200-auto?v=638555451987730000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158145-1200-auto?v=638555451987730000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158146-1200-auto?v=638555451990700000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158147-1200-auto?v=638555451993830000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158148-1200-auto?v=638555451999000000&width=1200&height=auto&aspect=true",
@@ -2692,11 +2539,11 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
-    "price": 29,
+    "price": 25,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158128-1200-auto?v=638555451928830000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158128-1200-auto?v=638555451928830000&width=1200&height=auto&aspect=true",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/158129-1200-auto?v=638555451931500000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158129-1200-auto?v=638555451931500000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158130-1200-auto?v=638555451934130000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158131-1200-auto?v=638555451939230000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158132-1200-auto?v=638555451945430000&width=1200&height=auto&aspect=true",
@@ -2712,11 +2559,11 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "aspiradoras",
-    "price": 139,
+    "price": 79,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158284-1200-auto?v=638555452517330000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158284-1200-auto?v=638555452517330000&width=1200&height=auto&aspect=true",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/158285-1200-auto?v=638555452523070000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158285-1200-auto?v=638555452523070000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158286-1200-auto?v=638555452527470000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158287-1200-auto?v=638555452533070000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158288-1200-auto?v=638555452537100000&width=1200&height=auto&aspect=true",
@@ -2736,7 +2583,6 @@
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/159517-1200-auto?v=638584701745470000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/159517-1200-auto?v=638584701745470000&width=1200&height=auto&aspect=true"
-       
     ],
     "slug": "aspiradora-smartlife-inalambrica-2-en-1",
     "url": "https://www.vstore.com.uy/aspiradora-inalambrica--smartlife/p"
@@ -2748,12 +2594,11 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "juguera",
-    "price": 59,
+    "price": 49,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/159791-1200-auto?v=638615920505600000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/159791-1200-auto?v=638615920505600000&width=1200&height=auto&aspect=true",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/159792-1200-auto?v=638785083039170000&width=1200&height=auto&aspect=true"
-      
+      "https://vstoreuy.vtexassets.com/arquivos/ids/159792-1200-auto?v=638785083039170000&width=1200&height=auto&aspect=true"
     ],
     "slug": "juguera-smartlife",
     "url": "https://www.vstore.com.uy/juguera-smartlife/p"
@@ -2764,17 +2609,16 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
-    "subsubcategory":"airfryer",
-    "price": 129,
+    "subsubcategory": "airfryer",
+    "price": 139,
     "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-04-04-09-51-08.jpeg",
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-04-04-09-51-08.jpeg",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/160752-1200-auto?v=638836110881330000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160752-1200-auto?v=638836110881330000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160753-1200-auto?v=638836110881630000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160754-1200-auto?v=638836110881800000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160757-1200-auto?v=638881010559230000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160758-1200-auto?v=638881010559400000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "freidora-de-aire-smartlife-12l-sl-afdg012-kit-de-regalo",
     "url": "https://www.vstore.com.uy/freidora-digital-12l-sl-afdg012-smartlife/p"
@@ -2789,13 +2633,12 @@
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158273-1200-auto?v=638555452463300000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158273-1200-auto?v=638555452463300000&width=1200&height=auto&aspect=true",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/158274-1600-auto?v=638555452470900000&width=1600&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158274-1600-auto?v=638555452470900000&width=1600&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158275-1200-auto?v=638555452475730000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "ventilador-de-mesa-smartlife",
     "url": "https://www.vstore.com.uy/ventilador-de-mesa-smartlife/p",
-    "stock":"no"
+    "stock": "no"
   },
   {
     "id": "SL-BF45S",
@@ -2803,14 +2646,13 @@
     "brand": "Smartlife",
     "category": "electrodomesticos",
     "subcategory": "ventilacion",
-    "price": 89,
+    "price": 75,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157857-1200-auto?v=638555450999130000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157857-1200-auto?v=638555450999130000&width=1200&height=auto&aspect=true",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/157858-1200-auto?v=638555451003670000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157858-1200-auto?v=638555451003670000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157859-1200-auto?v=638555451007870000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157860-1200-auto?v=638555451011400000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "turboventilador-smartlife",
     "url": "https://www.vstore.com.uy/turboventilador-smartlife/p"
@@ -2825,13 +2667,12 @@
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158222-1200-auto?v=638555452277270000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158222-1200-auto?v=638555452277270000&width=1200&height=auto&aspect=true",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/158223-1200-auto?v=638555452279870000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/158223-1200-auto?v=638555452279870000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158224-1200-auto?v=638555452282370000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "ventilador-de-pie-smartlife-negro",
     "url": "https://www.vstore.com.uy/ventilador-de-pie-negro-smartlife/p",
-    "stock":"no"
+    "stock": "no"
   },
   {
     "id": "SL-SF40W",
@@ -2845,7 +2686,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/158219-1200-auto?v=638555452267000000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158220-1200-auto?v=638555452269900000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158221-1200-auto?v=638555452272100000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "ventilador-de-pie-smartlife-blanco",
     "url": "https://www.vstore.com.uy/ventilador-de-pie-blanco-smartlife/p"
@@ -2863,8 +2703,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/158117-1200-auto?v=638555451886470000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158118-1200-auto?v=638555451890470000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158119-1200-auto?v=638555451893600000&width=1200&height=auto&aspect=true"
-      
-    
     ],
     "slug": "ventilador-smartlife-3-en-1",
     "url": "https://www.vstore.com.uy/ventilador-3-en-1-smartlife/p"
@@ -2881,7 +2719,6 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160259-1200-auto?v=638721293854800000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160260-1200-auto?v=638937129455900000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "multiprocesadora-smartlife-2-velocidades",
     "url": "https://www.vstore.com.uy/multiprocesadora-smartlife-2-velocidades/p"
@@ -2896,7 +2733,6 @@
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160509-1200-auto?v=638793003380170000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160509-1200-auto?v=638793003380170000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "convector-smartlife-2-niveles",
     "url": "https://www.vstore.com.uy/convector-2-niveles-smartlife/p"
@@ -2911,7 +2747,6 @@
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160511-1200-auto?v=638793007480630000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160511-1200-auto?v=638793007480630000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "radiador-smartlife-9-velas-digital",
     "url": "https://www.vstore.com.uy/radiador-9-velas-digital-smartlife/p"
@@ -2943,13 +2778,11 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/158175-1200-auto?v=638555452099470000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158176-1200-auto?v=638555452101970000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158177-1200-auto?v=638555452105030000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "radiador-smartlife-1500w",
     "url": "https://www.vstore.com.uy/radiador-1500w/p",
-    "stock":"no"
+    "stock": "no"
   },
-
   {
     "id": "HD7461/00",
     "title": "CAFETERA DE FILTRO PHILIPS 1.5L BLANCA",
@@ -2964,7 +2797,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/156854-1200-auto?v=638908762567970000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156855-1200-auto?v=638908762568100000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156856-1200-auto?v=638908762568100000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "cafetera-de-filtro-blanca-philips",
     "url": "https://www.vstore.com.uy/cafetera-de-filtro-blanca-philips/p"
@@ -2980,10 +2812,9 @@
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160012-1200-auto?v=638653092988200000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160012-1200-auto?v=638653092988200000&width=1200&height=auto&aspect=true",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/160013-1200-auto?v=638653093072430000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160013-1200-auto?v=638653093072430000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160014-1200-auto?v=638653093161130000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160015-1200-auto?v=638653093272570000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "cafetera-de-filtro-philips",
     "url": "https://www.vstore.com.uy/cafetera-de-filtro-philips/p"
@@ -2995,16 +2826,15 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "cafeteras",
-    "price": 599,
+    "price": 399,
     "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-05-07-15-39-26.jpeg",
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-05-07-15-39-26.jpeg",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/160892-1200-auto?v=638875717908100000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160892-1200-auto?v=638875717908100000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160891-1200-auto?v=638875717908100000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160893-1200-auto?v=638875717908270000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160894-1200-auto?v=638875717908270000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160895-1200-auto?v=638875717908400000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "cafetera-espresso-smartlife-automatica-c-molinillo-cafe",
     "url": "https://www.vstore.com.uy/cafetera-espresso-smartlife-automatica-c-molinillo-cafe/p"
@@ -3020,10 +2850,9 @@
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/156857-1200-auto?v=638555444610900000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/156857-1200-auto?v=638555444610900000&width=1200&height=auto&aspect=true",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/156858-1200-auto?v=638908760750730000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/156858-1200-auto?v=638908760750730000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156860-1200-auto?v=638908760751430000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156859-1200-auto?v=638908760751300000&width=1200&height=auto&aspect=true"
-     
     ],
     "slug": "cafetera-de-filtro-negra-philips",
     "url": "https://www.vstore.com.uy/cafetera-de-filtro-negra-philips/p"
@@ -3039,12 +2868,11 @@
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157943-1200-auto?v=638555451291770000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157943-1200-auto?v=638555451291770000&width=1200&height=auto&aspect=true",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/157944-1200-auto?v=638908783325530000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157944-1200-auto?v=638908783325530000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157945-1200-auto?v=638908783325700000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157946-1200-auto?v=638908783325700000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157947-1200-auto?v=638908783325700000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157948-1200-auto?v=638908783325700000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "cafetera-de-filtro-smartlife",
     "url": "https://www.vstore.com.uy/cafetera-de-filtro-smartlife/p"
@@ -3060,9 +2888,7 @@
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/156714-1200-auto?v=638555444094670000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/156714-1200-auto?v=638555444094670000&width=1200&height=auto&aspect=true",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/156715-1200-auto?v=638908755177430000&width=1200&height=auto&aspect=true",
-      
-      
+      "https://vstoreuy.vtexassets.com/arquivos/ids/156715-1200-auto?v=638908755177430000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156716-1200-auto?v=638908755177570000&width=1200&height=auto&aspect=true"
     ],
     "slug": "cafetera-expreso-automatica-c-latte-go-philips",
@@ -3079,9 +2905,8 @@
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157983-1200-auto?v=638555451417000000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157983-1200-auto?v=638555451417000000&width=1200&height=auto&aspect=true",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/157984-1600-auto?v=638908778806600000&width=1600&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157984-1600-auto?v=638908778806600000&width=1600&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157985-1200-auto?v=638908778806770000&width=1200&height=auto&aspect=true",
-      
       "https://vstoreuy.vtexassets.com/arquivos/ids/157986-1200-auto?v=638908778806770000&width=1200&height=auto&aspect=true"
     ],
     "slug": "cafetera-espresso-smartlife",
@@ -3098,8 +2923,7 @@
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/161331-1200-auto?v=638920952447200000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/161331-1200-auto?v=638920952447200000&width=1200&height=auto&aspect=true",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/161332-1200-auto?v=638920952447400000&width=1200&height=auto&aspect=true",
-     
+      "https://vstoreuy.vtexassets.com/arquivos/ids/161332-1200-auto?v=638920952447400000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/161333-1200-auto?v=638920952447530000&width=1200&height=auto&aspect=true"
     ],
     "slug": "cafetera-piccolo-xs-dolce-gusto",
@@ -3116,10 +2940,9 @@
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157949-1200-auto?v=638555451312700000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157949-1200-auto?v=638555451312700000&width=1200&height=auto&aspect=true",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/157950-1200-auto?v=638908781069130000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157950-1200-auto?v=638908781069130000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157951-1200-auto?v=638908781069300000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157952-1200-auto?v=638908781069470000&width=1200&height=auto&aspect=true",
-      
       "https://vstoreuy.vtexassets.com/arquivos/ids/157953-1200-auto?v=638908781069470000&width=1200&height=auto&aspect=true"
     ],
     "slug": "cafetera-espresso-800w-smartlife",
@@ -3132,23 +2955,19 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "cafeteras",
-    "price": 199,
+    "price": 169,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157280-1200-auto?v=638555448897630000&width=1200&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157280-1200-auto?v=638555448897630000&width=1200&height=auto&aspect=true",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/157281-1200-auto?v=638768704144170000&width=1200&height=auto&aspect=true",
-       "https://vstoreuy.vtexassets.com/arquivos/ids/157282-1200-auto?v=638768704144170000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157281-1200-auto?v=638768704144170000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/157282-1200-auto?v=638768704144170000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157283-1200-auto?v=638768704144170000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157284-1200-auto?v=638768704144330000&width=1200&height=auto&aspect=true",
-      
       "https://vstoreuy.vtexassets.com/arquivos/ids/157285-1200-auto?v=638768704144330000&width=1200&height=auto&aspect=true"
     ],
     "slug": "cafetera-genios--dolce-gusto",
     "url": "https://www.vstore.com.uy/cafetera-genios--dolce-gusto/p"
   },
-
-
-  
   {
     "id": "BRE255/00",
     "title": "DEPILADORA PHILIPS SATINELLE ESSENTIAL",
@@ -3174,13 +2993,12 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "cuidado-personal",
-    "price": 79,
+    "price": 69,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/156463-1200-auto?v=638555440422200000&width=500&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/156463-1200-auto?v=638555440422200000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156464-1200-auto?v=638555440424530000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156465-1200-auto?v=638555440426270000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "planchita-philips-straight-essential",
     "url": ""
@@ -3192,13 +3010,12 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "licuadoras",
-    "price": 159,
+    "price": 149,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/156930-1200-auto?v=638555444853400000&width=500&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/156930-1200-auto?v=638555444853400000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156931-1200-auto?v=638555444855600000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156932-1200-auto?v=638555444858270000&width=1200&height=auto&aspect=true",
-      
       "https://vstoreuy.vtexassets.com/arquivos/ids/156933-1200-auto?v=638555444861070000&width=1200&height=auto&aspect=true"
     ],
     "slug": "licuadora-philips-serie-5000-2l-negra",
@@ -3218,8 +3035,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/156840-1200-auto?v=638555444547630000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156841-1200-auto?v=638555444551230000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156842-1200-auto?v=638555444555130000&width=1200&height=auto&aspect=true"
-      
-      
     ],
     "slug": "cortacabello-philips-serie-5000",
     "url": ""
@@ -3239,7 +3054,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/156907-1200-auto?v=638555444781670000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156908-1200-auto?v=638555444785130000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156909-1200-auto?v=638555444787630000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "juguera-viva-philips-700w",
     "url": "",
@@ -3258,7 +3072,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/157321-1200-auto?v=638555449055730000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157322-1200-auto?v=638555449059930000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157323-1200-auto?v=638555449064630000&width=1200&height=auto&aspect=true",
-      
       "https://vstoreuy.vtexassets.com/arquivos/ids/157324-1600-auto?v=638555449068370000&width=1600&height=auto&aspect=true"
     ],
     "slug": "afeitadora-philips-oneblade-6-acc.",
@@ -3277,7 +3090,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/157309-1200-auto?v=638555449007500000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157310-1200-auto?v=638555449012330000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157311-1200-auto?v=638555449018570000&width=1200&height=auto&aspect=true",
-      
       "https://vstoreuy.vtexassets.com/arquivos/ids/157312-1200-auto?v=638555449022630000&width=1200&height=auto&aspect=true"
     ],
     "slug": "afeitadora-philips-oneblade-3-acc.",
@@ -3295,24 +3107,11 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/159188-1200-auto?v=638573546223100000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/159189-1200-auto?v=638810256656500000&width=1200&height=auto&aspect=true",
-
-      
       "https://vstoreuy.vtexassets.com/arquivos/ids/159190-1200-auto?v=638810256656670000&width=1200&height=auto&aspect=true"
     ],
     "slug": "afeitadora-philips-SERIE-5000.",
     "url": ""
   },
-
-
-
-
-
-
-
-
-
-
-
   {
     "id": "HC5610/15",
     "title": "CORTACABELLO PHILIPS",
@@ -3327,7 +3126,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/156835-1200-auto?v=638555444526530000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156836-1200-auto?v=638555444530770000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156837-1200-auto?v=638555444533730000&width=1200&height=auto&aspect=true",
-      
       "https://vstoreuy.vtexassets.com/arquivos/ids/156838-1200-auto?v=638555444539670000&width=1200&height=auto&aspect=true"
     ],
     "slug": "cortacabello-philips",
@@ -3348,7 +3146,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/156956-1200-auto?v=638555444960370000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156957-1200-auto?v=638555444967730000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156958-1200-auto?v=638555444974300000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "mixer-philips-promix-viva-c/-vaso,-picadora-y-batidor",
     "url": ""
@@ -3380,13 +3177,12 @@
     "category": "electrodomesticos",
     "subcategory": "aspiradoras",
     "subsubcategory": "",
-    "price": 199,
+    "price": 189,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/156717-1200-auto?v=638555444107030000&width=500&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/156717-1200-auto?v=638555444107030000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156718-1200-auto?v=638908760537570000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156719-1200-auto?v=638908760537870000&width=1200&height=auto&aspect=true",
-      
       "https://vstoreuy.vtexassets.com/arquivos/ids/156720-1200-auto?v=638908760537870000&width=1200&height=auto&aspect=true"
     ],
     "slug": "aspiradora-philips-powerpro-1800w",
@@ -3405,7 +3201,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/157167-1200-auto?v=638555448469830000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157168-1200-auto?v=638555448474030000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157169-1200-auto?v=638555448477330000&width=1200&height=auto&aspect=true",
-     
       "https://vstoreuy.vtexassets.com/arquivos/ids/157170-1600-auto?v=638555448483230000&width=1600&height=auto&aspect=true"
     ],
     "slug": "multigroom-philips-series-3000-5-acc.",
@@ -3425,7 +3220,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/160005-1200-auto?v=638653074757130000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160006-1200-auto?v=638653074839300000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160007-1200-auto?v=638653074926270000&width=1200&height=auto&aspect=true"
-     
     ],
     "slug": "afeitadora-philips-corporal-bodygroom",
     "url": ""
@@ -3457,14 +3251,12 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "airfryer",
-    "price": 249,
+    "price": 145,
     "thumbnail": "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-02-05-09-48-24.jpeg",
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-02-05-09-48-24.jpeg",
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-02-05-09-48-38.jpeg",
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2025-02-05-09-48-45.jpeg"
-      
-      
     ],
     "slug": "freidora-de-aire-philips-800g",
     "url": ""
@@ -3481,12 +3273,10 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157315-1200-auto?v=638555449037030000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157316-1200-auto?v=638555449039370000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "cuchillas-de-recambio-philips-oneblade",
     "url": ""
   },
- 
   {
     "id": "CA6500/63",
     "title": "ESPUMADOR DE LECHE PHILIPS",
@@ -3514,14 +3304,13 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "",
-    "price": 69,
+    "price": 59,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158807-1200-auto?v=638555454183900000&width=500&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158807-1200-auto?v=638555454183900000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158808-1200-auto?v=638555454186070000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158809-1200-auto?v=638555454187800000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/158810-1600-auto?v=638555454190430000&width=1600&height=auto&aspect=true"
-    
     ],
     "slug": "plancha-steamer-philips",
     "url": ""
@@ -3538,7 +3327,6 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160336-1200-auto?v=638750459223400000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160337-1200-auto?v=638750459321030000&width=1200&height=auto&aspect=true"
-     
     ],
     "slug": "jarra-electrica-philips-1,7-l",
     "url": ""
@@ -3555,7 +3343,6 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/156771-1200-auto?v=638555444314670000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156772-1200-auto?v=638555444317100000&width=1200&height=auto&aspect=true",
-      
       "https://vstoreuy.vtexassets.com/arquivos/ids/156773-1200-auto?v=638555444319170000&width=1200&height=auto&aspect=true"
     ],
     "slug": "quita-pelusas-philips",
@@ -3568,14 +3355,13 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "cuidado-personal",
-    "price": 99,
+    "price": 89,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/156433-1200-auto?v=638555440271100000&width=500&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/156433-1200-auto?v=638555440271100000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156434-1200-auto?v=638555440273670000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156435-1200-auto?v=638555440278670000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156436-1200-auto?v=638555440281030000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "secador-philips-dry-care-2200w",
     "url": ""
@@ -3593,7 +3379,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/160526-1200-auto?v=638793865334500000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160527-1200-auto?v=638793865334670000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160528-1200-auto?v=638793865334670000&width=1200&height=auto&aspect=true",
-      
       "https://vstoreuy.vtexassets.com/arquivos/ids/160529-1200-auto?v=638793865334670000&width=1200&height=auto&aspect=true"
     ],
     "slug": "licuadora-philips-serie-3000-hr2291/41",
@@ -3611,7 +3396,6 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157313-1200-auto?v=638555449026000000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157314-1200-auto?v=638555449031300000&width=1200&height=auto&aspect=true"
-     
     ],
     "slug": "cuchilla-de-recambio-philips-oneblade",
     "url": ""
@@ -3629,7 +3413,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/160619-1200-auto?v=638820558549330000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160620-1200-auto?v=638820558549500000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160621-1200-auto?v=638820558549530000&width=1200&height=auto&aspect=true"
-     
     ],
     "slug": "plancha-philipsa-vapor-con-suela-antiadherente",
     "url": ""
@@ -3648,12 +3431,10 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/156982-1200-auto?v=638555445086700000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156983-1200-auto?v=638555445090300000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156984-1200-auto?v=638555445093730000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "procesador-de-alimentos-philips-c/-4-acc",
     "url": ""
   },
-  
   {
     "id": "HR2738/00",
     "title": "EXPRIMIDOR PHILIPS",
@@ -3669,7 +3450,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/156961-1200-auto?v=638555444986030000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156962-1200-auto?v=638555444989800000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156963-1200-auto?v=638555444992300000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "exprimidor-philips",
     "url": ""
@@ -3681,14 +3461,13 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "cuidado-personal",
-    "price": 69,
+    "price": 59,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/156442-1200-auto?v=638555440322670000&width=500&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/156442-1200-auto?v=638555440322670000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156443-1200-auto?v=638555440335070000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156444-1200-auto?v=638555440344200000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156445-1600-auto?v=638555440352330000&width=1600&height=auto&aspect=true",
-  
       "https://vstoreuy.vtexassets.com/arquivos/ids/156446-1200-auto?v=638555440358630000&width=1200&height=auto&aspect=true"
     ],
     "slug": "secador-de-cabello-philips-serie-3000-2100w",
@@ -3707,7 +3486,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/156901-1200-auto?v=638555444764930000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156902-1200-auto?v=638908763007570000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156903-1200-auto?v=638908763007900000&width=1200&height=auto&aspect=true",
-      
       "https://vstoreuy.vtexassets.com/arquivos/ids/156904-1200-auto?v=638908763007900000&width=1200&height=auto&aspect=true"
     ],
     "slug": "juguera-viva-philips-1.5l-500w",
@@ -3726,7 +3504,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/156977-1200-auto?v=638555445065070000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156978-1200-auto?v=638555445069430000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156979-1200-auto?v=638555445071970000&width=1200&height=auto&aspect=true",
-     
       "https://vstoreuy.vtexassets.com/arquivos/ids/156980-1200-auto?v=638555445076030000&width=1200&height=auto&aspect=true"
     ],
     "slug": "procesador-de-alimentos-philips-c/-2-acc",
@@ -3745,17 +3522,11 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/156523-1200-auto?v=638555440697100000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156524-1200-auto?v=638908855446100000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156525-1200-auto?v=638908855446270000&width=1200&height=auto&aspect=true",
-      
       "https://vstoreuy.vtexassets.com/arquivos/ids/156526-1200-auto?v=638908855446270000&width=1200&height=auto&aspect=true"
     ],
     "slug": "cortabarba-philips-serie-3000",
     "url": ""
   },
- 
-  
-
-
-
   {
     "id": "NA220/00",
     "title": "FREIDORA DE AIRE PHILIPS DIGITAL 4.2L",
@@ -3763,14 +3534,13 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "airfryer",
-    "price": 229,
+    "price": 135,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/159887-1200-auto?v=638636485012830000&width=500&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/159887-1200-auto?v=638636485012830000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/159888-1200-auto?v=638761083212970000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/159889-1200-auto?v=638761083213100000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/159890-1200-auto?v=638761083213100000&width=1200&height=auto&aspect=true",
-     
       "https://vstoreuy.vtexassets.com/arquivos/ids/159891-1200-auto?v=638761083213100000&width=1200&height=auto&aspect=true"
     ],
     "slug": "freidora-de-aire-philips-digital-4.2l",
@@ -3783,13 +3553,12 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "multiprocesadoras",
-    "price": 79,
+    "price": 65,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/156898-1200-auto?v=638555444756600000&width=500&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/156898-1200-auto?v=638555444756600000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156899-1200-auto?v=638555444759430000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156900-1200-auto?v=638555444761770000&width=1200&height=auto&aspect=true"
-     
     ],
     "slug": "picador-philips",
     "url": ""
@@ -3822,13 +3591,12 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "",
-    "price": 159,
+    "price": 149,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160354-1200-auto?v=638751607603400000&width=500&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/160354-1200-auto?v=638751607603400000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160356-1200-auto?v=638751607999270000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160357-1200-auto?v=638751608153870000&width=1200&height=auto&aspect=true",
-      
       "https://vstoreuy.vtexassets.com/arquivos/ids/160358-1200-auto?v=638751608452570000&width=1200&height=auto&aspect=true"
     ],
     "slug": "plancha-philips-steamer-c/soporte",
@@ -3858,7 +3626,7 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "",
-    "price": 109,
+    "price": 99,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/158811-1200-auto?v=638555454192930000&width=500&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/158811-1200-auto?v=638555454192930000&width=500&height=auto&aspect=true",
@@ -3884,7 +3652,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/156964-1200-auto?v=638555444997630000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156965-1200-auto?v=638555445007000000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156966-1200-auto?v=638555445012030000&width=1200&height=auto&aspect=true",
-      
       "https://vstoreuy.vtexassets.com/arquivos/ids/156967-1200-auto?v=638555445019870000&width=1200&height=auto&aspect=true"
     ],
     "slug": "batidora-philips-daily-collection-blanca",
@@ -3903,7 +3670,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/156845-1200-auto?v=638555444568300000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156846-1200-auto?v=638908758778170000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156847-1200-auto?v=638908758778470000&width=1200&height=auto&aspect=true"
-     
     ],
     "slug": "tostadora-philips-blanca-ranura-xl",
     "url": ""
@@ -3920,7 +3686,6 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/156910-1200-auto?v=638555444791200000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156911-1200-auto?v=638555444794500000&width=1200&height=auto&aspect=true",
-     
       "https://vstoreuy.vtexassets.com/arquivos/ids/156912-1200-auto?v=638555444797330000&width=1200&height=auto&aspect=true"
     ],
     "slug": "licuadora-philips-daily-1.25l",
@@ -3941,7 +3706,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/160340-1200-auto?v=638908763564070000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160341-1200-auto?v=638908763564070000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160342-1200-auto?v=638908763564230000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "batidora-manual-philips-300w-daily-collection",
     "url": ""
@@ -3960,7 +3724,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/156849-1200-auto?v=638555444579430000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156850-1200-auto?v=638555444584430000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156851-1200-auto?v=638555444588370000&width=1200&height=auto&aspect=true",
-      
       "https://vstoreuy.vtexassets.com/arquivos/ids/156852-1200-auto?v=638555444592130000&width=1200&height=auto&aspect=true"
     ],
     "slug": "tostadora-philips-negra",
@@ -3980,7 +3743,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/160343-1200-auto?v=638750789758330000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156850-1200-auto?v=638555444584430000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160346-1200-auto?v=638774010754730000&width=1200&height=auto&aspect=true"
-      
     ]
   },
   {
@@ -3995,12 +3757,11 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/156920-1200-auto?v=638555444819230000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156921-1200-auto?v=638827560299830000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "sopera-philips",
     "url": ""
   },
-   {
+  {
     "id": "SL-SO1310",
     "title": "SOPERA PHILIPS",
     "brand": "Smartlife",
@@ -4012,7 +3773,6 @@
     "images": [
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2023-08-02-16-37-33.jpeg",
       "https://www.visuar.com.uy/Uploads/Productos/Fotos/Grande/foto_2023-08-02-16-37-38.jpeg"
-      
     ],
     "slug": "sopera-philips",
     "url": ""
@@ -4031,7 +3791,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/156831-1200-auto?v=638555444516430000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156832-1200-auto?v=638555444518900000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156833-1200-auto?v=638555444520770000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "cortacabellos-philips-13-posiciones",
     "url": ""
@@ -4043,13 +3802,12 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "cuidado-personal",
-    "price": 39,
+    "price": 35,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/157291-1200-auto?v=638555448940530000&width=500&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157291-1200-auto?v=638555448940530000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157292-1200-auto?v=638555448945070000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157293-1200-auto?v=638555448952230000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "nose-trimmer-philips",
     "url": ""
@@ -4068,12 +3826,11 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/156941-1200-auto?v=638908777446670000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156942-1200-auto?v=638908777446800000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156943-1200-auto?v=638908777446800000&width=1200&height=auto&aspect=true",
-      
       "https://vstoreuy.vtexassets.com/arquivos/ids/156944-1200-auto?v=638908777446800000&width=1200&height=auto&aspect=true"
     ],
     "slug": "minilicuadora-0.6l-philips",
     "url": "",
-    "stock":"no"
+    "stock": "no"
   },
   {
     "id": " BHD514/00",
@@ -4082,13 +3839,12 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "cuidado-personal",
-    "price": 75,
+    "price": 79,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/156447-1200-auto?v=638555440360670000&width=500&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/156447-1200-auto?v=638555440360670000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156448-1200-auto?v=638555440366200000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156449-1200-auto?v=638555440368500000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "secador-de-cabello-philips-serie-5000",
     "url": ""
@@ -4107,7 +3863,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/159862-1200-auto?v=638629771949200000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/159863-1200-auto?v=638629772070200000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/159864-1200-auto?v=638629772162200000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "sandwichera-philips-grill",
     "url": ""
@@ -4124,7 +3879,6 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/156896-1200-auto?v=638555444750530000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156897-1200-auto?v=638555444754600000&width=1200&height=auto&aspect=true"
-     
     ],
     "slug": "planchita-philips-essential-care-mini",
     "url": ""
@@ -4142,11 +3896,10 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/159254-1200-auto?v=638580456826670000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/159255-1200-auto?v=638908852110700000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/159256-1200-auto?v=638908852110870000&width=1200&height=auto&aspect=true"
-     
     ],
     "slug": "afeitadora-philips-serie-1000",
     "url": "",
-    "stock":"no"
+    "stock": "no"
   },
   {
     "id": "BHH880/00",
@@ -4155,7 +3908,7 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "cuidado-personal",
-    "price": 99,
+    "price": 69,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/156450-1200-auto?v=638555440372830000&width=500&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/156450-1200-auto?v=638555440372830000&width=500&height=auto&aspect=true",
@@ -4175,13 +3928,12 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "cuidado-personal",
-    "price": 159,
+    "price": 149,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/156496-1200-auto?v=638555440581970000&width=500&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/156496-1200-auto?v=638555440581970000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156497-1200-auto?v=638555440587770000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156498-1200-auto?v=638555440590570000&width=1200&height=auto&aspect=true"
-     
     ],
     "slug": "depiladora-philips-serie-8000-7-acc.",
     "url": ""
@@ -4198,7 +3950,6 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/156490-1200-auto?v=638555440558600000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156491-1200-auto?v=638908852447370000&width=1200&height=auto&aspect=true",
-      
       "https://vstoreuy.vtexassets.com/arquivos/ids/156492-1200-auto?v=638908852447830000&width=1200&height=auto&aspect=true"
     ],
     "slug": "depiladora-philips-serie-8000-2-acc.",
@@ -4217,7 +3968,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/156974-1200-auto?v=638555445051430000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156975-1200-auto?v=638555445057530000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156976-1200-auto?v=638555445061470000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "batidora-philips-daily-collection-negra",
     "url": ""
@@ -4236,7 +3986,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/159797-1200-auto?v=638621763288530000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/159798-1200-auto?v=638621763387200000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/159799-1200-auto?v=638621763459600000&width=1200&height=auto&aspect=true"
-    
     ],
     "slug": "plancha-philips-en-seco-con-suela-antiadherente",
     "url": ""
@@ -4254,7 +4003,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/156893-1200-auto?v=638555444744100000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156894-1200-auto?v=638555444746770000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156895-1200-auto?v=638555444748500000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "planchita-philips-essential-care-classic",
     "url": ""
@@ -4272,7 +4020,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/156916-1200-auto?v=638555444807030000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156917-1200-auto?v=638555444811100000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156918-1200-auto?v=638555444814230000&width=1200&height=auto&aspect=true",
-      
       "https://vstoreuy.vtexassets.com/arquivos/ids/156919-1200-auto?v=638555444817830000&width=1200&height=auto&aspect=true"
     ],
     "slug": "licuadora-philips-daily-1.5l-2-vel-+-pulso",
@@ -4290,7 +4037,6 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/157174-1200-auto?v=638555448496500000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/157175-1200-auto?v=638779160744400000&width=1200&height=auto&aspect=true",
-    
       "https://vstoreuy.vtexassets.com/arquivos/ids/157176-1200-auto?v=638779160744570000&width=1200&height=auto&aspect=true"
     ],
     "slug": "multigroom-philips-serie-5000",
@@ -4310,7 +4056,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/156923-1600-auto?v=638908759925070000&width=1600&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156924-1200-auto?v=638908759925230000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156925-1200-auto?v=638908759925400000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "licuadora-philips-serie-5000-3l-blanca",
     "url": ""
@@ -4329,7 +4074,6 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/160009-1200-auto?v=638908852899370000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160010-1200-auto?v=638908852899500000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/160011-1200-auto?v=638908852899500000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "afeitadora-philips-serie-3000",
     "url": ""
@@ -4341,13 +4085,12 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "licuadoras",
-    "price": 119,
+    "price": 115,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/156926-1200-auto?v=638555444842300000&width=500&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/156926-1200-auto?v=638555444842300000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156927-1200-auto?v=638555444845100000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156928-1200-auto?v=638555444847300000&width=1200&height=auto&aspect=true",
-      
       "https://vstoreuy.vtexassets.com/arquivos/ids/156929-1200-auto?v=638555444849670000&width=1200&height=auto&aspect=true"
     ],
     "slug": "licuadora-philipsserie-5000-3l-negra",
@@ -4397,12 +4140,11 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "cuidado-personal",
-    "price": 89,
+    "price": 85,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/156466-1200-auto?v=638555440431870000&width=500&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/156466-1200-auto?v=638555440431870000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156467-1200-auto?v=638555440434600000&width=1200&height=auto&aspect=true",
-      
       "https://vstoreuy.vtexassets.com/arquivos/ids/156468-1200-auto?v=638555440436000000&width=1200&height=auto&aspect=true"
     ],
     "slug": "planchitaphilips-thermoshield",
@@ -4415,13 +4157,12 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "cuidado-personal",
-    "price": 129,
+    "price": 119,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/156493-1200-auto?v=638555440571000000&width=500&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/156493-1200-auto?v=638555440571000000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156494-1200-auto?v=638555440574800000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156495-1200-auto?v=638555440578230000&width=1200&height=auto&aspect=true"
-      
     ],
     "slug": "depiladora-philips-serie-8000-4-acc.",
     "url": ""
@@ -4433,13 +4174,12 @@
     "category": "electrodomesticos",
     "subcategory": "pequenos-electro",
     "subsubcategory": "cuidado-personal",
-    "price": 199,
+    "price": 159,
     "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/156499-1200-auto?v=638555440599000000&width=500&height=auto&aspect=true",
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/156499-1200-auto?v=638555440599000000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156500-1200-auto?v=638908854290870000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156501-1200-auto?v=638908854291000000&width=1200&height=auto&aspect=true"
-     
     ],
     "slug": "depiladora-philips-serie-8000-6-acc.",
     "url": ""
@@ -4473,7 +4213,6 @@
     "images": [
       "https://vstoreuy.vtexassets.com/arquivos/ids/156937-1200-auto?v=638555444876770000&width=500&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156938-1200-auto?v=638555444880200000&width=1200&height=auto&aspect=true",
-      
       "https://vstoreuy.vtexassets.com/arquivos/ids/156939-1200-auto?v=638555444882570000&width=1200&height=auto&aspect=true"
     ],
     "slug": "mixer-philips-promix-daily-c/-vaso-transportable",
@@ -4494,11 +4233,8 @@
       "https://vstoreuy.vtexassets.com/arquivos/ids/156487-1200-auto?v=638908854741700000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156488-1200-auto?v=638908854741700000&width=1200&height=auto&aspect=true",
       "https://vstoreuy.vtexassets.com/arquivos/ids/156489-1200-auto?v=638908854741700000&width=1200&height=auto&aspect=true"
-   
     ],
     "slug": "depiladora-philips-satinelle-essential-6-acc.",
     "url": ""
   }
-
-
 ]
