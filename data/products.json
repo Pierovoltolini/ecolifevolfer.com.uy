@@ -300,6 +300,40 @@
     ]
   },
   {
+    "id": "SART42DG6770B1EY",
+    "title": "REFRIGERADOR SAMSUNG TOP FREEZER 394L",
+    "brand": "Samsung",
+    "category": "electrodomesticos",
+    "subcategory": "refrigeradores",
+    "price": 1199,
+    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/160392-1200-auto?v=638762650128170000&width=1200&height=auto&aspect=true",
+    "images": [
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160392-1200-auto?v=638762650128170000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160393-1200-auto?v=638762795200330000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160394-1200-auto?v=638762795200500000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160396-1200-auto?v=638762650128630000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/160397-1200-auto?v=638762650128800000&width=1200&height=auto&aspect=true"
+      
+    ]
+  },
+  {
+    "id": "SL-SBS320FSINV",
+    "title": "REFRIGERADOR SMARTLIFE SIDE BY SIDE FRENCH DOOR",
+    "brand": "Smartlife",
+    "category": "electrodomesticos",
+    "subcategory": "refrigeradores",
+    "price": 859,
+    "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/162530-1200-auto?v=639027129124770000&width=1200&height=auto&aspect=true",
+    "images": [
+      "https://vstoreuy.vtexassets.com/arquivos/ids/162530-1200-auto?v=639027129124770000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163276-1200-auto?v=639076173036670000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163277-1200-auto?v=639076173036670000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163278-1200-auto?v=639076173036830000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163280-1200-auto?v=639076173036830000&width=1200&height=auto&aspect=true",
+      "https://vstoreuy.vtexassets.com/arquivos/ids/163283-1200-auto?v=639076173037130000&width=1200&height=auto&aspect=true"
+    ]
+  },
+  {
     "id": "SARF32CG5410",
     "title": "REFRIGERADOR SAMSUNG FRENCH DOOR",
     "brand": "Samsung",
