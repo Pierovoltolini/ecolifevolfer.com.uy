@@ -1,30 +1,4 @@
 // js/checkout.js
-async function pagarConMercadoPago(order) {
-
-  const items = order.items.map(product => ({
-    title: product.name,
-    quantity: product.qty,
-    currency_id: "UYU",
-    unit_price: product.price
-  }));
-
-  const response = await fetch("/api/create-payment", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({ items })
-  });
-
-  const data = await response.json();
-
-  if (data.init_point) {
-    window.location.href = data.init_point;
-  } else {
-    alert("Error al iniciar pago");
-    console.error(data);
-  }
-}
 function buildOrderObject() {
   // Intentamos obtener el carrito desde EcoCart
   const ecoItems = (window.EcoCart && window.EcoCart.Cart && window.EcoCart.Cart.getItems)
@@ -66,21 +40,28 @@ function buildOrderObject() {
 
 
 
+async function createHandyPayment(order) {
+  try {
+    const res = await fetch("/api/handy-create-payment", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(order)
+    });
 
+    const data = await res.json();
 
+    if (data.url) {
+      return data.url; // OK — devolvemos URL
+    }
 
+    console.error("Handy error:", data);
+    return null; // ❗SIN ALERT AQUÍ
 
-
-
-
-
-
-
-
-
-
-
-
+  } catch (err) {
+    console.error("Error inesperado:", err);
+    return null; // ❗SIN ALERT TAMPOCO AQUÍ
+  }
+}
 
 
 // === End Handy Integration ===
@@ -563,12 +544,9 @@ function validarRUTUy(rut) {
    TODO EN USD — SIN UYU
 ============================================================ */
 
-const IVA_MULTIPLICADOR = 1.22;
-
-// Base PLAN CATORCE según tu tabla
-const RECARGOS_BASE_CUOTAS = {
-  1: 5.49,  // si 1 cuota = crédito contado local
-  2: 7.49,
+const RECARGOS_CUOTAS = {
+  1: 0,
+  2: 5.49,
   3: 7.99,
   4: 8.49,
   5: 8.99,
@@ -578,15 +556,8 @@ const RECARGOS_BASE_CUOTAS = {
   9: 9.49,
   10: 9.49,
   11: 9.49,
-  12: 9.49
+  12: 9.99
 };
-
-const RECARGOS_CUOTAS = Object.fromEntries(
-  Object.entries(RECARGOS_BASE_CUOTAS).map(([cuotas, porcentaje]) => [
-    Number(cuotas),
-    Number((porcentaje * IVA_MULTIPLICADOR).toFixed(2))
-  ])
-);
 
 function getTotalUSDConRecargo() {
   const data = collectCheckoutData();
@@ -666,21 +637,16 @@ document.getElementById("btn-confirm")?.addEventListener("click", async (e) => {
   } catch (err) {
     console.error("Error enviando EmailJS:", err);
   }
-try {
-  await pagarConMercadoPago(order);
-} catch (err) {
-  console.error("Error MercadoPago:", err);
-  alert("Error al iniciar pago");
-}
-  
 
+  // Handy
+  const paymentUrl = await createHandyPayment(order);
 
-
-
-
-
-
-
+  if (paymentUrl) {
+    alert("✅ Pedido enviado correctamente. Serás redirigido al portal de Handy para procesar el pago.");
+    window.location.href = paymentUrl;
+  } else {
+    alert("⚠️ Ocurrió un error al generar el pago. Intenta nuevamente.");
+  }
 });
 
 

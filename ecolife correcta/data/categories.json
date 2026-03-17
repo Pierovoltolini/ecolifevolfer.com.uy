@@ -1,0 +1,49 @@
+{
+  "order": ["televisores", "audio", "electrodomesticos"],
+  "categories": {
+    "televisores": {
+      "label": "Televisores"
+    },
+    "audio": {
+      "label": "Audio",
+      "subs": {
+        "barras-de-sonido": { "label": "Barras de sonido" }
+      }
+    },
+    "electrodomesticos": {
+      "label": "Electrodomésticos",
+      "subs": {
+        "refrigeradores":        { "label": "Refrigeradores" },
+        "hornos":                { "label": "Hornos" },
+        "cocinas":                { "label": "Cocinas" },
+        "anafes":                { "label": "Anafes" },
+        "campanas":              { "label": "Campanas" },
+        "microondas":            { "label": "Microondas" },
+        "lavavajillas":          { "label": "Lavavajillas" },
+        "lavado-secado":         { "label": "Lavado & Secado" },
+        "aspiradoras":           { "label": "Aspiradoras" },
+        "calefaccion":           { "label": "Calefacción" },
+        "ventilacion":           { "label": "Ventilación" },
+        "aires-acondicionados":  { "label": "Aires acondicionados" },
+        "termotanque":  { "label": "Termotanques" },
+        "pequenos-electro": {
+          "label": "Pequeños electro",
+          "subs": {
+            "airfryer":          { "label": "Airfryer" },
+            "licuadoras":         { "label": "Licuadoras" },
+            "batidoras":          { "label": "Batidoras" },
+            "cafeteras":          { "label": "Cafeteras" },
+            "tostadoras":         { "label": "Tostadoras" },
+            "mixers":             { "label": "Mixers" },
+            "multiprocesadoras":  { "label": "Multiprocesadoras" },
+            "exprimidores":       { "label": "Exprimidores" },
+            "sandwicheras":       { "label": "Sandwicheras" },
+            "jarra-electrica":    { "label": "Jarra eléctrica" },
+            "juguera":            { "label": "Juguera" },
+            "cuidado-personal": { "label": "Cuidado personal" }
+          }
+        }
+      }
+    }
+  }
+}

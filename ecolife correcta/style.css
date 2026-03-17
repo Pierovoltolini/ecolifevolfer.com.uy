@@ -1,0 +1,2490 @@
+/* ===== Variables y base ===== */
+:root{
+  /* degradado más sobrio (izq→der) */
+  --brand-1:#3fb28aba;
+  --brand-2:#2a92bfde;
+  --brand-3:#1d5f86;
+
+  --text:#0f172a;
+  --muted:#6b7280;
+  --bg:#ffffff;
+  --border:#e5e7eb;
+
+  --r-lg:16px;
+  --r-md:12px;
+  --r-sm:8px;
+
+  --shadow-sm:0 6px 18px rgba(2,6,23,.06);
+  --shadow-md:0 14px 36px rgba(2,6,23,.12);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text)}
+img{max-width:100%;display:block}
+
+body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}
+h1,h2,h3,.headline,.section-title{font-family:Poppins,Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;line-height:1.2}
+
+.wrap{width:min(1120px,92%);margin-inline:auto}
+a{text-decoration:none;color:inherit}
+
+/* ===== Header fijo con blur ===== */
+.site-header{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter:saturate(160%) blur(14px);
+  -webkit-backdrop-filter:saturate(160%) blur(14px);
+  background:color-mix(in srgb, #ffffff 78%, transparent);
+  border-bottom:1px solid var(--border);
+}
+.site-header .wrap{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:10px 0;
+}
+.brand{display:flex; align-items:center; gap:10px; font-weight:800}
+.brand img{height:34px}
+.brand-text small{font-weight:600; color:var(--muted)}
+.main-nav{display:flex; align-items:center; gap:16px; font-weight:600}
+.nav-link{padding:8px 10px; border-radius:10px; transition:transform .18s, background .18s}
+.nav-link:hover{background:#f3f4f6; transform:translateY(-1px)}
+.nav-flag{font-size:20px; padding:6px 8px; border-radius:10px; transition:transform .18s}
+.nav-flag:hover{transform:translateY(-1px)}
+
+/* ===== Hero (más corto, gradiente izq→der, menos brillo) ===== */
+.hero{
+  background:linear-gradient(90deg, var(--brand-1), color-mix(in srgb, var(--brand-2) 85%, #ffffff 15%) 60%, var(--brand-3));
+  color:#ffffff;
+}
+.hero-inner{
+  min-height:52vh; /* más corto */
+  display:grid; place-items:center;
+  padding-top:34px; /* bajo el header */
+}
+.hero-copy{max-width:760px; text-align:left; animation:fadeInUp .8s ease both}
+.headline{
+  font-size:clamp(30px, 5vw, 52px);
+  font-weight:800; letter-spacing:.02em; /* + separación */
+  margin:0 0 10px;
+}
+.subhead{font-size:clamp(15px, 1.8vw, 18px); opacity:.95; margin:0 0 20px}
+
+/* Botón menos redondo */
+.btn{
+  display:inline-block; font-weight:800; letter-spacing:.02em;
+  padding:12px 18px; border-radius:12px; /* menos pill */
+  border:2px solid rgba(255,255,255,.22);
+  background:rgba(255,255,255,.08); color:#fff;
+  box-shadow:var(--shadow-sm);
+  transition:transform .2s, box-shadow .2s, background .2s, border-color .2s;
+}
+.btn:hover{transform:translateY(-2px); box-shadow:var(--shadow-md); background:rgba(255,255,255,.14); border-color:rgba(255,255,255,.35)}
+.cta{animation:ctaPulse 2.6s ease-in-out .6s infinite}
+
+/* ===== Tarjetas de iconos (más cuadradas y más abajo) ===== */
+.icon-cards{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:16px;
+  margin-top:-20px; /* menos superpuestas → “más abajo” */
+  margin-bottom:40px;
+}
+.icon-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:12px;            /* menos curva */
+  padding:16px 10px;
+  box-shadow:var(--shadow-md);
+  text-align:center; color:var(--text);
+  transition:transform .18s, box-shadow .18s, border-color .18s;
+  animation:fadeIn .7s ease both;
+}
+.icon-card img{
+  width:60px; height:60px; object-fit:contain; margin:0 auto 8px;
+}
+.icon-card figcaption{font-weight:700}
+.icon-card:hover{transform:translateY(-5px); box-shadow:0 18px 38px rgba(2,6,23,.14); border-color:#dfe4ea}
+
+/* ===== Marcas (más separación) ===== */
+.brands{padding:56px 0 36px} /* + aire */
+.section-title{font-size:clamp(20px, 2.6vw, 28px); margin:0 0 18px; text-align:center}
+.brand-row{display:grid; grid-template-columns:repeat(3,1fr); gap:28px; align-items:center}
+.brand-logo{
+  justify-self:center; height:36px; width:auto;
+  filter:grayscale(1) contrast(1.05) brightness(.9);
+  opacity:.9; transition:filter .25s, opacity .25s, transform .25s;
+  animation:fadeInUp .6s ease both;
+}
+.brand-logo:hover{filter:none; opacity:1; transform:translateY(-2px)}
+
+/* ===== Productos “libres” (sin tarjeta) ===== */
+.showcase{padding:10px 0 70px} /* + aire abajo */
+.free-grid{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:26px;
+  align-items:end;
+}
+.free-item figure{margin:0; text-align:center}
+.free-item img{
+  height:200px; width:auto; object-fit:contain;
+  transform:translateZ(0); transition:transform .25s, filter .25s;
+}
+.free-item figcaption{margin-top:8px; font-weight:700}
+.free-item:hover img{transform:translateY(-6px) scale(1.02)}
+
+/* ===== Footer ===== */
+.site-footer{border-top:1px solid var(--border); background:#fff}
+.site-footer .wrap{padding:26px 0; text-align:center}
+.site-footer a{font-weight:600; color:#1d5f86}
+
+/* ===== Animaciones CSS ===== */
+@keyframes fadeIn{from{opacity:0; transform:translateY(6px)} to{opacity:1; transform:none}}
+@keyframes fadeInUp{from{opacity:0; transform:translateY(12px)} to{opacity:1; transform:none}}
+@keyframes ctaPulse{0%,100%{transform:translateY(0)} 50%{transform:translateY(-3px)}}
+
+@media (prefers-reduced-motion: reduce){
+  *{animation:none!important; transition:none!important}
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px){
+  .free-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width: 768px){
+  .hero-inner{min-height:48vh}
+  .icon-cards{grid-template-columns:repeat(2,1fr); margin-top:-16px}
+  .brand-row{grid-template-columns:1fr; gap:18px}
+  .free-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width: 520px){
+  .free-grid{grid-template-columns:1fr}
+}
+:root{
+  /* alto visible de la tarjeta para calcular la superposición */
+  --card-h: 150px;
+}
+
+/* Asegura que el hero no recorte (por si tenías algo en otro lado) */
+.hero{ overflow: visible; }
+
+/* Dejá un “piso” al final del hero para que haya color detrás de la mitad superior de las tarjetas */
+.hero{ 
+  padding-bottom: calc(var(--card-h) * 0.5 + 12px);
+}
+
+/* Tarjetas a caballo entre color y blanco */
+.icon-cards{
+  position: relative;
+  z-index: 3; /* por encima del corte */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+
+  /* Subimos el bloque para que la mitad superior quede sobre el hero */
+  margin-top: calc(var(--card-h) * -0.5);
+  margin-bottom: 40px;
+}
+
+.icon-card{
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 12px;          /* poco redondeo */
+  height: var(--card-h);
+  padding: 16px 12px;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  box-shadow: 0 22px 45px rgba(2,6,23,.18);  /* sombra marcada */
+  transition: transform .18s, box-shadow .18s, border-color .18s;
+}
+.icon-card:hover{ transform: translateY(-5px); box-shadow: 0 30px 60px rgba(2,6,23,.22); }
+.icon-card img{
+  width: clamp(64px, 7.2vw, 84px);
+  height: clamp(64px, 7.2vw, 84px);
+  object-fit: contain;
+  margin: 0 auto 8px;
+}
+.icon-card figcaption{ font-weight: 700; }
+
+/* Más aire antes de marcas (ya que las tarjetas están fuera del hero) */
+.brands{ padding-top: 24px; padding-bottom: 40px; }
+
+/* Responsive: mantiene el efecto mitad/mitad en mobile */
+@media (max-width: 768px){
+  :root{ --card-h: 140px; } /* opcional, para que no tape demasiado en pantallas chicas */
+  .icon-cards{ grid-template-columns: repeat(2, 1fr); }
+}
+.hero-inner{ 
+  min-height: 52vh; 
+  display: grid; 
+  align-items: center; 
+  justify-items: start; /* izquierda */
+  padding-top: 34px;
+}
+.headline{ letter-spacing: .03em; } /* un poco más de tracking */
+@media (max-width: 768px){
+  .icon-card img{ width: clamp(60px, 12vw, 76px); height: clamp(60px, 12vw, 76px); }
+}
+/* ===== Carrusel de marcas (CSS only) ===== */
+.brand-carousel{
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  padding: 14px 0;
+  /* desvanecido en bordes (mask) */
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+          mask-image: linear-gradient(90deg, transparent 0, #000 8%, #000 92%, transparent 100%);
+}
+
+.brand-track{
+  display: inline-flex;
+  align-items: center;
+  gap: 54px;                /* espacio entre logos */
+  padding-inline: 24px;
+  min-width: 200%;          /* para loop largo */
+  animation: brandScroll 28s linear infinite;
+}
+
+.brand-carousel:hover .brand-track{ animation-play-state: paused; } /* pausa al hover */
+
+.brand-logo{
+  height: 38px; width: auto;
+  filter: grayscale(1) contrast(1.05) brightness(.92);
+  opacity: .92;
+  transition: filter .25s, opacity .25s, transform .25s;
+}
+.brand-logo:hover{
+  filter: none; opacity: 1; transform: translateY(-2px) scale(1.03);
+}
+
+/* velocidad/responsivo */
+@media (max-width: 768px){
+  .brand-track{ gap: 36px; animation-duration: 22s; }
+  .brand-logo{ height: 32px; }
+}
+
+/* animación continua izquierda -> derecha */
+@keyframes brandScroll{
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* -50% porque el contenido está duplicado */
+}
+
+/* respeto de accesibilidad */
+@media (prefers-reduced-motion: reduce){
+  .brand-track{ animation: none; }
+}
+/* sombra / desvanecido al final del hero */
+.hero{
+  position: relative;
+}
+.hero::after{
+  content:"";
+  position:absolute; left:0; right:0; bottom:-28px; height:56px;
+  pointer-events:none;
+  background: radial-gradient(120% 60px at 50% -10px,
+              rgba(0,0,0,.18) 0%, rgba(0,0,0,.10) 28%, rgba(0,0,0,0) 70%);
+  opacity:.18;
+}
+/* banda visual muy clara con borde redondeado arriba */
+.section-band{
+  position: relative;
+  padding-top: 54px;            /* aire superior */
+  padding-bottom: 40px;
+  isolation:isolate;
+}
+.section-band::before{
+  content:"";
+  position:absolute; inset:0;
+  background: #f8fafc;          /* gris MUY claro */
+  border-radius: 28px 28px 0 0; /* redondeo arriba */
+  z-index:-1;
+  /* sutil sombra interna arriba */
+  box-shadow: inset 0 18px 30px -18px rgba(2,6,23,.18);
+}
+/* misma línea de base y títulos alineados */
+.free-grid{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:32px;
+  align-items:end;          /* alinea bases */
+  justify-items:center;
+}
+.free-item figure{margin:0; text-align:center}
+.free-item img{
+  height:220px; width:auto; object-fit:contain;
+  transform:translateZ(0); transition:transform .25s, filter .25s;
+}
+.free-item figcaption{margin-top:10px; font-weight:700}
+.free-item:hover img{transform:translateY(-6px) scale(1.02)}
+@media (max-width: 1024px){ .free-grid{grid-template-columns:repeat(3,1fr)} }
+@media (max-width: 768px){  .free-grid{grid-template-columns:repeat(2,1fr)} }
+@media (max-width: 520px){  .free-grid{grid-template-columns:1fr} }
+.section-title{
+  text-align:center;
+  margin: 0 0 18px;
+  letter-spacing:.01em;
+}
+.brands{ padding-top: 40px; padding-bottom: 36px; }
+.showcase{ padding: 32px 0 80px; }  /* más aire abajo */
+.divider{
+  height:1px; background:linear-gradient(90deg, transparent, #dfe4ea, transparent);
+  margin: 20px 0 32px;
+}
+/* HERO oscuro: negro → gris */
+.hero{
+  position: relative;
+  background: linear-gradient(90deg, #0b0d10 0%, #161a20 55%, #20262e 100%);
+  color:#fff;
+  overflow:visible;
+}
+/* Título y subtítulo legibles en oscuro */
+.headline{ color:#fff; letter-spacing:.03em; }
+.subhead{ color:rgba(255,255,255,.88); }
+
+/* Botón en hero (oscuro elegante, no chillón) */
+.btn{
+  padding:12px 18px; border-radius:12px;
+  background:#111318; color:#fff; border:1px solid #2b2f36;
+  box-shadow:0 6px 18px rgba(0,0,0,.28);
+  transition:transform .2s, box-shadow .2s, filter .2s, border-color .2s;
+}
+.btn:hover{ transform:translateY(-2px); box-shadow:0 14px 36px rgba(0,0,0,.35); filter:brightness(1.06); border-color:#3a3f47; }
+
+/* Suaviza el corte hacia blanco */
+.hero::after{
+  content:""; position:absolute; left:0; right:0; bottom:-28px; height:56px; pointer-events:none;
+  background:radial-gradient(120% 60px at 50% -10px, rgba(0,0,0,.16) 0%, rgba(0,0,0,.08) 28%, rgba(0,0,0,0) 70%);
+  opacity:.18;
+}
+
+/* Destello diagonal que cruza el título suavemente */
+.headline::before{
+  content:"";
+  position:absolute;
+  inset:-6px -10%;           /* un poco grande para que el destello salga y entre */
+  background:
+    linear-gradient(
+      115deg,
+      transparent 0%,
+      rgba(255,255,255,.06) 42%,
+      rgba(255,255,255,.35) 50%,
+      rgba(255,255,255,.06) 58%,
+      transparent 100%
+    );
+  transform:skewX(-12deg);
+  mix-blend-mode:screen;     /* brillo sutil, sin “quemar” el texto */
+  pointer-events:none;
+  animation:sheenSweep 4.2s ease-in-out infinite;
+  opacity:.9;
+}
+
+/* ===== HERO TITLE: Sheen + Línea en L (horizontal + diagonal) ===== */
+:root{
+  --accent-green:#38c793;
+  --accent-blue:#2fa7d9;
+
+  /* tuning rápido */
+  --accent-thickness: 5px;   /* grosor de línea */
+  --accent-gap: 16px;        /* aire entre H1 y línea */
+  --diag-angle: -62deg;      /* inclinación de la diagonal (más negativo = más vertical) */
+  --diag-l: 1.35em;          /* largo de la diagonal relativo al alto del H1 */
+  --join-trim: 0.35em;       /* recorte del tramo horizontal para que NO siga después de la diagonal */
+}
+
+/* H1 con sheen (destello) */
+.headline{
+  position:relative;
+  color:#fff;
+  letter-spacing:.03em;
+  isolation:isolate;
+}
+.headline::before{
+  content:"";
+  position:absolute; inset:-6px -10%;
+  background:linear-gradient(115deg,transparent 0%,rgba(255,255,255,.06) 42%,rgba(255,255,255,.35) 50%,rgba(255,255,255,.06) 58%,transparent 100%);
+  transform:skewX(-12deg);
+  mix-blend-mode:screen; pointer-events:none;
+  animation:sheenSweep 4.2s ease-in-out infinite; opacity:.9;
+}
+/* ⚠️ anulamos la barra vieja para no duplicar */
+.headline::after{ content:none !important; }
+
+/* Wrapper del texto: dibuja la L */
+.hline{
+  position:relative; display:inline-block;
+  padding-bottom: var(--accent-gap);
+  z-index:1;
+}
+
+/* 1) Tramo horizontal: LLEGA HASTA EL PUNTO DE QUIEBRE (no continúa) */
+.hline::after{
+  content:"";
+  position:absolute; left:0; bottom: calc(-1 * var(--accent-gap));
+  /* recortamos el final para que no “siga” tras la diagonal */
+  width: calc(100% - var(--join-trim));
+  height: var(--accent-thickness); border-radius:999px;
+  background:linear-gradient(90deg,var(--accent-green),var(--accent-blue));
+  filter: drop-shadow(0 0 8px rgba(56,199,147,.28)) drop-shadow(0 0 12px rgba(47,167,217,.22));
+}
+
+/* 2) Diagonal: nace EXACTO en el extremo recortado y sube */
+.hline::before{
+  content:"";
+  position:absolute;
+  /* ubicamos el origen en el final del tramo horizontal */
+  left: calc(100% - var(--join-trim));
+  bottom: calc(-1 * var(--accent-gap));
+  width: var(--diag-l); height: var(--accent-thickness);
+  border-radius:999px;
+  background:linear-gradient(90deg,var(--accent-green),var(--accent-blue));
+  transform-origin:left center; transform: rotate(var(--diag-angle));
+  filter: drop-shadow(0 0 8px rgba(56,199,147,.28)) drop-shadow(0 0 12px rgba(47,167,217,.22));
+}
+
+/* Más aire con el subtítulo */
+.subhead{ margin-top: 14px; }
+
+/* Animación del sheen (se mantiene) */
+@keyframes sheenSweep{
+  0%{transform:translateX(-30%) skewX(-12deg);opacity:0}
+  10%{opacity:.85}
+  50%{transform:translateX(10%) skewX(-12deg);opacity:.4}
+  100%{transform:translateX(40%) skewX(-12deg);opacity:0}
+}
+@media (prefers-reduced-motion: reduce){
+  .headline::before{ animation:none }
+}
+/* --- Ajustes finos para la “L” del hero --- */
+:root{
+  /* más cerca del título */
+  --accent-gap: 10px;
+
+  /* que la diagonal suba un poco más y sea un toque más vertical */
+  --diag-l: 1.80em;
+  --diag-angle: -64deg;
+
+  /* encastre limpio (podés dejar 0.30–0.45em según tu pantalla) */
+  --join-trim: 0.30em;
+}
+
+/* más aire entre la línea y el subtítulo */
+.subhead{
+  margin-top: 22px;   /* antes 14px */
+}
+/* --- Ajustes finos para la “L” del hero --- */
+:root{
+  /* más cerca del título */
+  --accent-gap: 10px;
+
+  /* que la diagonal suba un poco más y sea un toque más vertical */
+  --diag-l: 1.80em;
+  --diag-angle: -64deg;
+
+  /* encastre limpio (podés dejar 0.30–0.45em según tu pantalla) */
+  --join-trim: 0.30em;
+}
+
+/* más aire entre la línea y el subtítulo */
+.subhead{
+  margin-top: 22px;   /* antes 14px */
+}
+ /* ========= Vars (puedes ajustar) ========= */
+:root{
+  --accent-green:#38c793;
+  --accent-blue:#2fa7d9;
+  --glow-soft: 0 8px 24px rgba(47,167,217,.25), 0 2px 10px rgba(56,199,147,.18);
+  --radius-12: 12px;
+}
+
+/* ========= BOTÓN con borde degradado brillante ========= */
+/* Añade la clase .btn-glow a tu CTA */
+.btn.btn-dark.btn-glow{
+  position:relative;
+  z-index:0;
+  border: none;                       /* el borde lo hace el pseudo */
+  background:#111318;                 /* relleno oscuro */
+  border-radius: var(--radius-12);
+  box-shadow: var(--glow-soft);
+}
+
+/* Borde degradado + brillo (truco con máscara) */
+.btn.btn-dark.btn-glow::before{
+  content:"";
+  position:absolute; inset:-1px;      /* grosor del borde */
+  border-radius: inherit;
+  padding:1px;
+  background: linear-gradient(90deg, var(--accent-green), var(--accent-blue));
+  /* crea "solo borde" */
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  z-index:-1;
+  filter: drop-shadow(0 0 10px rgba(56,199,147,.35))
+          drop-shadow(0 0 14px rgba(47,167,217,.30));
+  animation: borderFlow 6s linear infinite;
+}
+
+.btn.btn-dark.btn-glow:hover{
+  filter: brightness(1.05);
+  box-shadow: 0 12px 30px rgba(47,167,217,.32), 0 4px 14px rgba(56,199,147,.22);
+}
+
+/* ========= ICON CARDS con borde degradado ========= */
+.icon-card{
+  position:relative;
+  z-index:0;
+  background:#fff;                   /* mantiene tarjeta blanca */
+  border:1px solid transparent;      /* dejamos transparente para el pseudo */
+  border-radius:14px;                /* o el que estés usando */
+  box-shadow: var(--glow-soft);
+}
+
+/* Borde degradado + glow (mismo truco de máscara) */
+.icon-card::before{
+  content:"";
+  position:absolute; inset:-1px;
+  border-radius:inherit;
+  padding:3px;
+  background: linear-gradient(90deg, var(--accent-green), var(--accent-blue));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  z-index:-1;
+  filter: drop-shadow(0 0 10px rgba(56,199,147,.22))
+          drop-shadow(0 0 12px rgba(47,167,217,.18));
+  animation: borderFlow 10s linear infinite;
+}
+
+.icon-card:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 22px 44px rgba(2,6,23,.16), 0 8px 20px rgba(47,167,217,.18);
+}
+
+/* ========= Animación del degradado ========= */
+@keyframes borderFlow{
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+.btn.btn-dark.btn-glow::before,
+.icon-card::before{
+  background-size: 200% 100%;        /* necesario para la animación */
+}
+
+/* Respeta accesibilidad */
+@media (prefers-reduced-motion: reduce){
+  .btn.btn-dark.btn-glow::before,
+  .icon-card::before{ animation:none }
+}
+.brand-logo{
+  height: 42px; /* antes 32px o 34px, subilo para hacerlo más grande */
+  width: auto;  /* mantiene proporción */
+}
+/* Logo versión más grande */
+.brand-logo-lg{
+  height: 80px;  /* ajustá este valor a gusto */
+  width: auto;
+  display: block;
+}
+/* fuerza el tamaño del logo, por si hay reglas previas que lo limitan */
+.brand img.brand-logo-lg{
+  height: 48px !important;   /* ajustá 48px a tu gusto (46–52px) */
+  max-height: 48px !important;
+  width: auto !important;
+  display: block;
+}
+/* ====== Acentos de marca ====== */
+:root{
+  --eco-green:#38c793;
+  --eco-blue:#2fa7d9;
+  --eco-deg: linear-gradient(90deg, var(--eco-green), var(--eco-blue));
+  --shadow-soft: 0 18px 45px rgba(2,6,23,.10);
+  --shadow-strong: 0 28px 70px rgba(2,6,23,.14);
+}
+
+/* ====== CONTENEDOR ====== */
+.about-us{
+  position: relative;
+  overflow: hidden;            /* para el blob decorativo */
+  padding: 64px 0 84px;
+}
+
+/* Blob sutil detrás del texto (colores de marca) */
+.about-us::before{
+  content:"";
+  position:absolute; inset:auto -20% -30% auto;  /* derecha-abajo */
+  width: 52vw; height: 52vw; max-width:720px; max-height:720px;
+  background: radial-gradient(45% 45% at 70% 40%,
+              color-mix(in srgb, var(--eco-green) 40%, transparent) 0%,
+              transparent 60%);
+  filter: blur(24px);
+  opacity:.22; pointer-events:none;
+}
+
+/* ====== GRID ====== */
+.about-us__grid{
+  display:grid;
+  grid-template-columns: 1.02fr 1fr;
+  gap:40px; align-items:center;
+}
+
+/* ====== TÍTULO con subrayado animado ====== */
+.section-title.left{
+  position:relative;
+  font-weight:800;
+  margin:0 0 10px;
+}
+.section-title.left::after{
+  content:"";
+  position:absolute; left:0; bottom:-10px;
+  width: clamp(120px, 38%, 240px); height:6px; border-radius:999px;
+  background: var(--eco-deg);
+  box-shadow: 0 0 10px rgba(56,199,147,.35), 0 0 12px rgba(47,167,217,.28);
+  animation: stripeGlow 3.6s ease-in-out infinite;
+}
+@keyframes stripeGlow{
+  0%,100%{ filter:brightness(1); }
+  50%    { filter:brightness(1.15); }
+}
+
+/* ====== LEAD & PÁRRAFOS ====== */
+.about-us .lead{ color:#111827; margin:0 0 12px; }
+.about-us__text p{ color:#1f2937; }
+
+/* ====== LISTA DE BENEFICIOS ====== */
+.about-us__bullets{
+  margin:12px 0 14px; padding:0; list-style:none; display:grid;
+  gap:10px;
+}
+.about-us__bullets li{
+  position:relative; padding-left:38px;
+}
+.about-us__bullets li::before{
+  content:"";
+  position:absolute; left:0; top:50%; transform:translateY(-50%);
+  width:22px; height:22px; border-radius:8px;
+  background: var(--eco-deg);
+  box-shadow: 0 6px 14px rgba(47,167,217,.25);
+  -webkit-mask: 
+     radial-gradient(#000 6px, transparent 7px) left 7px center / 14px 14px no-repeat,
+     radial-gradient(#000 2px, transparent 3px) left 11px center / 14px 14px no-repeat;
+          mask: 
+     radial-gradient(#000 6px, transparent 7px) left 7px center / 14px 14px no-repeat,
+     radial-gradient(#000 2px, transparent 3px) left 11px center / 14px 14px no-repeat;
+  animation: tickPulse .9s ease-out both;
+}
+@keyframes tickPulse{
+  from{ transform:translateY(-50%) scale(.7); opacity:.6 }
+  to  { transform:translateY(-50%) scale(1);   opacity:1 }
+}
+
+/* ====== FOTO (card premium) ====== */
+.about-us__photo{
+  margin:0; border-radius:18px; overflow:hidden;
+  border:1px solid #e5e7eb; background:#fff;
+  box-shadow: var(--shadow-soft);
+  position:relative;
+}
+.about-us__photo::before{ /* borde degradado súper sutil */
+  content:"";
+  position:absolute; inset:0; border-radius:inherit;
+  padding:1px; pointer-events:none;
+  background: var(--eco-deg);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+  opacity:.55;
+}
+.about-us__photo img{ display:block; width:100%; height:auto; object-fit:cover; transform:translateZ(0) }
+.about-us__photo:hover{ box-shadow: var(--shadow-strong); transform: translateY(-2px); transition: .25s ease }
+
+/* ====== REVEAL suave al hacer scroll (CSS only) ====== */
+@media (prefers-reduced-motion: no-preference){
+  .about-us__text, .about-us__photo{
+    opacity:0; transform: translateY(12px);
+    animation: riseIn .6s ease both;
+  }
+  .about-us__photo{ animation-delay:.08s }
+  @keyframes riseIn{
+    to{ opacity:1; transform:none }
+  }
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width:1024px){
+  .about-us__grid{ grid-template-columns:1fr; gap:26px }
+  .about-us__photo{ order:-1 }
+  .about-us::before{ inset:auto -30% -36% auto; width:70vw; height:70vw; opacity:.18 }
+}
+.text-cta{ display:inline-block; margin-top:6px; font-weight:800; color:#2fa7d9 }
+.text-cta:hover{ text-decoration:underline }
+/* Quitar la línea bajo el título (Nosotros) */
+.about-us .section-title.left::after{
+  content:none !important;
+}
+
+/* Título en verde de marca */
+.about-us .section-title.left{
+  color: #38c793; /* o usa var(--eco-green) si la tenés declarada */
+  /* opcional: si usás la variable */
+  /* color: var(--eco-green); */
+}
+/* ===== Animaciones base ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(28px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes popIn {
+  0%   { opacity: 0; transform: scale(0.96); }
+  60%  { opacity: 1; transform: scale(1.02); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* ===== Estado inicial para todo lo "reveal" ===== */
+.reveal {
+  opacity: 0;
+  will-change: opacity, transform;
+  transition: opacity .2s linear;
+}
+
+/* Cuando entra al viewport, el JS le agrega .in-view */
+.reveal.in-view {
+  /* Estas variables se rellenan según el data-anim y data-delay */
+  animation-name: var(--anim-name, fadeUp);
+  animation-duration: var(--anim-duration, .75s);
+  animation-timing-function: var(--anim-ease, cubic-bezier(.22,.61,.36,1));
+  animation-fill-mode: both;
+  animation-delay: var(--anim-delay, 0s);
+}
+
+/* Mapear data-anim -> animación */
+.reveal[data-anim="fade-up"]        { --anim-name: fadeUp; }
+.reveal[data-anim="slide-in-right"] { --anim-name: slideInRight; }
+.reveal[data-anim="pop"]            { --anim-name: popIn; }
+
+/* Permitir setear delays por data-delay="0.12s" */
+.reveal[data-delay] { --anim-delay: attr(data-delay); }
+
+/* ===== Stagger para la lista de bullets ===== */
+.reveal[data-anim="stagger-up"] { --anim-name: fadeUp; }
+.reveal[data-anim="stagger-up"] li {
+  opacity: 0;
+  transform: translateY(12px);
+  will-change: opacity, transform;
+}
+.reveal.in-view[data-anim="stagger-up"] li {
+  animation: fadeUp .65s cubic-bezier(.22,.61,.36,1) forwards;
+}
+.reveal.in-view[data-anim="stagger-up"] li:nth-child(1) { animation-delay: .05s; }
+.reveal.in-view[data-anim="stagger-up"] li:nth-child(2) { animation-delay: .15s; }
+.reveal.in-view[data-anim="stagger-up"] li:nth-child(3) { animation-delay: .25s; }
+.reveal.in-view[data-anim="stagger-up"] li:nth-child(4) { animation-delay: .35s; }
+
+/* Accesibilidad: respetar reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal * {
+    animation: none !important;
+    transition: none !important;
+  }
+  .reveal,
+  .reveal li {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* (Opcional) Si NO querés tocar el HTML: targets por clase existente */
+.about-us__text:not(.reveal),
+.about-us__photo:not(.reveal),
+.text-cta:not(.reveal) {
+  /* Esto solo se aplica si no agregaste la clase reveal */
+}
+/* Estados iniciales: oculto y levemente desplazado */
+.hero .headline,
+.hero .subhead,
+.hero .btn-glow {
+  opacity: 0;
+  transform: translateY(16px);
+  will-change: opacity, transform;
+}
+
+/* Al entrar en vista: animación */
+.hero.is-inview .headline   { animation: heroFadeUp .60s ease-out .00s both; }
+.hero.is-inview .subhead    { animation: heroFadeUp .60s ease-out .08s both; }
+.hero.is-inview .btn-glow   { animation: heroFadeUp .60s ease-out .16s both; }
+
+/* Keyframes simples (solo movimiento) */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Accesibilidad: respetar reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .hero .headline,
+  .hero .subhead,
+  .hero .btn-glow {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+/* Estado inicial: oculto y levemente abajo */
+.icon-cards .icon-card {
+  opacity: 0;
+  transform: translateY(16px);
+  will-change: opacity, transform;
+}
+
+/* Contenedor en vista: activa animaciones escalonadas */
+.icon-cards.inview .icon-card {
+  animation: iconFadeUp .55s ease-out both;
+}
+
+/* Stagger suave por posición */
+.icon-cards.inview .icon-card:nth-child(1) { animation-delay: .00s; }
+.icon-cards.inview .icon-card:nth-child(2) { animation-delay: .08s; }
+.icon-cards.inview .icon-card:nth-child(3) { animation-delay: .16s; }
+.icon-cards.inview .icon-card:nth-child(4) { animation-delay: .24s; }
+
+@keyframes iconFadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Respeta preferencias de movimiento reducido */
+@media (prefers-reduced-motion: reduce){
+  .icon-cards .icon-card{
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+@keyframes photoFadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Cambiá el data-anim del figure a "photo-fade" */
+.about-us__photo.reveal[data-anim="photo-fade"] { --anim-name: photoFadeUp; }
+.about-us__photo { will-change: transform, opacity; }
+.about-us__photo picture, 
+.about-us__photo img { contain: content; }
+/* ===== FAQ: layout base (sin cambiar tu estética) ===== */
+.faq { margin-block: 3.5rem; }
+.faq__title { margin-bottom: 1.25rem; }
+
+.faq__list { display: grid; gap: 10px; }
+.faq__item {
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 12px;
+  background: rgba(0,0,0,.02);
+  overflow: hidden;
+}
+
+/* Botón pregunta */
+.faq__q{
+  width: 100%;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: .75rem;
+  padding: 1rem 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Icono + / – */
+.faq__icon{
+  display: inline-block;
+  transition: transform .25s ease;
+  font-weight: 700;
+}
+.faq__q[aria-expanded="true"] .faq__icon{
+  transform: rotate(45deg); /* + -> x (cierra) */
+}
+
+/* Respuesta (acordeón con animación de altura) */
+.faq__a{
+  padding: 0 1.1rem;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height .36s ease, opacity .26s ease;
+}
+.faq__a p { margin: .9rem 0 1rem; }
+
+/* Estado abierto (se setea inline con JS el max-height exacto) */
+.faq__a.is-open{
+  opacity: 1;
+}
+
+/* ===== Animación de entrada al hacer scroll (keyframes) ===== */
+@keyframes faqFadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Estado inicial para reveal */
+.faq__title,
+.faq__item { opacity: 0; transform: translateY(14px); will-change: opacity, transform; }
+
+/* En vista: activar (el JS agrega .inview) */
+.faq.inview .faq__title { animation: faqFadeUp .6s ease-out .02s both; }
+.faq.inview .faq__item  { animation: faqFadeUp .6s ease-out both; }
+
+/* Stagger suave en items */
+.faq.inview .faq__item:nth-child(1) { animation-delay: .06s; }
+.faq.inview .faq__item:nth-child(2) { animation-delay: .10s; }
+.faq.inview .faq__item:nth-child(3) { animation-delay: .14s; }
+.faq.inview .faq__item:nth-child(4) { animation-delay: .18s; }
+.faq.inview .faq__item:nth-child(5) { animation-delay: .22s; }
+.faq.inview .faq__item:nth-child(6) { animation-delay: .26s; }
+
+/* Respeta reduce motion */
+@media (prefers-reduced-motion: reduce){
+  .faq__title, .faq__item { animation: none !important; opacity: 1 !important; transform: none !important; }
+  .faq__a{ transition: none !important; max-height: none !important; opacity: 1 !important; }
+}
+.faq__item {
+  /* border: 1px solid rgba(0,0,0,.08);  <-- elimínalo */
+  border-radius: 12px;
+  background: rgba(0,0,0,.02);
+  overflow: hidden;
+}
+/* Quitar línea SOLO en el título del FAQ */
+.faq__title.section-title::after {
+  display: none;
+}
+/* ===== Showcase Carousel (mantiene tu estilo, solo movimiento y layout) ===== */
+.showcase { position: relative; }
+
+.showcase-carousel{
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Flechas: sin cambiar diseño global; tipografía heredada */
+.sc-arrow{
+  border: none;
+  background: transparent;
+  padding: .25rem .5rem;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+}
+.sc-arrow:focus-visible{ outline: 2px solid rgba(0,0,0,.35); outline-offset: 2px; }
+
+.sc-viewport{
+  overflow: hidden;
+  width: 100%;
+}
+
+.sc-track{
+  display: flex;
+  align-items: center;
+  gap: 10px;               /* poco espacio entre productos (ajustable) */
+  will-change: transform;
+  transform: translateX(0);
+}
+
+/* Ítems compactos y consistentes visualmente */
+.sc-item{
+  flex: 0 0 auto;
+  width: clamp(160px, 18vw, 220px); /* tamaño responsivo; no quedan muy separados */
+}
+.sc-item figure{
+  margin: 0;
+}
+.sc-item img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Hover sutil (sin cambiar diseño: solo leve movimiento) */
+.sc-item .free-item{
+  display: block;
+  transform: translateY(0);
+  transition: transform .18s ease;
+}
+.sc-item .free-item:hover{ transform: translateY(-2px); }
+
+/* ===== Animación de entrada al scrollear (keyframes) ===== */
+@keyframes scFadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.sc-viewport { opacity: 0; transform: translateY(14px); }
+.showcase.inview .sc-viewport { animation: scFadeUp .6s ease-out both; }
+
+/* A11y: reduce motion */
+@media (prefers-reduced-motion: reduce){
+  .sc-viewport{ animation: none !important; opacity: 1 !important; transform: none !important; }
+}
+/* Quitar bullets y espacios del <ul> del carrusel */
+.sc-track{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Por si algún navegador agrega bullets en los <li> */
+.sc-item{
+  list-style: none;
+}
+/* Título verde para la sección Showcase (usa tu verde si ya existe) */
+.section-title--green{
+  color: var(--accent, #15E6B5);
+}
+/* Si tu .section-title tiene subrayado con ::after, que tome el mismo verde */
+.section-title--green::after{
+  background: currentColor;
+}
+.section-title--green { color: var(--accent, #15E6B5); }
+.section-title--green::after { background: currentColor; }
+/* 1) Título: verde más marcado (presencia) */
+.section-title--green{
+  /* Elegí uno de estos dos: */
+  /* color: #0E8F6B; */   /* verde profundo y vibrante */
+  color: #0C6E52;         /* aún más oscuro, muy sólido */
+}
+.section-title--green::after{
+  background: currentColor;
+}
+
+/* 2) Compactar la sección del carrusel (menos altura total) */
+.showcase.section-band{
+  padding-block: 18px;          /* antes seguro era mayor; bajamos el alto */
+}
+#showcase-title.section-title{
+  margin-bottom: 8px;           /* menos espacio bajo el título */
+}
+
+/* 3) Compactar los ítems del carrusel (figura más baja y consistente) */
+.sc-item{
+  width: clamp(150px, 17vw, 210px); /* levemente más compacto en ancho */
+}
+.sc-item figure{
+  margin: 0;
+  /* Altura controlada: reduce “alto visual” del carrusel */
+  height: clamp(120px, 18vw, 180px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sc-item img{
+  display: block;
+  max-height: 100%;
+  width: auto;                  /* mantené proporción sin estirar a lo alto */
+  object-fit: contain;          /* por si alguna imagen viene rara */
+}
+
+/* 4) Un poco menos de separación entre productos */
+.sc-track{
+  gap: 8px;                     /* antes tenías 10px */
+}
+.section-title--green {
+  color: #2fa7d9;       /* nuevo color más presente */
+}
+.section-title--green::after {
+  background: currentColor;  /* subrayado del mismo color */
+}
+
+/* ===== Header base ===== */
+.gdar-header { position: sticky; top: 0; z-index: 1000; background:#fff; border-bottom:1px solid #eee; }
+.gdar-header__inner { display:flex; align-items:center; justify-content:space-between; min-height:64px; }
+.gdar-brand__img { display:block; height:auto; }
+
+/* Quick links (desktop) */
+.gdar-quick { display:none; gap:16px; align-items:center; }
+.gdar-quick__link { color:#111; text-decoration:none; font-weight:500; }
+.gdar-quick__link:hover { text-decoration:underline; }
+.gdar-quick__cart { text-decoration:none; font-weight:600; }
+.gdar-cart-count { font-size:12px; margin-left:4px; }
+.gdar-flag { margin-left:8px; }
+
+/* Hamburguesa */
+.gdar-burger { display:inline-flex; flex-direction:column; gap:5px; width:40px; height:40px; align-items:center; justify-content:center; border:0; background:transparent; cursor:pointer; }
+.gdar-burger span { display:block; width:22px; height:2px; background:#111; border-radius:2px; transition:transform .2s ease, opacity .2s ease; }
+.gdar-burger[aria-expanded="true"] span:nth-child(1){ transform:translateY(7px) rotate(45deg); }
+.gdar-burger[aria-expanded="true"] span:nth-child(2){ opacity:0; }
+.gdar-burger[aria-expanded="true"] span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+/* Overlay + Drawer */
+.gdar-overlay { position:fixed; inset:0; background:rgba(0,0,0,.35); backdrop-filter:saturate(120%) blur(1px); }
+.gdar-drawer { position:fixed; inset:0 0 0 auto; width:min(420px, 92vw); background:#fff; box-shadow:-8px 0 20px rgba(0,0,0,.08);
+  transform:translateX(100%); transition:transform .25s ease; display:flex; flex-direction:column; }
+.gdar-drawer.is-open { transform:translateX(0); }
+.gdar-drawer__header { display:flex; align-items:center; justify-content:space-between; padding:16px 20px; border-bottom:1px solid #eee; }
+.gdar-drawer__title { font-weight:700; }
+.gdar-drawer__close { border:0; background:transparent; font-size:22px; cursor:pointer; }
+
+.gdar-menu { display:flex; flex-direction:column; padding:10px 16px; gap:4px; }
+.gdar-menu__link { padding:10px 6px; text-decoration:none; color:#111; font-weight:500; border-radius:8px; }
+.gdar-menu__link:hover { background:#f6f6f6; }
+
+/* Acordeón */
+.gdar-accordion { margin:6px 0; }
+.gdar-accordion__btn { width:100%; text-align:left; padding:10px 6px; border:0; background:transparent; font-weight:600; cursor:pointer; }
+.gdar-accordion__panel { display:flex; flex-direction:column; padding:4px 6px 8px 12px; }
+.gdar-sub { padding:8px 6px; text-decoration:none; color:#333; border-radius:6px; }
+.gdar-sub:hover { background:#f4f4f4; }
+
+/* Buscador en drawer */
+.gdar-search { display:flex; gap:8px; padding:12px 16px 16px; margin-top:auto; border-top:1px solid #eee; }
+.gdar-search input { flex:1; padding:10px 12px; border:1px solid #ddd; border-radius:8px; }
+.gdar-search button { padding:10px 14px; border:0; border-radius:8px; background:#111; color:#fff; cursor:pointer; }
+
+/* Desktop >=1024px: quick links visibles, drawer sigue existiendo */
+@media (min-width:1024px){
+  .gdar-quick { display:flex; }
+}
+
+/* Body no-scroll cuando el menú está abierto */
+body.gdar-no-scroll { overflow:hidden; }
+.menu-tree { display:flex; flex-direction:column; gap:4px; }
+.mt-item { display:flex; flex-direction:column; }
+.mt-btn { width:100%; text-align:left; padding:8px 6px; border:0; background:transparent; font-weight:600; cursor:pointer; }
+.mt-panel { padding:2px 0 6px 12px; display:none; }
+.mt-panel.is-open { display:block; }
+.mt-link { display:block; padding:6px 4px; text-decoration:none; color:#333; border-radius:6px; }
+.mt-link:hover { background:#f4f4f4; }
+.mt-count { opacity:.55; margin-left:6px; font-size:.9em; }
+.mt-btn { position: relative; padding-right: 26px; }
+.mt-btn::after {
+  content: '›';
+  position: absolute; right: 6px; top: 50%; transform: translateY(-50%) rotate(90deg);
+  font-weight: 700; opacity: .6; transition: transform .2s ease;
+}
+.mt-panel.is-open + .mt-btn::after,
+.mt-btn[aria-expanded="true"]::after { transform: translateY(-50%) rotate(270deg); }
+
+.mt-panel { padding: 2px 0 8px 12px; display: none; }
+.mt-panel.is-open { display: block; }
+
+.mt-link { font-size: .96rem; }
+.mt-link:first-child { color:#666; } /* “Ver todo” más suave */
+/* ========== Tienda básica ========== */
+.shop-toolbar { padding: 16px 0; border-bottom: 1px solid #eee; }
+.breadcrumb { font-size: .9rem; color:#666; margin-bottom: 8px; }
+.breadcrumb a { color:#666; text-decoration: none; }
+.toolbar-row { display: grid; gap: 12px; align-items: center;
+  grid-template-columns: 1fr; }
+.shop-title { font-size: 1.6rem; margin: 0; }
+#results-count { font-weight:600; margin-left: 8px; font-size: 1rem; color:#0a0; }
+.shop-search { display: flex; gap: 8px; }
+.shop-search input { flex: 1; padding: 10px 12px; border:1px solid #ddd; border-radius:8px; }
+.shop-search button { padding: 10px 14px; border:0; border-radius:8px; background:#111; color:#fff; cursor:pointer; }
+.shop-sort select { padding: 10px 12px; border:1px solid #ddd; border-radius:8px; }
+.btn-filters { padding: 10px 14px; border:1px solid #ddd; border-radius:8px; background:#fff; cursor:pointer; }
+
+.shop-layout { display: grid; grid-template-columns: 1fr; gap: 20px; padding: 16px 0 32px; }
+.shop-sidebar { display:none; padding-right: 12px; }
+.shop-sidebar .muted { color:#777; font-size:.95rem; }
+
+.chips { display:flex; flex-wrap: wrap; gap:8px; margin-bottom: 12px; }
+.chip { background:#f2f2f2; border-radius: 999px; padding:6px 10px; font-size:.9rem; }
+.chip button { margin-left:6px; border:0; background:transparent; cursor:pointer; }
+
+.products-grid { list-style:none; padding:0; margin:0; display:grid; gap:12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.product-card { border:1px solid #eee; border-radius:12px; padding:10px; display:flex; flex-direction:column; gap:6px; background:#fff; }
+.product-card figure { margin:0; aspect-ratio: 4 / 5; display:flex; align-items:center; justify-content:center; background:#fafafa; border-radius:8px; overflow:hidden; }
+.product-card img { width:100%; height:100%; object-fit: contain; }
+.product-title { font-weight:600; line-height:1.25; min-height: 2.4em; }
+.product-meta { font-size:.9rem; color:#666; }
+.product-price { font-weight:700; font-size:1.05rem; }
+
+.pagination { display:flex; gap:8px; justify-content:center; margin-top:16px; }
+.page-btn { padding:8px 12px; border:1px solid #ddd; border-radius:8px; background:#fff; cursor:pointer; text-decoration:none; color:#111; }
+.page-btn[aria-current="page"] { background:#111; color:#fff; border-color:#111; }
+
+@media (min-width:1024px){
+  .toolbar-row { grid-template-columns: 1fr auto auto auto; }
+  .shop-layout { grid-template-columns: 260px 1fr; }
+  .shop-sidebar { display:block; }
+  .products-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+/* ===== Product detail ===== */
+.product { padding: 16px 0 32px; }
+.product .breadcrumb { margin-bottom: 16px; color:#666; }
+.product .breadcrumb a { color:#666; text-decoration:none; }
+
+.product-layout { display:grid; grid-template-columns: 1fr; gap:20px; }
+.p-gallery { display:flex; flex-direction:column; gap:12px; }
+.p-main { margin:0; background:#fafafa; border:1px solid #eee; border-radius:12px; overflow:hidden; aspect-ratio:4/5; display:flex; align-items:center; justify-content:center; }
+.p-main img { width:100%; height:100%; object-fit:contain; }
+.p-thumbs { display:flex; gap:8px; flex-wrap:wrap; }
+.p-thumbs .thumb { border:1px solid #eee; border-radius:8px; padding:4px; background:#fff; cursor:pointer; }
+.p-thumbs img { width:72px; height:72px; object-fit:contain; }
+
+.p-info { display:flex; flex-direction:column; gap:12px; }
+.p-title { font-size:1.5rem; margin:0; }
+.p-brand { color:#666; }
+.p-price { display:flex; gap:10px; align-items:center; }
+.price { font-size:1.4rem; font-weight:800; }
+.old-price { text-decoration:line-through; color:#999; }
+.badge { background:#e21; color:#fff; font-weight:700; padding:2px 8px; border-radius:999px; font-size:.85rem; }
+
+.p-bullets { margin:0; padding-left:18px; }
+.p-cta { display:flex; gap:10px; }
+.btn-primary { background:#111; color:#fff; border:0; padding:10px 14px; border-radius:10px; cursor:pointer; }
+.btn-secondary { border:1px solid #ddd; padding:10px 14px; border-radius:10px; text-decoration:none; color:#111; }
+
+.p-tabs { display:flex; gap:8px; border-bottom:1px solid #eee; margin-top:6px; }
+.tab { background:#f6f6f6; border:0; padding:8px 12px; border-radius:10px 10px 0 0; cursor:pointer; }
+.tab.is-active { background:#fff; border:1px solid #eee; border-bottom-color:#fff; }
+
+.p-panels .panel { display:none; padding:12px 0; }
+.p-panels .panel.is-active { display:block; }
+
+.specs { width:100%; border-collapse:collapse; }
+.specs th, .specs td { padding:8px 10px; border-bottom:1px solid #eee; text-align:left; }
+.specs th { width:38%; color:#555; font-weight:600; }
+
+.p-empty { text-align:center; padding:40px 0; }
+
+@media (min-width:1024px){
+  .product-layout { grid-template-columns: 520px 1fr; }
+  .p-main { aspect-ratio: 1 / 1; }
+}
+.old-price { text-decoration: line-through; color:#999; margin-right:6px; }
+.badge { background:#e21; color:#fff; font-weight:700; padding:2px 8px; border-radius:999px; font-size:.85rem; margin-left:6px; }
+
+.product-actions{ display:flex; gap:.5rem; margin-top:.5rem }
+.page-btn.ghost{ background:transparent; border:1px solid #ddd }
+/* Contenedor del árbol dentro del drawer */
+#acc-cats .menu-tree {
+  max-height: 64vh;        /* ajustá a gusto */
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: .25rem;   /* espacio para scrollbar */
+  scrollbar-width: thin;   /* Firefox */
+}
+#acc-cats .menu-tree::-webkit-scrollbar { width: 8px; }
+#acc-cats .menu-tree::-webkit-scrollbar-thumb { background: #cfcfcf; border-radius: 8px; }
+#acc-cats .menu-tree::-webkit-scrollbar-track { background: transparent; }
+/* Scroll suave en la página (opcional) */
+:root { scroll-behavior: smooth; }
+
+/* Contenedor que debe scrollear (cambiá .menu-tree por tu wrapper si usás otro) */
+.menu-tree {
+  max-height: 70vh;   /* ajustá si querés más/menos alto */
+  overflow: auto;
+  overscroll-behavior: contain;
+}
+
+/* Solo la lógica visual de toggle (abrir/cerrar) */
+.mt-panel { display: none; }
+.mt-panel.is-open { display: block; }
+
+/* No tocamos .mt-item / .mt-btn / .mt-link / .mt-count
+   para que usen los estilos por defecto del navegador */
+.trust{
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 28px;
+  align-items: start;
+  text-align: center;
+}
+.trust__item{
+  background: #fff;
+  border: 1px solid #E7ECF2;
+  border-radius: 16px;
+  padding: 28px 22px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.05);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.trust__item:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+}
+.trust__icon{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.trust h3{
+  font-size: 1.1rem;
+  margin: 4px 0 8px;
+  color: #0F172A; /* slate-900 */
+  font-weight: 700;
+}
+.trust p{
+  margin: 0;
+  color: #334155; /* slate-700 */
+  line-height: 1.5;
+}
+@media (max-width: 900px){
+  .trust{ grid-template-columns: 1fr; gap: 18px; }
+}
+/* Botón oficial Samsung — estilos y animaciones */
+.page-btn--official{
+  --samsung-blue: #1428A0;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  padding: .9rem 1.1rem;
+  border-radius: 14px;
+  background: var(--samsung-blue);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: .2px;
+  box-shadow: 0 6px 16px rgba(20,40,160,.25);
+  overflow: hidden;
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+
+.page-btn--official .logo{
+  display: grid;
+  place-items: center;
+  width: 28px; height: 28px;
+  border-radius: 999px;
+  background: #fff;
+}
+.page-btn--official.is-samsung .logo img{ display:block; }
+
+.page-btn--official .txt{ line-height: 1.05; }
+.page-btn--official .txt small{
+  display:block;
+  font-weight: 450;
+  font-size: .74rem;
+  opacity: .9;
+}
+
+.page-btn--official .arrow{
+  margin-left:.15rem;
+  display:inline-block;
+  transform: translateX(0);
+  animation: arrow-move 1.15s ease-in-out infinite;
+}
+
+/* Shine barrido */
+.page-btn--official::after{
+  content:'';
+  position:absolute; inset:-2px;
+  border-radius: 16px;
+  background: linear-gradient(120deg, transparent 0 40%, rgba(255,255,255,.35) 50%, transparent 60% 100%);
+  transform: translateX(-120%);
+  animation: shine 2.6s linear infinite;
+}
+
+/* Hover feedback */
+.page-btn--official:hover{ transform: translateY(-1px); box-shadow: 0 8px 22px rgba(20,40,160,.35); }
+
+/* Pulsado suave del botón */
+.page-btn--official.is-pulsing{ animation: pulse 2.4s ease-in-out infinite; }
+
+/* Keyframes */
+@keyframes arrow-move{
+  0%{ transform: translateX(0); }
+  50%{ transform: translateX(6px); }
+  100%{ transform: translateX(0); }
+}
+@keyframes shine{ to{ transform: translateX(120%); } }
+@keyframes pulse{
+  0%,100%{ box-shadow: 0 6px 16px rgba(20,40,160,.25); }
+  50%{    box-shadow: 0 10px 26px rgba(20,40,160,.45); }
+}
+
+/* Dark mode friendly: si tu tema usa fondo oscuro, ajustá contraste si hace falta */
+@media (prefers-color-scheme: dark){
+  .page-btn--official{ box-shadow: 0 6px 16px rgba(20,40,160,.35); }
+}
+#p-bullets { display: none !important; }
+/* en tu CSS global o en :root */
+.page-btn--official{ --official-bg:#1B2A5B; } /* navy más apagado */
+/* ===== TIENDA: layout & toolbar ===== */
+.shop { padding: 18px 0 36px; }
+.shop-title { font-size: clamp(1.35rem, 2.6vw, 1.8rem); margin: 0; }
+.shop-toolbar { display:grid; gap:12px; margin-bottom:12px; }
+.toolbar-row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+.shop-search { display:flex; gap:8px; margin-left:auto; }
+.shop-search input[type="search"]{
+  min-width: 220px; height:40px; border:1px solid #E5EAF2; border-radius:12px; padding:0 12px;
+}
+.shop-search button{ height:40px; border-radius:12px; }
+.shop-sort select{ height:40px; border:1px solid #E5EAF2; border-radius:12px; padding:0 10px; }
+.btn-filters{ height:40px; border-radius:12px; border:1px solid #E5EAF2; background:#fff; }
+
+/* chips activos */
+.chips{ display:flex; gap:8px; flex-wrap: wrap; margin:8px 0 0; }
+.chip{ background:#F4F7FB; border:1px solid #E5EAF2; border-radius:999px; padding:6px 10px; font-size:.9rem; }
+.chip button{ margin-left:6px; border:0; background:transparent; cursor:pointer; }
+
+/* layout de resultados */
+.shop-layout{ display:grid; grid-template-columns: 1fr; gap:18px; }
+.shop-sidebar{ border:1px dashed #E5EAF2; background:#FAFCFF; border-radius:14px; padding:12px; }
+.products-grid{ display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:14px; margin:0; padding:0; list-style:none; }
+@media (min-width:700px){ .products-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); } }
+@media (min-width:1024px){
+  .shop-layout{ grid-template-columns: 280px 1fr; }
+  .products-grid{ grid-template-columns: repeat(3, minmax(0,1fr)); gap:18px; }
+}
+
+/* ===== Card de producto ===== */
+.product-card{
+  display:grid; grid-template-rows: auto auto auto auto; gap:8px;
+  padding:12px; border:1px solid #E9EDF3; border-radius:16px; background:#fff;
+  box-shadow:0 8px 30px rgba(0,0,0,.04);
+  transition: transform .12s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.product-card:hover{ transform: translateY(-2px); border-color:#DCE4F4; box-shadow:0 10px 34px rgba(2,6,23,.08); }
+
+.product-card figure{
+  margin:0; aspect-ratio: 1 / 1; background:#F6F9FF;
+  border:1px solid #EDF2FB; border-radius:12px; display:grid; place-items:center; overflow:hidden;
+}
+.product-card img{ width:100%; height:100%; object-fit:contain; }
+
+.product-title{ font-weight:800; line-height:1.25; min-height:2.4em; }
+.product-meta{ color:#667085; font-size:.92rem; }
+
+.product-price{ display:flex; align-items:center; gap:8px; }
+.product-price .old-price{ text-decoration: line-through; color:#98A2B3; }
+.product-price .badge{
+  margin-left:auto; font-size:.78rem; font-weight:800; color:#0F5132; background:#D1FAE5;
+  border:1px solid #A7F3D0; padding:2px 8px; border-radius:999px;
+}
+
+/* acciones */
+.product-actions{ display:flex; gap:8px; }
+.product-actions .page-btn{ flex:1; border-radius:12px; }
+.product-actions .ghost{ background:#fff; border:1px solid #E5EAF2; }
+
+/* ===== Paginación ===== */
+.pagination{ display:flex; gap:6px; margin-top:14px; }
+.pagination .page-btn{
+  border-radius:10px; padding:8px 12px; border:1px solid #E5EAF2; background:#fff;
+}
+.pagination .page-btn[aria-current="page"]{ background:#0F172A; color:#fff; border-color:#0F172A; }
+.pagination .dots{ display:inline-flex; align-items:center; padding:0 6px; color:#98A2B3; }
+
+/* ===== Skeleton loading ===== */
+.skeleton-card{
+  padding:12px; border:1px solid #E9EDF3; border-radius:16px; background:#fff;
+  display:grid; gap:10px; animation: sk-pulse 1.2s ease-in-out infinite;
+}
+.skel-box{ background: linear-gradient(90deg, #EEF2FF 25%, #F7F9FF 37%, #EEF2FF 63%); background-size: 400% 100%; height:12px; border-radius:8px; }
+.skel-img{ height: 180px; border-radius:12px; }
+@keyframes sk-pulse{ 0%{filter:brightness(1)} 50%{filter:brightness(1.03)} 100%{filter:brightness(1)} }
+/* === Mostrar carrito junto a la hamburguesa SOLO en mobile/tablet === */
+@media (max-width: 1024px) {
+  /* Asegura layout en el header */
+  .gdar-header__inner {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+  }
+
+  /* El nav rápido solo mostrará el carrito */
+  .gdar-quick {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-left: 0 !important;   /* pegaló a la hamburguesa */
+  }
+
+  /* Ocultá los atajos, dejá solo el carrito */
+  .gdar-quick__link,
+  .gdar-flag {
+    display: none !important;
+  }
+
+  /* Mostrá el carrito y dale un área táctil cómoda */
+  .gdar-quick__cart {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 6px 10px !important;
+    font-size: 18px !important;    /* tamaño legible */
+    line-height: 1 !important;
+    text-decoration: none !important;
+  }
+
+  /* Si tu badge del carrito es muy chico en mobile, agrandalo un toque */
+  .gdar-cart-count {
+    min-width: 18px !important;
+    height: 18px !important;
+    padding: 0 4px !important;
+    border-radius: 999px !important;
+    font-size: 12px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
+/* Título con degradado azul→verde (solo este h2) */
+#showcase-title.section-title--green{
+  /* colores EcoLife */
+  --g1:#2a92bf;  /* azul */
+  --g2:#3fb28a;  /* verde */
+
+  background: linear-gradient(90deg, var(--g1) 0%, var(--g2) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* hace visible el gradiente */
+  color: transparent;                   /* fallback consistente */
+
+  /* un toque de definición para que se lea fuerte */
+  text-shadow: 0 1px 0 rgba(0,0,0,.15);
+  font-weight: 900;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+/* (Opcional) en móvil, un pelín más grueso el trazo visual */
+@media (max-width:640px){
+  #showcase-title.section-title--green{
+    letter-spacing: .03em;
+    text-shadow: 0 1px 0 rgba(0,0,0,.2);
+  }
+}
+/* Borde degradado + glow (azul→verde) para la banda de marcas */
+.brands.section-band{
+  position: relative;
+  border: 2px solid transparent;
+  border-radius: 22px;
+  background:
+    /* capa interior (fondo original) */
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    /* borde en degradé */
+    linear-gradient(90deg, #2a92bf, #3fb28a) border-box;
+  box-shadow:
+    0 0 0 1px rgba(42,146,191,.12),
+    0 8px 28px rgba(42,146,191,.12),
+    0 10px 34px rgba(63,178,138,.10);
+}
+
+/* Si tu .section-band tiene un ::before que pinta fondo, anulalo solo acá */
+.brands.section-band::before{
+  content: none;
+}
+
+
+/* (Opcional) animación MUY sutil del degradé (look tech) */
+
+@keyframes ecoSweep { to { background-position: 200% 0; } }
+.brands.section-band{
+  background-size: auto, 200% 100%;
+  animation: ecoSweep 8s linear infinite;
+}
+/* Showcase: solo BORDE degradado (interior blanco), sin fondo verde */
+.showcase.section-band{
+  border: 2px solid transparent !important;
+  border-radius: 22px !important;
+  /* interior blanco + borde degradado */
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(90deg, #2a92bf, #3fb28a) border-box !important;
+  box-shadow:
+    0 0 0 1px rgba(42,146,191,.10),
+    0 8px 28px rgba(42,146,191,.10),
+    0 10px 34px rgba(63,178,138,.10) !important; /* glow sutil */
+  overflow: hidden; /* asegura las esquinas redondeadas */
+}
+
+/* Si .section-band tenía un fondo aplicado con ::before, lo apagamos acá */
+.showcase.section-band::before{
+  content: none !important;
+}
+
+.section-title,
+#showcase-title,
+#brands-title,
+.nosotros,
+.nosotros h2{
+  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+/* === Forzar Montserrat en títulos/secciones clave === */
+.section-title,
+#showcase-title,
+#brands-title,
+.nosotros,
+.nosotros h2,
+.about-us,
+.about-us h2,
+.faq__title {
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif !important;
+}
+
+/* =========================
+   SHOWCASE — Mobile & Anim
+   ========================= */
+
+/* 1) Solo móvil: achicar el título */
+@media (max-width: 640px){
+  /* Apunta al h2 de la sección Showcase */
+  .showcase > #showcase-title.section-title{
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+    letter-spacing: .2px !important;
+    margin-bottom: 8px !important;
+  }
+}
+
+/* 2) Animación fade-up (suave, con “stagger”) */
+@media (prefers-reduced-motion: no-preference){
+  /* Estado inicial */
+  .showcase .section-title,
+  .showcase .sc-viewport,
+  .showcase .sc-arrow,
+  .showcase .sc-track > .sc-item{
+    opacity: 0;
+    transform: translateY(8px);
+    will-change: transform, opacity;
+  }
+
+  /* Keyframes */
+  @keyframes fadeUp {
+    to { opacity: 1; transform: none; }
+  }
+
+  /* Disparo con leves delays */
+  .showcase .section-title{
+    animation: fadeUp .45s ease-out forwards;
+    animation-delay: .05s;
+  }
+  .showcase .sc-viewport{
+    animation: fadeUp .50s ease-out forwards;
+    animation-delay: .12s;
+  }
+  .showcase .sc-arrow.sc-prev{
+    animation: fadeUp .40s ease-out forwards;
+    animation-delay: .18s;
+  }
+  .showcase .sc-arrow.sc-next{
+    animation: fadeUp .40s ease-out forwards;
+    animation-delay: .22s;
+  }
+
+  /* Stagger de ítems del carrusel */
+  .showcase .sc-track > .sc-item:nth-child(1){ animation: fadeUp .40s ease-out forwards; animation-delay: .10s; }
+  .showcase .sc-track > .sc-item:nth-child(2){ animation: fadeUp .40s ease-out forwards; animation-delay: .15s; }
+  .showcase .sc-track > .sc-item:nth-child(3){ animation: fadeUp .40s ease-out forwards; animation-delay: .20s; }
+  .showcase .sc-track > .sc-item:nth-child(4){ animation: fadeUp .40s ease-out forwards; animation-delay: .25s; }
+  .showcase .sc-track > .sc-item:nth-child(5){ animation: fadeUp .40s ease-out forwards; animation-delay: .30s; }
+  .showcase .sc-track > .sc-item:nth-child(6){ animation: fadeUp .40s ease-out forwards; animation-delay: .35s; }
+  .showcase .sc-track > .sc-item:nth-child(7){ animation: fadeUp .40s ease-out forwards; animation-delay: .40s; }
+  .showcase .sc-track > .sc-item:nth-child(8){ animation: fadeUp .40s ease-out forwards; animation-delay: .45s; }
+  /* si hay más, seguí el patrón sumando +0.05s */
+}
+/* Typing letra por letra con cursor que se APAGA al final */
+.typewrite{
+  display:inline-block;
+  white-space:nowrap;
+  overflow:hidden;
+  border-right: 1px solid currentColor;   /* cursor */
+  /* variables */
+  --chars: 20;
+  --duration: 2s;
+  --delay: 0s;
+
+  width: 0;
+  animation:
+    typing var(--duration) steps(var(--chars), end) var(--delay) forwards,
+    caretBlink .9s step-end var(--delay) infinite,
+    caretOff 0s linear calc(var(--delay) + var(--duration)) forwards; /* apaga cursor */
+}
+
+/* Escribe aumentando el width en "ch" */
+@keyframes typing { to { width: calc(var(--chars) * 1ch); } }
+
+/* Parpadeo mientras escribe */
+@keyframes caretBlink { 50% { border-color: transparent; } }
+
+/* Al terminar la escritura, apaga el cursor (sin parpadeo) */
+@keyframes caretOff { to { border-color: transparent; } }
+
+/* Respeto accesibilidad */
+@media (prefers-reduced-motion: reduce){
+  .typewrite{ width:auto; animation:none; border-right:0; }
+}
+.about-us__text p + .about-us__bullets{
+  margin-top: 16px !important;
+  position: relative;
+}
+.about-us__text p + .about-us__bullets::before{
+  content:"";
+  display:block;
+  height: 3px;
+  width: 72px;
+  margin: 0 0 10px;
+  border-radius: 999px;
+  background: linear-gradient(90deg,#2a92bf,#3fb28a);
+  opacity: .45;                   /* sutil */
+}
+.about-us__bullets li{ margin: 8px 0; }
+@media (max-width: 640px){
+  .about-us__break{
+    height: 120px;
+    background: linear-gradient(180deg, #ffffff 0%, #e8faf8 100%);
+    border-radius: 16px;
+    margin: 24px 0;
+    background-image: url('img/decor-soft.png'); /* algo suave, decorativo */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .about-us__text p{
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .about-us__bullets{
+    padding: 10px 14px;
+    background: #f9fbfb;
+    border-radius: 12px;
+  }
+}
+/* ===== Marcas (solo móvil): compactar ancho y tamaños ===== */
+@media (max-width: 640px){
+  /* achicar la “tarjeta” completa */
+  .brands.section-band{
+    max-width: 92% !important;    /* antes 100% */
+    margin: 0 auto !important;
+    padding: 14px 12px !important;
+    border-radius: 16px !important;
+    border-width: 1.5px !important;
+    box-shadow: 0 6px 18px rgba(15,23,42,.08) !important; /* sombra más baja */
+  }
+
+  /* título más pequeño */
+  #brands-title.section-title{
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* carrusel más compacto */
+  .brand-carousel{ padding: 6px 4px !important; }
+  .brand-track{ gap: 20px !important; }
+
+  /* logos más chicos */
+  .brand-logo{
+    height: 28px !important;      /* antes ~40–42px */
+    width: auto !important;
+  }
+}
+.pulse-highlight{
+  outline: 2px solid #3fb28a;
+  outline-offset: 2px;
+  border-radius: 10px;
+  animation: pulseEco .8s ease-out 2;
+}
+@keyframes pulseEco{
+  0%{ box-shadow: 0 0 0 0 rgba(63,178,138,.35); }
+  100%{ box-shadow: 0 0 0 14px rgba(63,178,138,0); }
+}
+/* Bloque de precios apilados en el carrito/checkout */
+.cart-price.is-stacked{
+  display:flex; flex-direction:column; align-items:flex-end; line-height:1.1;
+}
+.cart-price.is-stacked .row.old .old-price{
+  display:block;
+  font-size: .95rem;        /* viejo más chico */
+  color: #9aa3b2;
+  text-decoration: line-through;
+  letter-spacing:.2px;
+  margin-bottom: 2px;
+}
+.cart-price.is-stacked .row.now{
+  display:flex; align-items:center; gap:.5rem;
+}
+.cart-price.is-stacked .row.now .price{
+  font-size: 1.15rem;       /* oferta un poco más chica que antes */
+  font-weight: 800;         /* pero más grande/jerárquica que el viejo */
+}
+.cart-price.is-stacked .badge{
+  display:inline-block; padding:.1rem .45rem; border-radius:.6rem;
+  font-weight:700; font-size:.8rem; background:#e53935; color:#fff;
+}
+@media (min-width: 900px){
+  .cart-price.is-stacked .row.old .old-price{ font-size: 1.0rem; }
+  .cart-price.is-stacked .row.now .price{ font-size: 1.2rem; }
+}
+/* ============ Slider Nosotros ============ */
+.nosotros-slider {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto 60px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 380px;
+}
+
+.slider-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity .6s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* Flechas */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 22px;
+  transition: .2s;
+}
+
+.slider-btn:hover {
+  background: rgba(0,0,0,0.7);
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+/* Dots */
+.slider-dots {
+  position: absolute;
+  bottom: 16px;
+  width: 100%;
+  text-align: center;
+}
+
+.slider-dots span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 4px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-dots .active-dot {
+  background: #fff;
+}
+
+/* === MOBILE (hasta 480px) === */
+@media (max-width: 480px) {
+
+  /* ALTURA IDEAL PARA TUS NUEVAS IMÁGENES MOBILE */
+  .slider-container {
+    height: 250px !important; /* ajustalo a 240–280 según prefieras */
+    min-height: 250px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* SIN ESPACIOS ANTES NI DESPUÉS */
+  .nosotros-slider,
+  .nosotros-slider *,
+  section,
+  .section,
+  .home-grid,
+  .categories {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  /* IMÁGENES PERFECTAS (sin recorte y completamente visibles) */
+  .nosotros-slider .slide {
+    height: 100% !important;
+  }
+
+  .nosotros-slider .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain !important; /* muestra toda la imagen */
+    border-radius: 0 !important;     /* BORDES RECTOS */
+  }
+
+  /* FLECHAS AJUSTADAS AL TAMAÑO MOBILE */
+  .slider-btn {
+    padding: 6px 10px !important;
+    font-size: 16px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+
+  /* DOTS Pegados abajo del slider sin espacios */
+  .slider-dots {
+    margin: 5px auto 0 !important;
+  }
+}
+
+
+/* Desktop por defecto */
+.img-mobile {
+  display: none;
+}
+
+/* Solo en celular se ocultan desktop y se muestran mobile */
+@media (max-width: 480px) {
+  .img-desktop {
+    display: none !important;
+  }
+  .img-mobile {
+    display: block !important;
+  }
+}
+.gdar-quick__cart {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gdar-cart-icon {
+  width: 22px;
+  height: 22px;
+  fill: #0f172a;
+}
+
+body.dark .gdar-cart-icon {
+  fill: #ffffff;
+}
+#aboutus-title {
+  background: linear-gradient(
+    90deg,
+    var(--brand-1) 0%,
+    var(--brand-1) 35%,
+    var(--brand-2) 65%,
+    var(--brand-3) 100%
+  ) !important;
+
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  text-fill-color: transparent !important;
+}
+/* ===========================
+   BOTONES FLOTANTES
+=========================== */
+.floating-buttons {
+  position: fixed;
+  bottom: 22px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 9999;
+}
+
+.float-btn {
+  width: 46px;
+  height: 46px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 14px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s;
+}
+
+.float-btn img {
+  width: 26px;
+  height: 26px;
+}
+
+.float-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+/* color especial para whatsapp */
+.float-btn.wsp {
+  background: #25D366 !important;
+}
+
+.float-btn.wsp img {
+  filter: brightness(100%);
+}
+
+/* instagram degradado */
+.float-btn.ig {
+  background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888) !important;
+}
+
+.float-btn.ig img {
+  filter: brightness(100%);
+}
+/* ===========================
+   TOOLTIP FLOTANTE
+=========================== */
+.float-btn {
+  position: relative;
+}
+
+/* Tooltip */
+.float-btn::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  right: 110%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #0f172a;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease, transform .25s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.18);
+}
+
+/* Flecha del tooltip */
+.float-btn::before {
+  content: '';
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent #0f172a transparent transparent;
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+
+/* Mostrar tooltip al pasar */
+.float-btn:hover::after,
+.float-btn:hover::before {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+/* Botón con ícono */
+.btn-icon {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+.btn-icon .btn-ico {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+/* 🔧 FIJA EL PROBLEMA DE CORTE LATERAL EN MOBILE */
+html, body {
+  overflow-x: hidden !important;
+}
+
+/* 🔧 Evita que el banner empuje el contenido hacia los costados */
+.top-banner__track {
+  will-change: transform;
+  overflow: hidden;
+}
+/* BOTÓN VER TIENDA — PREMIUM */
+.btn-home-tienda {
+  --g1: var(--brand-1);
+  --g2: var(--brand-2);
+  --g3: var(--brand-3);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px 24px;
+  background: #fff;                         /* Fondo blanco visible */
+  border-radius: 16px;                      /* Bordes redondeados */
+  font-weight: 600;
+  font-size: 15px;
+
+  /* BORDE DEGRADADO GRUESO */
+  border: 3px solid transparent;
+  background-image:
+    linear-gradient(#fff, #fff),
+    linear-gradient(90deg, var(--g1), var(--g2), var(--g3));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+/* TEXTO degradado */
+.btn-home-tienda .btn-home-text {
+  background: linear-gradient(90deg, var(--g1), var(--g2), var(--g3));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Hover */
+.btn-home-tienda:hover {
+  background: #f8fafc;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .btn-home-tienda {
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 14px;
+  }
+}
+/* BARRA NEGRA SUPERIOR - CARRUSEL SEGURO */
+.top-banner {
+  width: 100%;
+  background: #000;                  /* Fondo negro */
+  color: #fff;
+  padding: 6px 0;
+  border-bottom: 1px solid #111;
+  overflow: hidden;                  /* 🔥 Esto evita que rompa el layout */
+  white-space: nowrap;
+  position: relative;
+  z-index: 9999;
+}
+
+/* Pista del carrusel */
+.top-banner__track {
+  display: inline-flex;
+  gap: 60px;                         /* separación entre textos */
+  animation: bannerMove 25s linear infinite;
+}
+
+/* Texto */
+.top-banner__track span {
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-block;
+  padding-right: 30px;
+  color: #fff;
+}
+
+/* ANIMACIÓN SUPER SUAVE Y SIN BUGS */
+@keyframes bannerMove {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* En mobile aún más prolijo */
+@media (max-width: 768px) {
+  .top-banner__track span {
+    font-size: 12px;
+  }
+}
+/* CONTENEDOR de la imagen principal */
+.p-gallery {
+  padding: 20px 10px !important;      /* 🔥 Mucho más chico */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: auto !important;        /* 🔥 Evita altura gigante */
+}
+
+/* Imagen principal centrada */
+#p-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 340px;                  /* 🔥 Tamaño ideal */
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  #p-image {
+    max-height: 300px;
+  }
+
+  .p-gallery {
+    padding: 12px 8px !important;
+  }
+}
+/* 📱 SOLO CELULAR — Header fijo siempre visible */
+@media (max-width: 768px) {
+
+  .gdar-header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999 !important;
+
+    background: #ffffff !important;     /* fondo blanco sólido */
+    border-bottom: 1px solid #e5e7eb;   /* línea suave */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06); /* leve sombra */
+  }
+
+  /* el contenido baja para no quedar tapado */
+  body {
+    padding-top: 70px !important; /* ajustá si tu header es más alto */
+  }
+}
+/* ==========================================================
+   📱 OPTIMIZACIÓN PARA IPHONE SE — 375px y pantallas chicas
+========================================================== */
+@media (max-width: 380px) {
+
+  /* ---- HEADER ---- */
+  .gdar-header__inner {
+    padding: 10px 12px !important;
+  }
+  .gdar-brand__img {
+    width: 110px !important;
+  }
+
+  /* ---- HERO ---- */
+  .hero-inner {
+    padding: 20px 14px !important;
+  }
+  .headline {
+    font-size: 1.65rem !important;
+    line-height: 1.2 !important;
+  }
+  .subhead {
+    font-size: 0.95rem !important;
+  }
+
+  /* ---- BOTÓN VER TIENDA ---- */
+  .btn, .btn-dark {
+    font-size: 0.95rem !important;
+    padding: 10px 16px !important;
+  }
+
+  /* ---- ICON CARDS (Aires, Heladeras, etc.) ---- */
+  .icon-cards {
+    gap: 12px !important;
+    padding: 0 12px !important;
+  }
+  .icon-card {
+    width: 100% !important;
+    min-width: unset !important;
+    padding: 14px !important;
+    gap: 6px !important;
+  }
+  .icon-card img {
+    width: 38px !important;
+    height: 38px !important;
+  }
+  .icon-card figcaption {
+    font-size: 0.9rem !important;
+  }
+
+  /* ---- SLIDER HERO INICIO ---- */
+  .nosotros-slider .slider-container .slide img.img-mobile {
+    object-fit: cover;
+    height: 320px !important;
+  }
+
+  /* ---- SECCIONES TIENDA ---- */
+  .section__title {
+    font-size: 1.2rem !important;
+  }
+  .section__tagline {
+    font-size: 0.9rem !important;
+  }
+  .section__hero {
+    min-height: 180px !important;
+    padding: 20px !important;
+  }
+
+  /* ---- CARRUSELES ---- */
+  .carousel {
+    padding: 0 6px !important;
+  }
+  .carousel__track {
+    gap: 12px !important;
+  }
+
+  /* ---- TARJETAS DE PRODUCTOS ---- */
+  .product-card {
+    padding: 12px !important;
+  }
+  .product-card img {
+    height: 130px !important;
+  }
+  .product-card h3 {
+    font-size: 1rem !important;
+  }
+  .product-price {
+    font-size: 1rem !important;
+  }
+  .p-old {
+    font-size: 0.85rem !important;
+  }
+
+  /* ---- GRID DE PRODUCTOS ---- */
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  /* ---- FILTROS ---- */
+  #btn-filters {
+    padding: 8px 12px !important;
+    font-size: 0.85rem !important;
+  }
+
+  /* ---- BOTONES FLOTANTES (WA + IG) ---- */
+  .floating-buttons {
+    bottom: 16px !important;
+    right: 14px !important;
+    gap: 8px !important;
+  }
+  .float-btn {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .float-btn img {
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  /* ---- FOOTER ---- */
+  .site-footer p {
+    font-size: 0.8rem !important;
+    text-align: center !important;
+    padding: 0 10px !important;
+  }
+}
+/* SEO BLOCK – Versión móvil mejorada */
+@media (max-width: 480px) {
+
+  .seo-block {
+    background: #f8fafc;
+    padding: 20px 14px !important;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+  }
+
+  .seo-block h2 {
+    font-size: 16px !important;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: 16px !important;
+  }
+
+  .seo-block p {
+    background: #ffffff;
+    padding: 12px 14px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    font-size: 13px !important;
+    line-height: 1.45;
+    border: 1px solid #edf2f7;
+  }
+
+  .seo-block p:last-child {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 480px) {
+  .seo-block h2 {
+    font-size: 16px !important;
+    text-align: center;
+    margin-bottom: 18px !important;
+    font-weight: 700;
+    background: linear-gradient(90deg,#3fb28a,#2a92bf,#1d5f86);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .seo-block h2::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 3px;
+    margin: 8px auto 0;
+    border-radius: 50px;
+    background: linear-gradient(90deg,#3fb28a,#2a92bf,#1d5f86);
+  }
+}
+/* ===== BLOQUE INFORMACIÓN — Versión premium mobile ===== */
+@media (max-width: 480px) {
+
+  .seo-info-wrap {
+    padding: 0 12px;
+    margin-top: 25px;
+  }
+
+  /* Etiqueta “Información” */
+  .seo-info-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #1d5f86;
+    background: #e6f4f1;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 14px;
+  }
+
+  /* Línea degradada */
+  .seo-info-divider {
+    height: 3px;
+    width: 65%;
+    margin: 10px 0 20px;
+    border-radius: 40px;
+    background: linear-gradient(90deg,#3fb28a,#2a92bf,#1d5f86);
+  }
+
+  /* Cada párrafo */
+  .seo-info p {
+    background: #ffffff;
+    padding: 14px 16px;
+    border-radius: 14px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    line-height: 1.45;
+    border: 1px solid #edf2f7;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+
+  .seo-info p:last-child {
+    margin-bottom: 0;
+  }
+}
+/* ===== ANIMACIÓN FADE-UP ===== */
+@media (max-width: 1000px) {
+  .fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all .55s cubic-bezier(.16,.55,.3,1);
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
