@@ -1,9 +1,10 @@
 export async function onRequestPost(context) {
   try {
+    // 📦 Leer body del frontend
     const body = await context.request.json();
 
-    // 🔥 Validación básica
-    if (!body.items || !Array.isArray(body.items)) {
+    // 🛑 Validación básica
+    if (!body.items || !Array.isArray(body.items) || body.items.length === 0) {
       return new Response(JSON.stringify({
         error: "Items inválidos"
       }), {
@@ -12,12 +13,24 @@ export async function onRequestPost(context) {
       });
     }
 
-    // 🔥 Llamada a Mercado Pago
+    // 🔐 Token desde Cloudflare (NUNCA hardcodeado)
+    const accessToken = context.env.MP_ACCESS_TOKEN;
+
+    if (!accessToken) {
+      return new Response(JSON.stringify({
+        error: "Falta configurar MP_ACCESS_TOKEN en Cloudflare"
+      }), {
+        status: 500,
+        headers: { "Content-Type": "application/json" }
+      });
+    }
+
+    // 💳 Crear preferencia en Mercado Pago
     const mpResponse = await fetch("https://api.mercadopago.com/checkout/preferences", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "Bearer APP_USR-4374141298019499-031615-797bd08fbe5bf4fb509f308e81740251-3270627079"
+        "Authorization": `Bearer ${accessToken}`
       },
       body: JSON.stringify({
         items: body.items,
@@ -34,7 +47,18 @@ export async function onRequestPost(context) {
 
     const data = await mpResponse.json();
 
-    // 🔥 Respuesta al frontend
+    // 🛑 Manejo de error de Mercado Pago
+    if (!mpResponse.ok) {
+      return new Response(JSON.stringify({
+        error: "Error en Mercado Pago",
+        detail: data
+      }), {
+        status: 500,
+        headers: { "Content-Type": "application/json" }
+      });
+    }
+
+    // 🚀 Respuesta al frontend
     return new Response(JSON.stringify({
       init_point: data.init_point
     }), {
