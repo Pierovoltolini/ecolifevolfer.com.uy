@@ -582,22 +582,22 @@
   /* ============================================================
       CUOTAS – PLAN CATORCE (RECARGO)
   ============================================================ */
-  const IVA_MULTIPLICADOR = 1.22;
+  const IVA_MULTIPLICADOR = 1;
 
   const RECARGOS_BASE_CUOTAS = {
-    1: 5.49,
-    2: 7.49,
-    3: 7.99,
-    4: 8.49,
-    5: 8.99,
-    6: 9.49,
-    7: 9.49,
-    8: 9.49,
-    9: 9.49,
-    10: 9.49,
-    11: 9.49,
-    12: 9.49
-  };
+  1: 0,
+  2: 3,
+  3: 4,
+  4: 5,
+  5: 6,
+  6: 7,
+  7: 8,
+  8: 8,
+  9: 8,
+  10: 8,
+  11: 8,
+  12: 8
+};
 
   const RECARGOS_CUOTAS = Object.fromEntries(
     Object.entries(RECARGOS_BASE_CUOTAS).map(([cuotas, porcentaje]) => [
