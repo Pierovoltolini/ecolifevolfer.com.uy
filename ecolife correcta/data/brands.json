@@ -1,7 +1,0 @@
-{
-  "order": ["samsung", "smartlife"],
-  "brands": {
-    "samsung":  { "label": "Samsung" },
-    "smartlife":{ "label": "Smartlife" }
-  }
-}
