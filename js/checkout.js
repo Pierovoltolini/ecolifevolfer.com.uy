@@ -8,16 +8,14 @@ async function pagarConMercadoPago(order) {
     unit_price: product.price
   }));
 
-  const response = await fetch("/api/handy-create-payment", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    items,
-    total // 👈 importante
-  })
-});
+  const response = await fetch("/api/create-payment", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ items })
+  });
+
   const data = await response.json();
 
   if (data.init_point) {
