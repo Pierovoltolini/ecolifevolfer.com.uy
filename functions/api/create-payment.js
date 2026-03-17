@@ -7,6 +7,18 @@ function json(data, status = 200) {
   });
 }
 
+export function onRequestGet(context) {
+  const url = new URL(context.request.url);
+
+  return json({
+    ok: true,
+    route: "create-payment",
+    method: "GET",
+    host: url.host,
+    pathname: url.pathname
+  });
+}
+
 export async function onRequestPost(context) {
   try {
     const MP_ACCESS_TOKEN = context.env.MP_ACCESS_TOKEN;
