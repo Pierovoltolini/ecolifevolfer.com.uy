@@ -8,7 +8,7 @@ async function pagarConMercadoPago(order) {
     unit_price: product.price
   }));
 
-  const response = await fetch("/api/create-payment", {
+  const response = await fetch("/create-payment", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
