@@ -1,111 +1,186 @@
 // js/checkout.js
-async function pagarConMercadoPago(order) {
-
-  const items = order.items.map(product => ({
-    title: product.name,
-    quantity: product.qty,
-    currency_id: "UYU",
-    unit_price: product.price
-  }));
-
-  const response = await fetch("/api/create-payment", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({ items })
-  });
-
-  const data = await response.json();
-
-  if (data.init_point) {
-    window.location.href = data.init_point;
-  } else {
-    alert("Error al iniciar pago");
-    console.error(data);
-  }
-}
-function buildOrderObject() {
-  // Intentamos obtener el carrito desde EcoCart
-  const ecoItems = (window.EcoCart && window.EcoCart.Cart && window.EcoCart.Cart.getItems)
-    ? window.EcoCart.Cart.getItems()
-    : null;
-
-  const rawItems = Array.isArray(ecoItems) && ecoItems.length
-    ? ecoItems
-    : JSON.parse(localStorage.getItem("cart") || "[]");
-
-  // 🔥 Normalizamos los items (Handy exige imagen, nombre, qty y price)
-  const items = rawItems.map(item => ({
-    name: item.title || item.name,
-    qty: Number(item.qty ?? item.quantity ?? 1),
-    price: Number(item.price) || 0,
-    taxed: 0,
-    image: item.thumbnail || item.images?.[0] || "https://via.placeholder.com/600"
-  }));
-
-  const subtotal = items.reduce((acc, i) => acc + i.price * i.qty, 0);
-
-  // 🔥 Datos del cliente (Handy recomienda enviarlos)
-  const customer = {
-    name: document.querySelector("#fact-nombre")?.value || "",
-    email: document.querySelector("#fact-email")?.value || "",
-    phone: document.querySelector("#fact-tel")?.value || "",
-    document: document.querySelector("#fact-doc")?.value || ""
-  };
-
-  // 🔥 Estructura final enviada al Worker
-  return {
-    orderNumber: Date.now(),
-    taxedAmount: 0,
-    total: subtotal,   // El worker lo redondea si es necesario
-    items,
-    customer
-  };
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// === End Handy Integration ===
-
-// Validación simple de RUT uruguayo
-function validarRUTUy(rut) {
-  rut = rut.replace(/\D/g, ""); // solo números
-
-  if (rut.length !== 12) return false;
-
-  const coef = [4,3,2,9,8,7,6,5,4,3,2];
-  let sum = 0;
-
-  for (let i = 0; i < 11; i++) {
-    sum += coef[i] * parseInt(rut[i], 10);
-  }
-
-  const dv = (11 - (sum % 11)) % 11;
-
-  return dv === parseInt(rut[11], 10);
-}
+// Checkout corregido para Mercado Pago Checkout Pro
+// Nota: este archivo NO envía emails antes del pago.
+// Lo correcto es enviar confirmación en success/webhook cuando el pago quede confirmado.
 
 (function () {
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => root.querySelectorAll(sel);
+
+  /* ============================================================
+      HELPERS
+  ============================================================ */
+  const fmt = new Intl.NumberFormat("es-UY", { style: "currency", currency: "USD" });
+  const USD_FREE_SHIP_THRESHOLD = 150;
+  const UYU_SHIP_FLAT = 250;
+  const USD_RATE = 40;
+
+  function roundMoney(n) {
+    return Math.round((Number(n) || 0) * 100) / 100;
+  }
+
+  // Validación simple de RUT uruguayo
+  function validarRUTUy(rut) {
+    rut = String(rut || "").replace(/\D/g, "");
+    if (rut.length !== 12) return false;
+
+    const coef = [4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2];
+    let sum = 0;
+
+    for (let i = 0; i < 11; i++) {
+      sum += coef[i] * parseInt(rut[i], 10);
+    }
+
+    const dv = (11 - (sum % 11)) % 11;
+    return dv === parseInt(rut[11], 10);
+  }
+
+  function calcCartSubtotalUSD(cart) {
+    return cart.reduce((acc, it) => acc + (Number(it.price) || 0) * (Number(it.qty) || 1), 0);
+  }
+
+  function buildOrderObject() {
+    const ecoItems = (window.EcoCart && window.EcoCart.Cart && window.EcoCart.Cart.getItems)
+      ? window.EcoCart.Cart.getItems()
+      : null;
+
+    const rawItems = Array.isArray(ecoItems) && ecoItems.length
+      ? ecoItems
+      : JSON.parse(localStorage.getItem("cart") || "[]");
+
+    const items = rawItems.map(item => ({
+      name: item.title || item.name,
+      qty: Number(item.qty ?? item.quantity ?? 1),
+      price: Number(item.price) || 0,
+      taxed: 0,
+      image: item.thumbnail || item.images?.[0] || "https://via.placeholder.com/600"
+    }));
+
+    const customer = {
+      name: document.querySelector("#fact-nombre")?.value || "",
+      email: document.querySelector("#fact-email")?.value || "",
+      phone: document.querySelector("#fact-tel")?.value || "",
+      document: document.querySelector("#fact-doc")?.value || ""
+    };
+
+    return {
+      orderNumber: Date.now(),
+      items,
+      customer
+    };
+  }
+
+  function collectCheckoutData() {
+    const CartAPI = window.EcoCart?.Cart;
+    const items = CartAPI?.getItems() || [];
+    const subtotalUSD = calcCartSubtotalUSD(items);
+    const shippingUYU = subtotalUSD >= USD_FREE_SHIP_THRESHOLD ? 0 : UYU_SHIP_FLAT;
+    const envioUSD = shippingUYU / USD_RATE;
+    const totalUSD = subtotalUSD + envioUSD;
+
+    return {
+      customer: {
+        name: $("#fact-nombre")?.value || "",
+        email: $("#fact-email")?.value || "",
+        phone: $("#fact-tel")?.value || "",
+        document: $("#fact-doc")?.value || "",
+        rut: $("#fact-rut")?.value || ""
+      },
+      shipping: {
+        mode: document.querySelector(".ship-tab.is-active")?.dataset.mode,
+        address: $("#envio-direccion")?.value || "",
+        city: $("#envio-ciudad")?.value || "",
+        state: $("#envio-depto")?.value || "",
+        zip: $("#envio-cp")?.value || "",
+        retiroNombre: $("#retiro-nombre")?.value || "",
+        retiroTel: $("#retiro-tel")?.value || ""
+      },
+      items,
+      amounts: { subtotalUSD, shippingUYU, totalUSD }
+    };
+  }
+
+  async function pagarConMercadoPago(order) {
+    if (!window.checkoutCuotas) {
+      actualizarResumenCuotas();
+    }
+
+    const checkoutData = collectCheckoutData();
+    const totalBaseUSD = roundMoney(checkoutData.amounts.totalUSD || 0);
+    const totalConRecargoUSD = roundMoney(window.checkoutCuotas?.totalUSD || totalBaseUSD);
+    const cuotas = Number(window.checkoutCuotas?.cuotas || 1);
+    const recargoUSD = roundMoney(Math.max(0, totalConRecargoUSD - totalBaseUSD));
+    const shippingUSD = roundMoney((checkoutData.amounts.shippingUYU || 0) / USD_RATE);
+
+    const items = order.items.map(product => ({
+      title: product.name,
+      quantity: Number(product.qty || 1),
+      currency_id: "USD",
+      unit_price: roundMoney(product.price)
+    })).filter(item => item.quantity > 0 && item.unit_price > 0);
+
+    if (shippingUSD > 0) {
+      items.push({
+        title: "Envío",
+        quantity: 1,
+        currency_id: "USD",
+        unit_price: shippingUSD
+      });
+    }
+
+    if (recargoUSD > 0) {
+      items.push({
+        title: cuotas === 1 ? "Recargo" : `Recargo por ${cuotas} cuotas`,
+        quantity: 1,
+        currency_id: "USD",
+        unit_price: recargoUSD
+      });
+    }
+
+    const payload = {
+      orderId: String(order.orderNumber || Date.now()),
+      items,
+      payer: {
+        name: document.querySelector("#fact-nombre")?.value?.trim() || "",
+        email: document.querySelector("#fact-email")?.value?.trim() || "",
+        phone: document.querySelector("#fact-tel")?.value?.trim() || ""
+      },
+      metadata: {
+        cuotas,
+        totalBaseUSD,
+        totalConRecargoUSD
+      }
+    };
+
+    const response = await fetch("/api/create-payment", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    });
+
+    const rawText = await response.text();
+
+    let data;
+    try {
+      data = JSON.parse(rawText);
+    } catch {
+      throw new Error(`La API no devolvió JSON. Respuesta: ${rawText}`);
+    }
+
+    if (!response.ok) {
+      throw new Error(data.error || data.details || "Error al crear la preferencia");
+    }
+
+    const checkoutUrl = data.init_point || data.sandbox_init_point;
+
+    if (!checkoutUrl) {
+      throw new Error("Mercado Pago no devolvió init_point");
+    }
+
+    window.location.href = checkoutUrl;
+  }
 
   /* ============================================================
       PASOS DEL CHECKOUT
@@ -140,49 +215,32 @@ function validarRUTUy(rut) {
     const next = e.target.getAttribute("data-next");
     const prev = e.target.getAttribute("data-prev");
 
-    /* -------------------------
-       VALIDACIÓN PASO 1
-    -------------------------- */
     if (next === "2") {
       const nombre = $("#fact-nombre")?.value.trim();
-      const email  = $("#fact-email")?.value.trim();
-      const tel    = $("#fact-tel")?.value.trim();
-      const doc    = $("#fact-doc")?.value.trim();
-      const rut    = $("#fact-rut")?.value.trim();
+      const email = $("#fact-email")?.value.trim();
+      const tel = $("#fact-tel")?.value.trim();
+      const doc = $("#fact-doc")?.value.trim();
+      const rut = $("#fact-rut")?.value.trim();
 
       if (!nombre) return alert("Ingresá tu nombre completo.");
-      if (!email)  return alert("Ingresá tu email.");
-      if (!tel)    return alert("Ingresá tu teléfono.");
-      if (!doc)    return alert("Ingresá tu Documento.");
-
-      // Validar RUT solo si lo completaron
-      if (rut && !validarRUTUy(rut)) {
-        return alert("El RUT ingresado no es válido.");
-      }
+      if (!email) return alert("Ingresá tu email.");
+      if (!tel) return alert("Ingresá tu teléfono.");
+      if (!doc) return alert("Ingresá tu Documento.");
+      if (rut && !validarRUTUy(rut)) return alert("El RUT ingresado no es válido.");
     }
 
-    /* -------------------------
-       VALIDACIÓN PASO 2
-    -------------------------- */
     if (next === "3") {
       const mode = document.querySelector(".ship-tab.is-active")?.dataset.mode;
 
-      // --- Envío a domicilio ---
       if (mode === "domicilio") {
-        if (!$("#envio-direccion")?.value.trim())
-          return alert("Ingresá la dirección.");
-        if (!$("#envio-ciudad")?.value.trim())
-          return alert("Ingresá la ciudad.");
-        if (!$("#envio-depto")?.value.trim())
-          return alert("Ingresá el departamento.");
+        if (!$("#envio-direccion")?.value.trim()) return alert("Ingresá la dirección.");
+        if (!$("#envio-ciudad")?.value.trim()) return alert("Ingresá la ciudad.");
+        if (!$("#envio-depto")?.value.trim()) return alert("Ingresá el departamento.");
       }
 
-      // --- Retiro en sucursal ---
       if (mode === "retiro") {
-        if (!$("#retiro-nombre")?.value.trim())
-          return alert("Ingresá el nombre de quien retira.");
-        if (!$("#retiro-tel")?.value.trim())
-          return alert("Ingresá el teléfono de quien retira.");
+        if (!$("#retiro-nombre")?.value.trim()) return alert("Ingresá el nombre de quien retira.");
+        if (!$("#retiro-tel")?.value.trim()) return alert("Ingresá el teléfono de quien retira.");
       }
     }
 
@@ -201,7 +259,6 @@ function validarRUTUy(rut) {
       tab.classList.add("is-active");
 
       const mode = tab.dataset.mode;
-
       document.querySelectorAll("[data-ship]").forEach(el => {
         el.hidden = el.dataset.ship !== mode;
       });
@@ -213,15 +270,14 @@ function validarRUTUy(rut) {
   /* ============================================================
       CARRITO
   ============================================================ */
-
   const listEl = $("#cart-list");
   const subEl = $("#cart-sub");
   const clearBtn = $("#btn-clear");
-  const fmt = new Intl.NumberFormat("es-UY", { style: "currency", currency: "USD" });
 
   function renderCartRight() {
     const CartAPI = window.EcoCart?.Cart;
     if (!CartAPI) return;
+
     const items = CartAPI.getItems();
 
     if (!items.length) {
@@ -280,7 +336,7 @@ function validarRUTUy(rut) {
     window.EcoCart?.updateCartBadge?.();
   }
 
-  function relocateBadgesToTitle(){
+  function relocateBadgesToTitle() {
     document.querySelectorAll('#cart-list .ci').forEach(row => {
       const title = row.querySelector('h4');
       const priceBlock = row.querySelector('.cart-price');
@@ -288,7 +344,7 @@ function validarRUTUy(rut) {
       if (!title || !badge) return;
 
       let tr = row.querySelector('.title-row');
-      if (!tr){
+      if (!tr) {
         tr = document.createElement('div');
         tr.className = 'title-row';
         title.parentNode.insertBefore(tr, title);
@@ -298,9 +354,10 @@ function validarRUTUy(rut) {
     });
   }
 
-  function ensureRightAlignedPriceLayout(){
+  function ensureRightAlignedPriceLayout() {
     const STYLE_ID = 'checkout-price-overrides';
     if (document.getElementById(STYLE_ID)) return;
+
     const css = `
 .ci .price{ text-align:right; display:flex; flex-direction:column; align-items:flex-end; gap:2px; }
 .cart-price{ display:flex; flex-direction:column; align-items:flex-end; gap:2px; }
@@ -310,6 +367,7 @@ function validarRUTUy(rut) {
 .ci .title-row{ display:flex; align-items:center; justify-content:space-between; gap:8px; }
 .ci .title-row h4{ margin:0; }
 .ci .title-row .badge{ margin-left:auto; }`;
+
     const tag = document.createElement('style');
     tag.id = STYLE_ID;
     tag.textContent = css;
@@ -319,8 +377,10 @@ function validarRUTUy(rut) {
   document.addEventListener("click", (e) => {
     const CartAPI = window.EcoCart?.Cart;
     if (!CartAPI) return;
+
     const row = e.target.closest(".ci");
     if (!row) return;
+
     const id = row.dataset.id;
     const input = row.querySelector(".qty-input");
     const val = () => Math.max(1, Math.min(5, Number(input.value) || 1));
@@ -336,6 +396,7 @@ function validarRUTUy(rut) {
     const CartAPI = window.EcoCart?.Cart;
     if (!CartAPI) return;
     if (!e.target.classList.contains("qty-input")) return;
+
     const row = e.target.closest(".ci");
     const id = row.dataset.id;
     const n = Math.max(1, Math.min(5, Number(e.target.value) || 1));
@@ -357,6 +418,7 @@ function validarRUTUy(rut) {
     }
     renderCartRight();
     ensureRightAlignedPriceLayout();
+    setTimeout(actualizarResumenCuotas, 300);
   });
 
   window.addEventListener("cart:updated", renderCartRight);
@@ -365,22 +427,14 @@ function validarRUTUy(rut) {
   /* ============================================================
       ENVÍO + TOTALES
   ============================================================ */
-  const USD_FREE_SHIP_THRESHOLD = 150;
-  const UYU_SHIP_FLAT = 250;
-  const USD_RATE = 40;
-
-  function calcCartSubtotalUSD(cart) {
-    return cart.reduce((acc, it) => acc + (Number(it.price) || 0) * (Number(it.qty) || 1), 0);
-  }
-
-  function ensurePaymentStrip(summaryBox){
+  function ensurePaymentStrip(summaryBox) {
     if (!summaryBox) return;
     if (summaryBox.querySelector('.payment-strip')) return;
 
     const el = document.createElement('div');
     el.className = 'payment-strip';
     el.innerHTML = `
-      <img src="img/pagoseguro.png" alt="Pago seguro: tarjetas, bancos, Handy, SSL" style="width:100%;margin-top:12px;opacity:.95;">
+      <img src="img/pagoseguro.png" alt="Pago seguro: tarjetas, Mercado Pago, SSL" style="width:100%;margin-top:12px;opacity:.95;">
     `;
     summaryBox.appendChild(el);
   }
@@ -393,7 +447,9 @@ function validarRUTUy(rut) {
     if (cart.length === 0) {
       summaryBox.style.display = "none";
       return;
-    } else summaryBox.style.display = "";
+    } else {
+      summaryBox.style.display = "";
+    }
 
     const unitFinalUSD = (it) => Number(it.unitPriceUSD ?? it.priceUSD ?? it.price ?? 0);
     const unitOriginalUSD = (it) => Number(it.unitPriceOriginalUSD ?? it.priceOldUSD ?? it.priceOld ?? it.msrp ?? unitFinalUSD(it));
@@ -402,8 +458,7 @@ function validarRUTUy(rut) {
     const originalUSD = cart.reduce((acc, it) => acc + unitOriginalUSD(it) * (it.qty || 1), 0);
     const savingsUSD = Math.max(0, originalUSD - subtotalUSD);
     const envioUYU = subtotalUSD >= USD_FREE_SHIP_THRESHOLD ? 0 : UYU_SHIP_FLAT;
-    const envioUSD = envioUYU / USD_RATE;
-    const totalUSD = subtotalUSD + envioUSD;
+    const totalUSD = subtotalUSD + (envioUYU / USD_RATE);
 
     summaryBox.querySelectorAll('.cart-row, .summary-rows').forEach(n => n.remove());
 
@@ -429,10 +484,14 @@ function validarRUTUy(rut) {
     `);
 
     ensurePaymentStrip(summaryBox);
+
+    if (typeof actualizarResumenCuotas === "function") {
+      actualizarResumenCuotas();
+    }
   }
 
   /* ============================================================
-      EMAILJS
+      EMAILJS (se mantiene, pero NO se dispara antes del pago)
   ============================================================ */
   const EMAILJS_SERVICE = "service_o901yzo";
   const TEMPLATE_ID_STORE = "template_2jobyzx";
@@ -467,38 +526,9 @@ function validarRUTUy(rut) {
     }).join("");
   }
 
-  function collectCheckoutData() {
-    const CartAPI = window.EcoCart?.Cart;
-    const items = CartAPI?.getItems() || [];
-    const subtotalUSD = calcCartSubtotalUSD(items);
-    const shippingUYU = subtotalUSD >= USD_FREE_SHIP_THRESHOLD ? 0 : UYU_SHIP_FLAT;
-    const envioUSD = shippingUYU / USD_RATE;
-    const totalUSD = subtotalUSD + envioUSD;
-
-    return {
-      customer: {
-        name: $("#fact-nombre")?.value || "",
-        email: $("#fact-email")?.value || "",
-        phone: $("#fact-tel")?.value || "",
-        document: $("#fact-doc")?.value || "",
-        rut: $("#fact-rut")?.value || ""
-      },
-      shipping: {
-        mode: document.querySelector(".ship-tab.is-active")?.dataset.mode,
-        address: $("#envio-direccion")?.value || "",
-        city: $("#envio-ciudad")?.value || "",
-        state: $("#envio-depto")?.value || "",
-        zip: $("#envio-cp")?.value || "",
-        retiroNombre: $("#retiro-nombre")?.value || "",
-        retiroTel: $("#retiro-tel")?.value || ""
-      },
-      items,
-      amounts: { subtotalUSD, shippingUYU, totalUSD }
-    };
-  }
-
   async function sendEmailToStore(payload) {
     const rows = buildCartRowsHTML(payload.items);
+    const totalFinalUSD = payload.payment?.totalUSDConRecargo ?? payload.amounts.totalUSD;
 
     const vars = {
       name: payload.customer.name,
@@ -512,10 +542,9 @@ function validarRUTUy(rut) {
       zip: payload.shipping.zip,
       retiroNombre: payload.shipping.retiroNombre,
       retiroTel: payload.shipping.retiroTel,
-
       subtotalUSD: fmt.format(payload.amounts.subtotalUSD),
       shippingUYU: payload.amounts.shippingUYU === 0 ? "Gratis" : `UYU ${payload.amounts.shippingUYU}`,
-      totalUSD: fmt.format(payload.amounts.totalUSD),
+      totalUSD: fmt.format(totalFinalUSD),
       itemsrows: rows
     };
 
@@ -528,7 +557,7 @@ function validarRUTUy(rut) {
         email: payload.customer.email,
         subtotalUSD: fmt.format(payload.amounts.subtotalUSD),
         shippingUYU: payload.amounts.shippingUYU === 0 ? "Gratis" : `UYU ${payload.amounts.shippingUYU}`,
-        totalUSD: fmt.format(payload.amounts.totalUSD),
+        totalUSD: fmt.format(totalFinalUSD),
         itemsrows: rows
       };
 
@@ -539,15 +568,11 @@ function validarRUTUy(rut) {
         emailjs.send(EMAILJS_SERVICE, TEMPLATE_ID_ABANDONED, {
           name: payload.customer.name,
           email: payload.customer.email,
-          totalUSD: fmt.format(payload.amounts.totalUSD),
+          totalUSD: fmt.format(totalFinalUSD),
           shippingUYU: payload.amounts.shippingUYU === 0 ? "Gratis" : `UYU ${payload.amounts.shippingUYU}`,
           itemsrows: rows
         });
       }, 60 * 60 * 1000);
-
-      
-      window.EcoCart?.Cart.clear();
-
     } catch (err) {
       console.error("❌ Error al enviar:", err);
       alert("⚠️ No se pudo enviar el correo del pedido.");
@@ -555,134 +580,113 @@ function validarRUTUy(rut) {
   }
 
   /* ============================================================
-      CUOTAS – PLAN CATORCE (RECARGO) + RESUMEN
+      CUOTAS – PLAN CATORCE (RECARGO)
   ============================================================ */
+  const IVA_MULTIPLICADOR = 1.22;
 
-/* ============================================================
-   CUOTAS – PLAN CATORCE (RECARGO)
-   TODO EN USD — SIN UYU
-============================================================ */
-
-const IVA_MULTIPLICADOR = 1.22;
-
-// Base PLAN CATORCE según tu tabla
-const RECARGOS_BASE_CUOTAS = {
-  1: 5.49,  // si 1 cuota = crédito contado local
-  2: 7.49,
-  3: 7.99,
-  4: 8.49,
-  5: 8.99,
-  6: 9.49,
-  7: 9.49,
-  8: 9.49,
-  9: 9.49,
-  10: 9.49,
-  11: 9.49,
-  12: 9.49
-};
-
-const RECARGOS_CUOTAS = Object.fromEntries(
-  Object.entries(RECARGOS_BASE_CUOTAS).map(([cuotas, porcentaje]) => [
-    Number(cuotas),
-    Number((porcentaje * IVA_MULTIPLICADOR).toFixed(2))
-  ])
-);
-
-function getTotalUSDConRecargo() {
-  const data = collectCheckoutData();
-  const totalUSDBase = data.amounts.totalUSD || 0;
-
-  const select = document.getElementById("selector-cuotas");
-  const cuotas = Number(select?.value || 1);
-
-  const recargo = RECARGOS_CUOTAS[cuotas] || 0;
-  const totalUSDConRecargo = totalUSDBase * (1 + recargo / 100);
-
-  return { cuotas, recargo, totalUSDBase, totalUSDConRecargo };
-}
-
-function actualizarResumenCuotas() {
-  const resumen = document.getElementById("cuotas-resumen");
-  const select = document.getElementById("selector-cuotas");
-  if (!resumen || !select) return;
-
-  const { cuotas, recargo, totalUSDConRecargo } = getTotalUSDConRecargo();
-
-  // 👉 Formato USD elegante
-  const fmtUSD = (n) => `USD ${n.toFixed(2)}`;
-
-  // 👉 Cálculo cuota en USD (sin pesos)
-  const cuotaUSD = totalUSDConRecargo / cuotas;
-
-  // 👉 Mostrar SOLO USD
-  if (cuotas === 1) {
-    resumen.textContent =
-      `Total final: ${fmtUSD(totalUSDConRecargo)}`;
-  } else {
-    resumen.textContent =
-      `Total final: ${fmtUSD(totalUSDConRecargo)} — ` +
-      `${cuotas} cuotas de ${fmtUSD(cuotaUSD)}`;
-  }
-
-  // Guardar valores para el botón Confirmar
-  window.checkoutCuotas = {
-    cuotas,
-    recargo,
-    totalUSD: totalUSDConRecargo,
-    cuotaUSD
+  const RECARGOS_BASE_CUOTAS = {
+    1: 5.49,
+    2: 7.49,
+    3: 7.99,
+    4: 8.49,
+    5: 8.99,
+    6: 9.49,
+    7: 9.49,
+    8: 9.49,
+    9: 9.49,
+    10: 9.49,
+    11: 9.49,
+    12: 9.49
   };
-}
 
-document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(actualizarResumenCuotas, 300);
-});
+  const RECARGOS_CUOTAS = Object.fromEntries(
+    Object.entries(RECARGOS_BASE_CUOTAS).map(([cuotas, porcentaje]) => [
+      Number(cuotas),
+      Number((porcentaje * IVA_MULTIPLICADOR).toFixed(2))
+    ])
+  );
 
-document.getElementById("selector-cuotas")?.addEventListener("change", actualizarResumenCuotas);
+  function getTotalUSDConRecargo() {
+    const data = collectCheckoutData();
+    const totalUSDBase = data.amounts.totalUSD || 0;
 
+    const select = document.getElementById("selector-cuotas");
+    const cuotas = Number(select?.value || 1);
+    const recargo = RECARGOS_CUOTAS[cuotas] || 0;
+    const totalUSDConRecargo = totalUSDBase * (1 + recargo / 100);
 
-/* ============================================================
-   BOTÓN CONFIRMAR – ENVÍA TOTAL A HANDY (USD)
-============================================================ */
+    return { cuotas, recargo, totalUSDBase, totalUSDConRecargo };
+  }
 
-document.getElementById("btn-confirm")?.addEventListener("click", async (e) => {
-  e.preventDefault();
+  function actualizarResumenCuotas() {
+    const resumen = document.getElementById("cuotas-resumen");
+    const select = document.getElementById("selector-cuotas");
+    if (!resumen || !select) return;
 
-  const order = buildOrderObject();
+    const { cuotas, recargo, totalUSDConRecargo } = getTotalUSDConRecargo();
+    const fmtUSD = (n) => `USD ${Number(n || 0).toFixed(2)}`;
+    const cuotaUSD = totalUSDConRecargo / cuotas;
 
-  try {
-    if (!window.checkoutCuotas) actualizarResumenCuotas();
-
-    if (window.checkoutCuotas?.totalUSD) {
-      order.total = Math.round(window.checkoutCuotas.totalUSD);
+    if (cuotas === 1) {
+      resumen.textContent = `Total final: ${fmtUSD(totalUSDConRecargo)}`;
+    } else {
+      resumen.textContent = `Total final: ${fmtUSD(totalUSDConRecargo)} — ${cuotas} cuotas de ${fmtUSD(cuotaUSD)}`;
     }
-  } catch (err) {
-    console.warn("No se pudo aplicar recargo de cuotas.", err);
+
+    window.checkoutCuotas = {
+      cuotas,
+      recargo,
+      totalUSD: totalUSDConRecargo,
+      cuotaUSD
+    };
   }
 
-  // emails
-  try {
-    const payload = collectCheckoutData();
-    await sendEmailToStore(payload);
-  } catch (err) {
-    console.error("Error enviando EmailJS:", err);
-  }
-try {
-  await pagarConMercadoPago(order);
-} catch (err) {
-  console.error("Error MercadoPago:", err);
-  alert("Error al iniciar pago");
-}
-  
+  document.getElementById("selector-cuotas")?.addEventListener("change", actualizarResumenCuotas);
 
+  /* ============================================================
+      BOTÓN CONFIRMAR – MERCADO PAGO
+  ============================================================ */
+  document.getElementById("btn-confirm")?.addEventListener("click", async (e) => {
+    e.preventDefault();
 
+    const order = buildOrderObject();
 
+    try {
+      if (!window.checkoutCuotas) {
+        actualizarResumenCuotas();
+      }
+    } catch (err) {
+      console.warn("No se pudo actualizar el resumen de cuotas.", err);
+    }
 
+    // Guardar temporalmente el pedido antes de ir a Mercado Pago
+    try {
+      const payload = collectCheckoutData();
 
+      payload.payment = {
+        cuotas: window.checkoutCuotas?.cuotas || 1,
+        recargo: window.checkoutCuotas?.recargo || 0,
+        totalUSDConRecargo: window.checkoutCuotas?.totalUSD || payload.amounts.totalUSD,
+        cuotaUSD: window.checkoutCuotas?.cuotaUSD || payload.amounts.totalUSD
+      };
 
+      localStorage.setItem("pending_checkout_payload", JSON.stringify(payload));
+      localStorage.setItem("pending_checkout_order", JSON.stringify(order));
+    } catch (err) {
+      console.warn("No se pudo guardar el pedido temporalmente.", err);
+    }
 
+    try {
+      await pagarConMercadoPago(order);
+    } catch (err) {
+      console.error("Error MercadoPago:", err);
+      alert("Error al iniciar pago: " + err.message);
+    }
+  });
 
-});
-
-
-
+  // Expuesto por si luego querés dispararlo desde success.html
+  window.EcoLifeCheckout = {
+    collectCheckoutData,
+    sendEmailToStore
+  };
 })();
