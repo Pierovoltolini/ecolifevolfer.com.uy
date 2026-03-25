@@ -494,7 +494,7 @@
       EMAILJS (se mantiene, pero NO se dispara antes del pago)
   ============================================================ */
   const EMAILJS_SERVICE = "service_o901yzo";
-  const TEMPLATE_ID_STORE = "template_2jobyzx";
+  const TEMPLATE_ID_STORE = "template_mfbo6hj";
   const TEMPLATE_ID_PENDING = "template_3t4k1j1";
   const TEMPLATE_ID_ABANDONED = "template_v9m0mtb";
   const EMAILJS_USER = "ktIyEXjcCfhYjKZzI";
@@ -526,58 +526,41 @@
     }).join("");
   }
 
-  async function sendEmailToStore(payload) {
-    const rows = buildCartRowsHTML(payload.items);
-    const totalFinalUSD = payload.payment?.totalUSDConRecargo ?? payload.amounts.totalUSD;
+ async function sendCheckoutLeadEmail(payload) {
+  const rows = buildCartRowsHTML(payload.items);
+  const totalFinalUSD = payload.payment?.totalUSDConRecargo ?? payload.amounts.totalUSD;
 
-    const vars = {
-      name: payload.customer.name,
-      email: payload.customer.email,
-      phone: payload.customer.phone,
-      document: payload.customer.document,
-      rut: payload.customer.rut,
-      address: payload.shipping.address,
-      city: payload.shipping.city,
-      state: payload.shipping.state,
-      zip: payload.shipping.zip,
-      retiroNombre: payload.shipping.retiroNombre,
-      retiroTel: payload.shipping.retiroTel,
-      subtotalUSD: fmt.format(payload.amounts.subtotalUSD),
-      shippingUYU: payload.amounts.shippingUYU === 0 ? "Gratis" : `UYU ${payload.amounts.shippingUYU}`,
-      totalUSD: fmt.format(totalFinalUSD),
-      itemsrows: rows
-    };
+  const vars = {
+    name: payload.customer.name,
+    email: payload.customer.email,
+    phone: payload.customer.phone,
+    document: payload.customer.document,
+    rut: payload.customer.rut,
+    address: payload.shipping.address,
+    city: payload.shipping.city,
+    state: payload.shipping.state,
+    zip: payload.shipping.zip,
+    retiroNombre: payload.shipping.retiroNombre,
+    retiroTel: payload.shipping.retiroTel,
+    subtotalUSD: fmt.format(payload.amounts.subtotalUSD),
+    shippingUYU: payload.amounts.shippingUYU === 0 ? "Gratis" : `UYU ${payload.amounts.shippingUYU}`,
+    totalUSD: fmt.format(totalFinalUSD),
+    itemsrows: rows,
+    estado_pedido: "Pendiente de pago"
+  };
 
-    try {
-      await emailjs.send(EMAILJS_SERVICE, TEMPLATE_ID_STORE, vars);
-      console.log("📩 Pedido enviado a EcoLife");
+  try {
+    await emailjs.send(
+      EMAILJS_SERVICE,
+      "template_mfbo6hj",
+      vars
+    );
 
-      const clientVars = {
-        name: payload.customer.name,
-        email: payload.customer.email,
-        subtotalUSD: fmt.format(payload.amounts.subtotalUSD),
-        shippingUYU: payload.amounts.shippingUYU === 0 ? "Gratis" : `UYU ${payload.amounts.shippingUYU}`,
-        totalUSD: fmt.format(totalFinalUSD),
-        itemsrows: rows
-      };
-
-      await emailjs.send(EMAILJS_SERVICE, TEMPLATE_ID_PENDING, clientVars);
-      console.log("📧 Confirmación enviada al cliente");
-
-      setTimeout(() => {
-        emailjs.send(EMAILJS_SERVICE, TEMPLATE_ID_ABANDONED, {
-          name: payload.customer.name,
-          email: payload.customer.email,
-          totalUSD: fmt.format(totalFinalUSD),
-          shippingUYU: payload.amounts.shippingUYU === 0 ? "Gratis" : `UYU ${payload.amounts.shippingUYU}`,
-          itemsrows: rows
-        });
-      }, 60 * 60 * 1000);
-    } catch (err) {
-      console.error("❌ Error al enviar:", err);
-      alert("⚠️ No se pudo enviar el correo del pedido.");
-    }
+    console.log("📩 Aviso de checkout iniciado enviado a la tienda");
+  } catch (err) {
+    console.error("❌ Error enviando aviso de checkout iniciado:", err);
   }
+}
 
   /* ============================================================
       CUOTAS – PLAN CATORCE (RECARGO)
@@ -647,46 +630,57 @@
       BOTÓN CONFIRMAR – MERCADO PAGO
   ============================================================ */
   document.getElementById("btn-confirm")?.addEventListener("click", async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const order = buildOrderObject();
+  const order = buildOrderObject();
 
-    try {
-      if (!window.checkoutCuotas) {
-        actualizarResumenCuotas();
-      }
-    } catch (err) {
-      console.warn("No se pudo actualizar el resumen de cuotas.", err);
+  try {
+    if (!window.checkoutCuotas) {
+      actualizarResumenCuotas();
     }
+  } catch (err) {
+    console.warn("No se pudo actualizar el resumen de cuotas.", err);
+  }
 
-    // Guardar temporalmente el pedido antes de ir a Mercado Pago
-    try {
-      const payload = collectCheckoutData();
+  let payload = null;
 
-      payload.payment = {
-        cuotas: window.checkoutCuotas?.cuotas || 1,
-        recargo: window.checkoutCuotas?.recargo || 0,
-        totalUSDConRecargo: window.checkoutCuotas?.totalUSD || payload.amounts.totalUSD,
-        cuotaUSD: window.checkoutCuotas?.cuotaUSD || payload.amounts.totalUSD
-      };
+  // Guardar temporalmente el pedido antes de ir a Mercado Pago
+  try {
+    payload = collectCheckoutData();
 
-      localStorage.setItem("pending_checkout_payload", JSON.stringify(payload));
-      localStorage.setItem("pending_checkout_order", JSON.stringify(order));
-    } catch (err) {
-      console.warn("No se pudo guardar el pedido temporalmente.", err);
+    payload.payment = {
+      cuotas: window.checkoutCuotas?.cuotas || 1,
+      recargo: window.checkoutCuotas?.recargo || 0,
+      totalUSDConRecargo: window.checkoutCuotas?.totalUSD || payload.amounts.totalUSD,
+      cuotaUSD: window.checkoutCuotas?.cuotaUSD || payload.amounts.totalUSD
+    };
+
+    localStorage.setItem("pending_checkout_payload", JSON.stringify(payload));
+    localStorage.setItem("pending_checkout_order", JSON.stringify(order));
+  } catch (err) {
+    console.warn("No se pudo guardar el pedido temporalmente.", err);
+  }
+
+  // Enviar aviso a la tienda antes del pago
+  try {
+    if (payload) {
+      await sendCheckoutLeadEmail(payload);
     }
+  } catch (err) {
+    console.warn("No se pudo enviar el correo de aviso previo.", err);
+  }
 
-    try {
-      await pagarConMercadoPago(order);
-    } catch (err) {
-      console.error("Error MercadoPago:", err);
-      alert("Error al iniciar pago: " + err.message);
-    }
-  });
+  // Redirigir a Mercado Pago
+  try {
+    await pagarConMercadoPago(order);
+  } catch (err) {
+    console.error("Error MercadoPago:", err);
+    alert("Error al iniciar pago: " + err.message);
+  }
+});
 
-  // Expuesto por si luego querés dispararlo desde success.html
   window.EcoLifeCheckout = {
-    collectCheckoutData,
-    sendEmailToStore
-  };
+  collectCheckoutData,
+  sendCheckoutLeadEmail
+};
 })();
