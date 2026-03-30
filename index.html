@@ -122,12 +122,10 @@ cuidado personal Uruguay
     </a>
 
     <!-- Botón hamburguesa -->
-    <button class="gdar-burger" id="gdar-burger"
-            aria-label="Abrir menú" aria-controls="gdar-drawer" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </button>
+    <button class="gdar-burger gdar-burger--with-text" id="gdar-burger" aria-label="Abrir menú de categorías" aria-controls="gdar-drawer" aria-expanded="false">
+  <small class="gdar-burger-label">Categorías</small>
+  <span></span><span></span><span></span>
+</button>
 
     <!-- Acciones rápidas a la derecha (desktop) -->
     <nav class="gdar-quick" aria-label="Accesos rápidos">
@@ -247,41 +245,44 @@ cuidado personal Uruguay
     </figure>
   </a>
 </div>
+<!-- =========================================================
+     BLOQUE 2 — ENVÍOS
+========================================================= -->
+<p><div class="final-trust-banner">
+  <div class="final-trust-banner__inner">
 
-<!-- ============ Slider Nosotros ============ -->
-<section class="nosotros-slider">
-  <div class="slider-container">
-    
-    <!-- Slide 1 (Desktop + Mobile igual) -->
-    
+    <div class="final-trust-banner__media" aria-hidden="true">
+      <video class="final-trust-banner__video" autoplay muted loop playsinline>
+        <source src="img/envioexpress.mp4" type="video/mp4">
+      </video>
 
-    <!-- Slide 2 (Desktop + Mobile igual) -->
-    <div class="slide">
-      <img class="img-desktop" src="img/heroinicio2.png" alt="Climatización EcoLife">
-      <img class="img-mobile" src="img/heroiniciocelu2.png" alt="Climatización EcoLife">
+      <div class="final-trust-banner__media-overlay"></div>
+
+      <div class="final-trust-banner__media-caption">
+        Ecolife by Volfer - Electrodomésticos
+      </div>
     </div>
 
-    <!-- Slide 3 (desktop / mobile diferentes) -->
-    <div class="slide">
-      <img class="img-desktop" src="img/iniciohero3.png" alt="Tecnología Inverter">
-      <img class="img-mobile" src="img/heroiniciocelu3.png" alt="Tecnología Inverter Mobile">
+    <div class="final-trust-banner__content">
+      <h3 class="final-trust-banner__title">
+        Recibí tu compra de forma cómoda, segura y directamente en tu hogar
+      </h3>
+
+      <p class="final-trust-banner__text">
+        Estamos para acompañarte en todo el proceso. Envíos sin costo a tu domicilio.
+      </p>
+
+      <a class="final-trust-banner__cta"
+         href="https://wa.me/59894990760?text=Hola%20EcoLife%2C%20quiero%20consultar%20por%20env%C3%ADos"
+         target="_blank"
+         rel="noopener">
+        Consultar por envíos
+      </a>
     </div>
-
-    <!-- Slide 4 (desktop / mobile diferentes) -->
-    <div class="slide">
-      <img class="img-desktop" src="img/heroinicio4.png" alt="Tecnología Inverter">
-      <img class="img-mobile" src="img/heroiniciocelu4.png" alt="Tecnología Inverter Mobile">
-    </div>
-
-    <!-- Flechas -->
-    <button class="slider-btn prev" aria-label="Imagen anterior">&#10094;</button>
-    <button class="slider-btn next" aria-label="Imagen siguiente">&#10095;</button>
-
-    <!-- Indicadores -->
-    <div class="slider-dots"></div>
 
   </div>
-</section>
+</div></p>
+
 
 
     <!-- ============ Sección Nosotros (texto izq / foto der) ============ -->
@@ -338,7 +339,54 @@ cuidado personal Uruguay
 
     <a class="text-cta reveal" href="tienda.html" data-anim="pop" data-delay="0.12s">Conocé nuestros productos →</a>
   </div>
-  </section>
+  </section> <br>
+  <!-- =========================================================
+     BLOQUE 1 — ASESORAMIENTO PERSONALIZADO
+========================================================= -->
+<div id="advisory-block-wrapper">
+  <div class="advisory-block">
+    <div class="advisory-block__inner">
+
+      <div class="advisory-block__visual" aria-hidden="true">
+        <video class="advisory-block__video" autoplay muted loop playsinline>
+          <source src="img/cafevideo.mp4" type="video/mp4">
+        </video>
+        <div class="advisory-block__visual-overlay"></div>
+
+        <div class="advisory-block__icon-stack">
+          <div class="advisory-block__icon-main">🤝</div>
+          <div class="advisory-block__trust-text">
+            Trabajamos día a día para brindarte la mejor experiencia de compra y satisfacción.
+          </div>
+        </div>
+      </div>
+
+      <div class="advisory-block__content">
+        <div class="advisory-block__eyebrow">¿No sabés por dónde empezar?</div>
+        <h2 class="advisory-block__title">Te ayudamos a elegir el electrodoméstico ideal</h2>
+        <p class="advisory-block__text">
+          Contanos tu espacio, necesidad y presupuesto. Nuestro equipo te asesora sin apurarte para que tomés la mejor decisión.
+        </p>
+
+        <ul class="advisory-block__features">
+          <li>Asesoramiento por WhatsApp sin costo</li>
+          <li>Te comparamos modelos según tu uso</li>
+          <li>Recomendaciones según tu presupuesto</li>
+        </ul>
+
+        <a class="advisory-block__cta"
+           href="https://wa.me/59894990760?text=Hola%20EcoLife%2C%20me%20gustar%C3%ADa%20recibir%20asesoramiento%20para%20elegir%20un%20electrodom%C3%A9stico"
+           target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          Hablar con un asesor
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
   <!-- MARCAS -->
  <section class="brands wrap section-band" aria-labelledby="brands-title">
 
@@ -363,7 +411,7 @@ cuidado personal Uruguay
 </section>
 
 <!-- ============ Preguntas Frecuentes ============ -->
-<section id="faq" class="faq wrap" aria-labelledby="faq-title">
+<p><section id="faq" class="faq wrap" aria-labelledby="faq-title">
   <h2 id="faq-title" class="section-title left faq__title">Preguntas frecuentes</h2>
 
   <div class="faq__list" role="list">
@@ -433,7 +481,7 @@ cuidado personal Uruguay
       </div>
     </article>
   </div>
-</section>
+</section><br></p>
 
 
   <!-- PRODUCTOS “LIBRES” (Carrusel) -->
@@ -443,7 +491,7 @@ cuidado personal Uruguay
   TODO LO QUE NECESITÁS PARA TU HOGAR , CON MARCAS CONFIABLES 
 </h2>
 
-<h2 id="showcase-title" class="section-title"></h2>
+<p><h2 id="showcase-title" class="section-title"></h2>
 
   <div class="showcase-carousel" role="region" aria-label="Carrusel de productos">
     <button class="sc-arrow sc-prev" aria-label="Anterior" type="button">‹</button>
@@ -541,6 +589,8 @@ cuidado personal Uruguay
     <button class="sc-arrow sc-next" aria-label="Siguiente" type="button">›</button>
   </div>
 </section>
+</p><br>
+
 
 <!-- SEO BLOCK — TEXTO OPTIMIZADO PARA GOOGLE -->
 <section class="seo-block" style="padding:30px 0; font-size:14px; color:#555;">

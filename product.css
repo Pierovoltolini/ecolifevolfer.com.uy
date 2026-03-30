@@ -914,3 +914,590 @@ body.dark .gdar-cart-icon {
   opacity: 0;
   animation: pImageZoomOut 0.65s cubic-bezier(.16,.55,.32,1) forwards;
 }
+/* ============================================================
+   BLOQUE 3 — PRUEBA SOCIAL INTERMEDIA
+   ============================================================ */
+
+/* ============================================================
+   BLOQUE DEL MEDIO — OPINIONES
+   DESKTOP: 1 sola fila, deslizable a la derecha
+   MOBILE: tarjetas chicas, cuadradas y deslizables
+   REEMPLAZAR COMPLETO
+   ============================================================ */
+
+.social-proof-mid{
+  padding: 76px 24px;
+  background: #f7f8fb;
+  position: relative;
+  overflow: hidden;
+}
+
+.social-proof-mid::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--p-green-lt), transparent);
+}
+
+.social-proof-mid__header{
+  text-align: center;
+  margin-bottom: 38px;
+}
+
+.proof-eyebrow{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--p-font-b);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--p-green);
+  margin-bottom: 14px;
+}
+
+.proof-eyebrow::before,
+.proof-eyebrow::after{
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: rgba(27,122,62,.55);
+}
+
+.proof-title{
+  font-family: var(--p-font-h);
+  font-size: clamp(26px, 4vw, 40px);
+  font-weight: 800;
+  color: #0d1121;
+  margin: 0;
+  letter-spacing: -.03em;
+  line-height: 1.05;
+}
+
+/* ===== TRACK HORIZONTAL ===== */
+
+.reviews-mid-grid{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 320px;
+  gap: 18px;
+  max-width: 1180px;
+  margin: 0 auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 2px 2px 10px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.reviews-mid-grid::-webkit-scrollbar{
+  height: 7px;
+}
+
+.reviews-mid-grid::-webkit-scrollbar-thumb{
+  background: rgba(160,170,190,.45);
+  border-radius: 999px;
+}
+
+/* ===== CARD ===== */
+
+.review-mid-card{
+  scroll-snap-align: start;
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #dfe5ee;
+  border-radius: 24px;
+  padding: 24px 22px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 255px;
+  box-shadow: 0 8px 22px rgba(13,17,33,.06);
+  transition: transform .25s var(--p-ease), box-shadow .25s var(--p-ease), border-color .25s var(--p-ease);
+}
+
+.review-mid-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 18px 38px rgba(13,17,33,.10);
+  border-color: rgba(27,122,62,.20);
+}
+
+.review-mid-card__quote{
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-family: Georgia, serif;
+  font-size: 52px;
+  line-height: 1;
+  color: #dcecdf;
+  pointer-events: none;
+}
+
+.review-mid-card__stars{
+  display: flex;
+  gap: 3px;
+  margin-bottom: 2px;
+}
+
+.star-icon{
+  width: 13px;
+  height: 13px;
+  fill: #f59e0b;
+  flex-shrink: 0;
+}
+
+.review-mid-card__text{
+  margin: 0;
+  font-family: var(--p-font-b);
+  font-size: 13px;
+  color: #636b82;
+  line-height: 1.55;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 100px;
+}
+
+.review-mid-card__product{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: #f3f4f8;
+  border-radius: 12px;
+}
+
+.review-mid-card__product-icon{
+  width: 34px;
+  height: 34px;
+  background: #e5f6ea;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.review-mid-card__product-name{
+  font-family: var(--p-font-b);
+  font-size: 12px;
+  font-weight: 700;
+  color: #1c2235;
+  line-height: 1.25;
+}
+
+/* ===== PRODUCTO CON FOTO ===== */
+
+.review-mid-card__product--photo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-mid-card__product-photo{
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+  border: 1px solid #dfe5ee;
+  background: #fff;
+}
+
+.review-mid-card__footer{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid #e3e8f0;
+  padding-top: 12px;
+  margin-top: auto;
+}
+
+.review-mid-card__avatar{
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--p-font-h);
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.av--a{ background: linear-gradient(135deg, #1b7a3e, #4ade80); }
+.av--b{ background: linear-gradient(135deg, #2563eb, #60a5fa); }
+.av--c{ background: linear-gradient(135deg, #7c3aed, #c084fc); }
+
+.review-mid-card__name{
+  font-family: var(--p-font-b);
+  font-size: 12px;
+  font-weight: 700;
+  color: #1b2132;
+  line-height: 1.15;
+}
+
+.review-mid-card__location{
+  font-family: var(--p-font-b);
+  font-size: 10px;
+  color: #9aa0b4;
+  margin-top: 2px;
+  line-height: 1.15;
+}
+
+/* ===== TABLET ===== */
+
+@media (max-width: 980px){
+  .social-proof-mid{
+    padding: 56px 18px;
+  }
+
+  .social-proof-mid__header{
+    margin-bottom: 26px;
+  }
+
+  .reviews-mid-grid{
+    grid-auto-columns: 260px;
+    gap: 14px;
+  }
+
+  .review-mid-card{
+    min-height: 225px;
+    padding: 18px 16px 14px;
+    border-radius: 18px;
+    gap: 10px;
+  }
+
+  .review-mid-card__quote{
+    font-size: 40px;
+    top: 8px;
+    right: 10px;
+  }
+
+  .review-mid-card__text{
+    font-size: 11.5px;
+    min-height: 82px;
+    -webkit-line-clamp: 4;
+  }
+
+  .review-mid-card__product-photo{
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+  }
+
+  .review-mid-card__product-icon{
+    width: 28px;
+    height: 28px;
+    font-size: 13px;
+  }
+
+  .review-mid-card__product-name{
+    font-size: 10.5px;
+  }
+
+  .review-mid-card__avatar{
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+  }
+
+  .review-mid-card__name{
+    font-size: 10.5px;
+  }
+
+  .review-mid-card__location{
+    font-size: 8.8px;
+  }
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 640px){
+  .social-proof-mid{
+    padding: 38px 10px;
+  }
+
+  .social-proof-mid__header{
+    margin-bottom: 18px;
+  }
+
+  .proof-eyebrow{
+    font-size: 9px;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+
+  .proof-eyebrow::before,
+  .proof-eyebrow::after{
+    width: 16px;
+  }
+
+  .proof-title{
+    font-size: 20px;
+    line-height: 1.08;
+  }
+
+  .reviews-mid-grid{
+    grid-auto-columns: minmax(165px, 46%);
+    gap: 8px;
+    padding: 2px 2px 8px;
+  }
+
+  .review-mid-card{
+    min-height: 175px;
+    padding: 11px 10px 10px;
+    border-radius: 14px;
+    gap: 8px;
+    box-shadow: 0 5px 12px rgba(13,17,33,.05);
+  }
+
+  .review-mid-card__quote{
+    font-size: 32px;
+    top: 6px;
+    right: 8px;
+  }
+
+  .review-mid-card__stars{
+    gap: 2px;
+    margin-bottom: 0;
+  }
+
+  .star-icon{
+    width: 10px;
+    height: 10px;
+  }
+
+  .review-mid-card__text{
+    font-size: 9.8px;
+    line-height: 1.35;
+    min-height: 58px;
+    -webkit-line-clamp: 3;
+  }
+
+  .review-mid-card__product{
+    gap: 7px;
+    padding: 7px 8px;
+    border-radius: 9px;
+  }
+
+  .review-mid-card__product-photo{
+    width: 40px;
+    height: 40px;
+    border-radius: 7px;
+  }
+
+  .review-mid-card__product-icon{
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+    border-radius: 7px;
+  }
+
+  .review-mid-card__product-name{
+    font-size: 9px;
+    line-height: 1.15;
+  }
+
+  .review-mid-card__footer{
+    gap: 6px;
+    padding-top: 8px;
+  }
+
+  .review-mid-card__avatar{
+    width: 24px;
+    height: 24px;
+    font-size: 9px;
+  }
+
+  .review-mid-card__name{
+    font-size: 9px;
+  }
+
+  .review-mid-card__location{
+    font-size: 7.8px;
+  }
+}
+
+@media (max-width: 380px){
+  .reviews-mid-grid{
+    grid-auto-columns: minmax(150px, 48%);
+    gap: 7px;
+  }
+
+  .review-mid-card{
+    min-height: 165px;
+    padding: 10px 8px 9px;
+    border-radius: 12px;
+  }
+
+  .review-mid-card__text{
+    font-size: 9.2px;
+  }
+
+  .review-mid-card__product-name{
+    font-size: 8.5px;
+  }
+}
+@media (max-width: 980px){
+  .review-mid-card__text{
+    font-size: 11.5px;
+    min-height: 82px;
+    max-height: 82px;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 640px){
+  .review-mid-card__text{
+    font-size: 9.8px;
+    line-height: 1.35;
+    min-height: 58px;
+    max-height: 58px;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 380px){
+  .review-mid-card__text{
+    font-size: 9.2px;
+    min-height: 54px;
+    max-height: 54px;
+    overflow-y: auto;
+  }
+}
+@media (max-width: 980px){
+  .review-mid-card__text{
+    font-size: 11.5px;
+    min-height: 82px;
+    max-height: 82px;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 640px){
+  .review-mid-card__text{
+    font-size: 9.8px;
+    line-height: 1.35;
+    min-height: 58px;
+    max-height: 58px;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 380px){
+  .review-mid-card__text{
+    font-size: 9.2px;
+    min-height: 54px;
+    max-height: 54px;
+    overflow-y: auto;
+  }
+}
+/* ===== FIX DESCRIPCION PRODUCTO SOLO MOBILE ===== */
+@media (max-width: 640px){
+  .p-panels{
+    margin-top: 14px !important;
+  }
+
+  .p-panels .panel,
+  #tab-desc,
+  #tab-specs,
+  #tab-ship{
+    font-size: 12.5px !important;
+    line-height: 1.5 !important;
+  }
+
+  #tab-desc p,
+  #tab-specs p,
+  #tab-ship p,
+  #tab-desc li,
+  #tab-specs li,
+  #tab-ship li{
+    font-size: 12.5px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 8px !important;
+  }
+
+  #tab-desc h2,
+  #tab-desc h3,
+  #tab-specs h2,
+  #tab-specs h3,
+  #tab-ship h2,
+  #tab-ship h3{
+    font-size: 14px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 6px !important;
+  }
+
+  #product-seo{
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+    margin-top: 14px !important;
+  }
+
+  #product-seo h2{
+    font-size: 14px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 6px !important;
+  }
+
+  #product-seo p{
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+    margin-bottom: 8px !important;
+  }
+}
+/* ===== TRUST STRIP SOLO MOBILE - CUADRADITOS CHICOS ===== */
+@media (max-width: 640px){
+
+  .trust.wrap{
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+    padding: 0 4px !important;
+    margin-top: 12px !important;
+  }
+
+  .trust.wrap .trust__item{
+    min-height: 88px !important;
+    padding: 8px 6px !important;
+    border-radius: 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .trust.wrap .trust__icon{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 4px !important;
+  }
+
+  .trust.wrap .trust__icon svg{
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  .trust.wrap .trust__item h3{
+    font-size: 10px !important;
+    line-height: 1.15 !important;
+    margin: 0 !important;
+    font-weight: 700 !important;
+  }
+
+  .trust.wrap .trust__item p{
+    display: none !important;   /* así quedan bien cuadrados y compactos */
+  }
+}
