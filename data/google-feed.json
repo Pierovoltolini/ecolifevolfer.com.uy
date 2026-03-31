@@ -6474,5 +6474,30 @@
     "link": "https://www.ecolifebyvolfer.com/producto/depiladora-philips-satinelle-essential-6-acc.",
     "image_link": "https://vstoreuy.vtexassets.com/arquivos/ids/156485-1200-auto?v=638555440538000000&width=500&height=auto&aspect=true",
     "policies": {}
-  }
+  },
+  {
+  "id": "EP5547/90",
+  "title": "CAFETERA EXPRESO PHILIPS AUTOMÁTICA C/MOLINILLO 15BARES",
+  "brand": "Philips",
+  "category": "electrodomesticos",
+  "subcategory": "pequenos-electro",
+  "subsubcategory": "cafeteras",
+  "price": 1199.0,
+  "thumbnail": "https://vstoreuy.vtexassets.com/arquivos/ids/162642-1200-auto?v=639039074331300000&width=1200&height=auto&aspect=true",
+  "images": [
+    "https://vstoreuy.vtexassets.com/arquivos/ids/162642-1200-auto?v=639039074331300000&width=1200&height=auto&aspect=true",
+    "https://vstoreuy.vtexassets.com/arquivos/ids/162643-1200-auto?v=639039074331300000&width=1200&height=auto&aspect=true",
+    "https://vstoreuy.vtexassets.com/arquivos/ids/162644-1600-auto?v=639039074331300000&width=1600&height=auto&aspect=true"
+  ],
+  "slug": "cafetera-expreso-automatica-c-latte-go-philips",
+  "url": "https://ecolifevolfer.com.uy/CAFETERA EXPRESO PHILIPS AUTOMÁTICA C/MOLINILLO 15BARES/p",
+  "description": "Cafetera expreso Philips automática con molinillo integrado y sistema LatteGo para preparar café de forma simple y rápida en casa. Presión: 15 bares. Bebidas preprogramadas: 20. Capacidad del depósito de agua: 1,8 L. Capacidad del recipiente de granos: 275 g. Molinillo con 12 niveles de molienda. Perfiles: 4 usuarios + invitado. Pantalla TFT intuitiva. Potencia: 1500 W. Piezas aptas para lavavajillas. Incluye compatibilidad con filtro AquaClean. Enviamos a todo el país. Coordinamos día y franja horaria. Garantía: 24 meses.",
+  "sale_price": null,
+  "currency": "USD",
+  "availability": "in stock",
+  "condition": "new",
+  "link": "https://ecolifevolfer.com.uy/CAFETERA EXPRESO PHILIPS AUTOMÁTICA C/MOLINILLO 15BARES/p",
+  "image_link": "https://vstoreuy.vtexassets.com/arquivos/ids/162642-1200-auto?v=639039074331300000&width=1200&height=auto&aspect=true",
+  "policies": {}
+}
 ]
